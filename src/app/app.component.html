@@ -1,4 +1,9 @@
 <div> 
 <p> This is the covid website homepage</p>
 </div>
+<ul>
+    <li *ngFor="let city of cities">
+        {{city.city_name}}, {{city.nation}},
+        {{city.lat}}, {{city.long}}</li>
+</ul>
 <router-outlet></router-outlet>
