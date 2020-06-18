@@ -1,6 +1,9 @@
 {
+    "path-intellisense.mappings": {
+        "assets": "${workspaceRoot}/src/assets",
+    },
     "path-autocomplete.pathMappings": {
         "assets": "${folder}/src/assets",
         "/assets": "${folder}/src/assets"
-    },
+    }
 }
