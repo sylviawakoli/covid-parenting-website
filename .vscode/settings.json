@@ -5,5 +5,5 @@
     "path-autocomplete.pathMappings": {
         "assets": "${folder}/src/assets",
         "/assets": "${folder}/src/assets"
-    },
+    }
 }

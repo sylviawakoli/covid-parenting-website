@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContributorsComponent } from './contributors/contributors.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpreadsheetService } from './shared/services/spreadsheet.service';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SpreadsheetService } from './shared/services/spreadsheet.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule
     HttpClientModule
   ],
   providers: [
