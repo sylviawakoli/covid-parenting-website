@@ -2,7 +2,7 @@
     <img class="plh-logo" src="assets/images/plh_logo1.png">
     <div class="website-title">Covid 19 Parenting</div>
     <div class="menu-items">
-        <div *ngFor="let item of menuItems" class="menu-item">{{item.name}}</div>
+        <a *ngFor="let item of menuItems" class="menu-item" [routerLink]="item.href">{{item.name}}</a>
     </div>
     <div class="right-container">
         <a class="facebook-button" href="https://www.facebook.com/PLH-Parenting-for-Lifelong-Health-479688329453239"><img src="assets/images/fb_icon.svg"></a>
@@ -16,5 +16,5 @@
     </div>
 </nav>
 <div class="top-menu-dropdown" [@openClose]="menuDropdownOpen ? 'open' : 'closed'" >
-    <div *ngFor="let item of menuItems" class="menu-item">{{item.name}}</div>
+    <a *ngFor="let item of menuItems" class="menu-item" [routerLink]="item.href">{{item.name}}</a>
 </div>

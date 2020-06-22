@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpreadsheetService } from './shared/services/spreadsheet.service';
 import { CaseworkersComponent } from './caseworkers/caseworkers.component';
 import { PsaComponent } from './psa/psa.component';
+import { HomeComponent } from './home/home.component';
+import { TipsComponent } from './tips/tips.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PsaComponent } from './psa/psa.component';
     FooterComponent,
     ContributorsComponent,
     CaseworkersComponent,
-    PsaComponent
+    PsaComponent,
+    HomeComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,
