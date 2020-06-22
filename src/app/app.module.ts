@@ -20,7 +20,7 @@ import { SpreadsheetService } from './shared/services/spreadsheet.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
     HttpClientModule
   ],
   providers: [
