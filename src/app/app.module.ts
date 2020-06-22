@@ -12,6 +12,7 @@ import { SpreadsheetService } from './shared/services/spreadsheet.service';
 import { CaseworkersComponent } from './caseworkers/caseworkers.component';
 import { PsaComponent } from './psa/psa.component';
 import { HomeComponent } from './home/home.component';
+import { TipsComponent } from './tips/tips.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     ContributorsComponent,
     CaseworkersComponent,
     PsaComponent,
-    HomeComponent
+    HomeComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,
