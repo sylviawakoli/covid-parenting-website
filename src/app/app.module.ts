@@ -9,13 +9,17 @@ import { FooterComponent } from './footer/footer.component';
 import { ContributorsComponent } from './contributors/contributors.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SpreadsheetService } from './shared/services/spreadsheet.service';
+import { CaseworkersComponent } from './caseworkers/caseworkers.component';
+import { PsaComponent } from './psa/psa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     FooterComponent,
-    ContributorsComponent
+    ContributorsComponent,
+    CaseworkersComponent,
+    PsaComponent
   ],
   imports: [
     BrowserModule,
