@@ -1,7 +1,7 @@
 <h1>Tips in English</h1>
 <div class="tip-sheet-container">
 <a *ngFor="let tipSheet of tipSheets" class="tip-sheet" [href]="tipSheet.pdfSrc">
-    <h2>{{tipSheet.title}}</h2>
-    <img src="{{tipSheet.thumnailSrc}}">
+    <h4>{{tipSheet.title}}</h4>
+    <img class="tipisheet-thumbnail" src="{{tipSheet.thumnailSrc}}">
 </a>
 </div>
