@@ -16,7 +16,7 @@ export type LanguageCSVRow = {
 })
 export class TipsComponent implements OnInit {
 
-  langCode = "en";
+  langCode = "af";
 
   tipSheets: { title: string, thumnailSrc: string; pdfSrc: string }[] = [];
 
