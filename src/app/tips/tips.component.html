@@ -1,7 +1,13 @@
 <h1>Tips in English</h1>
+<div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{currentLanguage.name}}</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button *ngFor="let language of allLanguages" ngbDropdownItem (click)="changeLanguage(language)">{{language.name}}</button>
+    </div>
+</div>
 <div class="tip-sheet-container">
-<a *ngFor="let tipSheet of tipSheets" class="tip-sheet" [href]="tipSheet.pdfSrc">
-    <h4>{{tipSheet.title}}</h4>
-    <img class="tipisheet-thumbnail" src="{{tipSheet.thumnailSrc}}">
-</a>
+    <a *ngFor="let tipSheet of tipSheets" class="tip-sheet" [href]="tipSheet.pdfSrc">
+        <h4>{{tipSheet.title}}</h4>
+        <img class="tipisheet-thumbnail" src="{{tipSheet.thumnailSrc}}">
+    </a>
 </div>
