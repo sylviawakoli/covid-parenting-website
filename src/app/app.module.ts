@@ -13,6 +13,7 @@ import { CaseworkersComponent } from './caseworkers/caseworkers.component';
 import { PsaComponent } from './psa/psa.component';
 import { HomeComponent } from './home/home.component';
 import { TipsComponent } from './tips/tips.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TipsComponent } from './tips/tips.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     SpreadsheetService
