@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +7,9 @@ import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 })
 export class HomeComponent implements OnInit {
 
-  title = 'covid-parenting-website';
-  cities = [];
+  title = 'Covid Parenting Website';
 
-  constructor(private spreadsheetService: SpreadsheetService) {
-    this.spreadsheetService.getCSVObjects("assets/cities.csv")
-      .subscribe((cities) => {
-        this.cities = cities;
-        console.log("Cities?", cities);
-      });
+  constructor() {
   }
 
   ngOnInit(): void {
