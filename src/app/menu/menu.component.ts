@@ -3,8 +3,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 
 const MENU_ITEMS: { name: string, href?: string }[] = [
   { name: "Home", href: "/" },
-  { name: "Tips in English", href: "/tips" },
-  { name: "Tips in other languages", href: "/tips-other-lang" },
+  { name: "Tips", href: "/tips" },
   { name: "For Caseworkers", href: "/caseworkers" },
   { name: "Public Service Announcements", href: "/psa" },
   { name: "Contributors", href: "/contributors" },
