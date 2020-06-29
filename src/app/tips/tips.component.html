@@ -1,5 +1,7 @@
 <div class="content">
     <h1>Tips</h1>
+    <h2> Select your language from the dropdown below.</h2>
+    <p>If you cant find a tipsheet in your language, please <a href="https://web.facebook.com/Parentinglh-Parenting-for-Lifelong-Health-PLH-479688329453239?_rdc=1&_rdr">Send us a message on Facebook</a> </p>
     <header>Select your language</header>
     <div class="lang-letter-ranges">
         <a *ngFor="let range of letterRanges" (click)="onLetterRangeClick(range)"
@@ -20,7 +22,8 @@
             <div class="tipsheet-thumbnail">
                 <img class="thumbnail-img" src="{{tipSheet.thumnailSrc}}">
             </div>
-
         </a>
+        <p>Please note that these translations were not created by the World Health Organization (WHO), and WHO is not responsible
+        for the content or accuracy of these translations</p>
     </div>
 </div>
