@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 import { Language, TipSheet, LanguageCSVRow } from './tip-sheets.model';
 import { HttpClient } from '@angular/common/http';
 import { SpreadsheetService } from '../shared/services/spreadsheet.service';
@@ -9,7 +9,7 @@ import { TipSheetService } from './tip-sheet.service';
   templateUrl: './tip-sheets.component.html',
   styleUrls: ['./tip-sheets.component.scss']
 })
-export class TipSheetsComponent implements OnInit {
+export class TipSheetsComponent implements OnInit, OnChanges {
 
   allLanguages: Language[] = [];
   selectedRange: string[] = ["A", "F"];
@@ -32,6 +32,12 @@ export class TipSheetsComponent implements OnInit {
       this.onLetterRangeClick(this.letterRanges[0], false);
       this.changeLanguage(this.currentLanguage);
     });
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.currentLanguage) {
+      this.changeLanguage(this.currentLanguage);
+    }
   }
 
   changeLanguage(language: Language) {

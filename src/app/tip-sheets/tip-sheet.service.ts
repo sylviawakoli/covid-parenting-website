@@ -64,7 +64,7 @@ export class TipSheetService {
   }
 
   public getLanguageByCode(langCode: string): Observable<Language> {
-    if (this.languagesByCode[langCode]) {
+    if (this.languagesByCode && this.languagesByCode[langCode]) {
       return of(this.languagesByCode[langCode]);
     }
     return this.fetchTipSheets()
@@ -76,7 +76,7 @@ export class TipSheetService {
   }
 
   public getTipSheetsForLanguage(langCode: string): Observable<TipSheet[]> {
-    if (this.tipSheetsByLanguage[langCode]) {
+    if (this.tipSheetsByLanguage && this.tipSheetsByLanguage[langCode]) {
       return of(this.tipSheetsByLanguage[langCode]);
     }
     return this.fetchTipSheets()
