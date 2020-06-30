@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Language } from '../tip-sheets/tip-sheets.model';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title = 'Covid Parenting Website';
+
+  tipSheetLang: Language = {
+    code: "en",
+    name: "English"
+  };
 
   constructor() {
   }
