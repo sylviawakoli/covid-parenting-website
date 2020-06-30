@@ -14,6 +14,8 @@ import { PsaComponent } from './psa/psa.component';
 import { HomeComponent } from './home/home.component';
 import { TipsComponent } from './tips/tips.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TipSheetsComponent } from './tip-sheets/tip-sheets.component';
+import { TipSheetService } from './tip-sheets/tip-sheet.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CaseworkersComponent,
     PsaComponent,
     HomeComponent,
-    TipsComponent
+    TipsComponent,
+    TipSheetsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule
   ],
   providers: [
-    SpreadsheetService
+    SpreadsheetService,
+    TipSheetService
   ],
   bootstrap: [AppComponent]
 })
