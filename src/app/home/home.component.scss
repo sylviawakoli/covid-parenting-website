@@ -9,11 +9,6 @@
   display: block;
 }
 
-.p {
-  font-size: 30px;
-  text-align: justify;
-}
-
 .below-banner {
   display: flex;
   flex-direction: row;
@@ -33,3 +28,17 @@
   }
 
 }
+
+.p {
+  font-family: 'roboto-thin', sans-serif;
+  font-size: 30px;
+  text-align: justify;
+}
+
+.h2{
+  font-family: 'roboto-bold', sans-serif;
+  font-size: 50px;
+  line-height: 1.35em; 
+  // text-align: center;
+}
+
