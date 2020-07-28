@@ -1,22 +1,130 @@
-<div class="content">
-    <img class="main-banner" src="assets/images/covid_19_banner1.webp">
-    <div class="below-banner">
-        <div class="text-div">
-            <h2 class="h2"> 24/7 parenting resources in 90 languages!</h2>
-            <p class="p">Parenting for Lifelong Health provides open-access online parenting resources during COVID-19.
-                We
-                are working with the <a href="https://www.who.int/"> World Health Organization </a>, <a
-                    href="https://www.unicef.org/">UNICEF </a>, <a
-                    href="https://www.end-violence.org/fVvSP6p153aTj1lTA">
-                    the Global Partnership to End Violence Against Children</a>, <a
-                    href="https://www.internetofgoodthings.org/"> the Internet of Good Things </a>, <a
-                    href="https://www.usaid.gov/"> USAID </a> and <a href="https://www.cdc.gov/"> Centers for Disease
-                    Control and Prevention </a></p>
-        </div>
-        <div class="blob-div">
-            <img src="assets/images/homepageblob.gif">
-        </div>
+<!-- Banner --->
+<div class="banner-container">
+  <div class="banner-text-main">
+    <div>
+      <h2 class="main-header-one">COVID-19:</h2>
+      <h2 class="main-header-two">24/7 PARENTING</h2>
+      <h3 class="main-header-three">
+        Proven parenting tips and activities for all ages in worldwide langauges
+      </h3>
+      <p>
+        Parenting for Lifelong Health provides open-access online parenting
+        resources during COVID-19. We are working with the World Health
+        Organization, UNICEF, the Global Partnership to End Violence Against
+        Children, the Internet of Good Things, USAID and Centers for Disease
+        Control and Prevention.
+      </p>
+      <a href="#">Learn more</a>
     </div>
-    <h2>Tips</h2>
-    <app-tip-sheets [currentLanguage]="tipSheetLang"></app-tip-sheets>
+  </div>
+  <div class="banner-text-language">
+    <div>AVAILABLE IN 90 LANGUAGES!</div>
+  </div>
 </div>
+<!-- /Banner --->
+
+<!-- Home-links --->
+<div class="nav-cards">
+  <div class="nav-card-item">
+    <img src="assets/images/iconlanguages.png" />
+    <h3 class="main-header-two">90 languages</h3>
+    <p>Download our PDF tipsheet in your language</p>
+    <a href="#">Learn more</a>
+  </div>
+  <div class="nav-card-item">
+    <img src="assets/images/iconcaseworkers.png" />
+    <h3 class="main-header-two">Caseworkers</h3>
+    <p>Quick text about this link goes here. This text is a placeholder</p>
+    <a href="#">Learn more</a>
+  </div>
+  <div class="nav-card-item">
+    <img src="assets/images/iconcontributors.png" />
+    <h3 class="main-header-two">Contributors</h3>
+    <p>Read about the important contributors behind these tipsheets.</p>
+    <a href="#">Learn more</a>
+  </div>
+  <div class="nav-card-item">
+    <img src="assets/images/iconannouncements.png" />
+    <h3 class="main-header-two">Announcements</h3>
+    <p>Quick text about this link goes here. This text is a placeholder</p>
+    <a href="#">Learn more</a>
+  </div>
+</div>
+<!-- /Home-links --->
+<!--curve-->
+<div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180">
+    <path
+      fill="#f2f2f2"
+      fill-opacity="1"
+      d="M0,64L48,64C96,64,192,64,288,80C384,96,480,128,576,144C672,160,768,160,864,165.3C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+    ></path>
+  </svg>
+</div>
+<!--/curve-->
+
+ 
+  <!--Todo Tips-->
+  <div class="tips" >
+    <h2>Select your language</h2>
+    <h3>
+      Click the links on the right to access the current tip sheets in
+      yourlanguage
+    </h3>
+    <div>
+      Please note that these translations were not created by the World Health
+      Organization (WHO), and WHO is not responsible for the content or accuracy
+      of these translations
+    </div>
+  </div>
+  <!--/end todo Tips-->
+  <!--curve-->
+  <div class="tips">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 255">
+      <path
+        fill="#0a4160"
+        fill-opacity="1"
+        d="M0,128L48,149.3C96,171,192,213,288,213.3C384,213,480,171,576,154.7C672,139,768,149,864,154.7C960,160,1056,160,1152,176C1248,192,1344,224,1392,240L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+      ></path>
+    </svg>
+  </div>
+  <!--/curve-->
+
+   <!--footer-->
+
+  <app-footer [footerBackgroundColor]="'#0a4160'"></app-footer>
+ <!--/footer-->
+
+
+
+
+<!--
+  <div class="content">
+  <img class="main-banner" src="assets/images/covid_19_banner1.webp" />
+  <div class="below-banner">
+    <div class="text-div">
+      <h2 class="h2">24/7 parenting resources in 90 languages!</h2>
+      <p class="p">
+        Parenting for Lifelong Health provides open-access online parenting
+        resources during COVID-19. We are working with the
+        <a href="https://www.who.int/"> World Health Organization </a>,
+        <a href="https://www.unicef.org/">UNICEF </a>,
+        <a href="https://www.end-violence.org/fVvSP6p153aTj1lTA">
+          the Global Partnership to End Violence Against Children</a
+        >,
+        <a href="https://www.internetofgoodthings.org/">
+          the Internet of Good Things </a
+        >, <a href="https://www.usaid.gov/"> USAID </a> and
+        <a href="https://www.cdc.gov/">
+          Centers for Disease Control and Prevention
+        </a>
+      </p>
+    </div>
+    <div class="blob-div">
+      <img src="assets/images/homepageblob.gif" />
+    </div>
+  </div>
+  <h2>Tips</h2>
+  <app-tip-sheets [currentLanguage]="tipSheetLang"></app-tip-sheets>
+</div> 
+-->

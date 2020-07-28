@@ -1,3 +1,135 @@
+.banner-container {
+  margin-top: 100px; //todo. remove this later
+  background-image: url("/assets/images/desktopbanner.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 700px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+  display: flex;
+  //flex-wrap: wrap;
+  
+}
+
+.banner-text-main {
+  flex: 42%;
+  align-self: center;
+  padding: 20px;
+}
+
+.banner-text-language {
+  flex: 58%;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.banner-text-language div {
+  display: block;
+  height: 22%;
+  width: 100%;
+  text-align: right;
+}
+
+.banner-text-language div {
+  font-family: "roboto-bold", sans-serif;
+  color: #ffffff; 
+  line-height: 1.35em;
+}
+
+.banner-text-main .main-header-one {
+  font-family: "roboto-light", sans-serif;
+  color: #0b4061;
+}
+
+.banner-text-main .main-header-two {
+  font-family: "roboto-bold", sans-serif;
+  color: #0b4061; 
+}
+
+.banner-text-main .main-header-three {
+  font-family: "roboto-medium", sans-serif;
+  color: #ed1651; 
+}
+
+.banner-text-main p {
+  font-family: "roboto-medium", sans-serif;
+  color: #0b4061;
+}
+
+.banner-text-main a {
+  font-family: "roboto-bold", sans-serif;
+  text-decoration: none; 
+  padding: 10px 10px;
+  //align-self: center;
+  border-radius: 25px;
+  color: #ffffff;
+  background: #ed1651;
+}
+
+
+.nav-cards{
+  display: flex;
+  //flex-wrap: wrap;
+  //align-items: center;
+  //padding: 50px;
+}
+
+ .nav-card-item {
+  color: #0b4061;
+  //padding: 14px 20px;
+  //align-self: center;
+  //text-decoration: none;
+  text-align: center;
+  //width: 200px;
+  flex: 1;
+}
+
+.nav-card-item a {
+  font-family: "roboto-bold";
+  text-decoration: none; 
+  padding: 10px 10px;
+  border-radius: 25px;
+  color: #ffffff;
+  background: #ed1651;
+}
+
+.tips{
+  background: #f2f2f2;
+  color: #0b4061;
+}
+
+@media only screen and (max-width: 750px) {
+  .nav-cards{
+    flex-wrap: wrap;
+  }
+  .nav-card-item {
+    width: 50%;
+    flex: auto;
+    padding-bottom: 50px; //todo. convert to ems
+  }
+
+
+}
+
+@media only screen and (max-width: 450px) {
+  .nav-cards{
+    flex-direction: column; 
+    align-items: center;
+  }
+  .nav-card-item {
+    width: 100%; 
+  }
+ 
+   
+}
+
+@media only screen and (max-width: 360px) {
+  
+}
+
+/** To be deleted **/
 .content {
   max-width: 900px;
   margin-left: auto;
@@ -21,24 +153,25 @@
 .blob-div {
   margin: 45px;
   margin-right: 0px;
-  
+
   img {
     width: 30vw;
     max-width: 300px;
   }
-
 }
 
 .p {
-  font-family: 'roboto-thin', sans-serif;
+  font-family: "roboto-thin", sans-serif;
   font-size: 30px;
   text-align: justify;
 }
 
-.h2{
-  font-family: 'roboto-bold', sans-serif;
+.h2 {
+  font-family: "roboto-bold", sans-serif;
   font-size: 50px;
-  line-height: 1.35em; 
+  line-height: 1.35em;
   // text-align: center;
 }
+
+
 

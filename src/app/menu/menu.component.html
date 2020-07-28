@@ -13,7 +13,7 @@
                 <rect y="40" width="60" height="12" fill="#333333" />
             </svg>
         </div>
-    </div>
+    </div> 
 </nav>
 <div class="top-menu-dropdown" [@openClose]="menuDropdownOpen ? 'open' : 'closed'" >
     <a *ngFor="let item of menuItems" class="menu-item" [routerLink]="item.href">{{item.name}}</a>
