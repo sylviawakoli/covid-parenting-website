@@ -16,11 +16,7 @@ const MENU_ITEMS: { name: string, href?: string }[] = [
 })
 export class FooterComponent implements OnInit {
 
-  @Input()
-  footerBackgroundColor: String = "#000";
-
-  menuItems = MENU_ITEMS;//todo. globalise source of menu items
- 
+  menuItems = MENU_ITEMS;//todo. globalise source of menu items. should come from central place 
 
   constructor() { }
 

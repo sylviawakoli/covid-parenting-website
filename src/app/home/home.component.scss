@@ -1,89 +1,66 @@
-.banner-container {
-  margin-top: 100px; //todo. remove this later
-  background-image: url("/assets/images/desktopbanner.png"); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 700px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-
-  display: flex;
-  //flex-wrap: wrap;
-  
-}
-
-.banner-text-main {
-  flex: 42%;
-  align-self: center;
-  padding: 20px;
-}
-
-.banner-text-language {
-  flex: 58%;
-  display: flex;
-  align-items: flex-end;
-  padding: 20px;
-}
-
-.banner-text-language div {
+.svg{
   display: block;
-  height: 22%;
-  width: 100%;
-  text-align: right;
 }
 
-.banner-text-language div {
-  font-family: "roboto-bold", sans-serif;
+.banner-container {
+  //margin-top: 100px; 
+  margin-top: 20px; 
+  background: #ffca04;
+  color: #ffffff;
+}
+
+.banner-slider { 
+  display: flex;
   color: #ffffff; 
-  line-height: 1.35em;
 }
 
-.banner-text-main .main-header-one {
+.slider-text {
+  flex: 50%;
+}
+
+.slider-image {
+  flex: 50%; //todo. could be larger?
+}
+
+
+.slider-text .main-header-one {
   font-family: "roboto-light", sans-serif;
   color: #0b4061;
 }
 
-.banner-text-main .main-header-two {
+.slider-text .main-header-two {
   font-family: "roboto-bold", sans-serif;
   color: #0b4061; 
 }
 
-.banner-text-main .main-header-three {
+.slider-text .main-header-three {
   font-family: "roboto-medium", sans-serif;
   color: #ed1651; 
 }
 
-.banner-text-main p {
+.slider-text p {
   font-family: "roboto-medium", sans-serif;
   color: #0b4061;
 }
 
-.banner-text-main a {
+.slider-text a {
   font-family: "roboto-bold", sans-serif;
   text-decoration: none; 
-  padding: 10px 10px;
-  //align-self: center;
+  padding: 10px 10px; //todo. convert to ems
   border-radius: 25px;
   color: #ffffff;
   background: #ed1651;
 }
 
-
 .nav-cards{
   display: flex;
-  //flex-wrap: wrap;
-  //align-items: center;
-  //padding: 50px;
+  margin-bottom: 10px;
 }
 
  .nav-card-item {
-  color: #0b4061;
-  //padding: 14px 20px;
-  //align-self: center;
-  //text-decoration: none;
-  text-align: center;
-  //width: 200px;
   flex: 1;
+  color: #0b4061;
+  text-align: center;
 }
 
 .nav-card-item a {
@@ -94,19 +71,30 @@
   color: #ffffff;
   background: #ed1651;
 }
-
 .tips{
-  background: #f2f2f2;
+  /** todo remove. temporary class**/
   color: #0b4061;
 }
 
+.tips-background{ 
+  background: #f2f2f2; 
+}
+
+
+.home-footer-background{
+  background: #0a4160;
+}
+
 @media only screen and (max-width: 750px) {
+  .banner-container { 
+    margin-top: 50px;  
+  }
+
   .nav-cards{
     flex-wrap: wrap;
   }
   .nav-card-item {
-    width: 50%;
-    flex: auto;
+    flex: 50%;
     padding-bottom: 50px; //todo. convert to ems
   }
 
@@ -114,22 +102,36 @@
 }
 
 @media only screen and (max-width: 450px) {
+  
+  .banner-container { 
+    margin-top: 80px;  
+  }
+
+  .banner-slider { 
+    flex-direction: column;
+  }
+  
+  .slider-text {
+    flex: 100%;
+  }
+  
+  .slider-image {
+    flex: 100%; 
+  }
   .nav-cards{
     flex-direction: column; 
     align-items: center;
   }
   .nav-card-item {
-    width: 100%; 
+    flex: 100%; 
   }
  
    
 }
 
-@media only screen and (max-width: 360px) {
-  
-}
 
-/** To be deleted **/
+
+/**todo. To be deleted **/
 .content {
   max-width: 900px;
   margin-left: auto;

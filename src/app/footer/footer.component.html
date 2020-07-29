@@ -1,23 +1,26 @@
-<div class="footer-container" [ngStyle]="{'background': footerBackgroundColor}">
-  <div class="footer-head">
-    <div>Image Logo here</div>
-    <div>
-      <h2>Working for families around the globe</h2>
-      <p>Parenting for lifelong health is an organisation that strives...</p>
-    </div>
-    <div class="footer-menu-items">
-      <a *ngFor="let item of menuItems" class="footer-menu-item" [routerLink]="item.href">{{ item.name }}</a>
-    </div>
-  </div>
-  
-  <hr class="divider">
-  
-  <div class="footer-tail">
-    <div>social media icons here</div>
-    <div>&copy; <script> document.write(new Date().getFullYear());</script> PLH 2020.</div>
-  </div>
-</div>
 
+  <div class="content footer-container">
+    <div class="footer-head">
+      <div>Image Logo here</div>
+      <div>
+        <h2>Working for families around the globe</h2>
+        <p>Parenting for lifelong health is an organisation that strives...</p>
+      </div>
+      <div class="footer-menu-items">
+        <a *ngFor="let item of menuItems" class="footer-menu-item" [routerLink]="item.href">{{ item.name }}</a>
+      </div>
+    </div>
+    
+    <hr class="divider">
+    
+    <div class="footer-tail">
+      <div>social media icons here</div>
+      <div>&copy; <script> document.write(new Date().getFullYear());</script> PLH 2020.</div>
+    </div>
+
+
+
+    <!--todo. delete these later-->
 <!--
 <div class="footer-div">
   <p class="footer-text">
