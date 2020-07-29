@@ -1,5 +1,6 @@
+
 .header-container {
-  height: 130px;
+  height: 120px;
   background-color: #ffffff;
   position: fixed;
   top: 0;
@@ -7,7 +8,7 @@
   padding-top: 10px;
 }
 
-.header-contents{
+.header-contents {
   padding: 0;
 }
 
@@ -15,14 +16,6 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  //align-items: flex-end;
-}
-
-.facebook-icon {
-  //width: 30px;
-  //align-self: flex-end;
-  //align-self: center;
-  //margin: 15px;
 }
 
 .facebook-icon img {
@@ -33,14 +26,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  //justify-content: center;
 }
 
 .plh-logo {
   width: 100px;
-  height: 80px;
-  //display: flex;
-  //align-self: center;
+  height: 80px; 
 }
 
 .desktop-menu {
@@ -63,75 +53,93 @@
   background: #ed1651;
 }
 
-/* selected link. todo. remove find away to have this done dynamically. */
-.desktop-menu a:active {
-  color: white;
-  background: #ed1651;
-}
-
-/* called dynamically */
+/* todo. to be called dynamically in typescript file */
 .menu-item-active {
-  color: white;
+  color: #ffffff;
   background: red;
 }
 
-.mobile-menu {
-  display: none;
-  height: 0px;
-  overflow: hidden;
-  background: #ffffff; //todo
+/* mobile menu Overlay (background) */
+.mobile-menu-overlay {
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-.mobile-menu a {
+/* Position the content inside the mobile menu overlay */
+.mobile-menu-overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* important. 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation menu links inside the overlay */
+.mobile-menu-overlay a {
+  padding: 8px;
   text-decoration: none;
-  font-family: "roboto-bold";
-  color: #0b4061;
-  padding-top: 10px;
-  padding-left: 10px;
-  //padding: 10px 25px;
-  //align-self: center;
-  //border-radius: 25px;
-  //border-width: 2px;
+  font-size: 36px;
+  color: #818181; /* whitish color */
+  display: block; /* Display block instead of inline */
+  font-family: "roboto-light";
 }
 
+/* Position the close button (top right corner) */
+.mobile-menu-overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
 
 
 .website-title {
-  font-size: 30px; //todo. convert to ems
   display: none;
-  align-self: center;
-  //margin: 20px; //todo
 }
 
-
 .menu-icon {
-  width: 30px;
   display: none;
-  //align-self: center;
-  //margin: 15px;
 }
 
 @media only screen and (max-width: 750px) {
-  .media-icons{
+  .media-icons {
     display: none;
-  }
-
-  .website-title {
-    display: block;
   }
 
   .desktop-menu {
     display: none;
   }
 
-  .menu-icon {
+  .website-title {
     display: block;
+    color: #0b4061;
+    font-family: "roboto-bold";
+    //font-size: 30px; //todo. convert to ems
+    align-self: center;
+    margin: 0px;
   }
 
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
+  .menu-icon {
+    display: block;
+    align-self: center;
+    margin-right: 6px;
   }
+
+  .menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: #0b4061;
+    margin: 6px 0;
+  }
+
 }
 
 @media only screen and (max-width: 360px) {

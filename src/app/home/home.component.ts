@@ -16,11 +16,9 @@ export class HomeComponent implements OnInit {
     name: "English"
   };
 
-  constructor(public webAnalyticsService: WebAnalyticsService) {
-  }
+  constructor(public webAnalyticsService: WebAnalyticsService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   //event handler for tracking.
  public SendDownloadTipSheetsEvent(){ 

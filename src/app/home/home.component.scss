@@ -4,7 +4,7 @@
 
 .banner-container {
   //margin-top: 100px; 
-  margin-top: 40px; 
+  margin-top: 30px; 
   background: #ffca04;
   color: #ffffff;
 }
@@ -24,29 +24,29 @@
 
 
 .slider-text .main-header-one {
-  font-family: "roboto-light", sans-serif;
+  font-family: "roboto-light";
   color: #0b4061;
 }
 
 .slider-text .main-header-two {
-  font-family: "roboto-bold", sans-serif;
+  font-family: "roboto-bold";
   color: #0b4061; 
 }
 
 .slider-text .main-header-three {
-  font-family: "roboto-medium", sans-serif;
+  font-family: "roboto-medium";
   color: #ed1651; 
 }
 
 .slider-text p {
-  font-family: "roboto-medium", sans-serif;
+  font-family: "roboto-medium";
   color: #0b4061;
 }
 
 .slider-text a {
-  font-family: "roboto-bold", sans-serif;
+  font-family: "roboto-bold",;
   text-decoration: none; 
-  padding: 10px 10px; //todo. convert to ems
+  padding: 10px 10px;
   border-radius: 25px;
   color: #ffffff;
   background: #ed1651;
@@ -87,7 +87,7 @@
 
 @media only screen and (max-width: 750px) {
   .banner-container { 
-    margin-top: 50px;  
+    margin-top: 80px;  
   }
 
   .nav-cards{
@@ -104,7 +104,7 @@
 @media only screen and (max-width: 450px) {
   
   .banner-container { 
-    margin-top: 80px;  
+    margin-top: 100px;  
   }
 
   .banner-slider { 

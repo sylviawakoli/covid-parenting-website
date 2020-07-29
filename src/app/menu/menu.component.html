@@ -1,27 +1,32 @@
 <nav class="header-container">
- <div class="content header-contents">
+  <div class="content header-contents">
     <div class="media-icons">
-        <a class="facebook-icon" href="https://www.facebook.com/PLH-Parenting-for-Lifelong-Health-479688329453239"><img src="assets/images/fb_icon.svg" /></a>
+      <a class="facebook-icon" href="https://www.facebook.com/PLH-Parenting-for-Lifelong-Health-479688329453239"><img src="assets/images/fb_icon.svg"  /></a>
+    <!-- todo. other social media icons here-->
+    </div>
+
+    <div class="toolbar">
+      <img class="plh-logo" src="assets/images/plh_logo1.png" />
+      <div class="website-title"><h2>Covid 19 Parenting</h2></div>
+      <div class="desktop-menu">
+        <a *ngFor="let item of menuItems" [routerLink]="item.href" >{{ item.name }}</a>
       </div>
-    
-      <div class="toolbar">
-        <img class="plh-logo" src="assets/images/plh_logo1.png" />
-        <div class="website-title">Covid 19 Parenting</div>
-        <div class="desktop-menu">
-          <a *ngFor="let item of menuItems" class="menu-item" [routerLink]="item.href" >{{ item.name }}</a>
-        </div>
-        <div class="menu-icon" (click)="menuDropdownOpen = !menuDropdownOpen">
-          <svg width="60"  height="52" viewBox="0 0 60 52"  fill="none"  xmlns="http://www.w3.org/2000/svg" >
-            <rect width="60" height="12" fill="#333333" />
-            <rect y="20" width="60" height="12" fill="#333333" />
-            <rect y="40" width="60" height="12" fill="#333333" />
-          </svg>
-        </div>
+      <div class="menu-icon" (click)="menuDropdownOpen = true">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-    
-      <div class="mobile-menu" [@openClose]="menuDropdownOpen ? 'open' : 'closed'">
-        <a *ngFor="let item of menuItems"  class="menu-item"  [routerLink]="item.href"  >{{ item.name }}</a>
+    </div>
+
+    <!--for the mobile menu-->
+    <div id="mobileMenu" class="mobile-menu-overlay" [ngStyle]="{'height': menuDropdownOpen ? '100%' : '0%' }">
+      <!-- button to close the overlay navigation -->
+      <a href="#" class="closebtn" (click)="menuDropdownOpen = false">&times;</a>
+      <!-- menu nav links content -->
+      <div class="mobile-menu-overlay-content">
+        <a *ngFor="let item of menuItems" [routerLink]="item.href" (click)="menuDropdownOpen = false" >{{ item.name }}</a>
       </div>
- </div>
-    
+    </div>
+  </div>
+
 </nav>

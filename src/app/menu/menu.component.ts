@@ -13,25 +13,7 @@ const MENU_ITEMS: { name: string, href?: string }[] = [
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
-  animations: [
-    trigger('openClose', [
-      state('open', style({
-        height: 60 * MENU_ITEMS.length + 'px',
-        opacity: 1
-      })),
-      state('closed', style({
-        height: '0px',
-        opacity: 0
-      })),
-      transition('* => closed', [
-        animate('0.5s')
-      ]),
-      transition('* => open', [
-        animate('0.5s')
-      ]),
-    ]),
-  ],
+  styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
 
@@ -43,6 +25,8 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ 
   //todo. function that listens for on clicks of the items for web tracking
+
 
 }
