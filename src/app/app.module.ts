@@ -17,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TipSheetsComponent } from './tip-sheets/tip-sheets.component';
 import { TipSheetService } from './tip-sheets/tip-sheet.service';
 import {WebAnalyticsService} from './web-analytics.service';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {WebAnalyticsService} from './web-analytics.service';
     PsaComponent,
     HomeComponent,
     TipsComponent,
-    TipSheetsComponent
+    TipSheetsComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
