@@ -1,142 +1,141 @@
-.toolbar {
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  justify-content: space-between;
-  //font-family: Roboto, "Helvetica Neue", sans-serif;
-
-  //sets the header to fixed position even on scroll
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+.header-container {
+  height: 130px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 10px;
 }
 
-/* Links inside the navbar */
-.menu-items a {
-  //float: left;
-  //display: block;
-  //text-align: center;
+.header-contents{
+  padding: 0;
+}
+
+.media-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  //align-items: flex-end;
+}
+
+.facebook-icon {
+  //width: 30px;
+  //align-self: flex-end;
+  //align-self: center;
+  //margin: 15px;
+}
+
+.facebook-icon img {
+  width: 30px;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  //justify-content: center;
+}
+
+.plh-logo {
+  width: 100px;
+  height: 80px;
+  //display: flex;
+  //align-self: center;
+}
+
+.desktop-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.desktop-menu a {
   text-decoration: none;
-  font-family: 'roboto-bold';
+  font-family: "roboto-bold";
   color: #0b4061;
   padding: 10px 25px;
   align-self: center;
   border-radius: 25px;
-  //margin-right: 25px;
 }
 
-/* mouse over link */
-.menu-items a:hover {
+.desktop-menu a:hover {
+  //todo. should be underlines
   color: white;
   background: #ed1651;
 }
 
-/* selected link. todo. remove after checking. */
-.menu-items a:active {
+/* selected link. todo. remove find away to have this done dynamically. */
+.desktop-menu a:active {
   color: white;
   background: #ed1651;
 }
+
 /* called dynamically */
 .menu-item-active {
   color: white;
   background: red;
 }
 
-.website-title {
-  font-size: 30px;
-  display: none;
-  align-self: center;
-  margin: 20px;
-}
-
-.plh-logo {
-  width: 100px;
-  height: 80px;
-  display: flex;
-  align-self: center;
-}
-
-.right-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.facebook-button {
-  width: 30px;
-  align-self: center;
-  margin: 15px;
-
-  img {
-    width: 30px;
-  }
-}
-
-.menu-button {
-  width: 30px;
-  display: none;
-  align-self: center;
-  margin: 15px;
-}
-
-.menu-items {
-  display: flex;
-
-  /*  .menu-item {
-    color: black;
-    text-decoration: none;
-    display: flex;
-    margin: 15px;
-    align-self: center;
-    border-right: 1px solid black;
-    padding-right: 20px;
-
-    &:last-of-type {
-      border-right: none;
-    }
-  } */
-}
-
-.top-menu-dropdown {
+.mobile-menu {
   display: none;
   height: 0px;
   overflow: hidden;
-  flex-direction: column;
-
-  .menu-item {
-    margin: 20px;
-    font-family: -apple-system, Roboto, "Helvetica Neue", sans-serif;
-  }
+  background: #ffffff; //todo
 }
 
-@media only screen and (max-width: 850px) {
-  /*.menu-items {
-    .menu-item {
-      //margin: 3px;
-    }
-  }*/
+.mobile-menu a {
+  text-decoration: none;
+  font-family: "roboto-bold";
+  color: #0b4061;
+  padding-top: 10px;
+  padding-left: 10px;
+  //padding: 10px 25px;
+  //align-self: center;
+  //border-radius: 25px;
+  //border-width: 2px;
+}
+
+
+
+.website-title {
+  font-size: 30px; //todo. convert to ems
+  display: none;
+  align-self: center;
+  //margin: 20px; //todo
+}
+
+
+.menu-icon {
+  width: 30px;
+  display: none;
+  //align-self: center;
+  //margin: 15px;
 }
 
 @media only screen and (max-width: 750px) {
-  .menu-items {
+  .media-icons{
     display: none;
   }
 
   .website-title {
-    display: flex;
+    display: block;
   }
 
-  .menu-button {
-    display: flex;
+  .desktop-menu {
+    display: none;
   }
 
-  .top-menu-dropdown {
+  .menu-icon {
+    display: block;
+  }
+
+  .mobile-menu {
     display: flex;
+    flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 360px) {
   .website-title {
-    display: none;
+    display: none; //todo. reduce size instead of this?
   }
 }

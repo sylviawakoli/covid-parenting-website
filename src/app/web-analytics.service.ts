@@ -9,7 +9,7 @@ export class WebAnalyticsService {
 
   constructor() { }
 
-  public eventEmitter(
+  public emitAnlayticsEvent(
     eventName: string,
     eventCategory: string = null,
     eventLabel: string = null,

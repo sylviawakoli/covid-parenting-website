@@ -24,9 +24,7 @@ export class HomeComponent implements OnInit {
 
   //event handler for tracking.
  public SendDownloadTipSheetsEvent(){ 
-    this
-    .webAnalyticsService
-    .eventEmitter("tipsheets_downloads", "downloads", "downloads");
+    this.webAnalyticsService.emitAnlayticsEvent("tipsheets_downloads", "downloads", "downloads");
   }
 
 }
