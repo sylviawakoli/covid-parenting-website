@@ -1,35 +1,124 @@
-.content {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.main-banner {
-  width: 100%;
+.svg{
   display: block;
 }
 
-.p {
-  font-size: 30px;
-  text-align: justify;
+.banner-container {
+  //margin-top: 100px; 
+  margin-top: 30px; 
+  background: #ffca04;
+  color: #ffffff;
 }
 
-.below-banner {
+.banner-slider { 
   display: flex;
-  flex-direction: row;
+  color: #ffffff; 
 }
 
-.text-div {
-  width: 60%;
-  margin-top: 45px;
+.slider-text {
+  flex: 50%;
 }
-.blob-div {
-  margin: 45px;
-  margin-right: 0px;
-  
-  img {
-    width: 30vw;
-    max-width: 300px;
+
+.slider-image {
+  flex: 50%; //todo. could be larger?
+}
+
+
+.slider-text .main-header-one {
+  font-weight: 300;
+  color: #0b4061;
+}
+
+.slider-text .main-header-two {
+  font-weight: 700;
+  color: #0b4061; 
+}
+
+.slider-text .main-header-three {
+  font-weight: 500;
+  color: #ed1651; 
+}
+
+.slider-text p {
+  font-weight: 400;
+  color: #0b4061;
+}
+
+.nav-cards{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.nav-card-item {
+  flex: 1;
+  color: #0b4061;
+  text-align: center;
+}
+
+.nav-card-item h3 {
+  font-weight: 500;
+}
+
+.nav-card-item p {
+  font-weight: 300;
+}
+
+.tips{
+  /** todo remove. temporary class**/
+  color: #0b4061;
+}
+
+.tips-background{ 
+  background: #f2f2f2; 
+}
+
+
+.home-footer-background{
+  background: #0a4160;
+}
+
+@media only screen and (max-width: 750px) {
+  .banner-container { 
+    margin-top: 80px;  
   }
 
+  .nav-cards{
+    flex-wrap: wrap;
+  }
+  .nav-card-item {
+    flex: 50%;
+    padding-bottom: 50px; //todo. convert to ems
+  }
+
+
 }
+
+@media only screen and (max-width: 450px) {
+  
+  .banner-container { 
+    margin-top: 100px;  
+  }
+
+  .banner-slider { 
+    flex-direction: column;
+  }
+  
+  .slider-text {
+    flex: 100%;
+  }
+  
+  .slider-image {
+    flex: 100%; 
+  }
+  .nav-cards{
+    flex-direction: column; 
+    align-items: center;
+  }
+  .nav-card-item {
+    flex: 100%; 
+  }
+ 
+   
+}
+
+
+

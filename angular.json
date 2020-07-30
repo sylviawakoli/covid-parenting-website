@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "covid-parenting-website"
+    }
+  },
+  "defaultProject": "covid-parenting-website",
+  "cli": {
+    "analytics": false
+  }
 }
