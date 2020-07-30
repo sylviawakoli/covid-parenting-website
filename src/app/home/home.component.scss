@@ -22,6 +22,11 @@
   flex: 50%; //todo. could be larger?
 }
 
+.slide-image {
+  width: calc(60vw - 50px);
+  min-width: 100px;
+  max-width: 500px;
+}
 
 .slider-text .main-header-one {
   font-weight: 300;
@@ -92,7 +97,7 @@
 
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 650px) {
   
   .banner-container { 
     margin-top: 100px;  
