@@ -26,14 +26,22 @@
 .footer-menu-items {
   display: flex;
   flex-direction: column;
+  
 }
 
-.footer-menu-item {
-  padding-left: 50px; //todo convert to ems
+.footer-menu-items a {
   padding-top: 10px;
+  padding-left: 50px; //todo convert to ems
   color: #ffffff;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
+  //font-size: 12px; //todo. verify if good size  
+  transition-duration: 0.4s;
+}
+
+.footer-menu-items a:hover {
+  text-decoration: none;
+  border-bottom: 4px solid #ffffff;
 }
 
 .footer-tail {
