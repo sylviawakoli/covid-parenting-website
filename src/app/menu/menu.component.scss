@@ -35,34 +35,40 @@
 
 .desktop-menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
 }
 
 .desktop-menu a {
+  align-self: center;
   font-weight: 500;
   text-decoration: none;
   color: #0b4061;
-  padding: 10px 25px;
-  align-self: center;
-  border-radius: 25px;
-  //font-size: 10px; //todo. verify if good size  
+  padding: 0px 20px;
+  //font-size: 12px; //todo. verify if good size  
+  transition-duration: 0.4s;
 }
 
 .desktop-menu a:hover {
-  //todo. should be underlines
-  color: #ffffff;
-  background: #ed1651;
+  text-decoration: none;
+  border-bottom: 4px solid #0b4061;
 }
+
 
 .desktop-menu a:active {
   color: #ffffff;
   background: #ed1651;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
 }
 
 /* todo. to be called dynamically in typescript file */
 .menu-item-active {
   color: #ffffff;
-  background: red;
+  background: #ed1651;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
 }
 
 /* mobile menu Overlay (background) */
