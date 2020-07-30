@@ -4,8 +4,8 @@ import { Component, OnInit } from '@angular/core';
 const MENU_ITEMS: { name: string, href?: string }[] = [
   { name: "Home", href: "/" },
   { name: "Tips", href: "/tips" },
-  { name: "For Caseworkers", href: "/caseworkers" },
-  { name: "Public Service Announcements", href: "/psa" },
+  { name: "Caseworkers", href: "/caseworkers" },
+  { name: "Announcements", href: "/psa" },
   { name: "Contributors", href: "/contributors" },
   { name: "Contact us", href: "/contactus" }
 ];

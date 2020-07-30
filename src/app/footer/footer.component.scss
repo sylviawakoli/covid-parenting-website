@@ -15,6 +15,14 @@
   flex: 1;
 }
 
+.footer-head .footer-text h3{
+  font-weight: 500; 
+}
+
+.footer-head .footer-text p{
+  font-weight: 300;
+}
+
 .footer-menu-items {
   display: flex;
   flex-direction: column;
@@ -25,13 +33,13 @@
   padding-top: 10px;
   color: #ffffff;
   text-decoration: none;
-  font-family: "roboto-bold";
+  font-weight: 700;
 }
 
 .footer-tail {
   display: flex;
   justify-content: space-between;
-  font-family: "roboto-bold";
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 450px) {

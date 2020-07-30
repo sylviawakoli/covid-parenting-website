@@ -25,7 +25,7 @@
 .toolbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .plh-logo {
@@ -39,17 +39,22 @@
 }
 
 .desktop-menu a {
+  font-weight: 500;
   text-decoration: none;
-  font-family: "roboto-bold";
   color: #0b4061;
   padding: 10px 25px;
   align-self: center;
   border-radius: 25px;
-  font-size: 30px;
+  //font-size: 10px; //todo. verify if good size  
 }
 
 .desktop-menu a:hover {
   //todo. should be underlines
+  color: #ffffff;
+  background: #ed1651;
+}
+
+.desktop-menu a:active {
   color: #ffffff;
   background: #ed1651;
 }
@@ -90,7 +95,7 @@
   font-size: 36px;
   color: #818181; /* whitish color */
   display: block; /* Display block instead of inline */
-  font-family: "roboto-light";
+  font-weight: 300;
 }
 
 /* Position the close button (top right corner) */
@@ -115,6 +120,10 @@
     display: none;
   }
 
+  .toolbar{
+     justify-content: space-between;
+  }
+
   .desktop-menu {
     display: none;
   }
@@ -122,8 +131,8 @@
   .website-title {
     display: block;
     color: #0b4061;
-    font-family: "roboto-bold";
-    //font-size: 30px; //todo. convert to ems
+    font-weight: 700;
+    //font-size: 30px; 
     align-self: center;
     margin: 0px;
   }
