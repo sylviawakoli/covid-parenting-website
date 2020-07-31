@@ -1,7 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-    padding: 0px;
-    margin: 0px;
-}
+
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.content {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+/** gives any tag custom button look**/
+.btn-container,.btn-container-md ,.btn-container-lg {
+  font-weight: 700;
+  text-decoration: none;
+  padding: 5px 25px;
+  border-radius: 25px;
+  color: #ffffff;
+  background: #ed1651;
+  border: none;
+  text-decoration: none; 
+  transition-duration: 0.4s;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-container-md{
+  padding: 10px 10px;
+  font-size: 14px;
+}
+
+.btn-container-lg{
+  padding: 10px 10px;
+  font-size: 16px;
+}
+
+.btn-container:hover, .btn-container-md:hover, .btn-container-lg:hover {
+  background: #ffffff;
+  color: black;
+  border: 2px solid #ed1651;
+  text-decoration: none; 
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
+    padding: 20px; //todo. convert to ems
+  }
+}

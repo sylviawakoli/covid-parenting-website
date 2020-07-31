@@ -1,5 +1,8 @@
 # CovidParentingWebsite
 
+## View Preview of website as on master [here](http://covid-parenting.idems.international/)
+Also view Netlify control panel [here](https://app.netlify.com/sites/covid19-parenting) (Authorised users only)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
 ## Development server

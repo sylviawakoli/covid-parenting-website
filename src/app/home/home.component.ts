@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Language } from '../tip-sheets/tip-sheets.model';
+import{WebAnalyticsService} from '../web-analytics.service';
 
 @Component({
   selector: 'app-home',
@@ -15,10 +16,13 @@ export class HomeComponent implements OnInit {
     name: "English"
   };
 
-  constructor() {
-  }
+  constructor(public webAnalyticsService: WebAnalyticsService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  //event handler for tracking.
+ public SendDownloadTipSheetsEvent(){ 
+    this.webAnalyticsService.emitAnlayticsEvent("tipsheets_downloads", "downloads", "downloads");
   }
 
 }

@@ -1,0 +1,52 @@
+.contact-container {
+  //margin-top: 30px; 
+  background: #f2f2f2;
+  color: #0b4061;
+}
+
+.home-footer-background {
+  background: #ec1551;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-info {
+  padding-right: 40px;
+  text-align: right;
+  flex: 40%;
+}
+
+.contact-form {
+  flex: 60%;
+}
+.contact-info h1{
+  font-weight: 700;
+}
+
+.contact-info p{
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 750px) {
+  .contact-container {
+    margin-top: 70px;  
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  .contact-content {
+    flex-direction: column;
+  }
+  .contact-content div {
+    flex: 100%;
+  }
+
+  .contact-info {
+    padding-right: 0px;
+    text-align: left; 
+  }
+}
