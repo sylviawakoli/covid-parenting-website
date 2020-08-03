@@ -1,111 +1,187 @@
-.toolbar {
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    justify-content: space-between;
-    font-family: -apple-system, Roboto, 'Helvetica Neue', sans-serif;
+.header-container {
+  height: 120px;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 10px;
 }
 
-.website-title {
-    font-size: 30px;
-    display: none;
-    align-self: center;
-    margin: 20px;
+.header-contents {
+  padding: 0;
+}
+
+.media-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.facebook-icon img {
+  width: 30px;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .plh-logo {
-    width: 100px;
-    height: 80px;
-    display: flex;
-    align-self: center;
+  width: 100px;
+  height: 80px;
 }
 
-.right-container {
-    display: flex;
-    flex-direction: row;
+.desktop-menu {
+  display: flex;
+  flex-direction: row;
 }
 
-.facebook-button {
-    width: 30px;
-    align-self: center;
-    margin: 15px;
-
-    img {
-        width: 30px;
-    }
+.desktop-menu a {
+  align-self: center;
+  font-weight: 500;
+  text-decoration: none;
+  color: #0b4061;
+  padding: 0px 20px;
+  //font-size: 12px; //todo. verify if good size
+  transition-duration: 0.4s;
 }
 
-.menu-button {
-    width: 30px;
-    display: none;
-    align-self: center;
-    margin: 15px;
+.desktop-menu a:hover {
+  text-decoration: none;
+  border-bottom: 4px solid #0b4061;
 }
 
-.menu-items {
-    display: flex;
-
-    .menu-item {
-        color: black;
-        text-decoration: none;
-        display: flex;
-        margin: 15px;
-        align-self: center;
-        border-right: 1px solid black;
-        padding-right: 20px;
-    
-        &:last-of-type {
-            border-right: none;
-        }
-    }
+.desktop-menu a:active {
+  color: #ffffff;
+  background: #ed1651;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
 }
 
-
-
-.top-menu-dropdown {
-    display: none;
-    height: 0px;
-    overflow: hidden;
-    flex-direction: column;
-
-    .menu-item {
-        margin: 20px;
-        font-family: -apple-system, Roboto, 'Helvetica Neue', sans-serif;
-    }
+/* todo. to be called dynamically in typescript file */
+.menu-item-active {
+  color: #ffffff;
+  background: #ed1651;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
 }
 
-@media only screen and (max-width: 850px) {
+/* mobile menu Overlay (background) */
+.mobile-menu-overlay {
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
 
-    .menu-items {
-        .menu-item {
-            margin: 3px;
-        }
-    }
-    
+/* Position the content inside the mobile menu overlay */
+.mobile-menu-overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* important. 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation menu links inside the overlay */
+.mobile-menu-overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181; /* whitish color */
+  display: block; /* Display block instead of inline */
+  font-weight: 300;
+}
+
+/* Position the close button (top right corner) */
+.mobile-menu-overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.website-title {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
 }
 
 @media only screen and (max-width: 750px) {
+  .header-container {
+    height: 100px;
+  }
 
-    .menu-items {
-        display: none;
-    }
+  .plh-logo {
+    width: 90px;
+    height: 70px;
+  }
 
-    .website-title {
-        display: flex;
-    }
 
-    .menu-button {
-        display: flex;
-    }
+  .media-icons {
+    display: none;
+  }
 
-    .top-menu-dropdown {
-        display: flex;
-    }
+  .toolbar {
+    justify-content: space-between;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .website-title {
+    display: block;
+    color: #0b4061;
+    font-weight: 500;
+    font-size: 1.6rem;
+    align-self: center;
+    margin: 0px;
+  }
+
+  .menu-icon {
+    display: block;
+    align-self: center;
+    margin-right: 6px;
+  }
+
+  .menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: #0b4061;
+    margin: 6px 0;
+  }
 }
 
-@media only screen and (max-width: 360px) {
-    .website-title {
-        display: none;
-    }
+@media only screen and (max-width: 450px) {
+   
+  .plh-logo {
+    display: none;
+  }
+
+  .website-title {
+    margin-left: 6px;
+    margin-top: 3px;
+  }
+
+  .website-title h2 {
+    font-size: 1.6rem;
+  }
+
+  .menu-icon div {
+    width: 30px;
+    height: 3px;
+    margin: 3px 0;
+  }
 }

@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
+declare let gtag: Function;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor() {
-    
+  constructor(public router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        //todo. replace the UA with the real one
+        gtag('config', 'UA-159100365-1',
+          {
+            'page_path': event.urlAfterRedirects
+            //todo. we can add more parameter values here like page_title
+          }
+        );
+      }
+    }
+    );
   }
+
 }
