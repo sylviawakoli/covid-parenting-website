@@ -6,9 +6,7 @@
       <div>
         <h2 class="main-header-one">COVID-19:</h2>
         <h2 class="main-header-two">24/7 PARENTING</h2>
-        <h3 class="main-header-three">
-          Proven parenting tips and activities for all ages in worldwide langauges
-        </h3>
+        <h3 class="main-header-three">Proven parenting tips and activities for all ages in worldwide langauges</h3>
         <p>
           Parenting for Lifelong Health provides open-access online parenting
           resources during COVID-19. We are working with the World Health
@@ -57,31 +55,30 @@
 <!-- /Home-Nav-links --->
 
 <div class="tips-background" >  
-   
-  <!--before curve-->
+   <!--before curve-->
    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#ffffff" fill-opacity="1" d="M0,288L48,256C96,224,192,160,288,149.3C384,139,480,181,576,213.3C672,245,768,267,864,282.7C960,299,1056,309,1152,309.3C1248,309,1344,299,1392,293.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> -->
-   <!--   #ffffff-->
    <svg class="tips-curve-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,240C384,256,480,256,576,234.7C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-   
-    <!--Todo this will be replaced with a Tips container-->
-    <div data-aos="zoom-in" data-aos-duration="1000" class="content tips">
-      <h2>Select your language</h2>
-      <h3>
-        Click the links on the right to access the current tip sheets in
-        yourlanguage
-      </h3>
-      <div>
-        Please note that these translations were not created by the World Health
-        Organization (WHO), and WHO is not responsible for the content or accuracy
-        of these translations
+    
+   <div class="content tips-content" data-aos="zoom-in" data-aos-duration="1000" >
+      <div class="tips-info" >
+        <h2>Choose your language</h2>
+        <h3>Click the links on the right to access the current tip sheets in your language </h3>
+        <p>Please note that these translations were not created by the World Health Organization (WHO), and WHO is not responsible for the content or accuracy of these translations </p>
+        <div class="tips-info-question">
+          <div class="tips-info-question-content"> 
+            <h3>Can't find your language?</h3>
+            <p><i>Want to help us with the translations? <br/> <a routerLink="/contactus">Send us a message!</a> </i></p>
+          </div>
+          <div><img src="assets/images/tipsquestion.png"/></div>
+        </div>
+      </div>
+      <div class="tips-sheets">
+        <app-tip-sheets [currentLanguage]="tipSheetLang"></app-tip-sheets>
       </div>
     </div>
-  <!--/end todo Tips container-->
   
-  <!--after curve-->
-    <!--   #0a4160-->
+  <!--after curve--> 
   <svg class="tips-curve-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#0a4160" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,240C384,256,480,256,576,234.7C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-   
 </div>
    
  <!-- footer-->
@@ -90,5 +87,4 @@
   </div> 
   <!--/footer-->
 
-<!-- <app-tip-sheets [currentLanguage]="tipSheetLang"></app-tip-sheets> -->
 

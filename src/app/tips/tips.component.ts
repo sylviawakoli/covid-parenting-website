@@ -13,7 +13,7 @@ import { TipSheetService } from '../tip-sheets/tip-sheet.service';
 })
 export class TipsComponent {
 
-  currentLanguage: Language = {
+  tipSheetLang: Language = {
     code: "en",
     name: "English"
   };
@@ -24,7 +24,7 @@ export class TipsComponent {
       if (paramMap["lang"]) {
         this.tipSheetSerivce.getLanguageByCode(paramMap["lang"])
           .subscribe((lang) => {
-            this.currentLanguage = lang;
+            this.tipSheetLang = lang;
           });
       }
     });

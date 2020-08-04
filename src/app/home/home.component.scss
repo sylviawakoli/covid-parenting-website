@@ -10,7 +10,6 @@
   margin-top: -150px;
 }
 
-
 .tips-curve-top{
   margin-top: -120px;
 }
@@ -47,12 +46,10 @@
 
 .slider-text .main-header-one {
   font-weight: 300;
-  color: #0b4061;
 }
 
 .slider-text .main-header-two {
   font-weight: 700;
-  color: #0b4061; 
 }
 
 .slider-text .main-header-three {
@@ -62,7 +59,6 @@
 
 .slider-text p {
   font-weight: 400;
-  color: #0b4061;
 }
 
 .nav-cards{
@@ -72,7 +68,6 @@
 
 .nav-card-item {
   flex: 1;
-  color: #0b4061;
   text-align: center;
 }
 
@@ -84,13 +79,41 @@
   font-weight: 300;
 }
 
-.tips{
-  /** todo remove. temporary class**/
-  color: #0b4061;
-}
-
 .tips-background{ 
   background: #f2f2f2; 
+}
+
+.tips-content{
+  color: #0b4061;
+  display: flex;
+  flex-direction: row;
+}
+
+.tips-info {
+  padding-right: 40px;
+  text-align: right;
+  flex: 50%;
+}
+
+.tips-sheets {
+  flex: 50%;
+}
+
+.tips-info h3{
+  font-weight: 400;
+}
+
+.tips-info p{
+  font-weight: 300;
+}
+
+.tips-info-question {
+  display: flex;
+  flex-direction: row; 
+}
+
+.tips-info-question-content{
+  padding-right: 10px;;
 }
 
 
@@ -98,7 +121,8 @@
   background: #0a4160;
 }
 
-@media only screen and (max-width: 750px) {
+
+@media only screen and (max-width: 768px) {
   .banner-curve-top{
     margin-bottom: -30px;
   }
@@ -116,13 +140,10 @@
     margin-top: -90px;
   }
   
-  .banner-container { 
-    //margin-top: 80px;  
-  }
-
   .nav-cards{
     flex-wrap: wrap;
   }
+  
   .nav-card-item {
     flex: 50%;
     padding-bottom: 50px; //todo. convert to ems
