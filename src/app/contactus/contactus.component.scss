@@ -1,7 +1,6 @@
 .contact-container {
   //margin-top: 30px; 
   background: #f2f2f2;
-  color: #0b4061;
 }
 
 .home-footer-background {
@@ -20,7 +19,7 @@
 }
 
 .contact-form {
-  flex: 60%;
+  flex: 60%; 
 }
 .contact-info h1{
   font-weight: 700;
@@ -30,9 +29,18 @@
   font-weight: 300;
 }
 
-@media only screen and (max-width: 750px) {
+.contact-curve-bottom{
+  /**because of the send button **/
+  margin-top: -10px;
+}
+
+@media only screen and (max-width: 768px) {
   .contact-container {
     margin-top: 70px;  
+  }
+
+  .contact-curve-bottom{
+    margin-top: -90px;
   }
 }
 
@@ -41,6 +49,7 @@
   .contact-content {
     flex-direction: column;
   }
+
   .contact-content div {
     flex: 100%;
   }
@@ -48,5 +57,9 @@
   .contact-info {
     padding-right: 0px;
     text-align: left; 
+  }
+
+  .contact-curve-bottom{
+    margin-top: -30px;
   }
 }

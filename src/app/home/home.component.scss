@@ -22,12 +22,10 @@
   //margin-top: 130px; 
   margin-top: 30px; 
   background: #ffca04;
-  color: #ffffff;
 }
 
 .banner-slider { 
   display: flex;
-  color: #ffffff; 
 }
 
 .slider-text {
@@ -116,7 +114,6 @@
   padding-right: 10px;;
 }
 
-
 .home-footer-background{
   background: #0a4160;
 }
@@ -143,7 +140,7 @@
   .nav-cards{
     flex-wrap: wrap;
   }
-  
+
   .nav-card-item {
     flex: 50%;
     padding-bottom: 50px; //todo. convert to ems
@@ -175,10 +172,6 @@
     //margin-top: 80px;  
   }
 
-  .banner-container { 
-    //margin-top: 100px;  
-  }
-
   .banner-slider { 
     flex-direction: column;
   }
@@ -190,14 +183,15 @@
   .slider-image {
     flex: 100%; 
   }
+
   .nav-cards{
     flex-direction: column; 
     align-items: center;
   }
+
   .nav-card-item {
     flex: 100%; 
   }
- 
    
 }
 

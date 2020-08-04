@@ -4,7 +4,7 @@
     <a *ngFor="let range of letterRanges" (click)="onLetterRangeClick(range)"
         [class]="range[0] === selectedRange[0] ? 'letter-range selected' : 'letter-range'">
         {{ range[0] }} - {{ range[1] }}
-    </a>
+    </a> 
 </div>
 <div ngbDropdown class="language-dropdown">
     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="tip-sheet-container">
-    <a *ngFor="let tipSheet of tipSheets" class="tip-sheet" [href]="tipSheet.pdfSrc">
+    <a class="tip-sheet" *ngFor="let tipSheet of tipSheets" [href]="tipSheet.pdfSrc">
         <div class="tip-sheet-title">{{ tipSheet.title }}</div>
         <div class="tipsheet-thumbnail">
             <img class="thumbnail-img" src="{{ tipSheet.thumnailSrc }}" />
@@ -26,11 +26,4 @@
 </div>
 <div *ngIf="tipSheets.length < 15">
     <p>Not all 15 tip sheets are available in this language yet.</p>
-</div>
-<div>
-    <p>
-        Please note that these translations were not created by the World Health
-        Organization (WHO), and WHO is not responsible for the content or accuracy
-        of these translations
-    </p>
 </div>

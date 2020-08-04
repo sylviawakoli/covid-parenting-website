@@ -8,7 +8,7 @@
 
 .main-header-two {
   font-weight: 700;
-}
+} 
 
 .main-header-three {
   font-weight: 400;
@@ -19,6 +19,10 @@
   font-weight: 300;
 }
 
+.tips-curve-bottom{
+  margin-top: -120px;
+}
+
 .home-footer-background {
   background: #0a4160;
 }
@@ -26,5 +30,14 @@
 @media only screen and (max-width: 768px) {
   .tips-container {
    margin-top: 30px;
+  }
+  .tips-curve-bottom{
+    margin-top: -90px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .tips-curve-bottom{
+    margin-top: -30px;
   }
 }
