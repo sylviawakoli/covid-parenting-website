@@ -2,8 +2,25 @@
   display: block;
 }
 
+.banner-curve-top{
+  margin-bottom: -50px;
+}
+
+.banner-curve-bottom{
+  margin-top: -150px;
+}
+
+
+.tips-curve-top{
+  margin-top: -120px;
+}
+
+.tips-curve-bottom{
+  margin-top: -120px;
+}
+
 .banner-container {
-  //margin-top: 100px; 
+  //margin-top: 130px; 
   margin-top: 30px; 
   background: #ffca04;
   color: #ffffff;
@@ -82,8 +99,25 @@
 }
 
 @media only screen and (max-width: 750px) {
+  .banner-curve-top{
+    margin-bottom: -30px;
+  }
+  
+  .banner-curve-bottom{
+    margin-top: -100px;
+  }
+
+  .tips-curve-top{
+    margin-top: -100px;
+    margin-bottom: -70px;
+  }
+  
+  .tips-curve-bottom{
+    margin-top: -90px;
+  }
+  
   .banner-container { 
-    margin-top: 80px;  
+    //margin-top: 80px;  
   }
 
   .nav-cards{
@@ -99,8 +133,29 @@
 
 @media only screen and (max-width: 650px) {
   
+  .banner-curve-top{
+    margin-bottom: -10px;
+  }
+  
+  .banner-curve-bottom{
+    margin-top: -50px;
+  }
+
+  .tips-curve-top{
+    margin-top: -30px;
+    margin-bottom: 10px;
+  }
+  
+  .tips-curve-bottom{
+    margin-top: -30px;
+  }
+  
   .banner-container { 
-    margin-top: 100px;  
+    //margin-top: 80px;  
+  }
+
+  .banner-container { 
+    //margin-top: 100px;  
   }
 
   .banner-slider { 
