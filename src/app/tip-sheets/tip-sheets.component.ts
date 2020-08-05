@@ -22,14 +22,18 @@ export class TipSheetsComponent implements OnInit, OnChanges {
     name: "English"
   };
 
+  @Input()
+  viewAllTipSheets: boolean = true;//by default show all tipsheets
+  @Input()
+  maxTipSheetsToShow: number = 6;//by default show tipsheets in batches of 6 rows
+
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] } = {};
 
   tipSheets: TipSheet[] = [];
   visibleTipSheets: TipSheet[] = [];
-  maxTipSheetsToShow: number = 6;//show tipsheets in batches of 6 rows
+  showloadMoreButton: boolean = false;
 
-  //todo. to be input
-  viewAllTipSheets: boolean = true;
+
 
   constructor(private tipSheetService: TipSheetService) {
     this.tipSheetService.getLanguages().subscribe((languages) => {
@@ -53,9 +57,9 @@ export class TipSheetsComponent implements OnInit, OnChanges {
     this.tipSheetService.getTipSheetsForLanguage(language.code).subscribe((sheets) => {
       this.tipSheets = sheets;
       this.visibleTipSheets = [];
-      if(this.viewAllTipSheets){
-        this.visibleTipSheets= this.tipSheets;
-      }else{
+      if (this.viewAllTipSheets) {
+        this.visibleTipSheets = this.tipSheets;
+      } else {
         this.viewMoreTipSheets()
       }
     });
@@ -75,28 +79,30 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   }
 
   public viewMoreTipSheets() {
-    
     if (this.visibleTipSheets.length == 0) {
       this.addElementsToVisibleTipSheets(0);
     } else if (this.visibleTipSheets.length > 0) {
       if (this.visibleTipSheets.length < this.tipSheets.length) {
-        //from last end
-        this.addElementsToVisibleTipSheets(this.visibleTipSheets.length + 1);
+        //from last added  
+        this.addElementsToVisibleTipSheets(this.visibleTipSheets.length );
       }//end inner if
     }//end if
-  
 
-  }
+    this.showloadMoreButton = this.visibleTipSheets.length < this.tipSheets.length;
+
+  }//end method
 
   private addElementsToVisibleTipSheets(startIndex: number) {
-    let i: number;
-    for (i = startIndex; i < this.tipSheets.length; i++) {
-      this.visibleTipSheets.push(this.tipSheets[i]);
-      if (i == this.maxTipSheetsToShow) {
+    let index: number;
+    let counter: number = 0;
+    for (index = startIndex; index < this.tipSheets.length; index++) {
+      if (counter == this.maxTipSheetsToShow) {
         break;
-      }//end if
+      }//end if 
+      this.visibleTipSheets.push(this.tipSheets[index]);
+      counter++;
     }//end for loop
-  }
+  }//end method
 
 }//end class
 

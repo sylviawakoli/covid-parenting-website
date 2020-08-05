@@ -62,7 +62,8 @@
    <div class="content tips-content" data-aos="zoom-in" data-aos-duration="1000" >
       <div class="tips-info" >
         <h2>Choose your language</h2>
-        <h3>Click the links on the right to access the current tip sheets in your language </h3>
+        <h3 class="desktop-tips-info-directions">Click the links on the right to access the current tip sheets in your language </h3>
+        <h3 class="mobile-tips-info-directions">Click the links below to access the current tip sheets in your language</h3>
         <p>Please note that these translations were not created by the World Health Organization (WHO), and WHO is not responsible for the content or accuracy of these translations </p>
         <div class="tips-info-question">
           <div class="tips-info-question-content"> 
@@ -73,7 +74,7 @@
         </div>
       </div>
       <div class="tips-sheets">
-        <app-tip-sheets [currentLanguage]="tipSheetLang"></app-tip-sheets>
+        <app-tip-sheets [currentLanguage]="tipSheetLang" [viewAllTipSheets]="false" [maxTipSheetsToShow] = "2" ></app-tip-sheets>
       </div>
     </div>
   
