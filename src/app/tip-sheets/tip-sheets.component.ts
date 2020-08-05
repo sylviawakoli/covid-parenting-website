@@ -21,16 +21,15 @@ export class TipSheetsComponent implements OnInit, OnChanges {
     code: "en",
     name: "English"
   };
-
   @Input()
-  viewAllTipSheets: boolean = true;//by default show all tipsheets
+  viewAllTipSheets: boolean = true;//used to indicate if the component will show all tipsheets
   @Input()
-  maxTipSheetsToShow: number = 6;//by default show tipsheets in batches of 6 rows
+  maxTipSheetsToShow: number = 6;//used to show tipsheets in batches
 
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] } = {};
 
-  tipSheets: TipSheet[] = [];
-  visibleTipSheets: TipSheet[] = [];
+  tipSheets: TipSheet[] = [];//holds all the tipsheets from the server
+  visibleTipSheets: TipSheet[] = [];//holds the tipsheets being view
   showloadMoreButton: boolean = false;
 
 
@@ -78,6 +77,7 @@ export class TipSheetsComponent implements OnInit, OnChanges {
     }
   }
 
+  //used by the view more button and when the tip sheets are to to be view in batches
   public viewMoreTipSheets() {
     if (this.visibleTipSheets.length == 0) {
       this.addElementsToVisibleTipSheets(0);
@@ -89,7 +89,6 @@ export class TipSheetsComponent implements OnInit, OnChanges {
     }//end if
 
     this.showloadMoreButton = this.visibleTipSheets.length < this.tipSheets.length;
-
   }//end method
 
   private addElementsToVisibleTipSheets(startIndex: number) {
