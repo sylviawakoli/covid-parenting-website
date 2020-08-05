@@ -1,17 +1,31 @@
-.svg{
+.svg {
   display: block;
 }
 
-.banner-container {
-  //margin-top: 100px; 
-  margin-top: 30px; 
-  background: #ffca04;
-  color: #ffffff;
+.banner-curve-top {
+  margin-bottom: -50px;
 }
 
-.banner-slider { 
+.banner-curve-bottom {
+  margin-top: -150px;
+}
+
+.tips-curve-top {
+  margin-top: -120px;
+}
+
+.tips-curve-bottom {
+  margin-top: -120px;
+}
+
+.banner-container {
+  //margin-top: 130px;
+  margin-top: 30px;
+  background: #ffca04;
+}
+
+.banner-slider {
   display: flex;
-  color: #ffffff; 
 }
 
 .slider-text {
@@ -30,32 +44,28 @@
 
 .slider-text .main-header-one {
   font-weight: 300;
-  color: #0b4061;
 }
 
 .slider-text .main-header-two {
   font-weight: 700;
-  color: #0b4061; 
 }
 
 .slider-text .main-header-three {
   font-weight: 500;
-  color: #ed1651; 
+  color: #ed1651;
 }
 
 .slider-text p {
   font-weight: 400;
-  color: #0b4061;
 }
 
-.nav-cards{
+.nav-cards {
   display: flex;
   margin-bottom: 10px;
 }
 
 .nav-card-item {
   flex: 1;
-  color: #0b4061;
   text-align: center;
 }
 
@@ -67,63 +77,150 @@
   font-weight: 300;
 }
 
-.tips{
-  /** todo remove. temporary class**/
+ /* for the tips container*/
+.tips-background {
+  background: #f2f2f2;
+}
+
+.tips-content {
   color: #0b4061;
+  display: flex;
+  flex-direction: row;
 }
 
-.tips-background{ 
-  background: #f2f2f2; 
+.tips-info {
+  padding-right: 40px;
+  text-align: right;
+  flex: 40%;
 }
 
+.tips-sheets {
+  flex: 60%;
+}
 
-.home-footer-background{
+.tips-info h3 {
+  font-weight: 400;
+}
+
+.tips-info p {
+  font-weight: 300;
+}
+
+.tips-info-question {
+  display: flex;
+  flex-direction: row;
+}
+
+.tips-info-question-content {
+  padding-right: 10px;
+}
+
+.desktop-tips-info-directions{
+  display: block;
+}
+
+.mobile-tips-info-directions{
+  display: none;
+}
+
+ /* for the footer container*/
+.home-footer-background {
   background: #0a4160;
 }
 
-@media only screen and (max-width: 750px) {
-  .banner-container { 
-    margin-top: 80px;  
+ /* for tablets*/
+@media only screen and (max-width: 768px) {
+  .banner-curve-top {
+    margin-bottom: -30px;
   }
 
-  .nav-cards{
+  .banner-curve-bottom {
+    margin-top: -100px;
+  }
+
+  .tips-curve-top {
+    margin-top: -100px;
+    margin-bottom: -70px;
+  }
+
+  .tips-curve-bottom {
+    margin-top: -90px;
+  }
+
+  .nav-cards {
     flex-wrap: wrap;
   }
+
   .nav-card-item {
-    flex: 50%;
-    padding-bottom: 50px; //todo. convert to ems
+    flex: 50%; 
+    margin-bottom: 50px;
   }
-
-
 }
 
 @media only screen and (max-width: 650px) {
-  
-  .banner-container { 
-    margin-top: 100px;  
+  .banner-curve-top {
+    margin-bottom: -10px;
   }
 
-  .banner-slider { 
+  .banner-curve-bottom {
+    margin-top: -50px;
+  }
+
+  .tips-curve-top {
+    margin-top: -30px;
+    margin-bottom: 10px;
+  }
+
+  .tips-curve-bottom {
+    margin-top: -30px;
+  }
+
+  .banner-container {
+    //margin-top: 80px;
+  }
+
+  .banner-slider {
     flex-direction: column;
   }
-  
+
   .slider-text {
     flex: 100%;
   }
-  
+
   .slider-image {
-    flex: 100%; 
+    flex: 100%;
   }
-  .nav-cards{
-    flex-direction: column; 
+
+  .nav-cards {
+    flex-direction: column;
     align-items: center;
   }
+
   .nav-card-item {
-    flex: 100%; 
+    flex: 100%;
   }
- 
-   
+
+  /* for the tips container*/
+  .tips-content {
+    flex-direction: column;
+  }
+
+  .tips-info {
+    padding: 0px;
+    text-align: left;
+    flex: 100%;
+  }
+
+  .tips-sheets {
+    flex: 100%;
+  }
+
+  .desktop-tips-info-directions{
+    display: none;
+  }
+  
+  .mobile-tips-info-directions{
+    display: block;
+  }
+
 }
-
-
-

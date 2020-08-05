@@ -1,13 +1,13 @@
 
   <div class="content footer-container">
-    <div class="footer-head">
+    <div data-aos="zoom-in" data-aos-duration="1000" class="footer-head">
       <div>Image Logo here</div>
       <div class="footer-text">
         <h3>Working for families around the globe</h3>
         <p>Parenting for lifelong health is an organisation that strives...</p>
       </div>
       <div class="footer-menu-items">
-        <a *ngFor="let item of menuItems" class="footer-menu-item" [routerLink]="item.href">{{ item.name }}</a>
+        <a *ngFor="let item of menuItems" [routerLink]="item.href">{{ item.name }}</a>
       </div>
     </div>
     
