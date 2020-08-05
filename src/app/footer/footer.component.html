@@ -7,7 +7,7 @@
         <p>Parenting for lifelong health is an organisation that strives...</p>
       </div>
       <div class="footer-menu-items">
-        <a *ngFor="let item of menuItems" class="footer-menu-item" [routerLink]="item.href">{{ item.name }}</a>
+        <a *ngFor="let item of menuItems" [routerLink]="item.href">{{ item.name }}</a>
       </div>
     </div>
     
