@@ -17,13 +17,20 @@
     </div>
 </div>
 <div class="tip-sheet-container">
-    <a class="tip-sheet" *ngFor="let tipSheet of tipSheets" [href]="tipSheet.pdfSrc">
-        <div class="tip-sheet-title">{{ tipSheet.title }}</div>
+    <a class="tip-sheet-card" *ngFor="let tipSheet of visibleTipSheets" [href]="tipSheet.pdfSrc">
+        <div class="tip-sheet-title"><h3>{{ tipSheet.title }}</h3></div>
         <div class="tipsheet-thumbnail">
             <img class="thumbnail-img" src="{{ tipSheet.thumnailSrc }}" />
         </div>
+        <div class="tip-sheet-btn-container"><span class="btn-container tip-sheet-btn">View</span> </div>       
     </a>
+
 </div>
-<div *ngIf="tipSheets.length < 15">
+<div *ngIf="visibleTipSheets.length == tipSheets.length && tipSheets.length < 15">
     <p>Not all 15 tip sheets are available in this language yet.</p>
 </div>
+<div *ngIf="visibleTipSheets.length < tipSheets.length" >
+    <a  href="#" (click)="viewMoreTipSheets()" >See more tip sheets</a>
+</div>
+
+

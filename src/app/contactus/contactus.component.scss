@@ -31,8 +31,8 @@
 
 .contact-curve-bottom{
   /**because of the send button **/
-  //margin-top: -10px;
-  margin-top: -150px;
+  margin-top: -10px;
+  //margin-top: -150px; won't work. Will block button
 }
 
 @media only screen and (max-width: 768px) {
