@@ -10,28 +10,27 @@ import { TipSheetService } from './tip-sheet.service';
   styleUrls: ['./tip-sheets.component.scss']
 })
 export class TipSheetsComponent implements OnInit, OnChanges {
-
-  allLanguages: Language[] = [];
-  selectedRange: string[] = ["A", "F"];
-  letterRanges: string[][] = [["A", "F"], ["G", "L"], ["M", "R"], ["S", "Z"]];
-  dropdownLanguages: Language[] = [];
-
   @Input()
   currentLanguage: Language = {
     code: "en",
     name: "English"
   };
   @Input()
-  viewAllTipSheets: boolean = true;//used to indicate if the component will show all tipsheets
+  viewAllTipSheets: boolean = false;//used to indicate if the component will show all tipsheets
   @Input()
   maxTipSheetsToShow: number = 6;//used to show tipsheets in batches
+
+
+  allLanguages: Language[] = [];
+  selectedRange: string[] = ["A", "F"];
+  letterRanges: string[][] = [["A", "F"], ["G", "L"], ["M", "R"], ["S", "Z"]];
+  dropdownLanguages: Language[] = [];
 
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] } = {};
 
   tipSheets: TipSheet[] = [];//holds all the tipsheets from the server
   visibleTipSheets: TipSheet[] = [];//holds the tipsheets being view
   showloadMoreButton: boolean = false;
-
 
 
   constructor(private tipSheetService: TipSheetService) {

@@ -61,8 +61,7 @@
     //width: 230px; todo. original value
     //height: 180px; todo. original value
     
-    align-self: center;
-    overflow: hidden;
+    align-self: center; 
     border-radius: 10px;
     width: 210px;
     height: 150px;
@@ -72,12 +71,5 @@
     width: 100%;
 }
 
-.tip-sheet-load-more{
-    text-decoration: underline;
-    margin: 10px;
-    cursor: pointer;
-}
-.tip-sheet-load-more:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-} 
+
 
