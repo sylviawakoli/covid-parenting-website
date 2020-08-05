@@ -8,7 +8,7 @@ const MENU_ITEMS: { name: string, href?: string }[] = [
   { name: "Public Service Announcements", href: "/psa" },
   { name: "Contributors", href: "/contributors" },
   { name: "Contact us", href: "/contactus" }
-];
+]; 
 
 @Component({
   selector: 'app-footer',
