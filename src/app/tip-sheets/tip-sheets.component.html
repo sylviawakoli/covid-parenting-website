@@ -1,14 +1,10 @@
-<p>
-    If you cant find a tipsheet in your language, please
-    <a href="https://web.facebook.com/Parentinglh-Parenting-for-Lifelong-Health-PLH-479688329453239?_rdc=1&_rdr">Send us
-        a message on Facebook</a>
-</p>
+
 <header>Select your language</header>
 <div class="lang-letter-ranges">
     <a *ngFor="let range of letterRanges" (click)="onLetterRangeClick(range)"
         [class]="range[0] === selectedRange[0] ? 'letter-range selected' : 'letter-range'">
         {{ range[0] }} - {{ range[1] }}
-    </a>
+    </a> 
 </div>
 <div ngbDropdown class="language-dropdown">
     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
@@ -21,20 +17,20 @@
     </div>
 </div>
 <div class="tip-sheet-container">
-    <a *ngFor="let tipSheet of tipSheets" class="tip-sheet" [href]="tipSheet.pdfSrc">
-        <div class="tip-sheet-title">{{ tipSheet.title }}</div>
+    <a class="tip-sheet-card" *ngFor="let tipSheet of visibleTipSheets" [href]="tipSheet.pdfSrc">
+        <div class="tip-sheet-title"><h4>{{ tipSheet.title }}</h4></div>
         <div class="tipsheet-thumbnail">
             <img class="thumbnail-img" src="{{ tipSheet.thumnailSrc }}" />
         </div>
+        <div class="tip-sheet-btn-container"><span class="btn-container tip-sheet-btn">View</span> </div>       
     </a>
 </div>
-<div *ngIf="tipSheets.length < 15">
+
+<!-- todo. not quite sure about how this should be implemented-->
+<!--<div *ngIf="visibleTipSheets.length == tipSheets.length && tipSheets.length < 15">
     <p>Not all 15 tip sheets are available in this language yet.</p>
-</div>
+</div>-->
+
 <div>
-    <p>
-        Please note that these translations were not created by the World Health
-        Organization (WHO), and WHO is not responsible for the content or accuracy
-        of these translations
-    </p>
+   <span class="tip-sheet-load-more" (click)="viewMoreTipSheets()" *ngIf="showloadMoreButton">See more tip sheets</span> 
 </div>
