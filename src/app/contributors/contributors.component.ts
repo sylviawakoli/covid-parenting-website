@@ -31,7 +31,9 @@ export class ContributorsComponent implements OnInit {
 
   //used by the view more button and when the tip sheets are to to be view in batches
   public viewMoreContributors() {
-      if (this.visibleContributors.length == 0) {
+    console.log("visibleContributors = " + this.visibleContributors.length + " | contributors = "+ this.contributors.length);
+    //todo. left here
+    if (this.visibleContributors.length == 0) {
         this.addElementsToVisibleContributors(0);
       } else if (this.visibleContributors.length > 0) {
         if (this.visibleContributors.length < this.contributors.length) {
