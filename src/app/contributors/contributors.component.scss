@@ -82,14 +82,8 @@
 }
 
 .content {
-  margin-top: -110px;
+  margin-top: -16vw;
   padding-left: 20px;
-}
-
-@media only screen and (max-width: 1250px) {
-  .content {
-    margin-top: -40px;
-  }
 }
 
 /* for tablets screens*/
@@ -100,25 +94,14 @@
   .curve-bottom {
     margin-top: -90px;
   }
-  .content {
-    margin-top: -10px;
-  }  
 }
 
 @media only screen and (max-width: 650px) {
   .curve-bottom {
     margin-top: -30px;
   }
-  .content {
-    margin-top: 5px;
-  }
-}
 
-@media only screen and (max-width: 650px) {
-  .curve-bottom {
-    margin-top: -10px;
-  }
   .content {
-    margin-top: 25px;
+    margin-top: -50px;
   }
 }

@@ -8,6 +8,11 @@
   //padding-left: 0px;
 }
 
+.spacer {
+  height: 120px;
+  display: block;
+}
+
 .header-contents {
   padding: 0px;
   display: flex;
@@ -128,6 +133,10 @@
     //height: 100px;
   }
 
+  .spacer {
+    height: 100px;
+  }
+
   .plh-logo {
     width: 90px;
     height: 70px;
@@ -187,5 +196,9 @@
     width: 30px;
     height: 3px;
     margin: 3px 0;
+  }
+
+  .spacer {
+    height: 60px;
   }
 }
