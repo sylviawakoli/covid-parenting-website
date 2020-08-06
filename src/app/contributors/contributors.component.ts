@@ -16,34 +16,28 @@ export class ContributorsComponent implements OnInit {
 
   contributors: Contributor[] = [];//holds all the contribtors from the server
   visibleContributors: Contributor[] = [];//holds the contribtors being view
-  showloadMoreButton: boolean = false;
+  showloadMoreButton: boolean = true;
   maxContributorsToShow: number = 9;//used to show contributors in batches
 
   constructor() {
-    //load the contributors
-    //todo. this will eventually be inside a call back
-    this.contributors = CONTRIBUTORS_LIST;
-    this.visibleContributors = [];
-    this.viewMoreContributors();
+    this.visibleContributors = CONTRIBUTORS_LIST.sort((a, b) => a.name.localeCompare(b.name));
+    // this.viewMoreContributors();
   }
 
   ngOnInit(): void { }
 
-  //used by the view more button and when the tip sheets are to to be view in batches
   public viewMoreContributors() {
     console.log("visibleContributors = " + this.visibleContributors.length + " | contributors = "+ this.contributors.length);
-    //todo. left here
     if (this.visibleContributors.length == 0) {
         this.addElementsToVisibleContributors(0);
       } else if (this.visibleContributors.length > 0) {
         if (this.visibleContributors.length < this.contributors.length) {
-          //from last added  
           this.addElementsToVisibleContributors(this.contributors.length );
-        }//end inner if
-      }//end if
+        }
+      }
   
       this.showloadMoreButton = this.visibleContributors.length < this.contributors.length;
-    }//end method
+    }
   
     private addElementsToVisibleContributors(startIndex: number) {
       let index: number;
@@ -51,15 +45,14 @@ export class ContributorsComponent implements OnInit {
       for (index = startIndex; index < this.contributors.length; index++) {
         if (counter == this.maxContributorsToShow) {
           break;
-        }//end if 
+        }
         this.visibleContributors.push(this.contributors[index]);
         counter++;
-      }//end for loop
-    }//end method
+      }
+    }
 
-}//end class 
+}
 
-//todo. these will come remotely from a service
 const CONTRIBUTORS_LIST: Contributor[] = [
   { name: "Abraham Likhy",title: "", thumnailSrc: "/" },
   { name: "Adejola Awosanya",title: "", thumnailSrc: "/" },
