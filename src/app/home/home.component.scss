@@ -123,6 +123,11 @@
 .slow-down-video-content {
   margin-top: 60px;
   display: block;
+
+  .youtube-container {
+    max-width: 99%;
+    overflow: hidden;
+  }
 }
 
  /* for the footer container*/
