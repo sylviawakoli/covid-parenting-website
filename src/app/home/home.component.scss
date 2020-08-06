@@ -135,6 +135,24 @@
   background: #0a4160;
 }
 
+.survey-content {
+  margin-bottom: 60px;
+  display: block;
+}
+
+.survey-button {
+  
+  display: block;
+  background-color: #33aa33;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 22px;
+  padding-left: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+
 /* for tablets*/
 @media only screen and (max-width: 768px) {
   .banner-curve-top {
