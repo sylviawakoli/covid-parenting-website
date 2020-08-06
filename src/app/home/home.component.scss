@@ -1,10 +1,10 @@
 
 .banner-curve-top {
-  margin-bottom: -50px;
+  margin-bottom: 0px;
 }
 
 .banner-curve-bottom {
-  margin-top: -118px;
+  margin-top: -80px;
 }
 
 .tips-curve-top {
@@ -138,11 +138,11 @@
  /* for tablets*/
 @media only screen and (max-width: 768px) {
   .banner-curve-top {
-    margin-bottom: -30px;
+    margin-bottom: -20px;
   }
 
   .banner-curve-bottom {
-    margin-top: -100px;
+    margin-top: -65px;
   }
 
   .tips-curve-top {
@@ -166,11 +166,11 @@
 
 @media only screen and (max-width: 650px) {
   .banner-curve-top {
-    margin-bottom: -10px;
+    margin-bottom: 0px;
   }
 
   .banner-curve-bottom {
-    margin-top: -30px;
+    margin-top: -25px;
   }
 
   .tips-curve-top {
@@ -254,9 +254,36 @@
 
 @media only screen and (min-width: 650px) {
   .partner-logos-container {
+    margin-top: -40px;
+
     img {
       max-width: 48%;
       padding: 20px;
     }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .banner-curve-top {
+    margin-top: -40px;
+  }
+
+  .partner-logos-container {
+    margin-top: -70px;
+
+    img {
+      max-width: 48%;
+      padding: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .banner-curve-top {
+    margin-top: -140px;
+  }
+
+  .partner-logos-container {
+    margin-top: -120px;
   }
 }
