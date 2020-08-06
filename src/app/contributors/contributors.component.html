@@ -7,16 +7,20 @@
       <h3 class="main-header-three">We wish to thank the following organisations and individuals for translating and reviewing our materials. Thank you!</h3>
       <p class="contributors-info"><i>Can't find your name? Want us to update your affiliation? <a routerLink="/contactus">please Send us a message!</a></i></p>       
       <div class="contacts-container">
-        <div class="contact-card" *ngFor="let contributor of visibleContributors" >
-           
-            <div class="contact-thumbnail">
-                 <!--todo get the contact image sources-->
-                  <!--<img class="thumbnail-img" src="{{ tipSheet.thumnailSrc }}" /> -->
+        <ul>
+          <li *ngFor="let contributor of visibleContributors">
+            {{ contributor.name }} <span *ngIf="contributor.title" >-</span> {{ contributor.title }}
+          </li>
+        </ul>
+          <!--todo get the contact image sources-->
+        <!-- <div class="contact-card" *ngFor="let contributor of visibleContributors" >
+            <div class="contact-thumbnail">         
+                  <img class="thumbnail-img" src="{{ tipSheet.thumnailSrc }}" />
                   <img class="thumbnail-img" src="assets/images/iconcontact.png" />
             </div>   
             <div class="contact-name">{{ contributor.name }}</div> 
             <div class="contact-title">{{ contributor.title }}</div> 
-        </div>
+        </div>-->
       </div>
       <div>
         <span class="btn-load-more" (click)="viewMoreContributors()" *ngIf="showloadMoreButton">See more contributors</span> 

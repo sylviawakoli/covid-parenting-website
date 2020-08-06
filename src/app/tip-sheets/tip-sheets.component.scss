@@ -50,8 +50,8 @@
 }
 
 .tip-sheet-btn-container{
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     display: flex;
     justify-content: center;
 }
@@ -68,7 +68,9 @@
 }
 
 .thumbnail-img{
-    width: 100%;
+   // width: 100%;
+   width: 210px;
+   height: 150px;
 }
 
 
