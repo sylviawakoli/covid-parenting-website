@@ -20,7 +20,7 @@ export class TipsComponent {
 
   constructor(private route: ActivatedRoute, private tipSheetSerivce: TipSheetService) {
     this.route.queryParams.subscribe((paramMap) => {
-      console.log(paramMap);
+      //console.log(paramMap);
       if (paramMap["lang"]) {
         this.tipSheetSerivce.getLanguageByCode(paramMap["lang"])
           .subscribe((lang) => {

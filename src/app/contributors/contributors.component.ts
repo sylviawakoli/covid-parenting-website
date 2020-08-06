@@ -57,7 +57,7 @@ export class ContributorsComponent implements OnInit {
       }//end for loop
     }//end method
 
-}//end class
+}//end class 
 
 //todo. these will come remotely from a service
 const CONTRIBUTORS_LIST: Contributor[] = [
