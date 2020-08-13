@@ -7,7 +7,11 @@
     "build": "ng build --prod --aot --buildOptimizer",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy-to-2": "npm run build && gsutil -m rsync -d -R ./dist/covid-parenting-website gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/",
+    "deploy-from-2-to-1": "gsutil -m rsync -R gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/",
+    "deploy-from-1-to-2": "gsutil -m rsync -R gs://covid-website-storage1 gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/",
+    "deploy-cleanup-1": "gsutil -m rsync -R -d gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/"
   },
   "private": true,
   "dependencies": {
