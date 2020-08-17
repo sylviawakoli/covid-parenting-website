@@ -12,7 +12,7 @@ export class AppComponent {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);
-        gtag('config', 'UA-159100365-1',
+        gtag('config', 'UA-171116573-2',
           {
             'page_path': event.urlAfterRedirects
             //todo. we can add more parameter values here like page_title
