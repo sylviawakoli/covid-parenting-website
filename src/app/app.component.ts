@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-
+import * as AOS from 'aos';
 declare let gtag: Function;
 @Component({
   selector: 'app-root',
@@ -21,6 +21,10 @@ export class AppComponent {
       }
     }
     );
+  }
+
+  ngOnInit() {
+    AOS.init();
   }
 
 }

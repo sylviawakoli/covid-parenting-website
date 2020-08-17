@@ -1,7 +1,14 @@
 .contact-container {
   //margin-top: 30px; 
   background: #f2f2f2;
-  color: #0b4061;
+}
+
+.contact-container {
+  margin-top: 20px;
+
+  .content {
+    padding-top: 20px;
+  }
 }
 
 .home-footer-background {
@@ -10,17 +17,43 @@
 
 .contact-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .contact-info {
   padding-right: 40px;
-  text-align: right;
+  text-align: left;
   flex: 40%;
 }
 
+.facebook-msg-button {
+  display: block;
+  background-color: #0084ff;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 22px;
+  padding-left: 20px;
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.survey-button {
+  
+  display: block;
+  background-color: #33aa33;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 22px;
+  padding-left: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+
 .contact-form {
-  flex: 60%;
+  flex: 60%; 
 }
 .contact-info h1{
   font-weight: 700;
@@ -30,9 +63,16 @@
   font-weight: 300;
 }
 
-@media only screen and (max-width: 750px) {
-  .contact-container {
-    margin-top: 70px;  
+.contact-curve-bottom{
+  /**because of the send button **/
+  margin-top: -10px;
+  //margin-top: -150px; won't work. Will block button
+}
+
+@media only screen and (max-width: 768px) {
+
+  .contact-curve-bottom{
+    margin-top: -65px;
   }
 }
 
@@ -41,6 +81,7 @@
   .contact-content {
     flex-direction: column;
   }
+
   .contact-content div {
     flex: 100%;
   }
@@ -48,5 +89,9 @@
   .contact-info {
     padding-right: 0px;
     text-align: left; 
+  }
+
+  .contact-curve-bottom{
+    margin-top: -30px;
   }
 }

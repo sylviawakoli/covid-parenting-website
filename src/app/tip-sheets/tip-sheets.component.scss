@@ -1,38 +1,3 @@
-* {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-        "Helvetica Neue", sans-serif;
-}
-
-.tip-sheet {
-    color: black;
-    background-color: lightgrey;
-    text-decoration: none;
-    border-radius: 20px;
-    margin: 20px;
-    display: block;
-    padding: 10px;
-    box-sizing: content-box;
-
-    .tip-sheet-title {
-        font-size: 15px;
-        text-align: center;
-        max-width: 230px;
-    }
-
-    .tipsheet-thumbnail {
-        width: 230px;
-        height: 180px;
-        overflow: hidden;
-        border-radius: 10px;
-    }
-    
-}
-
-.tip-sheet-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 900px;
-}
 
 .lang-letter-ranges {
     display: flex;
@@ -54,3 +19,59 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.tip-sheet-container {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.tip-sheet-card {
+    flex: 1; /* make the cards equal in size  */
+    text-decoration: none;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    margin: 10px;
+    color: #0b4061; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px; /* 5px rounded corners */
+    background: #ffffff;
+    transition: 0.4s;
+}
+
+.tip-sheet-card:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}  
+
+.tip-sheet-title {
+    //font-size: 15px;
+    text-align: center;
+    padding-top: 8px; 
+}
+
+.tip-sheet-btn-container{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.tipsheet-thumbnail{
+    //width: 230px; todo. original value
+    //height: 180px; todo. original value
+    
+    align-self: center; 
+    border-radius: 10px;
+    width: 210px;
+    height: 150px;
+}
+
+.thumbnail-img{
+   // width: 100%;
+   width: 210px;
+   height: 150px;
+}
+
+
+

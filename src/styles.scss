@@ -1,12 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Importing Bootstrap SCSS file. */
-@import "~bootstrap/scss/bootstrap";
+
+@import "~bootstrap/scss/bootstrap"; /* Importing Bootstrap SCSS file. */
+@import "~aos/dist/aos.css"; /* Importing AOS CSS file. */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
 body {
   padding: 0px;
   margin: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #0b4061; 
 }
 
 .content {
@@ -44,14 +47,25 @@ body {
 
 .btn-container:hover, .btn-container-md:hover, .btn-container-lg:hover {
   background: #ffffff;
-  color: black;
+  color: #0b4061; 
   border: 2px solid #ed1651;
   text-decoration: none; 
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+.btn-load-more{
+  text-decoration: underline;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn-load-more:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+} 
+
+
 @media only screen and (max-width: 900px) {
   .content {
-    padding: 20px; //todo. convert to ems
+    padding: 20px; 
   }
 }

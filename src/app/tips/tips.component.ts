@@ -13,18 +13,18 @@ import { TipSheetService } from '../tip-sheets/tip-sheet.service';
 })
 export class TipsComponent {
 
-  currentLanguage: Language = {
+  tipSheetLang: Language = {
     code: "en",
     name: "English"
   };
 
   constructor(private route: ActivatedRoute, private tipSheetSerivce: TipSheetService) {
     this.route.queryParams.subscribe((paramMap) => {
-      console.log(paramMap);
+      //console.log(paramMap);
       if (paramMap["lang"]) {
         this.tipSheetSerivce.getLanguageByCode(paramMap["lang"])
           .subscribe((lang) => {
-            this.currentLanguage = lang;
+            this.tipSheetLang = lang;
           });
       }
     });

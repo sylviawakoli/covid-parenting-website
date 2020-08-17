@@ -7,7 +7,10 @@
     "build": "ng build --prod --aot --buildOptimizer",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "upload": "npm run build && gsutil -m -h \"Cache-Control:no-cache,max-age=0\" rsync -d -R ./dist/covid-parenting-website gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/ && open-cli http://covidp2.idems.international",
+    "golive": "gsutil -m -h \"Cache-Control:public, max-age=600\" rsync -R gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/ && open-cli https://covid19parenting.com",
+    "deploy-cleanup": "gsutil -m -h \"Cache-Control:public, max-age=600\" rsync -R -d gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +25,7 @@
     "@angular/router": "~9.1.11",
     "@ionic/angular": "^5.2.2",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.4.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
@@ -45,6 +49,7 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "typescript": "~3.8.3",
+    "open-cli": "~6.0.1"
   }
 }

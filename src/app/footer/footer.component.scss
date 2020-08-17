@@ -26,7 +26,6 @@
 .footer-menu-items {
   display: flex;
   flex-direction: column;
-  
 }
 
 .footer-menu-items a {
@@ -55,9 +54,9 @@
     flex-direction: column;
   }
 
-  .footer-menu-item {
+  .footer-menu-items a {
+    padding-top: 10px;
     padding-left: 0px; 
-    padding-top: 10px;//todo convert to ems  
   }
 }
 
@@ -68,22 +67,3 @@
   }
 }
 
-
-
-
-/** To Be Deleted**/
-
-/** 
-.footer-div {
-  width: 60%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.footer-text {
-  margin-left: 10px;
-  text-align: center;
-  font-size: 20px;
-  margin-right: 10px;
-}
-**/

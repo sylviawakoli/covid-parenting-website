@@ -1,17 +1,27 @@
-.svg{
-  display: block;
+.banner-curve-top {
+  margin-bottom: 0px;
+  position: absolute;
+}
+
+.banner-curve-bottom {
+  margin-top: -80px;
+}
+
+.tips-curve-top {
+  margin-top: -120px;
+}
+
+.tips-curve-bottom {
+  margin-top: -120px;
 }
 
 .banner-container {
-  //margin-top: 100px; 
-  margin-top: 30px; 
+  margin-top: 10px;
   background: #ffca04;
-  color: #ffffff;
 }
 
-.banner-slider { 
+.banner-slider {
   display: flex;
-  color: #ffffff; 
 }
 
 .slider-text {
@@ -25,37 +35,34 @@
 .slide-image {
   width: calc(60vw - 50px);
   min-width: 100px;
-  max-width: 500px;
+  max-width: 440px;
 }
 
-.slider-text .main-header-one {
+.main-header-one {
   font-weight: 300;
-  color: #0b4061;
 }
 
-.slider-text .main-header-two {
+.main-header-two {
   font-weight: 700;
-  color: #0b4061; 
 }
 
-.slider-text .main-header-three {
+.main-header-three {
   font-weight: 500;
-  color: #ed1651; 
+  color: #ed1651;
 }
 
 .slider-text p {
   font-weight: 400;
-  color: #0b4061;
 }
 
-.nav-cards{
+.nav-cards {
   display: flex;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .nav-card-item {
   flex: 1;
-  color: #0b4061;
   text-align: center;
 }
 
@@ -67,63 +74,237 @@
   font-weight: 300;
 }
 
-.tips{
-  /** todo remove. temporary class**/
+/* for the tips container*/
+.tips-background {
+  background: #f2f2f2;
+}
+
+.tips-content {
   color: #0b4061;
+  display: flex;
+  flex-direction: row;
 }
 
-.tips-background{ 
-  background: #f2f2f2; 
+.tips-info {
+  padding-right: 40px;
+  text-align: right;
+  flex: 40%;
 }
 
+.tips-sheets {
+  flex: 60%;
+}
 
-.home-footer-background{
+.tips-info h3 {
+  font-weight: 400;
+}
+
+.tips-info p {
+  font-weight: 300;
+}
+
+.tips-info-question {
+  display: flex;
+  flex-direction: row;
+}
+
+.tips-info-question-content {
+  padding-right: 10px;
+}
+
+.desktop-tips-info-directions {
+  display: block;
+}
+
+.mobile-tips-info-directions {
+  display: none;
+}
+
+.slow-down-video-content {
+  margin-top: 60px;
+  display: block;
+
+  .youtube-container {
+    max-width: 99%;
+    overflow: hidden;
+  }
+}
+
+/* for the footer container*/
+.home-footer-background {
   background: #0a4160;
 }
 
-@media only screen and (max-width: 750px) {
-  .banner-container { 
-    margin-top: 80px;  
+.survey-content {
+  margin-bottom: 60px;
+  display: block;
+}
+
+.survey-button {
+  
+  display: block;
+  background-color: #33aa33;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 22px;
+  padding-left: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+
+/* for tablets*/
+@media only screen and (max-width: 768px) {
+  .banner-curve-top {
+    margin-bottom: -20px;
   }
 
-  .nav-cards{
-    flex-wrap: wrap;
+  .banner-curve-bottom {
+    margin-top: -65px;
   }
+
+  .tips-curve-top {
+    margin-top: -100px;
+    margin-bottom: -70px;
+  }
+
+  .tips-curve-bottom {
+    margin-top: -90px;
+  }
+
+  .nav-cards {
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+
   .nav-card-item {
     flex: 50%;
-    padding-bottom: 50px; //todo. convert to ems
+    margin-bottom: 50px;
   }
-
-
 }
 
 @media only screen and (max-width: 650px) {
-  
-  .banner-container { 
-    margin-top: 100px;  
+  .banner-curve-top {
+    margin-bottom: 0px;
   }
 
-  .banner-slider { 
+  .banner-curve-bottom {
+    margin-top: -20px;
+  }
+
+  .tips-curve-top {
+    margin-top: -30px;
+    margin-bottom: 10px;
+  }
+
+  .tips-curve-bottom {
+    margin-top: -30px;
+  }
+
+  .banner-slider {
     flex-direction: column;
   }
-  
+
   .slider-text {
     flex: 100%;
   }
-  
+
   .slider-image {
-    flex: 100%; 
+    flex: 100%;
   }
-  .nav-cards{
-    flex-direction: column; 
+
+  .nav-cards {
+    flex-direction: column;
     align-items: center;
+    margin-top: 0px;
   }
+
   .nav-card-item {
-    flex: 100%; 
+    flex: 100%;
   }
- 
-   
+
+  /* for the tips container*/
+  .tips-content {
+    flex-direction: column;
+  }
+
+  .tips-info {
+    padding: 0px;
+    text-align: left;
+    flex: 100%;
+  }
+
+  .tips-sheets {
+    flex: 100%;
+  }
+
+  .desktop-tips-info-directions {
+    display: none;
+  }
+
+  .mobile-tips-info-directions {
+    display: block;
+  }
 }
 
+// UKRI and PLH Digital group logos
+.supporters-content {
+  width: 100%;
+  display: block;
 
+  .supporters-logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
+    img {
+      margin: 20px;
+      max-width: 100px;
+    }
+  }
+}
+
+// Dark Blue logos
+.partner-logos-container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .partner-logos-container {
+    img {
+      max-width: 48%;
+      padding: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .banner-curve-top {
+    margin-top: -110px;
+  }
+
+  .nav-cards {
+    margin-top: -30px;
+  }
+}
+
+.contact-us-link {
+  font-size: 30px;
+}
