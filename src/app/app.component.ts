@@ -11,7 +11,7 @@ export class AppComponent {
   constructor(public router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        //todo. replace the UA with the real one
+        window.scrollTo(0, 0);
         gtag('config', 'UA-159100365-1',
           {
             'page_path': event.urlAfterRedirects
