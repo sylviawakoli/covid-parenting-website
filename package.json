@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "upload": "npm run build && gsutil -m -h \"Cache-Control:no-cache,max-age=0\" rsync -d -R ./dist/covid-parenting-website gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/ && open-cli http://covidp2.idems.international",
+    "upload": "npm run build && gsutil -m -h \"Cache-Control:no-cache,max-age=0\" rsync -d -R -c ./dist/covid-parenting-website gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/ && open-cli http://covidp2.idems.international",
     "golive": "gsutil -m -h \"Cache-Control:public, max-age=600\" rsync -R gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/ && open-cli https://covid19parenting.com",
     "deploy-cleanup": "gsutil -m -h \"Cache-Control:public, max-age=600\" rsync -R -d gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/"
   },
