@@ -39,6 +39,19 @@
   margin-bottom: 40px;
 }
 
+.email-button {
+  display: block;
+  background-color: #ec1551;
+  color: white;
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 22px;
+  padding-left: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
 .survey-button {
   
   display: block;
@@ -77,6 +90,11 @@
 }
 
 @media only screen and (max-width: 450px) {
+
+  .email-button {
+    padding: 6px;
+    font-size: 18px;
+  }
 
   .contact-content {
     flex-direction: column;
