@@ -3,6 +3,7 @@ import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 import { Language, LanguageCSVRow, TipSheet } from './tip-sheets.model';
 import { Observable, of } from 'rxjs';
 import { shareReplay, map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +40,7 @@ export class TipSheetService {
               this.tipSheetsByLanguage[langCode].push({
                 title: row.title,
                 thumnailSrc: `/assets/images/tip_sheet_thumbnails/${row.tipSheetNumber}.webp`,
-                pdfSrc: `/assets/tip_sheets/${langCode}/${row.tipSheetNumber}.pdf`
+                pdfSrc: `${environment.pdfBaseUrl}${langCode}/${row.tipSheetNumber}.pdf`
               });
             }
           });

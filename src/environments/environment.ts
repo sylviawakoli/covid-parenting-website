@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  pdfBaseUrl: 'http://storage.googleapis.com/covid-website-pdfs1/assets/tip_sheets/'
 };
 
 /*
