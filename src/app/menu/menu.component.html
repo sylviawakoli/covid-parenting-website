@@ -1,17 +1,14 @@
 
 <nav  class="navbar fixed-top">
   <div class="content header-contents">
-    <div class="media-icons">
-      <a class="facebook-icon" href="https://www.facebook.com/PLH-Parenting-for-Lifelong-Health-479688329453239"><img src="assets/images/fb_icon.svg"  /></a>
-     <!--todo. other social media icons here-->
-    </div>
-
     <div class="toolbar">
-      <img class="plh-logo" src="assets/images/plh_logo1.svg" />
+      <img class="plh-logo" alt="Parenting for Lifelong Health Logo" src="assets/images/plh_logo1.svg" />
       <div class="website-title"><h2>Covid 19 Parenting</h2></div>
       <div class="desktop-menu">
         <a *ngFor="let item of menuItems" [routerLink]="item.href" >{{ item.name }}</a>
       </div>
+      <app-social-media-icons placement="toolbar"></app-social-media-icons>
+      
       <div class="menu-icon" (click)="menuDropdownOpen = true">
         <div></div>
         <div></div>
@@ -26,6 +23,9 @@
        <!-- menu nav links content -->
       <div class="mobile-menu-overlay-content">
         <a *ngFor="let item of menuItems" [routerLink]="item.href" (click)="menuDropdownOpen = false" >{{ item.name }}</a>
+        <div class="social-media-mobile">
+          <app-social-media-icons placement="mobile-menu"></app-social-media-icons>
+        </div>
       </div>
     </div>
   </div>

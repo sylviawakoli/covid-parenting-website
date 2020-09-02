@@ -17,7 +17,8 @@ const MENU_ITEMS: { name: string, href?: string }[] = [
 })
 export class FooterComponent implements OnInit {
 
-  menuItems = MENU_ITEMS;//todo. globalise source of menu items. should come from central place 
+  currentYear = new Date().getFullYear();
+  menuItems = MENU_ITEMS;
 
   constructor() { }
 
