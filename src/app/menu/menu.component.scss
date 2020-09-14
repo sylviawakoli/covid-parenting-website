@@ -20,15 +20,12 @@
   width: 100%;
 }
 
-.media-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.facebook-icon img {
-  width: 30px;
+.social-media-mobile {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding-bottom: 40px;
 }
 
 .toolbar {
@@ -128,7 +125,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .header-container {
     //height: 100px;
   }
@@ -142,7 +139,7 @@
     height: 70px;
   }
 
-  .media-icons {
+  .social-media-icons {
     display: none;
   }
 

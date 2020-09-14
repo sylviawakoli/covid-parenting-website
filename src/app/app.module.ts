@@ -18,6 +18,7 @@ import { TipSheetsComponent } from './tip-sheets/tip-sheets.component';
 import { TipSheetService } from './tip-sheets/tip-sheet.service';
 import {WebAnalyticsService} from './web-analytics.service';
 import { ContactusComponent } from './contactus/contactus.component';
+import { SocialMediaIconsComponent } from './social-media-icons/social-media-icons.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     HomeComponent,
     TipsComponent,
     TipSheetsComponent,
-    ContactusComponent
+    ContactusComponent,
+    SocialMediaIconsComponent
   ],
   imports: [
     BrowserModule,
