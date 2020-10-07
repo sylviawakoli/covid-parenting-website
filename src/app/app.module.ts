@@ -19,6 +19,9 @@ import { TipSheetService } from './tip-sheets/tip-sheet.service';
 import {WebAnalyticsService} from './web-analytics.service';
 import { ContactusComponent } from './contactus/contactus.component';
 import { SocialMediaIconsComponent } from './social-media-icons/social-media-icons.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
+import { BlogComponent } from './blog/blog.component';
+import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +35,17 @@ import { SocialMediaIconsComponent } from './social-media-icons/social-media-ico
     TipsComponent,
     TipSheetsComponent,
     ContactusComponent,
-    SocialMediaIconsComponent
+    SocialMediaIconsComponent,
+    BlogComponent,
+    BlogPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ScullyLibModule
   ],
   providers: [
     SpreadsheetService,
