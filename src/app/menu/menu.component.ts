@@ -24,9 +24,5 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
- 
-  //todo. function that listens for on clicks of the items for web tracking
-
-
 }
+
