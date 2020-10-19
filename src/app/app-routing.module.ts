@@ -6,6 +6,8 @@ import { TipsComponent } from './tips/tips.component';
 import { PsaComponent } from './psa/psa.component';
 import { CaseworkersComponent } from './caseworkers/caseworkers.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 
 
 const routes: Routes = [
@@ -35,6 +37,17 @@ const routes: Routes = [
     component: ContactusComponent
   },
   {
+    path: "blog",
+    component: BlogComponent,
+    pathMatch: "full"
+  },
+  {
+    path: "blog/:slug",
+    component: BlogPostComponent,
+    pathMatch: "full"
+  },
+  {
+
     path: "",
     redirectTo: "home",
     pathMatch: "full",
@@ -42,7 +55,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

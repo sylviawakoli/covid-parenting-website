@@ -7,7 +7,7 @@ const MENU_ITEMS: { name: string, href?: string }[] = [
   { name: "Caseworkers", href: "/caseworkers" },
   { name: "Announcements", href: "/psa" },
   { name: "Contributors", href: "/contributors" },
-  { name: "Your Opinion Matters", href: "/contactus" }
+  { name: "Your Opinion Matters!", href: "/contactus" }
 ];
 
 @Component({
@@ -24,9 +24,5 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
- 
-  //todo. function that listens for on clicks of the items for web tracking
-
-
 }
+
