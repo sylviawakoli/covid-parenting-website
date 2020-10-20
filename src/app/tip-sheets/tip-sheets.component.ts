@@ -3,6 +3,7 @@ import { Language, TipSheet, LanguageCSVRow } from './tip-sheets.model';
 import { HttpClient } from '@angular/common/http';
 import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 import { TipSheetService } from './tip-sheet.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tip-sheets',
@@ -31,13 +32,13 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   tipSheets: TipSheet[] = [];//holds all the tipsheets from the server
   visibleTipSheets: TipSheet[] = [];//holds the tipsheets being view
   showloadMoreButton: boolean = false;
+  tipSheetsSubscription: Subscription;
 
 
   constructor(private tipSheetService: TipSheetService) {
     this.tipSheetService.getLanguages().subscribe((languages) => {
       this.allLanguages = languages;
       this.onLetterRangeClick(this.letterRanges[0], false);
-      this.changeLanguage(this.currentLanguage);
     });
   }
 
@@ -46,14 +47,19 @@ export class TipSheetsComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.currentLanguage) {
-      this.changeLanguage(this.currentLanguage);
+      this.changeLanguage(changes.currentLanguage.currentValue);
     }
   }
 
   changeLanguage(language: Language) {
+    console.log("Change language ", language);
     this.currentLanguage = language;
-    this.tipSheetService.getTipSheetsForLanguage(language.code).subscribe((sheets) => {
+    if (this.tipSheetsSubscription) {
+      this.tipSheetsSubscription.unsubscribe();
+    }
+    this.tipSheetsSubscription = this.tipSheetService.getTipSheetsForLanguage(language.code).subscribe((sheets) => {
       this.tipSheets = sheets;
+      console.log("Tip sheets set", sheets);
       this.visibleTipSheets = [];
       if (this.viewAllTipSheets) {
         this.visibleTipSheets = this.tipSheets;

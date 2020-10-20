@@ -64,6 +64,22 @@ export class TipSheetService {
       );
   }
 
+  public searchForLanguageByName(langName: string): Observable<Language> {
+    if (this.languagesByCode) {
+      return of(Object.keys(this.languagesByCode)
+        .map((code) => this.languagesByCode[code])
+        .find((lang) => lang.name.toLowerCase().indexOf(langName.toLowerCase()) > -1));
+    }
+    return this.fetchTipSheets()
+      .pipe(
+        map(() => {
+          return Object.keys(this.languagesByCode)
+            .map((code) => this.languagesByCode[code])
+            .find((lang) => lang.name.toLowerCase().indexOf(langName.toLowerCase()) > -1);
+        })
+      );
+  }
+
   public getLanguageByCode(langCode: string): Observable<Language> {
     if (this.languagesByCode && this.languagesByCode[langCode]) {
       return of(this.languagesByCode[langCode]);

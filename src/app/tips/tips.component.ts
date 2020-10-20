@@ -21,10 +21,29 @@ export class TipsComponent {
   constructor(private route: ActivatedRoute, private tipSheetSerivce: TipSheetService) {
     this.route.queryParams.subscribe((paramMap) => {
       //console.log(paramMap);
-      if (paramMap["lang"]) {
-        this.tipSheetSerivce.getLanguageByCode(paramMap["lang"])
+      if (paramMap["langCode"]) {
+        this.tipSheetSerivce.getLanguageByCode(paramMap["langCode"])
           .subscribe((lang) => {
-            this.tipSheetLang = lang;
+            if (lang) {
+              this.tipSheetLang = lang;
+            } else {
+              this.tipSheetLang = {
+                code: "en",
+                name: "English"
+              };
+            }
+          });
+      } else if (paramMap["langName"]) {
+        this.tipSheetSerivce.searchForLanguageByName(paramMap["langName"])
+          .subscribe((lang) => {
+            if (lang) {
+              this.tipSheetLang = lang;
+            } else {
+              this.tipSheetLang = {
+                code: "en",
+                name: "English"
+              };
+            }
           });
       }
     });
