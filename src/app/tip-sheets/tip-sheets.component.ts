@@ -102,5 +102,9 @@ export class TipSheetsComponent implements OnInit, OnChanges {
     }//end for loop
   }//end method
 
+  public openTipSheetPDF(tipSheet: TipSheet) {
+    window.open(tipSheet.pdfSrc, "__blank");
+  }
+
 }//end class
 
