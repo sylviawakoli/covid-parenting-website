@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="tip-sheet-container">
-    <a class="tip-sheet-card" *ngFor="let tipSheet of visibleTipSheets" [href]="tipSheet.pdfSrc">
+    <a class="tip-sheet-card" *ngFor="let tipSheet of visibleTipSheets" (click)="openTipSheetPDF(tipSheet)">
         <div class="tip-sheet-title"><h4>{{ tipSheet.title }}</h4></div>
         <div class="tipsheet-thumbnail">
             <img class="thumbnail-img" src="{{ tipSheet.thumnailSrc }}" />
