@@ -1,8 +1,10 @@
-import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges, Output, EventEmitter } from '@angular/core';
 import { Language, TipSheet, LanguageCSVRow } from './tip-sheets.model';
 import { HttpClient } from '@angular/common/http';
 import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 import { TipSheetService } from './tip-sheet.service';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tip-sheets',
@@ -20,10 +22,9 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
   maxTipSheetsToShow: number = 6;//used to show tipsheets in batches
 
-
   allLanguages: Language[] = [];
   selectedRange: string[] = ["A", "F"];
-  letterRanges: string[][] = [["A", "F"], ["G", "L"], ["M", "R"], ["S", "Z"]];
+  letterRanges: string[][] = [["A", "B"], ["C", "F"], ["G", "J"], ["K", "L"], ["M", "P"], ["R", "S"], ["T", "Z"]];
   dropdownLanguages: Language[] = [];
 
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] } = {};
@@ -31,13 +32,13 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   tipSheets: TipSheet[] = [];//holds all the tipsheets from the server
   visibleTipSheets: TipSheet[] = [];//holds the tipsheets being view
   showloadMoreButton: boolean = false;
+  tipSheetsSubscription: Subscription;
 
 
-  constructor(private tipSheetService: TipSheetService) {
+  constructor(private tipSheetService: TipSheetService, private activatedRoute: ActivatedRoute) {
     this.tipSheetService.getLanguages().subscribe((languages) => {
       this.allLanguages = languages;
       this.onLetterRangeClick(this.letterRanges[0], false);
-      this.changeLanguage(this.currentLanguage);
     });
   }
 
@@ -46,20 +47,33 @@ export class TipSheetsComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.currentLanguage) {
-      this.changeLanguage(this.currentLanguage);
+      this.changeLanguage(changes.currentLanguage.currentValue);
     }
   }
 
   changeLanguage(language: Language) {
+    console.log("Change language ", language);
     this.currentLanguage = language;
-    this.tipSheetService.getTipSheetsForLanguage(language.code).subscribe((sheets) => {
+    if (this.tipSheetsSubscription) {
+      this.tipSheetsSubscription.unsubscribe();
+    }
+    this.tipSheetsSubscription = this.tipSheetService.getTipSheetsForLanguage(language.code).subscribe((sheets) => {
       this.tipSheets = sheets;
+      console.log("Tip sheets set", sheets);
       this.visibleTipSheets = [];
       if (this.viewAllTipSheets) {
         this.visibleTipSheets = this.tipSheets;
       } else {
         this.viewMoreTipSheets()
       }
+      this.activatedRoute.url.subscribe((urlSegments) => {
+        console.log("Activated route url segments", urlSegments);
+        let path = urlSegments[0].path;
+        if (history.pushState && path.indexOf("tips") > -1) {
+          var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + `?langCode=${language.code}`;
+          window.history.pushState({path:newurl},'',newurl);
+        }
+      });
     });
   }
 
@@ -101,6 +115,10 @@ export class TipSheetsComponent implements OnInit, OnChanges {
       counter++;
     }//end for loop
   }//end method
+
+  public openTipSheetPDF(tipSheet: TipSheet) {
+    window.open(tipSheet.pdfSrc, "__blank");
+  }
 
 }//end class
 
