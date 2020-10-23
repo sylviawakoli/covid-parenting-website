@@ -7,7 +7,7 @@ const MENU_ITEMS: { name: string, href?: string }[] = [
   { name: "Caseworkers", href: "/caseworkers" },
   { name: "Public Announcements", href: "/psa" },
   { name: "Contributors", href: "/contributors" },
-  { name: "Tell us what you think", href: "/contactus" }
+  { name: "Contact Us", href: "/contactus" }
 ];
 
 @Component({
