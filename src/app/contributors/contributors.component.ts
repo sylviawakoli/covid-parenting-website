@@ -87,6 +87,7 @@ const CONTRIBUTORS_LIST: Contributor[] = [
   { name: "Esther Kimokoti",title: "", thumnailSrc: "/" },
   { name: "Euni Motsa",title: "", thumnailSrc: "/" },
   { name: "Fatuma Abdullahi",title: "Danish Refugee Council, Somalia", thumnailSrc: "/" },
+  { name: "Filipa Laureano",title: "", thumnailSrc: "/" },
   { name: "Foundation for Disaster Forum", title: "", thumnailSrc: "/" },
   { name: "Fundiswa Menziwa", title: "", thumnailSrc: "/" },
   { name: "Gauri Divan",title: "", thumnailSrc: "/" },
