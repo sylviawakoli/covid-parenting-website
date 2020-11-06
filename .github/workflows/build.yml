@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - feature/drive-pipeline
+      - drive-pipeline
 
 jobs:
   build:
