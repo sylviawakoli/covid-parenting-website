@@ -28,9 +28,18 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: npm install and npm run build
+      - id: pre-upload-files
+        name: Upload files to Google Cloud Storage
+        uses: GoogleCloudPlatform/github-actions/upload-cloud-storage@master
+        with:
+          credentials: ${{ secrets.gcp_credentials }}
+          path: ./
+          destination: covid19p-testing/src_test
+      - name: npm install
         run: |
           npm install
+      - name: npm run build
+        run: |
           npm run build
       - id: upload-files
         name: Upload files to Google Cloud Storage
