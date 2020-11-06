@@ -37,5 +37,5 @@ jobs:
         uses: GoogleCloudPlatform/github-actions/upload-cloud-storage@master
         with:
           credentials: ${{ secrets.gcp_credentials }}
-          path: /dist/static
+          path: ./dist/static
           destination: covid19p-testing
