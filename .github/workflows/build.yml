@@ -14,7 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-
+      - name: What is my working directory?
+        run: pwd && ls -l
       - name: Cache node modules
         uses: actions/cache@v1
         with:
