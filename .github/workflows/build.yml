@@ -27,24 +27,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
-      - id: pre-upload-files
-        name: Upload files to Google Cloud Storage
-        uses: GoogleCloudPlatform/github-actions/upload-cloud-storage@master
+      - name: Setup GCloud
+      - uses: actions/checkout@v2
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
-          credentials: ${{ secrets.gcp_credentials }}
-          path: ./
-          destination: covid19p-testing/src_test
+          version: '290.0.1'
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+          export_default_credentials: true
+      - run: gcloud info
       - name: npm install
-        run: |
-          npm install
+        run: npm install
       - name: npm run build
-        run: |
-          npm run build
+        run: npm run build
       - id: upload-files
         name: Upload files to Google Cloud Storage
-        uses: GoogleCloudPlatform/github-actions/upload-cloud-storage@master
-        with:
-          credentials: ${{ secrets.gcp_credentials }}
-          path: ./dist/static
-          destination: covid19p-testing
+        run: npm run upload-files
