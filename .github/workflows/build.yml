@@ -14,8 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: What is my working directory?
-        run: pwd && ls -l
       - name: Cache node modules
         uses: actions/cache@v1
         with:
@@ -40,6 +38,5 @@ jobs:
         run: npm install
       - name: npm run build
         run: npm run build
-      - id: upload-files
-        name: Upload files to Google Cloud Storage
-        run: npm run upload-files
+      - name: What is my working directory?
+        run: pwd && ls -l
