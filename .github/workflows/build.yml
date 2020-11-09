@@ -28,8 +28,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Setup GCloud
-      - uses: actions/checkout@v2
-      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           version: '290.0.1'
           project_id: ${{ secrets.GCP_PROJECT_ID }}
