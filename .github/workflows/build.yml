@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [12.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -34,13 +34,10 @@ jobs:
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           export_default_credentials: true
       - run: gcloud info
-      - id: rsync-test
-        name: Testing GS Util R Sync
-        run: gsutil -m rsync -d -R -c ./src gs://covid19p-testing1/src
       - name: npm install
         run: npm install
       - name: npm run build
         run: npm run build
-      - run: ls -l .dist
-      - name: What is my working directory?
-        run: pwd && ls -l
+      - id: upload-files
+        name: Upload files to google drive (rsync)
+        run: gsutil -m rsync -d -R -c ./dist/static gs://covid19p-testing1 && gsutil web set -m index.html gs://covid19p-testing1/
