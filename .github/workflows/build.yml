@@ -34,6 +34,13 @@ jobs:
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           export_default_credentials: true
       - run: gcloud info
+      - name: Download from Google Drive
+        uses: satackey/action-google-drive@v1
+        with:
+          download-from: Covid_Website_Assets
+          download-to: ./drive_assets
+          google-client-id: ${{ secrets.GOOGLE_CLIENT_ID }}
+          google-client-secret: ${{ secrets.GOOGLE_CLIENT_SECRET }}
       - name: npm install
         run: npm install
       - name: npm run build
