@@ -32,7 +32,7 @@ jobs:
         env:
           RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
         with:
-          args: rclone copy -v gdrive:Covid_Website_Assets ./drive_assets
+          args: copy -v gdrive:Covid_Website_Assets ./drive_assets
       - name: Node ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
