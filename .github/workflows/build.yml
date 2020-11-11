@@ -13,6 +13,10 @@ jobs:
         node-version: [12.x]
 
     steps:
+      - name: Install crcmod
+        run: |
+          sudo apt-get install gcc python-dev python-setuptools
+          sudo pip install -I --no-cache-dir -U crcmod
       - uses: actions/checkout@v1
         with:
           lfs: true
@@ -31,11 +35,6 @@ jobs:
         with:
           path: drive_assets
           key: ${{ runner.os }}-drive-assets
-      - name: Install crcmod
-        run: |
-          sudo apt-get install gcc python-dev python-setuptools
-          sudo pip uninstall --ignore-installed crcmod 
-          sudo pip install --no-cache-dir -U crcmod
       - name: rclone - Download assets from Google Drive
         uses: wei/rclone@v1
         env:
