@@ -54,5 +54,5 @@ jobs:
       - name: npm run build
         run: npm run build
       - id: upload-files
-        name: Upload files to google drive (rsync)
+        name: Upload files to Google Cloud Storage (rsync)
         run: gsutil -m rsync -d -R -c ./dist/static gs://covid19p-testing1 && gsutil web set -m index.html gs://covid19p-testing1/
