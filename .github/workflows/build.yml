@@ -14,14 +14,25 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+        with:
+          lfs: true
+      - name: Checkout LFS objects
+        run: git lfs checkout
       - name: Cache node modules
         uses: actions/cache@v1
         with:
-          path: ~/.npm
+          path: |
+            ~/.npm
+            ./drive_assets
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
+      - name: rclone
+        uses: wei/rclone@v1
+        env:
+          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+        with:
+          args: rclone copy -v gdrive:Covid_Website_Assets ./drive_assets
       - name: Node ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
