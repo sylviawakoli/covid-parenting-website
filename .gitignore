@@ -47,4 +47,6 @@ debug.log
 Thumbs.db
 
 /drive_assets
+src/assets/drive_assets
 scully.log
+debug.log
