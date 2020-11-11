@@ -27,7 +27,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: rclone
+      - name: rclone - Download assets from Google Drive
         uses: wei/rclone@v1
         env:
           RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
@@ -45,13 +45,6 @@ jobs:
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           export_default_credentials: true
       - run: gcloud info
-      - name: Download from Google Drive
-        uses: satackey/action-google-drive@v1
-        with:
-          download-from: Covid_Website_Assets
-          download-to: ./drive_assets
-          google-client-id: ${{ secrets.GOOGLE_CLIENT_ID }}
-          google-client-secret: ${{ secrets.GOOGLE_CLIENT_SECRET }}
       - name: npm install
         run: npm install
       - name: npm run build
