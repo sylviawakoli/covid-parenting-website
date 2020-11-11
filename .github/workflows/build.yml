@@ -55,4 +55,5 @@ jobs:
         run: npm run build
       - id: upload-files
         name: Upload files to Google Cloud Storage (rsync)
-        run: gsutil -m rsync -d -R -c ./dist/static gs://covid19p-testing1 && gsutil web set -m index.html gs://covid19p-testing1/
+        timeout-minutes: 12
+        run: gsutil rsync -d -R ./dist/static gs://covid19p-testing1 && gsutil web set -m index.html gs://covid19p-testing1/
