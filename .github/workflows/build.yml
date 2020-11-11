@@ -25,6 +25,12 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - name: Cache Google Drive Assets
+        id: cache-drive-assets
+        uses: actions/cache@v2
+        with:
+          path: drive_assets
+          key: ${{ runner.os }}-drive-assets
       - name: rclone - Download assets from Google Drive
         uses: wei/rclone@v1
         env:
