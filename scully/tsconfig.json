@@ -1,24 +1,18 @@
-
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./scully/",
-    "declaration": true,
-    "downlevelIteration": true,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
     "importHelpers": false,
-    "emitDeclarationOnly": false,
     "lib": ["ES2019", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
     "target": "es2018",
     "types": ["node"],
-    "typeRoots": [],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "typeRoots": ["../node_modules/@types"],
     "allowSyntheticDefaultImports": true
   },
-  "files": ["**/*.ts", "*.ts"],
   "exclude": ["./**/*spec.ts"]
 }
-  
