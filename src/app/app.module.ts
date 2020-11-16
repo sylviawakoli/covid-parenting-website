@@ -28,6 +28,7 @@ import { RadioComponent } from './radio/radio.component';
 import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { ParentchatComponent } from './parentchat/parentchat.component';
 import { FaithleadersComponent } from './faithleaders/faithleaders.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FaithleadersComponent } from './faithleaders/faithleaders.component';
     RadioComponent,
     SocialmediaComponent,
     ParentchatComponent,
-    FaithleadersComponent
+    FaithleadersComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
