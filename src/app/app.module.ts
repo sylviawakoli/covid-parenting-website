@@ -36,6 +36,7 @@ import { OurworkComponent } from './ourwork/ourwork.component';
 import { PartnersFundersComponent } from './partners-funders/partners-funders.component';
 import { RegionwiseComponent } from './regionwise/regionwise.component';
 import { DisseminationComponent } from './dissemination/dissemination.component';
+import { WworeachComponent } from './wworeach/wworeach.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { DisseminationComponent } from './dissemination/dissemination.component'
     OurworkComponent,
     PartnersFundersComponent,
     RegionwiseComponent,
-    DisseminationComponent
+    DisseminationComponent,
+    WworeachComponent
   ],
   imports: [
     BrowserModule,
