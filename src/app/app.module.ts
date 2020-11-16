@@ -22,6 +22,7 @@ import { SocialMediaIconsComponent } from './social-media-icons/social-media-ico
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BlogPostComponent } from './blog/blog-post/blog-post.component';
     ContactusComponent,
     SocialMediaIconsComponent,
     BlogComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
