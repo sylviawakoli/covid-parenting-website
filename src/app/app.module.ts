@@ -33,6 +33,7 @@ import { NewslettersComponent } from './newsletters/newsletters.component';
 import { SongComponent } from './song/song.component';
 import { WebinarsComponent } from './webinars/webinars.component';
 import { OurworkComponent } from './ourwork/ourwork.component';
+import { PartnersFundersComponent } from './partners-funders/partners-funders.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { OurworkComponent } from './ourwork/ourwork.component';
     NewslettersComponent,
     SongComponent,
     WebinarsComponent,
-    OurworkComponent
+    OurworkComponent,
+    PartnersFundersComponent
   ],
   imports: [
     BrowserModule,
