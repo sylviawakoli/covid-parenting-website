@@ -30,6 +30,7 @@ import { ParentchatComponent } from './parentchat/parentchat.component';
 import { FaithleadersComponent } from './faithleaders/faithleaders.component';
 import { NewsComponent } from './news/news.component';
 import { NewslettersComponent } from './newsletters/newsletters.component';
+import { SongComponent } from './song/song.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NewslettersComponent } from './newsletters/newsletters.component';
     ParentchatComponent,
     FaithleadersComponent,
     NewsComponent,
-    NewslettersComponent
+    NewslettersComponent,
+    SongComponent
   ],
   imports: [
     BrowserModule,
