@@ -45,7 +45,7 @@
   flex-direction: row;
 }
 
-.desktop-menu a {
+.desktop-menu .menu-item {
   align-self: center;
   font-weight: 500;
   text-decoration: none;
@@ -57,14 +57,6 @@
 .desktop-menu a:hover {
   text-decoration: none;
   border-bottom: 4px solid #0b4061;
-}
-
-.desktop-menu a:active {
-  color: #ffffff;
-  background: #ed1651;
-  padding: 10px 25px;
-  border-radius: 25px;
-  border: none;
 }
 
 /* todo. to be called dynamically in typescript file */
@@ -198,4 +190,17 @@
   .spacer {
     height: 60px;
   }
+}
+
+.menu-item:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
