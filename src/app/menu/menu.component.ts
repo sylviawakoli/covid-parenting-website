@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 //todo. this needs to be globalised
 const MENU_ITEMS: { name: string, href?: string }[] = [
   { name: "Home", href: "/" },
-  { name: "Tips", href: "/tips" },
+  { name: "Parenting Tips", href: "/tips" },
   { name: "Caseworkers", href: "/caseworkers" },
-  { name: "Announcements", href: "/psa" },
+  { name: "Public Announcements", href: "/psa" },
   { name: "Contributors", href: "/contributors" },
-  { name: "Contact us", href: "/contactus" }
+  { name: "Contact Us", href: "/contactus" }
 ];
 
 @Component({
@@ -24,9 +24,5 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
- 
-  //todo. function that listens for on clicks of the items for web tracking
-
-
 }
+

@@ -3,6 +3,14 @@
   background: #f2f2f2;
 }
 
+.contact-container {
+  margin-top: 20px;
+
+  .content {
+    padding-top: 20px;
+  }
+}
+
 .home-footer-background {
   background: #ec1551;
 }
@@ -28,10 +36,24 @@
   padding-left: 20px;
   max-width: 300px;
   width: 100%;
+  margin-bottom: 40px;
+}
+
+.email-button {
+  display: block;
+  background-color: #ec1551;
+  color: white;
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 22px;
+  padding-left: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 .survey-button {
-  margin-top: 40px;
+  
   display: block;
   background-color: #33aa33;
   color: white;
@@ -61,16 +83,18 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .contact-container {
-    margin-top: 70px;  
-  }
 
   .contact-curve-bottom{
-    margin-top: -90px;
+    margin-top: -65px;
   }
 }
 
 @media only screen and (max-width: 450px) {
+
+  .email-button {
+    padding: 6px;
+    font-size: 18px;
+  }
 
   .contact-content {
     flex-direction: column;

@@ -18,6 +18,10 @@ import { TipSheetsComponent } from './tip-sheets/tip-sheets.component';
 import { TipSheetService } from './tip-sheets/tip-sheet.service';
 import {WebAnalyticsService} from './web-analytics.service';
 import { ContactusComponent } from './contactus/contactus.component';
+import { SocialMediaIconsComponent } from './social-media-icons/social-media-icons.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
+import { BlogComponent } from './blog/blog.component';
+import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +34,18 @@ import { ContactusComponent } from './contactus/contactus.component';
     HomeComponent,
     TipsComponent,
     TipSheetsComponent,
-    ContactusComponent
+    ContactusComponent,
+    SocialMediaIconsComponent,
+    BlogComponent,
+    BlogPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ScullyLibModule
   ],
   providers: [
     SpreadsheetService,

@@ -3,6 +3,7 @@ import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 import { Language, LanguageCSVRow, TipSheet } from './tip-sheets.model';
 import { Observable, of } from 'rxjs';
 import { shareReplay, map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +40,7 @@ export class TipSheetService {
               this.tipSheetsByLanguage[langCode].push({
                 title: row.title,
                 thumnailSrc: `/assets/images/tip_sheet_thumbnails/${row.tipSheetNumber}.webp`,
-                pdfSrc: `/assets/tip_sheets/${langCode}/${row.tipSheetNumber}.pdf`
+                pdfSrc: `${environment.pdfBaseUrl}${langCode}/${row.tipSheetNumber}.pdf`
               });
             }
           });
@@ -59,6 +60,22 @@ export class TipSheetService {
       .pipe(
         map(() => {
           return this.sortedLanguages;
+        })
+      );
+  }
+
+  public searchForLanguageByName(langName: string): Observable<Language> {
+    if (this.languagesByCode) {
+      return of(Object.keys(this.languagesByCode)
+        .map((code) => this.languagesByCode[code])
+        .find((lang) => lang.name.toLowerCase().indexOf(langName.toLowerCase()) > -1));
+    }
+    return this.fetchTipSheets()
+      .pipe(
+        map(() => {
+          return Object.keys(this.languagesByCode)
+            .map((code) => this.languagesByCode[code])
+            .find((lang) => lang.name.toLowerCase().indexOf(langName.toLowerCase()) > -1);
         })
       );
   }

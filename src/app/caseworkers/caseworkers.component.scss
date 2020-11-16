@@ -6,13 +6,21 @@
     max-width: 900px;
     padding: 10px;
     margin-right: auto;
-    padding-top: 130px;
+    padding-top: 20px;
 }
-.buttons{
+
+.buttons {
     height: 100px;
-    width: 40% ;
+    width: 40%;
     margin-left: 20px;
     margin-top: 15px;
+    border-style: none;
+    border-radius: 30px;
+    background-color: #ed1651;
+    
+    a {
+        color: white;
+    }
 }
 
 .button-text{

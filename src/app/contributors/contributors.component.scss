@@ -81,6 +81,11 @@
   //height: 100%;
 }
 
+.content {
+  margin-top: -16vw;
+  padding-left: 20px;
+}
+
 /* for tablets screens*/
 @media only screen and (max-width: 768px) {
   .contacts-container {
@@ -94,5 +99,9 @@
 @media only screen and (max-width: 650px) {
   .curve-bottom {
     margin-top: -30px;
+  }
+
+  .content {
+    margin-top: -50px;
   }
 }

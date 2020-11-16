@@ -4,10 +4,20 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --aot --buildOptimizer",
+    "build-dev": "ng build --aot --buildOptimizer",
+    "build-ng": "ng build --prod --aot --buildOptimizer",
+    "build": "npm run convert-drive-assets && npm run build-ng && npm run scully",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "upload": "npm run build && npm run upload-files",
+    "upload-files": "gsutil -m rsync -d -R -c ./dist/static gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/ && open-cli http://covidp2.idems.international",
+    "golive": "gsutil -m -h \"Cache-Control:public, max-age=600\" rsync -R -c gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/ && open-cli https://covid19parenting.com",
+    "deploy-cleanup": "gsutil -m -h \"Cache-Control:public, max-age=600\" rsync -R -d gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/",
+    "scully": "scully",
+    "scully:serve": "scully serve",
+    "convert-drive-assets": "ts-node --project tsconfig.scripts.json scripts/convert-drive-assets.ts",
+    "test-scripts": "jasmine-ts --project tsconfig.scripts.json --config=scripts.jasmine.json"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +32,9 @@
     "@angular/router": "~9.1.11",
     "@ionic/angular": "^5.2.2",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
+    "@scullyio/init": "^1.0.0-beta.3",
+    "@scullyio/ng-lib": "^1.0.0-beta.2",
+    "@scullyio/scully": "^1.0.0-beta.2",
     "aos": "^2.3.4",
     "bootstrap": "^4.4.0",
     "rxjs": "~6.5.4",
@@ -43,9 +56,12 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "open-cli": "~6.0.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "typescript": "~3.8.3",
+    "xlsx": "^0.16.8",
+    "@types/xlsx": "^0.0.36"
   }
 }

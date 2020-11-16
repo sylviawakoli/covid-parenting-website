@@ -1,11 +1,16 @@
 .navbar{
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 1);
    //height: 120px; 
   //position: fixed;
   //top: 0;
   //width: 100%;
   //padding-top: 10px;
   //padding-left: 0px;
+}
+
+.spacer {
+  height: 120px;
+  display: block;
 }
 
 .header-contents {
@@ -15,15 +20,12 @@
   width: 100%;
 }
 
-.media-icons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.facebook-icon img {
-  width: 30px;
+.social-media-mobile {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding-bottom: 40px;
 }
 
 .toolbar {
@@ -123,9 +125,13 @@
   display: none;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 900px) {
   .header-container {
     //height: 100px;
+  }
+
+  .spacer {
+    height: 100px;
   }
 
   .plh-logo {
@@ -133,7 +139,7 @@
     height: 70px;
   }
 
-  .media-icons {
+  .social-media-icons {
     display: none;
   }
 
@@ -143,7 +149,7 @@
 
   .desktop-menu {
     display: none;
-  }
+    }
 
   .website-title {
     display: block;
@@ -187,5 +193,9 @@
     width: 30px;
     height: 3px;
     margin: 3px 0;
+  }
+
+  .spacer {
+    height: 60px;
   }
 }
