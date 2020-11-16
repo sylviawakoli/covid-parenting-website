@@ -29,6 +29,7 @@ import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { ParentchatComponent } from './parentchat/parentchat.component';
 import { FaithleadersComponent } from './faithleaders/faithleaders.component';
 import { NewsComponent } from './news/news.component';
+import { NewslettersComponent } from './newsletters/newsletters.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { NewsComponent } from './news/news.component';
     SocialmediaComponent,
     ParentchatComponent,
     FaithleadersComponent,
-    NewsComponent
+    NewsComponent,
+    NewslettersComponent
   ],
   imports: [
     BrowserModule,
