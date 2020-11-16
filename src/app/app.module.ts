@@ -25,6 +25,7 @@ import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { BannerComponent } from './banner/banner.component';
 import { ParenttextComponent } from './parenttext/parenttext.component';
 import { RadioComponent } from './radio/radio.component';
+import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { RadioComponent } from './radio/radio.component';
     BlogPostComponent,
     BannerComponent,
     ParenttextComponent,
-    RadioComponent
+    RadioComponent,
+    SocialmediaComponent
   ],
   imports: [
     BrowserModule,
