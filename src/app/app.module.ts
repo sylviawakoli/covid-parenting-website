@@ -34,6 +34,7 @@ import { SongComponent } from './song/song.component';
 import { WebinarsComponent } from './webinars/webinars.component';
 import { OurworkComponent } from './ourwork/ourwork.component';
 import { PartnersFundersComponent } from './partners-funders/partners-funders.component';
+import { RegionwiseComponent } from './regionwise/regionwise.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { PartnersFundersComponent } from './partners-funders/partners-funders.co
     SongComponent,
     WebinarsComponent,
     OurworkComponent,
-    PartnersFundersComponent
+    PartnersFundersComponent,
+    RegionwiseComponent
   ],
   imports: [
     BrowserModule,
