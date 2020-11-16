@@ -20,27 +20,69 @@ const MENU_ITEMS: MenuItem[] = [
         href: "/tips"
       },
       {
+        name: "Caseworkers",
+        href: "/caseworkers",
+      },
+      {
+        name: "Public Service Announcements",
+        href: "/psa",
+      },
+      {
+        name: "Digital Parenting",
+        href: "/",
+      },
+      {
+        name: "Audiovisual",
+        href: "/",
+      },
+      {
+        name: "Faith-Based Resources",
+        href: "/",
+      },
+      {
+        name: "Social Media",
+        href: "/",
+      },
+    /**   {
         name: "Radio Scripts",
         href: "/tips",
         fragment: "radio"
-      }
+      },**/
     ]
   },
-  { name: "Caseworkers", href: "/caseworkers" },
+  { name: "News", 
+  href: "/" ,
+  subMenuItems: [
+    {
+      name: "News",
+      href: "/"
+    },
+    {
+      name: "Newsletters",
+      href: "/"
+    },
+    {
+      name: "Webinars",
+      href: "/"
+    }
+  ]
+},
+
   {
-    name: "Public Announcements",
-    href: "/psa",
+    name: "About Us",
+    href: "/",
     subMenuItems: [
       {
-        name: "PSA's",
-        href: "/psa"
+        name: "Our Work",
+        href: "/"
       },
       {
-        name: "Blog",
-        href: "/blog"
+        name: "Partners and Funders",
+        href: "/"
       }
     ]
   },
+  { name: "Impact", href: "/" },
   { name: "Contributors", href: "/contributors" },
   { name: "Contact Us", href: "/contactus" }
 ];

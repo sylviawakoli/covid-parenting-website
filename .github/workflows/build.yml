@@ -60,4 +60,4 @@ jobs:
       - id: upload-files
         name: Upload files to Google Cloud Storage (rsync)
         timeout-minutes: 15
-        run: gsutil rsync -d -R -c ./dist/static gs://covid-website-storage2 && gsutil web set -m index.html gs://covid19p-testing1/
+        run: gsutil rsync -d -R -c ./dist/static gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/
