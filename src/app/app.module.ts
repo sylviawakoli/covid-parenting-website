@@ -38,6 +38,7 @@ import { RegionwiseComponent } from './regionwise/regionwise.component';
 import { DisseminationComponent } from './dissemination/dissemination.component';
 import { WworeachComponent } from './wworeach/wworeach.component';
 import { ImpactStoriesComponent } from './impact-stories/impact-stories.component';
+import { ShareYourStoryComponent } from './share-your-story/share-your-story.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { ImpactStoriesComponent } from './impact-stories/impact-stories.componen
     RegionwiseComponent,
     DisseminationComponent,
     WworeachComponent,
-    ImpactStoriesComponent
+    ImpactStoriesComponent,
+    ShareYourStoryComponent
   ],
   imports: [
     BrowserModule,
