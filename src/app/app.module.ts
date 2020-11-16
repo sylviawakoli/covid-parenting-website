@@ -39,6 +39,7 @@ import { DisseminationComponent } from './dissemination/dissemination.component'
 import { WworeachComponent } from './wworeach/wworeach.component';
 import { ImpactStoriesComponent } from './impact-stories/impact-stories.component';
 import { ShareYourStoryComponent } from './share-your-story/share-your-story.component';
+import { SuggestContentComponent } from './suggest-content/suggest-content.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { ShareYourStoryComponent } from './share-your-story/share-your-story.com
     DisseminationComponent,
     WworeachComponent,
     ImpactStoriesComponent,
-    ShareYourStoryComponent
+    ShareYourStoryComponent,
+    SuggestContentComponent
   ],
   imports: [
     BrowserModule,
