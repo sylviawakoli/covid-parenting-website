@@ -37,6 +37,7 @@ import { PartnersFundersComponent } from './partners-funders/partners-funders.co
 import { RegionwiseComponent } from './regionwise/regionwise.component';
 import { DisseminationComponent } from './dissemination/dissemination.component';
 import { WworeachComponent } from './wworeach/wworeach.component';
+import { ImpactStoriesComponent } from './impact-stories/impact-stories.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { WworeachComponent } from './wworeach/wworeach.component';
     PartnersFundersComponent,
     RegionwiseComponent,
     DisseminationComponent,
-    WworeachComponent
+    WworeachComponent,
+    ImpactStoriesComponent
   ],
   imports: [
     BrowserModule,
