@@ -31,6 +31,7 @@ import { FaithleadersComponent } from './faithleaders/faithleaders.component';
 import { NewsComponent } from './news/news.component';
 import { NewslettersComponent } from './newsletters/newsletters.component';
 import { SongComponent } from './song/song.component';
+import { WebinarsComponent } from './webinars/webinars.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { SongComponent } from './song/song.component';
     FaithleadersComponent,
     NewsComponent,
     NewslettersComponent,
-    SongComponent
+    SongComponent,
+    WebinarsComponent
   ],
   imports: [
     BrowserModule,
