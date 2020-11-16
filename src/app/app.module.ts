@@ -23,6 +23,7 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { BannerComponent } from './banner/banner.component';
+import { ParenttextComponent } from './parenttext/parenttext.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BannerComponent } from './banner/banner.component';
     SocialMediaIconsComponent,
     BlogComponent,
     BlogPostComponent,
-    BannerComponent
+    BannerComponent,
+    ParenttextComponent
   ],
   imports: [
     BrowserModule,
