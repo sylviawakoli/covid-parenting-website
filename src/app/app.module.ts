@@ -27,6 +27,7 @@ import { ParenttextComponent } from './parenttext/parenttext.component';
 import { RadioComponent } from './radio/radio.component';
 import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { ParentchatComponent } from './parentchat/parentchat.component';
+import { FaithleadersComponent } from './faithleaders/faithleaders.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ParentchatComponent } from './parentchat/parentchat.component';
     ParenttextComponent,
     RadioComponent,
     SocialmediaComponent,
-    ParentchatComponent
+    ParentchatComponent,
+    FaithleadersComponent
   ],
   imports: [
     BrowserModule,
