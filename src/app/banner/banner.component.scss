@@ -1,0 +1,46 @@
+.banner-container {
+    //margin-top: 10px;
+    //background: #ffca04;
+  }
+  
+  .banner-slider {
+    //border: 2px solid black;
+    padding: 25px;
+    background: url("/../assets/images/banner_image.png");
+    background-repeat: no-repeat;
+    width: auto;
+    height: 340px;
+    //background-size: 300px 100px;
+    //background-size: auto;
+    display: flex;
+    justify-content: center;
+    //text-align: center;
+  }
+  
+  .slider-text {
+    //flex: 50%;
+  }
+  
+  .slider-image {
+    //flex: 50%; //todo. could be larger?
+  }
+  
+  .slide-image {
+    //width: calc(60vw - 50px);
+    min-width: 100px;
+    max-width: 440px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    .banner-slider {
+        flex-direction: column;
+      }
+    
+      .slider-text {
+        flex: 100%;
+      }
+    
+      .slider-image {
+        flex: 100%;
+      }
+  }

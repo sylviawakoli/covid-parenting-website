@@ -1,41 +1,42 @@
 .footer-container {
   color: #ffffff;
+  //padding-top: 10px;
+  
 }
 
-.divider {
-  color: #ffffff;
-  background: #ffffff;
+.footer-head-bg{
+  background: #0a4160;
+  
 }
 
-.footer-head {
+.footer-head{
+  margin-top: 10px;
   display: flex;
-}
+  flex-direction: row;
+  justify-content: space-between;
+} 
 
-.footer-head div {
-  flex: 1;
-}
-
-.footer-head .footer-text h3{
-  font-weight: 500; 
-}
-
-.footer-head .footer-text p{
+.footer-head h4 {
   font-weight: 300;
+  margin-bottom: 0px;
 }
 
 .footer-menu-items {
   display: flex;
   flex-direction: column;
+  //justify-content: flex-start;
 }
 
 .footer-menu-items a {
   padding-top: 10px;
-  padding-left: 50px; //todo convert to ems
+  //padding-left: 50px; //todo convert to ems
   color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
-  //font-size: 12px; //todo. verify if good size  
+  font-weight: 300;
+  //font-size: 12px; //todo. verify if good size
   transition-duration: 0.4s;
+
+  //align-self: flex-start;
 }
 
 .footer-menu-items a:hover {
@@ -44,10 +45,13 @@
 }
 
 .footer-tail {
+  background: #5dbcd2;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   font-weight: 700;
 }
+
+
 
 @media only screen and (max-width: 450px) {
   .footer-head {
@@ -56,14 +60,13 @@
 
   .footer-menu-items a {
     padding-top: 10px;
-    padding-left: 0px; 
+    padding-left: 0px;
   }
 }
 
 @media only screen and (max-width: 360px) {
   .footer-tail {
-   flex-direction: column;
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
   }
 }
-

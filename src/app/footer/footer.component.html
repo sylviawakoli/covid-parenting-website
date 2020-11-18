@@ -1,20 +1,22 @@
-
-  <div class="content footer-container">
-    <div class="footer-head">
-      <div class="footer-text">
-        <h3>Working for families around the globe</h3>
-        <p>Parenting for Lifelong Health</p>
-        <app-social-media-icons placement="footer"></app-social-media-icons>
+<div class="footer-container">
+  <div class="footer-head-bg">
+    <div class="footer-head content">
+      <div>
+        <h4>USEFUL INFORMATION</h4>
+        <div class="footer-menu-items">
+          <a *ngFor="let item of menuItems" [routerLink]="item.href">{{ item.name }}</a>
+        </div>
       </div>
-      <div class="footer-menu-items">
-        <a *ngFor="let item of menuItems" [routerLink]="item.href">{{ item.name }}</a>
+      <div>
+        <h4>CONTACT US</h4>
+        <div>icons here</div>
       </div>
     </div>
-    
-    <hr class="divider">
-    
-    <div class="footer-tail">
-      <div>&copy; PLH {{currentYear}}.</div>
-    </div>
+  </div>
 
+  <div class="footer-tail">
+    <div class="content">
+      <div>&copy; PLH {{ currentYear }}. | All rights reserved.</div>
+    </div>
+  </div>
 </div>
