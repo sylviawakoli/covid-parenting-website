@@ -20,6 +20,14 @@ body {
   font-weight: 500;
 }
 
+.read-more-link{
+  text-decoration: none;
+  color: #0b4061;
+}
+
+/*todo. delete some below*/
+
+
 /** gives any tag custom button look**/
 .btn-container,.btn-container-md ,.btn-container-lg {
   font-weight: 700;
@@ -29,7 +37,6 @@ body {
   color: #ffffff;
   background: #ed1651;
   border: none;
-  text-decoration: none; 
   transition-duration: 0.4s;
   font-size: 12px;
   cursor: pointer;

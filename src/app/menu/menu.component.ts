@@ -10,9 +10,9 @@ export interface MenuItem {
 
 //todo. this needs to be globalised
 const MENU_ITEMS: MenuItem[] = [
-  { name: "Home", href: "/" },
+  { name: "HOME", href: "/" },
   {
-    name: "Resources",
+    name: "RESOURCES",
     href: "/tips",
     subMenuItems: [
       {
@@ -50,7 +50,7 @@ const MENU_ITEMS: MenuItem[] = [
       },**/
     ]
   },
-  { name: "News", 
+  { name: "NEWS", 
   href: "/" ,
   subMenuItems: [
     {
@@ -69,7 +69,7 @@ const MENU_ITEMS: MenuItem[] = [
 },
 
   {
-    name: "About Us",
+    name: "ABOUT US",
     href: "/",
     subMenuItems: [
       {
@@ -82,9 +82,8 @@ const MENU_ITEMS: MenuItem[] = [
       }
     ]
   },
-  { name: "Impact", href: "/" },
-  { name: "Contributors", href: "/contributors" },
-  { name: "Contact Us", href: "/contactus" }
+  { name: "IMPACT", href: "/" },
+  { name: "TELL US WHAT YOU THINK", href: "/contributors" }
 ];
 
 @Component({
