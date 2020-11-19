@@ -7,9 +7,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
+  public slideIndex: number = 1;
+
   constructor() { }
 
-  ngOnInit(): void {
+ ngOnInit(): void {
+  this.showSlides(this.slideIndex);    
+}
+
+ngAfterViewInit(){
+
+}
+
+public plusSlides(n: number ) {
+  this.showSlides(this.slideIndex += n);
+}
+
+public showSlides(n: number) {
+  let i: number;
+  let slides: any = document.getElementsByClassName("banner-slide");
+  
+  if (n > slides.length) {
+    this.slideIndex = 1;
   }
+
+  if (n < 1) {
+    this.slideIndex = slides.length;
+  }
+
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  
+  slides[this.slideIndex-1].style.display = "block";  
+}
+
 
 }

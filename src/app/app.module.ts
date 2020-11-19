@@ -40,6 +40,8 @@ import { WworeachComponent } from './wworeach/wworeach.component';
 import { ImpactStoriesComponent } from './impact-stories/impact-stories.component';
 import { ShareYourStoryComponent } from './share-your-story/share-your-story.component';
 import { SuggestContentComponent } from './suggest-content/suggest-content.component';
+import { NewletterribbonComponent } from './newletterribbon/newletterribbon.component';
+import { ResourcesComponent } from './resources/resources.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,9 @@ import { SuggestContentComponent } from './suggest-content/suggest-content.compo
     WworeachComponent,
     ImpactStoriesComponent,
     ShareYourStoryComponent,
-    SuggestContentComponent
+    SuggestContentComponent,
+    NewletterribbonComponent,
+    ResourcesComponent
   ],
   imports: [
     BrowserModule,
