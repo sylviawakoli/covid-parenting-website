@@ -4,6 +4,30 @@
   justify-content: space-between;
 }
 
+.about-resources {
+  flex: 70%;
+}
+
+.side-bar {
+  flex: 30%;
+}
+
+.nav-card-resource {
+  flex: 100%;
+}
+
 .nav-card-resource .nav-card-item-header {
   background: #75c5ca;
+}
+
+.nav-card-resource .nav-card-item-content h5 {
+  color: #75c5ca;
+}
+
+.nav-card-resource .nav-card-item-content a {
+  color: #75c5ca;
+}
+
+.nav-card-resource hr {
+  border-top: 1px dashed #75c5ca;
 }
