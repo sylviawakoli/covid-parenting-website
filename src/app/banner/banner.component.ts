@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -9,38 +9,42 @@ export class BannerComponent implements OnInit {
 
   public slideIndex: number = 1;
 
-  constructor() { }
+  public slides: any;
 
- ngOnInit(): void {
-  this.showSlides(this.slideIndex);    
-}
+  constructor(private elem: ElementRef) { }
 
-ngAfterViewInit(){
+  ngOnInit(): void {
 
-}
-
-public plusSlides(n: number ) {
-  this.showSlides(this.slideIndex += n);
-}
-
-public showSlides(n: number) {
-  let i: number;
-  let slides: any = document.getElementsByClassName("banner-slide");
-  
-  if (n > slides.length) {
-    this.slideIndex = 1;
   }
 
-  if (n < 1) {
-    this.slideIndex = slides.length;
+  ngAfterViewInit() {
+    this.slides = this.elem.nativeElement.querySelectorAll('.banner-slide');
+    this.showSlides(this.slideIndex);
+
   }
 
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+  public plusSlides(n: number) {
+    this.showSlides(this.slideIndex += n);
   }
-  
-  slides[this.slideIndex-1].style.display = "block";  
-}
+
+  public showSlides(n: number) {
+
+    let i: number;
+
+    if (n > this.slides.length) {
+      this.slideIndex = 1;
+    }
+
+    if (n < 1) {
+      this.slideIndex = this.slides.length;
+    }
+
+    for (i = 0; i < this.slides.length; i++) {
+      this.slides[i].style.display = "none";
+    }
+
+    this.slides[this.slideIndex - 1].style.display = "block";
+  }
 
 
 }
