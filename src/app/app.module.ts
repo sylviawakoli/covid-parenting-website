@@ -42,6 +42,7 @@ import { ShareYourStoryComponent } from './share-your-story/share-your-story.com
 import { SuggestContentComponent } from './suggest-content/suggest-content.component';
 import { NewletterribbonComponent } from './newletterribbon/newletterribbon.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { ResourcesComponent } from './resources/resources.component';
     ShareYourStoryComponent,
     SuggestContentComponent,
     NewletterribbonComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
