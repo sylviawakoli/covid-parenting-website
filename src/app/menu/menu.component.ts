@@ -13,7 +13,7 @@ const MENU_ITEMS: MenuItem[] = [
   { name: "HOME", href: "/" },
   {
     name: "RESOURCES",
-    href: "/tips",
+    href: "/resources",
     subMenuItems: [
       {
         name: "Parenting Tips",
