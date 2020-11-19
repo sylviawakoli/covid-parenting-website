@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build-dev": "ng build --aot --buildOptimizer",
     "build-ng": "ng build --prod --aot --buildOptimizer",
-    "build": "npm run build-ng && npm run scully",
+    "build": "npm run convert-drive-assets && npm run build-ng && npm run scully",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -15,7 +15,9 @@
     "golive": "gsutil -m -h \"Cache-Control:public, max-age=600\" rsync -R -c gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/ && open-cli https://covid19parenting.com",
     "deploy-cleanup": "gsutil -m -h \"Cache-Control:public, max-age=600\" rsync -R -d gs://covid-website-storage2 gs://covid-website-storage1 && gsutil web set -m index.html gs://covid-website-storage1/",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "convert-drive-assets": "ts-node --project tsconfig.scripts.json scripts/convert-drive-assets.ts",
+    "test-scripts": "jasmine-ts --project tsconfig.scripts.json --config=scripts.jasmine.json"
   },
   "private": true,
   "dependencies": {
@@ -58,6 +60,8 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "typescript": "~3.8.3",
+    "xlsx": "^0.16.8",
+    "@types/xlsx": "^0.0.36"
   }
 }

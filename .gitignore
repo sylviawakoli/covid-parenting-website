@@ -40,7 +40,13 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+debug.log
 
 # System Files
 .DS_Store
 Thumbs.db
+
+/drive_assets
+src/assets/drive_assets
+scully.log
+debug.log
