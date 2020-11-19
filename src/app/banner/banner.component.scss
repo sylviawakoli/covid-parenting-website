@@ -1,46 +1,98 @@
-.banner-container {
-    //margin-top: 10px;
-    //background: #ffca04;
-  }
-  
-  .banner-slider {
-    //border: 2px solid black;
-    padding: 25px;
-    background: url("/../assets/images/banner_image.png");
-    background-repeat: no-repeat;
-    width: auto;
-    height: 340px;
-    //background-size: 300px 100px;
-    //background-size: auto;
-    display: flex;
-    justify-content: center;
-    //text-align: center;
-  }
-  
-  .slider-text {
-    //flex: 50%;
-  }
-  
-  .slider-image {
-    //flex: 50%; //todo. could be larger?
-  }
-  
-  .slide-image {
-    //width: calc(60vw - 50px);
-    min-width: 100px;
-    max-width: 440px;
-  }
+/* {
+  box-sizing: border-box;
+}*/
 
-  @media only screen and (max-width: 650px) {
-    .banner-slider {
-        flex-direction: column;
-      }
-    
-      .slider-text {
-        flex: 100%;
-      }
-    
-      .slider-image {
-        flex: 100%;
-      }
+.banner-slide {
+  display: none;
+}
+
+.banner-slide img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.banner-slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.banner-prev,.banner-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.banner-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.banner-prev:hover,.banner-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.banner-text {
+  //color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.banner-number-text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.banner-fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes banner-fade {
+  from {
+    opacity: 0.4;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes banner-fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .banner-prev,.banner-next,.banner-text {
+    font-size: 11px;
+  }
+}
