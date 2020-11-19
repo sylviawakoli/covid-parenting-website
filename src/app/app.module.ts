@@ -41,6 +41,7 @@ import { ImpactStoriesComponent } from './impact-stories/impact-stories.componen
 import { ShareYourStoryComponent } from './share-your-story/share-your-story.component';
 import { SuggestContentComponent } from './suggest-content/suggest-content.component';
 import { NewletterribbonComponent } from './newletterribbon/newletterribbon.component';
+import { ResourcesComponent } from './resources/resources.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { NewletterribbonComponent } from './newletterribbon/newletterribbon.comp
     ImpactStoriesComponent,
     ShareYourStoryComponent,
     SuggestContentComponent,
-    NewletterribbonComponent
+    NewletterribbonComponent,
+    ResourcesComponent
   ],
   imports: [
     BrowserModule,
