@@ -20,6 +20,21 @@ body {
   font-weight: 500;
 }
 
+.page-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-container{
+  flex: 70%;
+  margin-right: 10px;
+}
+
+.side-bar-container{
+  flex: 30%;
+}
+
 /*read more links*/
 .read-more-link{
   text-decoration: none;
@@ -53,10 +68,16 @@ body {
   margin-top: 10px;
   border-radius: 5px;
   color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .nav-card-item-content{
   margin-bottom: 10px;
+}
+
+.nav-card-item-content h5 {
+  margin-top: 10px;
 }
 
 .nav-card-item-content p {
@@ -67,11 +88,22 @@ body {
 .nav-card-item-content a{
   text-decoration: none;
   color: #0b4061;
+  font-size: 12px;
   cursor: pointer;
 }
 
 .nav-card-item-content a:hover{
   color: #0b4061;
+}
+
+ .nav-card-item-content span{
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.nav-card-item-content hr {
+  border-top: 1px dashed #0b4061;
+  margin: 0;
 }
 
 /*todo. delete some below*/

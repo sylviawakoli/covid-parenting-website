@@ -51,7 +51,7 @@ const MENU_ITEMS: MenuItem[] = [
     ]
   },
   { name: "NEWS", 
-  href: "/" ,
+  href: "/news" ,
   subMenuItems: [
     {
       name: "News",
@@ -83,7 +83,7 @@ const MENU_ITEMS: MenuItem[] = [
     ]
   },
   { name: "IMPACT", href: "/" },
-  { name: "TELL US WHAT YOU THINK", href: "/contributors" }
+  { name: "TELL US WHAT YOU THINK", href: "/contactus" }
 ];
 
 @Component({
