@@ -1,29 +1,42 @@
-
-.about-container{
+.about-container {
   display: flex;
+  flex-direction: row;
 }
 
-.about-text{
+.about-text {
   flex: 50%;
 }
 
-.about-image{
+.about-image {
   flex: 50%;
 }
 
-.about-text h3{
+.about-image img{
+  width: 100%;
+}
+
+.about-text h3 {
   font-weight: 300;
 }
 
-.about-text h4{
+.about-text h4 {
   font-weight: 500;
 }
 
-.about-text p{
+.about-text p {
   font-weight: 300;
 }
- 
-.nav-card-one .nav-card-item-icon{
+
+.nav-cards{
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-card-item{
+  margin-right: 10px;
+}
+
+.nav-card-one .nav-card-item-icon {
   background: #75c5ca;
 }
 
@@ -31,11 +44,11 @@
   background: #75c5ca;
 }
 
-.nav-card-one .nav-card-item-content h5{
+.nav-card-one .nav-card-item-content h5 {
   color: #75c5ca;
 }
 
-.nav-card-two .nav-card-item-icon{
+.nav-card-two .nav-card-item-icon {
   background: #66738d;
 }
 
@@ -43,11 +56,11 @@
   background: #66738d;
 }
 
-.nav-card-two .nav-card-item-content h5{
+.nav-card-two .nav-card-item-content h5 {
   color: #66738d;
 }
 
-.nav-card-three .nav-card-item-icon{
+.nav-card-three .nav-card-item-icon {
   background: #fecb79;
 }
 
@@ -55,43 +68,32 @@
   background: #fecb79;
 }
 
-.nav-card-three .nav-card-item-content h5{
+.nav-card-three .nav-card-item-content h5 {
   color: #fecb79;
 }
 
-
-
-
-
-
-
-//todo. delete below
-
-/* for tablets*/
-@media only screen and (max-width: 768px) {
-  .nav-cards {
-    flex-wrap: wrap;
-    margin-top: 0px;
+@media only screen and (max-width: 450px) {
+  .about-container {
+    flex-direction: column-reverse;
   }
 
-  .nav-card-item {
-    flex: 50%;
-    margin-bottom: 50px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  .nav-cards {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0px;
+  .about-text {
+    flex: 100%;
+    margin-top: 10px;
   }
 
-  .nav-card-item {
+  .about-image {
     flex: 100%;
   }
 
-}
+  .nav-cards{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nav-card-item{
+    margin-right: 0px;
+  }
 
- 
- 
+
+}

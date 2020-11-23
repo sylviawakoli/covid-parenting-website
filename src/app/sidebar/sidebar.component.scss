@@ -1,18 +1,22 @@
 .nav-cards {
-  display: flex;
   flex-direction: column;
-  //justify-content: space-between;
+  justify-content: space-between;
 }
 
-.sidebar-container.nav-card-item {
-  flex: 100%;
-}
+.nav-card-item img {
+  width: 100%;
+  //height: 80px;
+ }
 
 .nav-card-one .nav-card-item-header {
   background: #5dbcd2;
 }
 
 .nav-card-one .nav-card-item-content h5 {
+  color: #5dbcd2;
+}
+
+.nav-card-one .nav-card-item-content a {
   color: #5dbcd2;
 }
 
@@ -24,10 +28,18 @@
   color: #fac1bc;
 }
 
+.nav-card-two .nav-card-item-content a {
+  color: #fac1bc;
+}
+
 .nav-card-three .nav-card-item-header {
   background: #5d61ac;
 }
 
 .nav-card-three .nav-card-item-content h5 {
+  color: #5d61ac;
+}
+
+.nav-card-three .nav-card-item-content a {
   color: #5d61ac;
 }
