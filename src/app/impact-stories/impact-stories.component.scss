@@ -1,0 +1,31 @@
+
+.impact-header {
+  text-align: center;
+  color: #faad19;
+}
+
+.nav-cards{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nav-card-item-content{
+    text-align: center;
+}
+
+.nav-card-item-content img {
+  width: 200px;
+  height: 200px;
+}
+
+.nav-card-item-content span{
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 450px) {
+    .nav-cards{
+        flex-direction: column;
+
+    }
+}
+

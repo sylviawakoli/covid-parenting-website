@@ -82,7 +82,7 @@ const MENU_ITEMS: MenuItem[] = [
       }
     ]
   },
-  { name: "IMPACT", href: "/" },
+  { name: "IMPACT", href: "/impact" },
   { name: "TELL US WHAT YOU THINK", href: "/contactus" }
 ];
 
