@@ -10,4 +10,11 @@
 .news-letter-container .content h5 {
   font-weight: 300;
   margin: 0px;
+} 
+
+@media only screen and (max-width: 450px) {
+  .news-letter-container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }

@@ -6,7 +6,7 @@
   //width: 100%;
   //padding-top: 10px;
   //padding-left: 0px;
-}
+} 
 
 .spacer {
   height: 120px;
@@ -37,10 +37,10 @@
   flex-direction: row;
 }
 
-.divider {
-  color: #0a4160;
-  background: #0a4160;
-}
+//.divider {
+  //color: #0a4160;
+  //background: #0a4160;
+//}
 
 .desktop-menu-items .menu-item {
   align-self: center; 
@@ -61,14 +61,6 @@
   border-bottom: 4px solid #0b4061;
 }
 
-/* todo. to be called dynamically in typescript file */
-.menu-item-active {
-  color: #ffffff;
-  background: #ed1651;
-  padding: 10px 25px;
-  border-radius: 25px;
-  border: none;
-}
 
 /* mobile menu Overlay (background) */
 .mobile-menu-overlay {
@@ -119,23 +111,24 @@
   display: none;
 }
 
+.menu-item:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
 @media only screen and (max-width: 900px) {
   .header-container {
     //height: 100px;
   }
 
-  .spacer {
-    height: 100px;
-  }
-
-  .plh-logo {
-    width: 90px;
-    height: 70px;
-  }
-
-  .social-media-icons {
-    display: none;
-  }
 
   .toolbar {
     justify-content: space-between;
@@ -170,10 +163,6 @@
 
 @media only screen and (max-width: 450px) {
    
-  .plh-logo {
-    display: none;
-  }
-
   .website-title {
     margin-left: 6px;
     margin-top: 3px;
@@ -192,15 +181,3 @@
 
 }
 
-.menu-item:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}

@@ -1,20 +1,22 @@
+
 /* {
   box-sizing: border-box;
 }*/
-
-.banner-slide {
-  //display: none;
-}
-
-.banner-slide img {
-  vertical-align: middle;
-}
 
 /* Slideshow container */
 .banner-slideshow-container {
   max-width: 900px;
   position: relative;
-  margin: auto;
+  margin: auto; /*centres the banner*/
+  margin-top: 60px;
+}
+
+.banner-slide {
+  display: none;
+}
+ 
+.banner-slide img {
+  vertical-align: middle;
 }
 
 /* Next & previous buttons */
@@ -91,8 +93,10 @@
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 450px) {
+  
   .banner-prev,.banner-next,.banner-text {
     font-size: 11px;
   }
+
 }
