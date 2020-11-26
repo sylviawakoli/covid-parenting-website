@@ -12,4 +12,6 @@ export class ResourcesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  
 }
