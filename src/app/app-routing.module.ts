@@ -19,18 +19,11 @@ const routes: Routes = [
   { path: "news", component: NewsComponent },
   { path: "impact", component: ImpactStoriesComponent },
   { path: "tips", component: TipsComponent },
+  { path: "caseworkers", component: CaseworkersComponent },
+  { path: "psa", component: PsaComponent },
   {
     path: "contributors",
     component: ContributorsComponent
-  },
-
-  {
-    path: "psa",
-    component: PsaComponent
-  },
-  {
-    path: "caseworkers",
-    component: CaseworkersComponent
   },
   {
     path: "contactus",
