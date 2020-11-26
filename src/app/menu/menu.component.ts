@@ -54,10 +54,6 @@ const MENU_ITEMS: MenuItem[] = [
   href: "/news" ,
   subMenuItems: [
     {
-      name: "News",
-      href: "/"
-    },
-    {
       name: "Newsletters",
       href: "/"
     },
@@ -70,15 +66,23 @@ const MENU_ITEMS: MenuItem[] = [
 
   {
     name: "ABOUT US",
-    href: "/",
+    href: "/aboutus",
     subMenuItems: [
       {
         name: "Our Work",
-        href: "/"
+        href: "/aboutus"
       },
       {
-        name: "Partners and Funders",
-        href: "/"
+        name: "Partners",
+        href: "/aboutus"
+      },
+      {
+        name: "Funders",
+        href: "/aboutus"
+      },
+      {
+        name: "Contributors",
+        href: "/contributors"
       }
     ]
   },

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { NewsComponent } from './news/news.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 import { ImpactStoriesComponent } from './impact-stories/impact-stories.component';
 import { ContributorsComponent } from './contributors/contributors.component';
 import { TipsComponent } from './tips/tips.component';
@@ -17,18 +18,13 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "resources", component: ResourcesComponent },
   { path: "news", component: NewsComponent },
+  { path: "aboutus", component: AboutusComponent },
   { path: "impact", component: ImpactStoriesComponent },
+  { path: "contactus", component: ContactusComponent  },
   { path: "tips", component: TipsComponent },
   { path: "caseworkers", component: CaseworkersComponent },
   { path: "psa", component: PsaComponent },
-  {
-    path: "contributors",
-    component: ContributorsComponent
-  },
-  {
-    path: "contactus",
-    component: ContactusComponent
-  },
+  { path: "contributors", component: ContributorsComponent },
   {
     path: "blog",
     component: BlogComponent,
