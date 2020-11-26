@@ -70,19 +70,19 @@ const MENU_ITEMS: MenuItem[] = [
     subMenuItems: [
       {
         name: "Our Work",
-        href: "/"
+        href: "/aboutus"
       },
       {
         name: "Partners",
-        href: "/"
+        href: "/aboutus"
       },
       {
         name: "Funders",
-        href: "/"
+        href: "/aboutus"
       },
       {
         name: "Contributors",
-        href: "/"
+        href: "/contributors"
       }
     ]
   },
