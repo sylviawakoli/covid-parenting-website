@@ -43,6 +43,7 @@ import { SuggestContentComponent } from './suggest-content/suggest-content.compo
 import { NewletterribbonComponent } from './newletterribbon/newletterribbon.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     SuggestContentComponent,
     NewletterribbonComponent,
     ResourcesComponent,
-    SidebarComponent
+    SidebarComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
