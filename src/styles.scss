@@ -13,7 +13,7 @@ body {
 }
 
 .content {
-  max-width: 900px;
+  max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
   font-family: "Roboto", sans-serif;
@@ -44,6 +44,7 @@ body {
 
 .read-more-link:hover{
   color: #0b4061;
+  text-decoration: underline;
 }
 
 /*navigation cards*/
@@ -90,6 +91,8 @@ body {
 
 .nav-card-item-content a:hover{
   color: #0b4061;
+  text-decoration: underline;
+  transition: 0.4s;
 }
 
  .nav-card-item-content span{

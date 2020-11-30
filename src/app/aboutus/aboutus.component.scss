@@ -1,21 +1,34 @@
+.nav-card-item-header {
+  background: #5d61ac;
+}
 
- .nav-card-item-header {
-    background: #5d61ac;
+.nav-card-item-content h5 {
+  color: #5d61ac;
+}
+
+.nav-card-item-content a {
+  color: #5d61ac;
+}
+
+.nav-card-item-content hr {
+  border-color: #5d61ac;
+}
+
+.nav-images {
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 450px) {
+  .nav-images {
+    flex-wrap: nowrap;
+    flex-direction: column;
   }
-  
-  .nav-card-item-content h5 {
-    color: #5d61ac;
-  }
-  
-   .nav-card-item-content a {
-    color: #5d61ac;
-  }
-  
-   .nav-card-item-content hr {
-    border-color: #5d61ac; 
+  .news-items .nav-card-item-content {
+    flex: 100%;
+    padding-left: 0px;
   }
 
-  .nav-images{
-      flex-wrap: wrap;
-      //justify-content: space-between;
+  .nav-images .nav-card-item img {
+    width: 100%;
   }
+}
