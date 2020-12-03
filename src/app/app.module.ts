@@ -44,6 +44,7 @@ import { NewletterribbonComponent } from './newletterribbon/newletterribbon.comp
 import { ResourcesComponent } from './resources/resources.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { DigitalparentingComponent } from './digitalparenting/digitalparenting.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     NewletterribbonComponent,
     ResourcesComponent,
     SidebarComponent,
-    AboutusComponent
+    AboutusComponent,
+    DigitalparentingComponent
   ],
   imports: [
     BrowserModule,

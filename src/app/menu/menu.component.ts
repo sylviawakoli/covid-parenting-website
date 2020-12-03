@@ -18,7 +18,7 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Parenting Tips", href: "/tips" },
       { name: "Caseworkers", href: "/caseworkers" },
       { name: "Public Service Announcements", href: "/psa" },
-      { name: "Digital Parenting", href: "/" },
+      { name: "Digital Parenting", href: "/digitalparenting" },
       { name: "Audiovisual", href: "/" },
       { name: "Faith-Based Resources", href: "/" },
       { name: "Social Media", href: "/" },
