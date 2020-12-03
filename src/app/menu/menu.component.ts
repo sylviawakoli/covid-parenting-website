@@ -15,75 +15,36 @@ const MENU_ITEMS: MenuItem[] = [
     name: "RESOURCES",
     href: "/resources",
     subMenuItems: [
-      {
-        name: "Parenting Tips",
-        href: "/tips"
-      },
-      {
-        name: "Caseworkers",
-        href: "/caseworkers",
-      },
-      {
-        name: "Public Service Announcements",
-        href: "/psa",
-      },
-      {
-        name: "Digital Parenting",
-        href: "/",
-      },
-      {
-        name: "Audiovisual",
-        href: "/",
-      },
-      {
-        name: "Faith-Based Resources",
-        href: "/",
-      },
-      {
-        name: "Social Media",
-        href: "/",
-      },
-    /**   {
-        name: "Radio Scripts",
-        href: "/tips",
-        fragment: "radio"
-      },**/
+      { name: "Parenting Tips", href: "/tips" },
+      { name: "Caseworkers", href: "/caseworkers" },
+      { name: "Public Service Announcements", href: "/psa" },
+      { name: "Digital Parenting", href: "/" },
+      { name: "Audiovisual", href: "/" },
+      { name: "Faith-Based Resources", href: "/" },
+      { name: "Social Media", href: "/" },
+      /**   {
+          name: "Radio Scripts",
+          href: "/tips",
+          fragment: "radio"
+        },**/
     ]
   },
-  { name: "NEWS", 
-  href: "/news" ,
-  subMenuItems: [
-    {
-      name: "Newsletters",
-      href: "/"
-    },
-    {
-      name: "Webinars",
-      href: "/"
-    }
-  ]
-},
+  {
+    name: "NEWS",
+    href: "/news",
+    subMenuItems: [
+      { name: "Newsletters", href: "/" },
+      { name: "Webinars", href: "/" }
+    ]
+  },
 
   {
     name: "ABOUT US",
     href: "/aboutus",
     subMenuItems: [
-      {
-        name: "Our Work",
-        href: "/aboutus"
-      },
-      {
-        name: "Partners",
-        href: "/aboutus"
-      },
-      {
-        name: "Funders",
-        href: "/aboutus"
-      },
-      {
-        name: "Contributors",
-        href: "/contributors"
-      }
+      { name: "Our Work", href: "/aboutus" },
+      { name: "Partners & Funders", href: "/aboutus" },
+      { name: "Contributors", href: "/contributors" }
     ]
   },
   { name: "IMPACT", href: "/impact" },
