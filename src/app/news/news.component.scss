@@ -1,10 +1,8 @@
- 
-
- .nav-card-item .nav-card-item-header {
+.nav-card-item .nav-card-item-header {
   background: #5dbcd2;
 }
 
- .nav-card-item .nav-card-item-content h5 {
+.nav-card-item .nav-card-item-content h5 {
   color: #5dbcd2;
 }
 
@@ -20,10 +18,9 @@
   padding-left: 10px;
 }
 
-
 .news-items .nav-card-item-content img {
- width: 95%;
- height: 80px;
+  width: 95%;
+  height: 80px;
 }
 
 .news-items .nav-card-item-content hr {
@@ -39,12 +36,8 @@
     flex: 100%;
     padding-left: 0px;
   }
-    
+
   .news-items .nav-card-item-content img {
-   width: 100%; 
+    width: 100%;
   }
-
 }
-
-
- 
