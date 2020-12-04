@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import * as AOS from 'aos';
+//import * as jsPDF from 'jspdf'
 declare let gtag: Function;
 @Component({
   selector: 'app-root',

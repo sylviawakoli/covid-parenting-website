@@ -9,6 +9,7 @@ import { ContributorsComponent } from './contributors/contributors.component';
 import { TipsComponent } from './tips/tips.component';
 import { PsaComponent } from './psa/psa.component';
 import { DigitalparentingComponent } from './digitalparenting/digitalparenting.component';
+import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { CaseworkersComponent } from './caseworkers/caseworkers.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { BlogComponent } from './blog/blog.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: "caseworkers", component: CaseworkersComponent },
   { path: "psa", component: PsaComponent },
   { path: "digitalparenting", component: DigitalparentingComponent },
+  { path: "socialmedia", component: SocialmediaComponent },
   { path: "contributors", component: ContributorsComponent },
   {
     path: "blog",

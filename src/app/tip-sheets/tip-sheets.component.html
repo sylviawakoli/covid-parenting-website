@@ -15,6 +15,8 @@
         </button>
     </div>
 </div>
+<div>To download all the tips <a (click)="donloadAllTipSheetPDF()">click here</a></div>
+
 <div class="tip-sheet-container">
     <a class="tip-sheet-card" *ngFor="let tipSheet of visibleTipSheets" (click)="openTipSheetPDF(tipSheet)">
         <div class="tip-sheet-title"><h4>{{ tipSheet.title }}</h4></div>
