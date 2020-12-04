@@ -16,27 +16,27 @@ export class ContributorsComponent implements OnInit {
 
   contributors: Contributor[] = [];//holds all the contribtors from the server
   visibleContributors: Contributor[] = [];//holds the contribtors being view
-  showloadMoreButton: boolean = true;
   maxContributorsToShow: number = 9;//used to show contributors in batches
 
   constructor() {
-    this.visibleContributors = CONTRIBUTORS_LIST.sort((a, b) => a.name.localeCompare(b.name));
-    // this.viewMoreContributors();
+    //this.visibleContributors = CONTRIBUTORS_LIST.sort((a, b) => a.name.localeCompare(b.name));
+    this.contributors = CONTRIBUTORS_LIST.sort((a, b) => a.name.localeCompare(b.name));
+    this.viewMoreContributors();
   }
 
   ngOnInit(): void { }
 
   public viewMoreContributors() {
-    console.log("visibleContributors = " + this.visibleContributors.length + " | contributors = "+ this.contributors.length);
-    if (this.visibleContributors.length == 0) {
+    //console.log("visibleContributors = " + this.visibleContributors.length + " | contributors = "+ this.contributors.length);
+    if (this.visibleContributors.length === 0) {
         this.addElementsToVisibleContributors(0);
       } else if (this.visibleContributors.length > 0) {
         if (this.visibleContributors.length < this.contributors.length) {
-          this.addElementsToVisibleContributors(this.contributors.length );
+          this.addElementsToVisibleContributors(this.visibleContributors.length );
         }
       }
   
-      this.showloadMoreButton = this.visibleContributors.length < this.contributors.length;
+    
     }
   
     private addElementsToVisibleContributors(startIndex: number) {

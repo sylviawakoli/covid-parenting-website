@@ -1,0 +1,43 @@
+
+.impact-header {
+  text-align: center;
+  color: #faad19;
+}
+
+.main-container hr {
+    border-top: 1px dashed #0b4061;
+  }
+
+.nav-cards{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nav-dissemination{
+  justify-content: flex-start;;
+}
+
+.nav-dissemination .nav-card-item{
+  margin-left: 10px;
+}
+
+.nav-card-item-content{
+    text-align: center;
+}
+
+.nav-card-item-content img {
+  width: 200px;
+  height: 200px;
+}
+
+.nav-card-item-content span{
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 450px) {
+    .nav-cards{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+

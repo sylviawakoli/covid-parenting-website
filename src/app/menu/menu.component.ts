@@ -10,81 +10,44 @@ export interface MenuItem {
 
 //todo. this needs to be globalised
 const MENU_ITEMS: MenuItem[] = [
-  { name: "Home", href: "/" },
+  { name: "HOME", href: "/" },
   {
-    name: "Resources",
-    href: "/tips",
+    name: "RESOURCES",
+    href: "/resources",
     subMenuItems: [
-      {
-        name: "Parenting Tips",
-        href: "/tips"
-      },
-      {
-        name: "Caseworkers",
-        href: "/caseworkers",
-      },
-      {
-        name: "Public Service Announcements",
-        href: "/psa",
-      },
-      {
-        name: "Digital Parenting",
-        href: "/",
-      },
-      {
-        name: "Audiovisual",
-        href: "/",
-      },
-      {
-        name: "Faith-Based Resources",
-        href: "/",
-      },
-      {
-        name: "Social Media",
-        href: "/",
-      },
-    /**   {
-        name: "Radio Scripts",
-        href: "/tips",
-        fragment: "radio"
-      },**/
+      { name: "Parenting Tips", href: "/tips" },
+      { name: "Caseworkers", href: "/caseworkers" },
+      { name: "Public Service Announcements", href: "/psa" },
+      { name: "Digital Parenting", href: "/digitalparenting" },
+      { name: "Audiovisual", href: "/" },
+      { name: "Faith-Based Resources", href: "/" },
+      { name: "Social Media", href: "/socialmedia" },
+      /**   {
+          name: "Radio Scripts",
+          href: "/tips",
+          fragment: "radio"
+        },**/
     ]
   },
-  { name: "News", 
-  href: "/" ,
-  subMenuItems: [
-    {
-      name: "News",
-      href: "/"
-    },
-    {
-      name: "Newsletters",
-      href: "/"
-    },
-    {
-      name: "Webinars",
-      href: "/"
-    }
-  ]
-},
+  {
+    name: "NEWS",
+    href: "/news",
+    subMenuItems: [
+      { name: "Newsletters", href: "/newsletters" },
+      { name: "Webinars", href: "/webinars" }
+    ]
+  },
 
   {
-    name: "About Us",
-    href: "/",
+    name: "ABOUT US",
+    href: "/aboutus",
     subMenuItems: [
-      {
-        name: "Our Work",
-        href: "/"
-      },
-      {
-        name: "Partners and Funders",
-        href: "/"
-      }
+      { name: "Partners & Funders", href: "/aboutus" },
+      { name: "Contributors", href: "/contributors" }
     ]
   },
-  { name: "Impact", href: "/" },
-  { name: "Contributors", href: "/contributors" },
-  { name: "Contact Us", href: "/contactus" }
+  { name: "IMPACT", href: "/impact" },
+  { name: "TELL US WHAT YOU THINK", href: "/contactus" }
 ];
 
 @Component({
