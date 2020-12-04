@@ -21,7 +21,7 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Digital Parenting", href: "/digitalparenting" },
       { name: "Audiovisual", href: "/" },
       { name: "Faith-Based Resources", href: "/" },
-      { name: "Social Media", href: "/" },
+      { name: "Social Media", href: "/socialmedia" },
       /**   {
           name: "Radio Scripts",
           href: "/tips",
@@ -33,8 +33,8 @@ const MENU_ITEMS: MenuItem[] = [
     name: "NEWS",
     href: "/news",
     subMenuItems: [
-      { name: "Newsletters", href: "/" },
-      { name: "Webinars", href: "/" }
+      { name: "Newsletters", href: "/newsletters" },
+      { name: "Webinars", href: "/webinars" }
     ]
   },
 
@@ -42,7 +42,6 @@ const MENU_ITEMS: MenuItem[] = [
     name: "ABOUT US",
     href: "/aboutus",
     subMenuItems: [
-      { name: "Our Work", href: "/aboutus" },
       { name: "Partners & Funders", href: "/aboutus" },
       { name: "Contributors", href: "/contributors" }
     ]
