@@ -12,6 +12,7 @@ import { DigitalparentingComponent } from './digitalparenting/digitalparenting.c
 import { SocialmediaComponent } from './socialmedia/socialmedia.component';
 import { NewslettersComponent } from './newsletters/newsletters.component';
 import { WebinarsComponent } from './webinars/webinars.component';
+import { AudiovisualsComponent } from './audiovisuals/audiovisuals.component';
 import { CaseworkersComponent } from './caseworkers/caseworkers.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { BlogComponent } from './blog/blog.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: "socialmedia", component: SocialmediaComponent },
   { path: "newsletters", component: NewslettersComponent },
   { path: "webinars", component: WebinarsComponent },
+  { path: "audiovisuals", component: AudiovisualsComponent },
   { path: "contributors", component: ContributorsComponent },
   {
     path: "blog",
