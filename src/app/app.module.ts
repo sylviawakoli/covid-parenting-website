@@ -45,6 +45,7 @@ import { ResourcesComponent } from './resources/resources.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { DigitalparentingComponent } from './digitalparenting/digitalparenting.component';
+import { AudiovisualsComponent } from './audiovisuals/audiovisuals.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { DigitalparentingComponent } from './digitalparenting/digitalparenting.c
     ResourcesComponent,
     SidebarComponent,
     AboutusComponent,
-    DigitalparentingComponent
+    DigitalparentingComponent,
+    AudiovisualsComponent
   ],
   imports: [
     BrowserModule,
