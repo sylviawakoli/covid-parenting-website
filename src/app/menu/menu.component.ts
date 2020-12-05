@@ -20,7 +20,7 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Public Service Announcements", href: "/psa" },
       { name: "Digital Parenting", href: "/digitalparenting" },
       { name: "Audiovisual", href: "/audiovisuals" },
-      { name: "Faith-Based Resources", href: "/" },
+      { name: "Faith-Based Resources", href: "/faithleaders" },
       { name: "Social Media", href: "/socialmedia" },
       /**   {
           name: "Radio Scripts",
@@ -47,8 +47,8 @@ const MENU_ITEMS: MenuItem[] = [
     ]
   },
   { name: "IMPACT", href: "/impact" },
-  { name: "TELL US WHAT YOU THINK", href: "/contactus" }
-];
+  { name: "CONTACT US", href: "/contactus" }
+ ];
 
 @Component({
   selector: 'app-menu',
