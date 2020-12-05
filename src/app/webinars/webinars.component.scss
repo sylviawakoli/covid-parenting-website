@@ -22,9 +22,28 @@
 }
 
 .webinar-video {
-  //flex: 20%;
+  //flex: 40%;
 }
 
 .webinar-video {
-  //flex: 80%;
+  //flex: 60%;
 }
+
+.readmore {
+    max-height:20px;
+}
+.readmore .moreText {
+    display:none;
+}
+.readmore .more {
+    display:block;
+}
+
+.display-more{
+    display: block;
+}
+
+.display-less{
+    display: block;
+}
+
