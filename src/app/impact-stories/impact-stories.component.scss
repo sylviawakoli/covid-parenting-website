@@ -24,7 +24,7 @@
 .nav-card-item-content{
     text-align: center;
 }
-
+ 
 .nav-card-item-content img {
   width: 200px;
   height: 200px;
@@ -38,6 +38,10 @@
     .nav-cards{
         flex-direction: column;
         justify-content: center;
+    }
+
+    .nav-dissemination .nav-card-item{
+      margin-left: 0px;
     }
 }
 

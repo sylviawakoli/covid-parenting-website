@@ -11,14 +11,14 @@
       <p>
         To help prevent violence and abuse against children during the COVID-19 pandemic, in collaboration with the World Health Organization (WHO), UNICEF and other leading agencies, Parenting for Lifelong Health (PLH) provides open-source and evidence-based parenting resources to help mitigate the impact of the COVID-19 pandemic crisis on families, and support parents, caregivers, teachers, nurses, and others in keeping children safe under all circumstances. 
       </p>
-<p>
-  The COVID-19 Playful Parenting team's efforts are grounded in 5 core principles:
-  • Evidence-based materials and approaches, with in-built mechanisms for ongoing evaluation and knowledge gathering
-  • Open-source and non-commercial content and configurations, giving free access to resources
-  • Scalable and low-cost designs and dissemination routes, to reach all parents who need support
-  • Adaptive messaging and methods, to meet the needs of diverse local cultures and contexts across the globe
-  • Playful and empathic scope and spirit, because learning through playful and compassionate interaction are the key to positive parenting and child wellbeing
-</p>
+<p>The COVID-19 Playful Parenting team's efforts are grounded in 5 core principles:</p>
+  <ul>
+    <li>Evidence-based materials and approaches, with in-built mechanisms for ongoing evaluation and knowledge gathering.</li>
+    <li>Open-source and non-commercial content and configurations, giving free access to resources.</li>
+    <li>Scalable and low-cost designs and dissemination routes, to reach all parents who need support</li>
+    <li>Adaptive messaging and methods, to meet the needs of diverse local cultures and contexts across the globe.</li>
+    <li>Playful and empathic scope and spirit, because learning through playful and compassionate interaction are the key to positive parenting and child wellbeing.</li>
+  </ul>
 
 <p>
   Our Partners have been incredibly supportive of the COVID-19 Parenting Emergency Response
@@ -33,17 +33,14 @@
 </p>
     </div>
 
-    <div class="nav-cards">
-      
-      <div *ngFor="let summary of arrRegionSummaries" class="nav-card-item">
-        <h6>{{ summary.impactTitle }}</h6>
-        <span>{{ summary.impactNumber | number}}</span>
+    <div class="nav-cards"> 
+      <div *ngFor="let summary of arrRegionSummaries" class="nav-card-item">  
         <div class="nav-card-item-content">
           <img src="{{ summary.thumbnailSrc }}" />
-         
+          <h5>{{ summary.impactTitle }}</h5>
+          <div>{{ summary.impactNumber | number}}</div>
         </div>
       </div>
-
     </div>
 
     <hr/>

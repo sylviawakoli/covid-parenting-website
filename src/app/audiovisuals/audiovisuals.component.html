@@ -1,0 +1,43 @@
+<app-banner></app-banner>
+<app-newletterribbon></app-newletterribbon>
+<div class="content page-container">
+    <div class="nav-cards main-container">
+        <div class="nav-card-item">
+            <h5 class="nav-card-item-header">AUDIOVISUALS</h5>
+            <div class="nav-card-item-content">
+<p>See how our open-source and evidence-based parenting resources have been designed for specific audio and visual presentations, with the aim of continuously adapting our materials to reach all parents and caregivers groups, regardless of the quality of their internet access, and whether they come from low or high income countries.</p>
+            </div>
+            <hr/>
+            <div class="nav-card-item-content">
+                <h5>Comics</h5>
+                <div class="nav-cards">
+
+                    <a class="nav-card-item" *ngFor="let comicImage of visibleComicsVisuals"  href="{{ comicImage.hrefSrc }}"  download>
+                        <h4>{{ comicImage.title }}</h4>
+                        <img class="thumbnail-img" src="{{ comicImage.thumnailSrc }}" />
+                        <span class="tip-sheet-btn-container">View</span>       
+                    </a>
+
+                </div>
+            </div>
+            <hr/>
+            <div class="nav-card-item-content">
+                <h5>Let's Slow down videos</h5>
+                <div class="nav-cards">
+                    
+                </div>
+            </div>
+            <hr/>
+            <div class="nav-card-item-content">
+                <h5>Audio Packs</h5>
+                <div class="nav-cards">
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <app-sidebar class="side-bar-container"></app-sidebar>
+</div>
+
