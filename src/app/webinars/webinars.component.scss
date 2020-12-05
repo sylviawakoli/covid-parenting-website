@@ -12,38 +12,58 @@
   font-size: medium;
 }
 
-.nav-card-item-content hr {
+.nav-card-item hr {
   border-color: #75c5ca;
+  //margin: 0;
 }
 
 .webinar-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .webinar-video {
-  //flex: 40%;
+  flex: 40%;
 }
 
-.webinar-video {
-  //flex: 60%;
+.webinar-text {
+  flex: 60%;
+  padding-left: 10px;
 }
 
-.readmore {
-    max-height:20px;
-}
-.readmore .moreText {
-    display:none;
-}
-.readmore .more {
-    display:block;
+.preview-text {
+  //display: contents;
+  height: 100px;
+  overflow: hidden;
 }
 
-.display-more{
-    display: block;
+.more-ellipsis {
+  //display: contents;
 }
 
-.display-less{
-    display: block;
+.more-link {
+  display: block;
+  color: #75c5ca;
+  font-weight: 500;
+  font-size: medium;
 }
 
+.more-link:hover{
+    color: #75c5ca;
+    text-decoration: underline;
+  }
+
+@media only screen and (max-width: 450px) {
+  .webinar-container {
+    flex-direction: column;
+  }
+  .webinar-video {
+    flex: 100%;
+    margin-bottom: 10px;
+  }
+
+  .webinar-text {
+    flex: 100%;
+    padding-left: 0px;
+  }
+}

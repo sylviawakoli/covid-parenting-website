@@ -100,9 +100,12 @@ body {
   font-weight: 300;
 }
 
-
-
 .nav-card-item-content hr {
+  border-top: 1px dashed #0b4061;
+  margin: 0;
+}
+
+.nav-card-item hr {
   border-top: 1px dashed #0b4061;
   margin: 0;
 }
