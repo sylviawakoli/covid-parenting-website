@@ -47,7 +47,7 @@ const MENU_ITEMS: MenuItem[] = [
     ]
   },
   { name: "IMPACT", href: "/impact" },
-  { name: "Contact Us", href: "/contactus" }
+  { name: "CONTACT US", href: "/contactus" }
  ];
 
 @Component({
