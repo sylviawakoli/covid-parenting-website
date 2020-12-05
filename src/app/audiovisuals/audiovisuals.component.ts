@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+export type Visuals = {
+  title: string;
+  thumnailSrc: string;
+  hrefSrc: string;
+};
+
 @Component({
   selector: 'app-audiovisuals',
   templateUrl: './audiovisuals.component.html',
@@ -7,7 +13,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AudiovisualsComponent implements OnInit {
 
-  constructor() { }
+  comicsVisuals: Visuals[] = []; 
+  visibleComicsVisuals: Visuals[] = []; 
+
+  constructor() { 
+    this.visibleComicsVisuals.push();
+  }
 
   ngOnInit(): void {
   }
