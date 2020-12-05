@@ -29,6 +29,7 @@ body {
 .main-container{
   flex: 70%;
   margin-right: 10px;
+  font-weight: 300;
 }
 
 .side-bar-container{
@@ -75,6 +76,14 @@ body {
 
 .nav-card-item-content h5 {
   margin-top: 10px;
+}
+
+.nav-card-item-content div {
+  font-weight: 300;
+}
+
+.nav-card-item-content ul {
+  font-weight: 300;
 }
 
 .nav-card-item-content p {
