@@ -17,6 +17,7 @@ import { CaseworkersComponent } from './caseworkers/caseworkers.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+import { FaithleadersComponent } from './faithleaders/faithleaders.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: "webinars", component: WebinarsComponent },
   { path: "audiovisuals", component: AudiovisualsComponent },
   { path: "contributors", component: ContributorsComponent },
+  { path: "faithleaders", component: FaithleadersComponent },
   {
     path: "blog",
     component: BlogComponent,
