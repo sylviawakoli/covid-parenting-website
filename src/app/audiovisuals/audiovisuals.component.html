@@ -12,20 +12,40 @@
                 <h5>COMICS</h5>
                 <div class="nav-cards nav-comics">
 
-                  
+                    <a class="nav-card-item"  *ngFor="let comics of arrVisibleComicsVisuals">
+                        <h5>{{ comics.title }}</h5>
+                        <img src="{{comics.thumnailSrc}}" />
+                        <div>View</div>       
+                    </a>
 
                 </div>
-        
+                <div class="link-view-more" (click)="onClickViewMoreVisuals( arrAllComicsVisuals,arrVisibleComicsVisuals)" *ngIf="bShowloadMoreComicsButton">
+                    See more comics 
+                 </div>
             </div>
             <hr/>
             <div class="nav-card-item-content">
                 <h5>LET'S SLOW DOWN VIDEOS</h5>
                 <div class="nav-cards nav-comics">
 
-                  
+                    <div class="nav-card-item" *ngFor="let slowdown of arrVisibleSlowDownVisuals"  >
+                        <h5>{{ slowdown.title }}</h5>
+                      
+                        <iframe 
+                        width="150px"  height="150px"
+                        [src]= "slowdown.hrefSrc"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                      </iframe>
+                     
+                        <div>View</div>       
+                     </div>
 
                 </div>
-             
+                <div class="link-view-more" (click)="onClickViewMoreVisuals( arrAllSlowDownVideosVisuals,arrVisibleSlowDownVisuals)" *ngIf="bShowloadMoreSlowDownVideosButton">
+                    See more let's slow down videos 
+                 </div>
              
             </div>
          
