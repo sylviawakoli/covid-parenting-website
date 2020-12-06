@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ResourcesService, Resource } from '../resources.service';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 export type Visuals = {
   title: string;
   thumnailSrc: string;
-  hrefSrc: string;
+  url: string;
+  urlSafe: SafeResourceUrl;
 };
 
 @Component({
@@ -26,7 +28,7 @@ export class AudiovisualsComponent implements OnInit {
 
 
 
-  constructor(private resourcesService: ResourcesService) {
+  constructor(private resourcesService: ResourcesService, private sanitizer: DomSanitizer) {
    
   }
 
@@ -49,7 +51,8 @@ export class AudiovisualsComponent implements OnInit {
         this.arrAllComicsVisuals.push({
           title: row.resourceTitle,
           thumnailSrc: thumbnailSrc,
-          hrefSrc: hrefSrc
+          url: hrefSrc,
+          urlSafe: hrefSrc
         });
 
       });//end for loop
@@ -60,14 +63,18 @@ export class AudiovisualsComponent implements OnInit {
   }//end method
 
   private loadSlowDownVideos() {
-    this.resourcesService.fetchComics().subscribe((slowdownvideos) => {
+    this.resourcesService.fetchSlowDownVideos().subscribe((slowdownvideos) => {
       this.arrAllSlowDownVideosVisuals = []; //reset array
       slowdownvideos.forEach((row) => {
 
+        console.log("URL: " + row.resourceFilePrefix);
+        console.log("URL SAFE: " + this.sanitizer.bypassSecurityTrustResourceUrl(row.resourceFilePrefix));
+
         this.arrAllSlowDownVideosVisuals.push({
           title: row.resourceTitle,
-          thumnailSrc: "",
-          hrefSrc: row.resourceFilePrefix
+          thumnailSrc: "", 
+          url: row.resourceFilePrefix,
+          urlSafe: this.sanitizer.bypassSecurityTrustResourceUrl(row.resourceFilePrefix)
         });
 
       });//end for loop
