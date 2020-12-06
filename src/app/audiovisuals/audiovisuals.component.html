@@ -1,58 +1,66 @@
 <app-banner></app-banner>
 <app-newletterribbon></app-newletterribbon>
 <div class="content page-container">
-    <div class="nav-cards main-container">
-        <div class="nav-card-item">
-            <h5 class="nav-card-item-header">AUDIOVISUALS</h5>
-            <div class="nav-card-item-content">
-<p>See how our open-source and evidence-based parenting resources have been designed for specific audio and visual presentations, with the aim of continuously adapting our materials to reach all parents and caregivers groups, regardless of the quality of their internet access, and whether they come from low or high income countries.</p>
-            </div>
-            <hr/>
-            <div class="nav-card-item-content">
-                <h5>COMICS</h5>
-                <div class="nav-cards nav-comics">
-
-                    <a class="nav-card-item"  *ngFor="let comics of arrVisibleComicsVisuals">
-                        <h5>{{ comics.title }}</h5>
-                        <img src="{{comics.thumnailSrc}}" />
-                        <div>View</div>       
-                    </a>
-
-                </div>
-                <div class="link-view-more" (click)="onClickViewMoreVisuals( arrAllComicsVisuals,arrVisibleComicsVisuals)" *ngIf="bShowloadMoreComicsButton">
-                    See more comics 
-                 </div>
-            </div>
-            <hr/>
-            <div class="nav-card-item-content">
-                <h5>LET'S SLOW DOWN VIDEOS</h5>
-                <div class="nav-cards nav-comics">
-
-                    <div class="nav-card-item" *ngFor="let slowdown of arrVisibleSlowDownVisuals"  >
-                        <h5>{{ slowdown.title }}</h5>
-                      
-                        <iframe 
-                        width="150px"  height="150px"
-                        [src]= "slowdown.hrefSrc"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                      </iframe>
-                     
-                        <div>View</div>       
-                     </div>
-
-                </div>
-                <div class="link-view-more" (click)="onClickViewMoreVisuals( arrAllSlowDownVideosVisuals,arrVisibleSlowDownVisuals)" *ngIf="bShowloadMoreSlowDownVideosButton">
-                    See more let's slow down videos 
-                 </div>
-             
-            </div>
-         
-
+  <div class="nav-cards main-container">
+    <div class="nav-card-item">
+      <h5 class="nav-card-item-header">AUDIOVISUALS</h5>
+      <div class="nav-card-item-content">
+        <p>
+          See how our open-source and evidence-based parenting resources have
+          been designed for specific audio and visual presentations, with the
+          aim of continuously adapting our materials to reach all parents and
+          caregivers groups, regardless of the quality of their internet access,
+          and whether they come from low or high income countries.
+        </p>
+      </div>
+      <hr />
+      <div class="nav-card-item-content">
+        <h5>COMICS</h5>
+        <div class="nav-cards nav-comics">
+          <a class="nav-card-item" *ngFor="let comics of arrVisibleComicsVisuals" >
+            <h5>{{ comics.title }}</h5>
+            <img src="{{ comics.thumnailSrc }}" />
+            <div>View</div>
+          </a>
         </div>
+        <div class="link-view-more"  (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"  *ngIf="bShowloadMoreComicsButton"  >
+          See more comics
+        </div>
+      </div>
+      <hr />
+      <div class="nav-card-item-content">
+        <h5>LET'S SLOW DOWN VIDEOS</h5>
+        <div class="nav-cards nav-comics">
+          <div class="nav-card-item" *ngFor="let slowdown of arrVisibleSlowDownVisuals"  >
+            <h5>{{ slowdown.title }}</h5>
+
+            <iframe
+              width="150px"
+              height="150px"
+              [src]="slowdown.hrefSrc"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen  >
+            </iframe>
+
+            <div>View</div>
+          </div>
+        </div>
+        <div
+          class="link-view-more"
+          (click)="
+            onClickViewMoreVisuals(
+              arrAllSlowDownVideosVisuals,
+              arrVisibleSlowDownVisuals
+            )
+          "
+          *ngIf="bShowloadMoreSlowDownVideosButton"
+        >
+          See more let's slow down videos
+        </div>
+      </div>
     </div>
+  </div>
 
-    <app-sidebar class="side-bar-container"></app-sidebar>
+  <app-sidebar class="side-bar-container"></app-sidebar>
 </div>
-
