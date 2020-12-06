@@ -16,3 +16,12 @@
  .nav-card-item-content hr {
     border-color: #75c5ca; 
   }
+  .slow-down-video-content {
+    margin-top: 60px;
+    display: block;
+  
+    .youtube-container {
+      max-width: 99%;
+      overflow: hidden;
+    }
+  }
