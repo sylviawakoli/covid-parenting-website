@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResourcesService, Resource } from '../resources.service';
 
 export type Visuals = {
   title: string;
@@ -13,14 +14,99 @@ export type Visuals = {
 })
 export class AudiovisualsComponent implements OnInit {
 
-  comicsVisuals: Visuals[] = []; 
-  visibleComicsVisuals: Visuals[] = []; 
+  private numOfResourcesToShow: number = 6;//used to show resources in batches
 
-  constructor() { 
-    this.visibleComicsVisuals.push();
+  public arrAllComicsVisuals: Visuals[] = [];
+  public arrVisibleComicsVisuals: Visuals[] = [];
+  public bShowloadMoreComicsButton: boolean = false;
+
+  public arrAllSlowDownVideosVisuals: Visuals[] = [];
+  public arrVisibleSlowDownVisuals: Visuals[] = [];
+  public bShowloadMoreSlowDownVideosButton: boolean = false;
+
+
+
+  constructor(private resourcesService: ResourcesService) {
+   
   }
 
   ngOnInit(): void {
+    this.loadComics();
+    this.loadSlowDownVideos();
   }
 
-}
+  private loadComics() {
+    this.resourcesService.fetchComics().subscribe((comics) => {
+      let thumbnailSrc: string;
+      let hrefSrc: string;
+      this.arrAllComicsVisuals = []; //reset array
+
+      comics.forEach((row) => {
+
+        thumbnailSrc = `assets/resources/comics/${row.resourceFilePrefix}_thumbnail.png`
+        hrefSrc = `assets/resources/comics/${row.resourceFilePrefix}_image.png`
+
+        this.arrAllComicsVisuals.push({
+          title: row.resourceTitle,
+          thumnailSrc: thumbnailSrc,
+          hrefSrc: hrefSrc
+        });
+
+      });//end for loop
+
+      this.onClickViewMoreVisuals(this. arrAllComicsVisuals,  this.arrVisibleComicsVisuals);
+
+    });
+  }//end method
+
+  private loadSlowDownVideos() {
+    this.resourcesService.fetchComics().subscribe((slowdownvideos) => {
+      this.arrAllSlowDownVideosVisuals = []; //reset array
+      slowdownvideos.forEach((row) => {
+
+        this.arrAllSlowDownVideosVisuals.push({
+          title: row.resourceTitle,
+          thumnailSrc: "",
+          hrefSrc: row.resourceFilePrefix
+        });
+
+      });//end for loop
+
+      this.onClickViewMoreVisuals(this.arrAllSlowDownVideosVisuals, this. arrVisibleSlowDownVisuals);
+
+    });
+  }//end method
+
+  //used by the view more buttons and when the visuals are to to be view in batches
+  public onClickViewMoreVisuals(arrAllVisuals: Visuals[], arrVisibleVisuals: Visuals[]) {
+    let startIndex: number;
+    if (arrVisibleVisuals.length == 0) {
+      startIndex = 0;
+    } else {
+      if (arrVisibleVisuals.length < arrAllVisuals.length) {
+        startIndex = arrVisibleVisuals.length; //from last added  
+      } else {
+        return;
+      }//end inner if
+    }//end if
+
+    this.addElementsToVisibleResources(arrAllVisuals, arrVisibleVisuals, startIndex);
+    
+    this.bShowloadMoreComicsButton = this.arrVisibleComicsVisuals.length < this.arrAllComicsVisuals.length;
+    this.bShowloadMoreSlowDownVideosButton = this.arrVisibleSlowDownVisuals.length < this.arrAllSlowDownVideosVisuals.length;
+
+  }//end method
+
+  private addElementsToVisibleResources(arrAllVisuals: Visuals[], arrVisibleVisuals: Visuals[], startIndex: number) {
+    let index: number;
+    let counter: number = 0;
+    for (index = startIndex; index < arrAllVisuals.length; index++) {
+      if (counter == this.numOfResourcesToShow) {
+        break;
+      }//end if 
+      arrVisibleVisuals.push(arrAllVisuals[index]);
+      counter++;
+    }//end for loop
+  }//end method
+
+}//end class

@@ -1,18 +1,77 @@
 .nav-card-item-header {
-    background: #75c5ca;
+  background: #75c5ca;
+}
+
+.nav-card-item-content h5 {
+  color: #75c5ca;
+}
+
+.nav-card-item-content a {
+  color: #75c5ca;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.nav-card-item hr {
+  border-color: #75c5ca;
+  //margin: 0;
+}
+
+.nav-comics {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.nav-comics .nav-card-item {
+  flex: 1;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  color: #0b4061;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* 5px rounded corners */
+  background: #ffffff;
+  transition: 0.4s;
+}
+
+.nav-comics .nav-card-item:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-comics .nav-card-item h5 {
+  align-self: center;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.nav-comics .nav-card-item img {
+  align-self: center;
+  border-radius: 10px;
+  width: 200px;
+  height: 150px;
+}
+
+.nav-comics .nav-card-item div {
+  align-self: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  //display: flex;
+  //justify-content: center;
+}
+
+.link-view-more {
+  font-weight: 500;
+  font-size: medium;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 450px) {
+  .nav-comics {
+    flex-direction: column;
+    justify-content: center;
   }
-  
-  .nav-card-item-content h5 {
-    color: #75c5ca;
-  }
-  
-  .nav-card-item-content a {
-    color: #75c5ca;
-    font-weight: 500;
-    font-size: medium;
-  }
-  
-  .nav-card-item hr {
-    border-color: #75c5ca;
-    //margin: 0;
-  }
+}
