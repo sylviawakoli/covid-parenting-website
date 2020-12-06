@@ -119,6 +119,59 @@ body {
   margin: 0;
 }
 
+/*navs used for resources*/
+.nav-resources {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.nav-resources .nav-card-item {
+  flex: 1;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  //color: #0b4061;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px; 
+  background: #ffffff;
+  transition: 0.4s;
+}
+
+.nav-resources .nav-card-item:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-resources .nav-card-item h5 {
+  align-self: center;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.nav-resources .nav-card-item .preview {
+  align-self: center;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.nav-resources .nav-card-item .view-text {
+  align-self: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.resource-view-more-text {
+  font-weight: 500;
+  font-size: medium;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 900px) {
   .content {
     //padding: 20px; 
@@ -140,6 +193,19 @@ body {
   
   .side-bar-container{
     flex: 100%;
+  }
+
+  /*navs used for resources*/
+  .nav-resources {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .nav-resources .nav-card-item .preview {
+    align-self: center;
+    border-radius: 10px;
+    width: 100%;
   }
 }
 

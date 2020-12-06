@@ -20,10 +20,10 @@
           <a class="nav-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}" target="_blank">
             <h5>{{ comics.title }}</h5>
             <img class="preview" [src]="comics.thumnailSrc" />
-            <div>View</div>
+            <div class="view-text">View</div>
           </a>
         </div>
-        <div class="link-view-more"  (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"  *ngIf="bShowloadMoreComicsButton"  >
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"  *ngIf="bShowloadMoreComicsButton"  >
           See more comics
         </div>
       </div>
@@ -33,19 +33,15 @@
         <div class="nav-cards nav-resources">
           <div class="nav-card-item" *ngFor="let slowdown of arrVisibleSlowDownVisuals"  >
             <h5>{{ slowdown.title }}</h5>
-
-            <iframe class="preview-video"
-            
+            <iframe class="preview"
               [src]="slowdown.urlSafe"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen  >
             </iframe>
-
-   
           </div>
         </div>
-        <div class="link-view-more"  (click)="onClickViewMoreVisuals(arrAllSlowDownVideosVisuals, arrVisibleSlowDownVisuals )"  *ngIf="bShowloadMoreSlowDownVideosButton" >
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllSlowDownVideosVisuals, arrVisibleSlowDownVisuals )"  *ngIf="bShowloadMoreSlowDownVideosButton" >
           See more let's slow down videos
         </div>
       </div>
