@@ -46,16 +46,7 @@
             <div>View</div>
           </div>
         </div>
-        <div
-          class="link-view-more"
-          (click)="
-            onClickViewMoreVisuals(
-              arrAllSlowDownVideosVisuals,
-              arrVisibleSlowDownVisuals
-            )
-          "
-          *ngIf="bShowloadMoreSlowDownVideosButton"
-        >
+        <div class="link-view-more"  (click)="onClickViewMoreVisuals(arrAllSlowDownVideosVisuals, arrVisibleSlowDownVisuals )"  *ngIf="bShowloadMoreSlowDownVideosButton" >
           See more let's slow down videos
         </div>
       </div>
