@@ -7,6 +7,7 @@ export type Resource = {
   resourceType: string;
   resourceTitle: string;
   resourceFilePrefix: string;
+  resourceFilePath: string;
   resourceLanguageName: string;
   resourceLanguageCode: string;
 };
