@@ -15,7 +15,6 @@ export class TipSheetService {
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] };
 
   constructor(private spreadsheetService: SpreadsheetService) {
-    //console.log("Service created");
     this.fetchTipSheets();
   }
 

@@ -7,8 +7,6 @@ export type Resource = {
   resourceType: string;
   resourceTitle: string;
   resourceFilePrefix: string;
-  resourceFilePath: string;
-  resourceLanguageName: string;
   resourceLanguageCode: string;
 };
 
@@ -24,7 +22,7 @@ export class ResourcesService {
     //get all the resources and fill to the array
     this.fetchAllResources().subscribe((resources) => {
       this.arrResources = resources;
-      console.log("RESOURCES LOADED: " + resources.length);
+      //console.log("RESOURCES LOADED: " + resources.length);
     });
 
   }
@@ -64,6 +62,22 @@ export class ResourcesService {
         }
       } catch (ex) {
         console.log("Error in fetching slowdown videos: " + (ex as Error).message);
+      }
+
+    });
+
+    return of(arr);
+  }//end method
+
+  public fetchResourcesByLanguage(langCode: string): Observable<Resource[]> {
+    let arr: Resource[] = [];
+    this.arrResources.forEach((row) => {
+      try {
+        if (row.resourceLanguageCode.toLowerCase() === langCode) {
+          arr.push(row);
+        }
+      } catch (ex) {
+        console.log("Error in fetching resources by language: " +(ex as Error).message);
       }
 
     });

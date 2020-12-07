@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResourcesService, Resource } from '../resources.service';
+import { ResourcesService } from '../resources.service';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 export type Visuals = {
