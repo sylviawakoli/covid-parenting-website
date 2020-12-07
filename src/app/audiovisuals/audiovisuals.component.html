@@ -1,43 +1,52 @@
 <app-banner></app-banner>
 <app-newletterribbon></app-newletterribbon>
 <div class="content page-container">
-    <div class="nav-cards main-container">
-        <div class="nav-card-item">
-            <h5 class="nav-card-item-header">AUDIOVISUALS</h5>
-            <div class="nav-card-item-content">
-<p>See how our open-source and evidence-based parenting resources have been designed for specific audio and visual presentations, with the aim of continuously adapting our materials to reach all parents and caregivers groups, regardless of the quality of their internet access, and whether they come from low or high income countries.</p>
-            </div>
-            <hr/>
-            <div class="nav-card-item-content">
-                <h5>Comics</h5>
-                <div class="nav-cards">
-
-                    <a class="nav-card-item" *ngFor="let comicImage of visibleComicsVisuals"  href="{{ comicImage.hrefSrc }}"  download>
-                        <h4>{{ comicImage.title }}</h4>
-                        <img class="thumbnail-img" src="{{ comicImage.thumnailSrc }}" />
-                        <span class="tip-sheet-btn-container">View</span>       
-                    </a>
-
-                </div>
-            </div>
-            <hr/>
-            <div class="nav-card-item-content">
-                <h5>Let's Slow down videos</h5>
-                <div class="nav-cards">
-                    
-                </div>
-            </div>
-            <hr/>
-            <div class="nav-card-item-content">
-                <h5>Audio Packs</h5>
-                <div class="nav-cards">
-                    
-                </div>
-            </div>
-
+  <div class="nav-cards main-container">
+    <div class="nav-card-item">
+      <h5 class="nav-card-item-header">AUDIOVISUALS</h5>
+      <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
+        <p>
+          See how our open-source and evidence-based parenting resources have
+          been designed for specific audio and visual presentations, with the
+          aim of continuously adapting our materials to reach all parents and
+          caregivers groups, regardless of the quality of their internet access,
+          and whether they come from low or high income countries.
+        </p>
+      </div>
+      <hr />
+      <div class="nav-card-item-content">
+        <h5>COMICS</h5>
+        <div class="nav-cards nav-resources">
+          <a class="nav-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+            <h5>{{ comics.title }}</h5>
+            <img class="preview" [src]="comics.thumnailSrc" />
+            <div class="view-text">View</div>
+          </a>
         </div>
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"  *ngIf="bShowloadMoreComicsButton"  >
+          See more comics
+        </div>
+      </div>
+      <hr />
+      <div class="nav-card-item-content">
+        <h5>LET'S SLOW DOWN VIDEOS</h5>
+        <div class="nav-cards nav-resources">
+          <div class="nav-card-item" *ngFor="let slowdown of arrVisibleSlowDownVisuals"  data-aos="zoom-in" data-aos-duration="1000" >
+            <h5>{{ slowdown.title }}</h5>
+            <iframe class="preview"
+              [src]="slowdown.urlSafe"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen  >
+            </iframe>
+          </div>
+        </div>
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllSlowDownVideosVisuals, arrVisibleSlowDownVisuals )"  *ngIf="bShowloadMoreSlowDownVideosButton" >
+          See more let's slow down videos
+        </div>
+      </div>
     </div>
+  </div>
 
-    <app-sidebar class="side-bar-container"></app-sidebar>
+  <app-sidebar class="side-bar-container"></app-sidebar>
 </div>
-

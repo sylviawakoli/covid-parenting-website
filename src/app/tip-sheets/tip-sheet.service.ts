@@ -15,12 +15,11 @@ export class TipSheetService {
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] };
 
   constructor(private spreadsheetService: SpreadsheetService) {
-    //console.log("Service created");
     this.fetchTipSheets();
   }
 
   private fetchTipSheets(): Observable<{ [langCode: string]: TipSheet[] }> {
-    return this.spreadsheetService.getCSVObjects("/assets/tip_sheets/tipSheetNames.csv")
+    return this.spreadsheetService.getCSVObjects("assets/tip_sheets/tipSheetNames.csv")
       .pipe(
         shareReplay(1),
         map((rows: LanguageCSVRow[]) => {
@@ -39,7 +38,7 @@ export class TipSheetService {
               }
               this.tipSheetsByLanguage[langCode].push({
                 title: row.title,
-                thumnailSrc: `/assets/images/tip_sheet_thumbnails/${row.tipSheetNumber}.webp`,
+                thumnailSrc: `assets/images/tip_sheet_thumbnails/${row.tipSheetNumber}.webp`,
                 pdfSrc: `${environment.pdfBaseUrl}${langCode}/${row.tipSheetNumber}.pdf`
               });
             }
