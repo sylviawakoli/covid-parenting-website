@@ -24,25 +24,25 @@ export class ImpactStoriesService {
   constructor(private spreadsheetService: SpreadsheetService) { }
 
   public fetchImpactSummaries(): Observable<ImpactSummary[]> {
-    return this.spreadsheetService.getCSVObjects("/assets/impacts/impact_summary.csv")
+    return this.spreadsheetService.getCSVObjects("assets/impacts/impact_summary.csv")
       .pipe(
         shareReplay(1),
         map((rows: ImpactSummaryCSVRow[]) => {
           let arrImpactSummaries: ImpactSummary[] = [];
-          let srcThumbnailSrc: string;
+          let thumbnailSrc: string;
           rows.forEach((row) => {
             //add row contents to the array
             if (row.impactType.toUpperCase() === "REGION") {
-              srcThumbnailSrc = `/assets/impacts/${row.impactTitle}.jpg`
+              thumbnailSrc = `assets/impacts/${row.impactTitle}.jpg`
             } else {
-              srcThumbnailSrc= ""         
+              thumbnailSrc= ""         
             }
             
             arrImpactSummaries.push({
               impactType: row.impactType,
               impactTitle: row.impactTitle,
               impactNumber: row.impactNumber,
-              thumbnailSrc: srcThumbnailSrc
+              thumbnailSrc: thumbnailSrc
             });
 
           });
