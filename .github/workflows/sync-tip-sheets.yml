@@ -1,0 +1,35 @@
+name: Sync Tip Sheets from GDrive
+on:
+  workflow_dispatch
+
+jobs:
+  sync-tip-sheets:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - name: Cache Google Drive Assets
+      id: cache-drive-assets
+      uses: actions/cache@v2
+      with:
+        path: ./tip_sheets
+        key: ${{ runner.os }}-tip-sheets  
+    - name: rclone - Download tip sheets from Google Drive
+      uses: wei/rclone@v1
+      env:
+        RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
+      with:
+        args: copy -v gdrive:Covid19Parenting_Website_Tip_Sheets ./tip_sheets
+    - name: Setup GCloud
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '290.0.1'
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+        export_default_credentials: true
+    - run: gcloud info
+    - id: upload-files
+      name: Upload tip sheets to Google Cloud Storage (rsync)
+      timeout-minutes: 30
+      run: gsutil rsync -d -R -c ./tip_sheets gs://covid-website-pdfs1
