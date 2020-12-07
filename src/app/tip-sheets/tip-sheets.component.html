@@ -21,7 +21,7 @@
 </div>
 
 <div class="nav-cards nav-resources">
-    <a class="nav-card-item" *ngFor="let tipSheet of visibleTipSheets" (click)="openTipSheetPDF(tipSheet)">
+    <a class="nav-card-item" *ngFor="let tipSheet of visibleTipSheets" (click)="openTipSheetPDF(tipSheet)" data-aos="zoom-in" data-aos-duration="1000">
         <h5>{{ tipSheet.title }}</h5> 
         <img class="preview" [src]="tipSheet.thumnailSrc" />
         <div class="view-text">View</div>     
@@ -33,7 +33,7 @@
 </div>
 
 <div *ngIf="arrOtherResources" class="nav-cards nav-other-resources">
-    <div class="nav-card-item">
+    <div class="nav-card-item" data-aos="zoom-in" data-aos-duration="1000">
         <div class="nav-card-item-content">
          <h5>Other Resources in {{currentLanguage.name}}</h5>
 

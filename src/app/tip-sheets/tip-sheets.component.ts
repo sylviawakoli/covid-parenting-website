@@ -130,17 +130,16 @@ export class TipSheetsComponent implements OnInit, OnChanges {
 
   public fetchAndOtherResources(langCode: string) {
 
-
+    this.objMergedTipsheet = null; //reset
+    this.arrOtherResources = null; //reset array
+    
     this.resourcesService.fetchResourcesByLanguage(langCode).subscribe((langResources) => {
       let strResourceType: string;
       let objResourceSheet: TipSheet;
-      this.objMergedTipsheet = null; //reset
-      this.arrOtherResources = []; //reset array
+      this.arrOtherResources = []; //initialise array
 
       langResources.forEach((row) => {
-
         strResourceType = row.resourceType.toLowerCase();
-
         objResourceSheet = {
           title: row.resourceTitle,
           thumnailSrc: "",
@@ -162,9 +161,13 @@ export class TipSheetsComponent implements OnInit, OnChanges {
         }
 
         this.arrOtherResources.push(objResourceSheet);
-
      
       });//end for loop
+
+      //if other resources not there. set to null
+      if(this.arrOtherResources.length == 0){
+        this.arrOtherResources = null;
+      } 
 
 
 
