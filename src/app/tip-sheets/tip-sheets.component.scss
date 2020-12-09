@@ -1,5 +1,5 @@
-.language-header{
-  color: #5dbcd2;
+.tip-header{
+  color: #0b4061;
 }
 
 .lang-letter-ranges {
@@ -28,22 +28,30 @@
   font-size: medium;
 }
 
-.resource-view-more-text{
-  color: #5dbcd2;
+.nav-cards{
+  width: 100%;
+}
+
+.nav-cards .nav-card-item{
+  width: 100%;
+}
+
+.nav-card-item-content a {
+  color: #75c5ca;
+  font-weight: 500;
+  font-size: medium;
 }
 
 .nav-card-item-content hr {
   border-color: #75c5ca; 
+  margin-bottom: 20px;
 }
 
-.nav-other-resources .nav-card-item .nav-card-item-content h5 {
+
+.resource-view-more-text{
   color: #5dbcd2;
 }
 
-.nav-other-resources .nav-card-item .nav-card-item-content div a{
-  color: #5dbcd2;
-  font-size: medium;
-}
 
 
 
