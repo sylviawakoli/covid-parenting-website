@@ -18,6 +18,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { FaithleadersComponent } from './faithleaders/faithleaders.component';
+import { NewsMainComponent } from './news-main/news-main.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: "audiovisuals", component: AudiovisualsComponent },
   { path: "contributors", component: ContributorsComponent },
   { path: "faithleaders", component: FaithleadersComponent },
+  { path: "news-main", component: NewsMainComponent },
   {
     path: "blog",
     component: BlogComponent,
