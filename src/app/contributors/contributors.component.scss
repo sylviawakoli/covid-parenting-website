@@ -1,3 +1,22 @@
+.language-header{
+  color: #5dbcd2;
+}
+
+.lang-letter-ranges {
+  display: flex;
+}
+
+.letter-range {
+  border: 1px solid grey;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 4px;
+
+  &.selected {
+    background-color: #5dbcd2;
+  }
+}
+
 .nav-card-item-header {
   background: #75c5ca;
 }
@@ -11,7 +30,7 @@ hr {
   margin-bottom: 20px;
 }
 
-.btn-more {
-  text-decoration: underline;
-  cursor: pointer;
+.contributors-info a{
+  font-size: normal;
+  color: #75c5ca;
 }
