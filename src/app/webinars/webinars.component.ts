@@ -28,9 +28,8 @@ export class WebinarsComponent implements OnInit {
       previewTextNode.style.height = "auto";
       moreLinkNode.innerHTML = "show less";
     }
- 
     
-  }
+  }//end method
 
 
 }

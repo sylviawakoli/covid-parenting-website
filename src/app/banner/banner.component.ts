@@ -19,16 +19,24 @@ export class BannerComponent implements OnInit {
 
   ngAfterViewInit() {
     this.slides = this.elem.nativeElement.querySelectorAll('.banner-slide');
-    this.showSlides(this.slideIndex);
-
+    this.showSlidesTimer();
   }
 
-  public plusSlides(n: number) {
+  private showSlidesTimer(): void {
+
+    this.plusSlides(1);
+
+    //start the timer
+    setTimeout(() => {
+      this.showSlidesTimer();
+    }, 3000);
+  }
+
+  public plusSlides(n: number): void {
     this.showSlides(this.slideIndex += n);
   }
 
-  public showSlides(n: number) {
-
+  private showSlides(n: number): void {
     let i: number;
 
     if (n > this.slides.length) {
@@ -44,7 +52,7 @@ export class BannerComponent implements OnInit {
     }
 
     this.slides[this.slideIndex - 1].style.display = "block";
-  }
+  }//end method
 
 
 }
