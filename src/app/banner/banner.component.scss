@@ -52,9 +52,8 @@
 
 /* Caption text */
 .banner-text {
-  display: none; /*todo. delete this later*/
-  //color: #f2f2f2;
-  font-size: 15px;
+  color: #f48c5c;
+  font-size: 16px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -79,7 +78,7 @@
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes banner-fade {
+@-webkit-keyframes fade {
   from {
     opacity: 0.4;
   }
@@ -88,7 +87,7 @@
   }
 }
 
-@keyframes banner-fade {
+@keyframes fade {
   from {
     opacity: 0.4;
   }
