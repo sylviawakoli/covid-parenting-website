@@ -46,6 +46,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { DigitalparentingComponent } from './digitalparenting/digitalparenting.component';
 import { AudiovisualsComponent } from './audiovisuals/audiovisuals.component';
+import { NewsMainComponent } from './news-main/news-main.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { AudiovisualsComponent } from './audiovisuals/audiovisuals.component';
     SidebarComponent,
     AboutusComponent,
     DigitalparentingComponent,
-    AudiovisualsComponent
+    AudiovisualsComponent,
+    NewsMainComponent
   ],
   imports: [
     BrowserModule,
