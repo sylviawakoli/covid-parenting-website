@@ -36,9 +36,10 @@
     <div class="nav-cards"> 
       <div *ngFor="let summary of arrRegionSummaries" class="nav-card-item"  data-aos="zoom-in" data-aos-duration="1000">  
         <div class="nav-card-item-content">
-          <img src="{{ summary.thumbnailSrc }}" />
           <h5>{{ summary.impactTitle }}</h5>
           <div>{{ summary.impactNumber | number}}</div>
+          <div>{{ summary.impactPercentage | number:'1.1-1' }} %</div>
+          <img src="{{ summary.thumbnailSrc }}" />     
         </div>
       </div>
     </div>
@@ -55,8 +56,9 @@
     <div class="nav-cards nav-dissemination">
       <div *ngFor="let summary of arrDisseminationSummaries" class="nav-card-item" data-aos="zoom-in" data-aos-duration="1000">
         <div class="nav-card-item-content">
-          <h6>{{ summary.impactTitle }}</h6>
-          <span>{{ summary.impactNumber | number}}</span>
+          <h5>{{ summary.impactTitle }}</h5>
+          <div>{{ summary.impactNumber | number}}</div>
+          <div>{{ summary.impactPercentage | number:'1.1-1' }} %</div>
         </div>
       </div>
     </div>

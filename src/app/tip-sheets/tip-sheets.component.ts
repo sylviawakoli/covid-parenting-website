@@ -19,10 +19,10 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
   viewAllTipSheets: boolean = false;//used to indicate if the component will show all tipsheets
   @Input()
-  maxTipSheetsToShow: number = 6;//used to show tipsheets in batches
+  maxTipSheetsToShow: number = 5;//was originally 6 cause of flex wrap. used to show tipsheets in batches
 
   allLanguages: Language[] = [];
-  selectedRange: string[] = ["A", "F"];
+  selectedRange: string[] = ["C", "F"];
   letterRanges: string[][] = [["A", "B"], ["C", "F"], ["G", "J"], ["K", "L"], ["M", "P"], ["R", "S"], ["T", "Z"]];
   dropdownLanguages: Language[] = [];
 
