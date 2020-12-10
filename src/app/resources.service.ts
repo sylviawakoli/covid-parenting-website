@@ -36,32 +36,15 @@ export class ResourcesService {
         }));
   }//end method
 
-
-  public fetchComics(): Observable<Resource[]> {
+  public fetchResourcesByType(resourceType: string): Observable<Resource[]> {
     let arr: Resource[] = [];
     this.arrResources.forEach((row) => {
       try {
-        if (row.resourceType.toLowerCase() === "comics") {
+        if (row.resourceType === resourceType) {
           arr.push(row);
         }
       } catch (ex) {
-        console.log("Error in fetching comics: " +(ex as Error).message);
-      }
-
-    });
-
-    return of(arr);
-  }//end method
-
-  public fetchSlowDownVideos(): Observable<Resource[]> {
-    let arr: Resource[] = [];
-    this.arrResources.forEach((row) => {
-      try {
-        if (row.resourceType.toLowerCase() === "slowdownvideo") {
-          arr.push(row);
-        }
-      } catch (ex) {
-        console.log("Error in fetching slowdown videos: " + (ex as Error).message);
+        console.log("Error in fetching resource: "+ resourceType+"| Error:" + (ex as Error).message);
       }
 
     });
@@ -84,10 +67,6 @@ export class ResourcesService {
 
     return of(arr);
   }//end method
-
-  
-
-
 
 
 
