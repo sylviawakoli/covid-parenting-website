@@ -52,3 +52,22 @@ font-weight: 300;
     width: 100%;
   }
 }
+
+.buttons {
+  height: 40px;
+  width: 30%;
+  margin-left: 20px;
+  margin-top: 15px;
+  border-style: none;
+  border-radius: 30px;
+  background-color: #ed1651;
+    
+  a {
+      color: white;
+  }
+
+  .button-text{
+    font-size: 	15px;
+    color: black ;
+}
+}
