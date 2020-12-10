@@ -64,10 +64,12 @@
   </div>
 
   <div class="nav-card-item nav-card-three" data-aos="zoom-in" data-aos-duration="1000">
-    <div class="nav-card-item-icon">icon here</div>
     <h5 class="nav-card-item-header">PARENTING TIPS</h5>
     <div class="nav-card-item-content">
-      <h5>One-to-One time</h5>
+      <img src="assets/images/home_tips.png" />
+    </div>
+    <div class="nav-card-item-content">
+      <h5>One-to-One time</h5> 
       <p>
         "Can't go to work? Schools closed? Worried about money? It is normal to feel stressed and overwhelmed. 
 We can also see this as a chance to make better relationships with our children and teenagers. Download our parenting tip sheets for more information."
@@ -75,11 +77,22 @@ We can also see this as a chance to make better relationships with our children 
       <a href="/tips">Read more</a>
     </div>
     <div class="nav-card-item-content">
-      <h5>Talk about COVID-19</h5>
-      <p>
-        Be willing to talk. They will already have heard something. Silence and secrets do not protect our children. Honesty and openness do. Think about how much they will understand. You know them best. Download our parenting tip sheets for more information.
-      </p>
-      <a href="/tips">Read more</a>
+      <h5>Other Tip Sheets</h5>
+      <div class="nav-cards">
+        <div class="nav-card-item">
+             <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
+                 <div *ngFor="let tipSheet of arrVisibleTipSheets">
+                    <a href="{{ tipSheet.pdfSrc}}" target="_blank">
+                        {{ tipSheet.title }}      
+                    </a>
+                    <hr/>
+                 </div>
+            </div> 
+        </div>
+    </div>
+
+
+      <a href="/tips"> See more tip sheets</a>
     </div>
   </div>
 </div> 
