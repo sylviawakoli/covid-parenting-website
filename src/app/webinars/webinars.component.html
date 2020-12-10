@@ -5,26 +5,45 @@
     <div class="nav-card-item">
       <h5 class="nav-card-item-header">WEBINARS</h5>
       <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
-        <p>
+        <p class="preview-text">
           Check out our selection of video workshops and presentations hosted
           online regarding Parenting and Child Protection resources. These
           sessions are used to share knowledge, ideas, and updates with people
           around the world working on Parenting and Child Protection projects
           during COVID-19.
-        </p>        
+        </p>
+        <span class="more-ellipsis">...</span> 
+        <span class="more-link" (click)="onClickShowMoreText($event)">show more</span>
       </div>
       <hr />
       <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
         <h5>WEBINAR: COVID-19 & Child Protection (April 2020)</h5>
         <div class="webinar-container">
           <div class="webinar-video">
-            <img style="width: 80%; height: 200px;" src="assets/images/youtube-ubscribe-icon-01.png">                       
+            <iframe
+              width="100%"
+              height="150px"
+              src="https://www.youtube.com/embed/j1ShU5pwpaQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
           </div>
           <div class="webinar-text">
-            <p>
-              The Global Partnership to End Violence Against Children (EVAC) and the Early Childhood Development Action Network (ECDAN) partnered to present a webinar focused on key issues on Child Protection in the context of the COVID-19 pandemic.
+            <p class="preview-text">
+              The Global Partnership to End Violence Against Children (EVAC) and
+              the Early Childhood Development Action Network (ECDAN) partnered
+              to present a webinar focused on key issues on Child Protection in
+              the context of the COVID-19 pandemic. The webinar provided an
+              overview of the issue of Child Protection, with lessons learned
+              from past emergency contexts, current data on the prevalence of
+              violence against children, presentation of guides and strategies
+              to promote the protection of children and country presentations on
+              strategies being currently implemented.
             </p>
-            <a href="https://youtu.be/RAZiy-NIHQA?list=PLURnZih-6HI6uvf37gI3ZqBhm-6ZSdM0H"><span class="more-link">Watch the video on our YouTube Channel</span></a>         
+            <span class="more-ellipsis">...</span> 
+            <span class="more-link" (click)="onClickShowMoreText($event)">show more</span>
           </div>
         </div>
       </div>
@@ -35,10 +54,18 @@
         </h5>
         <div class="webinar-container">
           <div class="webinar-video">
-            <img style="width: 80%; height: 200px;" src="assets/images/youtube-ubscribe-icon-01.png">                       
+            <iframe
+              width="100%"
+              height="150px"
+              src="https://www.youtube.com/embed/j1ShU5pwpaQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
           </div>
           <div class="webinar-text">
-              <div>
+              <div class="preview-text">
                 <p>
                     Presentation of our free parenting resources delivered by Brigitte
                     De Hulsters at the Seminario Iberamericano last week (beginning at 59:34).
@@ -48,32 +75,35 @@
                     intervention in cases of sexual violence in children and
                     adolescents in Latin America and the Caribean (LAC) was organized
                     by FAN (Fundacion de Atencion a la Ninez, Colombia) and Early
-                    Institute (Mexico) from 25 till 28 august 2020.
+                    Institute (Mexico) from 25 till 28 august 2020 and counted
+                    presentations by a representative of ISPCAN, on the use of data to
+                    prevent violence in children/adolescents, of Early Institute, and
+                    ALUMBRA, Mexico, on the creation of alliances between governments
+                    and organizations on this topic, of the Government of Gran
+                    Canarias, Spain, on the pilot multisectoral approach that
+                    harmonizes the rights of both victim and accused and avoids
+                    revictimization of the child; PAICABI, a Chilean NGO, and Jugar
+                    para Sanar (FAN Colombia), on the need to restore the health WITH
+                    (not OF) the child, humanizing surroundings, protective and
+                    therapeutic interventions repairing (not focusing on the damage),
+                    the perspectives and continuing development of the child.
+                    COVID19parenting was the closing presentation, and received much
+                    interest as a true prevention method now. Directors of FAN and
+                    Early considered this first seminar a great success. Attendant’s
+                    count was above 400 for each session. Inscriptions 554. Certain
+                    voids of multicultural knowledge and practices were closed.
+                    Knowledge sharing was effective and emphasized that the
+                    restoration of the child or adolescent after abuse, needs to
+                    happen WITH the child/adolescent, through play, avoiding
+                    revictimization and by a multisectoral team in appropriate
+                    surroundings for the victim. Prevention is always better, and
+                    parents need access to tools for play and stress reduction to
+                    avoid intrafamily violence directed towards children, especially
+                    during COVID19.
                   </p>
               </div>
-              <a href="https://youtu.be/MYOPHoGGFgQ"><span class="more-link">Watch the video on our YouTube Channel</span></a>         
-           
-          </div>
-        </div>
-      </div>
-      <hr />
-
-      <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
-        <h5>
-          WEBINAR: WCARO x PLH webinar (September 2020)
-        </h5>
-        <div class="webinar-container">
-          <div class="webinar-video">
-            <img style="width: 80%; height: 200px;" src="assets/images/youtube-ubscribe-icon-01.png">                       
-          </div>
-          <div class="webinar-text">
-              <div>
-                <p>
-                  On 15 September 2020, we presented a webinar on COVID-19 Parenting to the West and Central Africa Regional Office (WCARO) and approximately 25 Country Offices in the region. The webinar addresses key questions about COVID-19 Parenting and shared information about the emergency response we have been providing since March 2020, highlighting the wide range of parenting resources being developed and adapted for varying levels of internet access, to reach all population groups, in low as well as high income countries.
-                  </p>
-                  
-              </div>
-              <a href="https://youtu.be/dvFPzjTl8Ck"><span class="more-link">Watch the video on our YouTube Channel</span></a>         
+              <span class="more-ellipsis">...</span> 
+              <span class="more-link" (click)="onClickShowMoreText($event)">show more</span>
            
           </div>
         </div>
@@ -86,10 +116,18 @@
         </h5>
         <div class="webinar-container">
           <div class="webinar-video">
-            <img style="width: 80%; height: 200px;" src="assets/images/youtube-ubscribe-icon-01.png">                       
+            <iframe
+              width="100%"
+              height="150px"
+              src="https://www.youtube.com/embed/j1ShU5pwpaQ"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
           </div>
           <div class="webinar-text">
-              <div >
+              <div class="preview-text">
                 <p>
                     UNICEF Innocenti's new report – Beyond Masks: Societal impacts of
                     COVID-19 and accelerated solutions for children and adolescents –
@@ -99,12 +137,29 @@
                     examines past health crises such as HIV/AIDS, SARS and Ebola to
                     provide insights into the current one, and proposes proven and
                     promising solutions.
-                </p>                
-              </div>          
-              <a href="https://youtu.be/R3FMBPbutz4"><span class="more-link">Watch the video on our YouTube Channel</span></a>         
+                </p>
+                <p>
+                    This panel discussion, timed with the launch of the Beyond Masks
+                    report on 19 November, 2020, comes at a moment when policymakers
+                    are asking deep questions about how to deal with the raging
+                    pandemic in many parts of the world while ensuring children’s
+                    health, education and well-being. In it, we delve deep into Beyond
+                    Masks to better understand how its findings can shape national and
+                    subnational policy responses and individual, family and community
+                    behaviors. With COVID-19 pandemic showing no signs of abating,
+                    there is an urgent need to find scalable and cost-effective
+                    solutions to the continued and deepening impact of the COVID
+                    crisis on the world’s youngest citizens.
+                  </p>
+                  <p>Download the Summary: https://www.unicef-irc.org/publication</p>
+              </div>
+          
+            <span class="more-ellipsis">...</span> 
+            <span class="more-link" (click)="onClickShowMoreText($event)">show more</span>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
