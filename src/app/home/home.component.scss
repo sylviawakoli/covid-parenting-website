@@ -4,11 +4,11 @@
 }
 
 .about-text {
-  flex: 50%;
+  flex: 65%;
 }
 
 .about-image {
-  flex: 50%;
+  flex: 35%;
 }
 
 .about-image img {
@@ -37,9 +37,12 @@
   flex: 1;
 }
 
-.nav-card-item-content img {
-  align-self: center;
+.nav-cards-img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
 
 .nav-card-one .nav-card-item-icon {
   background: #fecb79;
@@ -77,6 +80,10 @@
   color: #75c5ca;
 }
 
+.tipsheets-item-content div a {
+  font-size: 16px;
+}
+
 @media only screen and (max-width: 450px) {
   .about-container {
     flex-direction: column-reverse;
@@ -100,10 +107,4 @@
     margin-right: 0px;
   }
 
-  .imgcenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
 }
