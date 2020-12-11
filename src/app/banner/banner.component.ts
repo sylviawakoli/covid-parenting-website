@@ -29,7 +29,7 @@ export class BannerComponent implements OnInit {
     //start the timer
     setTimeout(() => {
       this.showSlidesTimer();
-    }, 3000);
+    }, 4000);
   }
 
   public plusSlides(n: number): void {
