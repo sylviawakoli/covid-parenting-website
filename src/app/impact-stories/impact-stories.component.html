@@ -2,11 +2,7 @@
 <app-newletterribbon></app-newletterribbon>
 <div class="content page-container">
   <div class="main-container">
-    <div class="impact-header">
-      <h4>Total reach by region</h4>
-      <h6>{{ totalRegionSummary | number }} people</h6>
-      <p>As of 14th December 2020</p>
-    </div>
+  
 <div data-aos="zoom-in" data-aos-duration="1000">
       <p>
         Our Partners have been incredibly supportive of the COVID-19 Playful Parenting Emergency Response Project!
@@ -24,6 +20,12 @@
 <p>
   These resources focus on building positive parent-child relationships and reducing violence against children by learning through play, reinforcing positive and managing difficult behaviours, creating structure and routines, talking about COVID-19, keeping children safe online, and reducing stress and conflict.
 </p>
+    </div>
+
+    <div class="impact-header">
+      <h4>Total reach by region</h4>
+      <h6>{{ totalRegionSummary | number }} people</h6>
+      <p>As of {{ strCurrentDate }}</p>
     </div>
 
     <div class="nav-cards"> 

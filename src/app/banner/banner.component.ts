@@ -7,7 +7,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  public slideIndex: number = 1;
+  public slideIndex: number = 0; //current slide index
 
   public slides: any;
 
@@ -29,22 +29,25 @@ export class BannerComponent implements OnInit {
     //start the timer
     setTimeout(() => {
       this.showSlidesTimer();
-    }, 4000);
+    }, 5000);
   }
 
   public plusSlides(n: number): void {
-    this.showSlides(this.slideIndex += n);
+    this.showSlides(n);
   }
 
   private showSlides(n: number): void {
     let i: number;
 
-    if (n > this.slides.length) {
+
+    this.slideIndex = this.slideIndex + n;
+
+    if (this.slideIndex > this.slides.length) {
       this.slideIndex = 1;
     }
 
-    if (n < 1) {
-      this.slideIndex = this.slides.length;
+    if (this.slideIndex < 1) {
+      this.slideIndex = 1;
     }
 
     for (i = 0; i < this.slides.length; i++) {

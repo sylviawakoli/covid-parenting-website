@@ -8,12 +8,15 @@ import { ImpactStoriesService, ImpactSummary } from './impact-stories.service';
 })
 export class ImpactStoriesComponent implements OnInit {
 
+  public strCurrentDate: string="";
   public arrRegionSummaries: ImpactSummary[] = [];
   public arrDisseminationSummaries: ImpactSummary[] = [];
   public totalRegionSummary: number=0;
   public totalDisseminationSummary: number=0;
 
   constructor(private impactStoriesService: ImpactStoriesService) {
+    this.strCurrentDate = new Date().toISOString();
+
     impactStoriesService.fetchImpactSummaries().subscribe((impactsummaries) => {
       impactsummaries.forEach((impactsummary) => {
 
