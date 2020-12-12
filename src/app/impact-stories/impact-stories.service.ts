@@ -35,7 +35,7 @@ export class ImpactStoriesService {
           rows.forEach((row) => {
             try {
               //add row contents to the array
-              thumbnailSrc = row.impactType.toUpperCase() === "REGION"? `assets/impacts/${row.impactTitle}.jpg` : "";
+              thumbnailSrc = row.impactType.toUpperCase() === "REGION"? `assets/impacts/${row.impactTitle}.png` : "";
 
               arrImpactSummaries.push({
                 impactType: row.impactType,
