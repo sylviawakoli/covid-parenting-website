@@ -15,7 +15,7 @@ export class ImpactStoriesComponent implements OnInit {
   public totalDisseminationSummary: number=0;
 
   constructor(private impactStoriesService: ImpactStoriesService) {
-    this.strCurrentDate = new Date().toISOString();
+    this.strCurrentDate = new Date().toLocaleDateString();
 
     impactStoriesService.fetchImpactSummaries().subscribe((impactsummaries) => {
       impactsummaries.forEach((impactsummary) => {

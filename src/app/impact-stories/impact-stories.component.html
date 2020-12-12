@@ -28,7 +28,7 @@
       <p>As of {{ strCurrentDate }}</p>
     </div>
 
-    <div class="nav-cards"> 
+    <div class="nav-cards nav-regions"> 
       <div *ngFor="let summary of arrRegionSummaries" class="nav-card-item"  data-aos="zoom-in" data-aos-duration="1000">  
         <div class="nav-card-item-content">
           <h5>{{ summary.impactTitle }}</h5>
@@ -44,16 +44,17 @@
     <div class="impact-header" data-aos="zoom-in" data-aos-duration="1000">
       <h4>Total reach by dissemination method</h4>
       <h6>{{ totalDisseminationSummary | number }} people</h6>
-      <p>As of 14th December 2020</p>
+      <p>As of {{ strCurrentDate }}</p>
     </div>
 
    
-    <div class="nav-cards nav-dissemination">
+    <div class="nav-cards nav-disseminations">
       <div *ngFor="let summary of arrDisseminationSummaries" class="nav-card-item" data-aos="zoom-in" data-aos-duration="1000">
         <div class="nav-card-item-content">
           <h5>{{ summary.impactTitle }}</h5>
           <div>{{ summary.impactNumber | number}}</div>
           <div class="percentages-text" >{{ summary.impactPercentage | number:'1.1-1' }} %</div>
+          <img src="{{ summary.thumbnailSrc }}" />   
         </div>
       </div>
     </div>

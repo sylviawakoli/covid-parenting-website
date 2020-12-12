@@ -36,7 +36,11 @@ export class ImpactStoriesService {
           rows.forEach((row) => {
             try {
               //add row contents to the array
-              thumbnailSrc = row.impactType.toUpperCase() === "REGION" ? `assets/impacts/${row.impactTitle}.png` : "";
+              if (row.impactType.toUpperCase() === "REGION") {
+                thumbnailSrc = `assets/impacts/region_images/${row.impactTitle}.png`;
+              } else {
+                thumbnailSrc = `assets/impacts/dissemination_images/${row.impactTitle}.png`;
+              }
 
               arrImpactSummaries.push({
                 impactType: row.impactType,
