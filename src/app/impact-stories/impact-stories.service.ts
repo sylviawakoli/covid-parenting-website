@@ -23,7 +23,8 @@ export type ImpactSummaryCSVRow = {
 })
 export class ImpactStoriesService {
 
-  constructor(private spreadsheetService: SpreadsheetService) { }
+  constructor(private spreadsheetService: SpreadsheetService) {
+  }
 
   public fetchImpactSummaries(): Observable<ImpactSummary[]> {
     return this.spreadsheetService.getCSVObjects("assets/impacts/impact_summary.csv")
@@ -35,7 +36,11 @@ export class ImpactStoriesService {
           rows.forEach((row) => {
             try {
               //add row contents to the array
-              thumbnailSrc = row.impactType.toUpperCase() === "REGION"? `assets/impacts/${row.impactTitle}.jpg` : "";
+              if (row.impactType.toUpperCase() === "REGION") {
+                thumbnailSrc = `assets/impacts/region_images/${row.impactTitle}.png`;
+              } else {
+                thumbnailSrc = `assets/impacts/dissemination_images/${row.impactTitle}.png`;
+              }
 
               arrImpactSummaries.push({
                 impactType: row.impactType,
