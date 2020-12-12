@@ -1,7 +1,7 @@
 resourceType,resourceTitle,resourceFilePrefix,resourceLanguageCode
 comics,One on one time,1,en
-comics,Keeping it Positive Teens,2,en
-comics,Keeping it Positive Kids,3,en
+comics,Keeping it positive teens,2,en
+comics,Keeping it positive kids,3,en
 comics,Communicating to your baby,4,en
 comics,Playing with your baby,5,en
 comics,Creating a daily routine,6,en
@@ -44,6 +44,12 @@ psa,Public Service announcements,PSA-Portuguese,pt
 psa,Public Service announcements,PSA-Russian,ru
 psa,Public Service announcements,PSA-Spanish,es
 psa,Public Service announcements,PSA-Turkish,tr
+psa,Top 6 Parenting Tips,Top-6-Tips-Albanian,al
+psa,Top 6 Parenting Tips,Top-6-Tips-Arabic,ar
+psa,Top 6 Parenting Tips,Top-6-Tips-English,en
+psa,Top 6 Parenting Tips,Top-6-Tips-Montenegrin,cnr
+psa,Top 6 Parenting Tips,Top-6-Tips-Romani,rom
+psa,Top 6 Parenting Tips,Top-6-Tips-Russian,ru
 psahowto,How to use public service announcements,How-to-PSA-Bikol,bcl
 psahowto,How to use public service announcements,How-to-PSA-Bisaya,ceb
 psahowto,How to use public service announcements,How-to-PSA-Chinese,zh
