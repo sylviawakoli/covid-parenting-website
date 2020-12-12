@@ -5,7 +5,7 @@
     <div class="impact-header">
       <h4>Total reach by region</h4>
       <h6>{{ totalRegionSummary | number }} people</h6>
-      <p>As of 11 September 2020</p>
+      <p>As of 14th December 2020</p>
     </div>
 <div data-aos="zoom-in" data-aos-duration="1000">
       <p>
@@ -31,7 +31,7 @@
         <div class="nav-card-item-content">
           <h5>{{ summary.impactTitle }}</h5>
           <div>{{ summary.impactNumber | number}}</div>
-          <div>{{ summary.impactPercentage | number:'1.1-1' }} %</div>
+          <div class="percentages-text">{{ summary.impactPercentage | number:'1.1-1' }} %</div>
           <img src="{{ summary.thumbnailSrc }}" />     
         </div>
       </div>
@@ -40,9 +40,9 @@
     <hr/>
     
     <div class="impact-header" data-aos="zoom-in" data-aos-duration="1000">
-      <h4>Total reach by dissemination</h4>
+      <h4>Total reach by dissemination method</h4>
       <h6>{{ totalDisseminationSummary | number }} people</h6>
-      <p>As of 11 September 2020</p>
+      <p>As of 14th December 2020</p>
     </div>
 
    
@@ -51,7 +51,7 @@
         <div class="nav-card-item-content">
           <h5>{{ summary.impactTitle }}</h5>
           <div>{{ summary.impactNumber | number}}</div>
-          <div>{{ summary.impactPercentage | number:'1.1-1' }} %</div>
+          <div class="percentages-text" >{{ summary.impactPercentage | number:'1.1-1' }} %</div>
         </div>
       </div>
     </div>

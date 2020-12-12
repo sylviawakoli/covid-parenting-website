@@ -19,6 +19,7 @@
 
 .nav-dissemination .nav-card-item{
   margin-left: 10px;
+  flex: 30%;
 }
 
 .nav-card-item-content{
@@ -34,6 +35,10 @@
     font-weight: 400;
 }
 
+.percentages-text{
+  color: #faad19;
+}
+
 @media only screen and (max-width: 450px) {
     .nav-cards{
         flex-direction: column;
@@ -42,6 +47,7 @@
 
     .nav-dissemination .nav-card-item{
       margin-left: 0px;
+      flex: 100%;
     }
 }
 
