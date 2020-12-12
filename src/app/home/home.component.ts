@@ -31,9 +31,9 @@ export class HomeComponent implements OnInit {
       this.arrVisibleTipSheets = [];
       let index: number;
       for (index = 0; index < tipSheets.length; index++) {
-        if (index === 5) {
-          break;
-        }//end if 
+        //if (index === 5) {
+          //break;
+        //}//end if 
         this.arrVisibleTipSheets.push(tipSheets[index]);
       }//end for loop
 
