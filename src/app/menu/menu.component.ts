@@ -30,7 +30,7 @@ const MENU_ITEMS: MenuItem[] = [
     ]
   },
   {
-    name: "NEWS",
+    name: "NEWS & EVENTS",
     href: "/news-main",
     subMenuItems: [
       { name: "News", href: "/news" },
