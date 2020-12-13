@@ -1,3 +1,21 @@
+.contactus-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactus-text {
+  flex: 65%;
+}
+
+.contactus-image {
+  flex: 35%;
+}
+
+.contactus-image img {
+  width: 100%;
+}
+
+
 .nav-card-item-header {
   background: #fac1bc;
 }
@@ -7,12 +25,28 @@
 }
 
 .nav-card-item-content a {
-  /**color: #fac1bc;**/
   color: #0b4061;
   font-weight: 500;
   font-size: 16px;
 }
 
-.nav-card-item-content hr {
+.nav-card-item hr {
   border-color: #fac1bc;
+}
+
+@media only screen and (max-width: 450px) {
+  .contactus-main {
+    flex-direction: column-reverse;
+  }
+
+  .contactus-text {
+    flex: 100%;
+    margin-top: 10px;
+  }
+
+  .contactus-image {
+    flex: 100%;
+  }
+
+
 }
