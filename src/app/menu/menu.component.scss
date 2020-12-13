@@ -1,11 +1,6 @@
-.navbar{
-  background-color: rgba(255, 255, 255, 1);
-   //height: 120px; 
-  //position: fixed;
-  //top: 0;
-  //width: 100%;
-  //padding-top: 10px;
-  //padding-left: 0px;
+.navbar {
+  /*background-color: rgba(255, 255, 255, 1);*/
+  background: #5dbcd2;
 }
 
 .spacer {
@@ -20,14 +15,6 @@
   width: 100%;
 }
 
-.social-media-mobile {
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  padding-bottom: 40px;
-}
-
 .toolbar {
   display: flex;
   flex-direction: row;
@@ -35,45 +22,70 @@
   width: 100%;
 }
 
-.plh-logo {
-  width: 100px;
-  height: 80px;
+.desktop-menu {
+  /*padding-bottom: 10px;*/
+  /*border-bottom: 1px solid #0b4061;*/
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
 }
 
-.desktop-menu {
+.desktop-menu-items {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.desktop-menu a {
+.desktop-menu-items .menu-item {
   align-self: center;
+}
+
+.desktop-menu-items .menu-item a {
   font-weight: 500;
   text-decoration: none;
-  color: #0b4061;
-  padding: 0px 20px; 
+  /*color: #0b4061;*/
+  color: #ffffff;
+  line-height: 1.2;
+  font-size: 1.2rem;
   transition-duration: 0.4s;
 }
 
-.desktop-menu a:hover {
+.desktop-menu-items .menu-item a:hover {
   text-decoration: none;
-  border-bottom: 4px solid #0b4061;
+  /*border-bottom: 4px solid #0b4061;*/
+  /* color: #0b4061;*/
+  color: #ffffff;
+  border-bottom: 4px solid #ffffff;
 }
 
-.desktop-menu a:active {
-  color: #ffffff;
-  background: #ed1651;
-  padding: 10px 25px;
-  border-radius: 25px;
-  border: none;
+.menu-item:hover .dropdown-content {
+  display: block;
 }
 
-/* todo. to be called dynamically in typescript file */
-.menu-item-active {
+.dropdown-content {
+  display: none;
+  position: absolute;
+  /*background-color: #f1f1f1;*/
+  background-color: #5dbcd2;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content .dropdown-item {
+  background-color: #5dbcd2;
+}
+
+.dropdown-content .dropdown-item a {
+  background-color: #5dbcd2;
   color: #ffffff;
-  background: #ed1651;
-  padding: 10px 25px;
-  border-radius: 25px;
-  border: none;
+}
+
+.dropdown-content .dropdown-item a:hover {
+  //background: #ffffff;
+  background-color: #5dbcd2;
+  color: #ffffff;
 }
 
 /* mobile menu Overlay (background) */
@@ -126,34 +138,18 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .header-container {
-    //height: 100px;
-  }
-
-  .spacer {
-    height: 100px;
-  }
-
-  .plh-logo {
-    width: 90px;
-    height: 70px;
-  }
-
-  .social-media-icons {
-    display: none;
-  }
-
   .toolbar {
     justify-content: space-between;
   }
 
   .desktop-menu {
     display: none;
-    }
+  }
 
   .website-title {
     display: block;
-    color: #0b4061;
+    /*color: #0b4061;*/
+    color: #ffffff;
     font-weight: 500;
     font-size: 1.6rem;
     align-self: center;
@@ -169,17 +165,13 @@
   .menu-icon div {
     width: 35px;
     height: 5px;
-    background-color: #0b4061;
+    /*background-color: #0b4061;*/
+    background-color: #ffffff;
     margin: 6px 0;
   }
 }
 
 @media only screen and (max-width: 450px) {
-   
-  .plh-logo {
-    display: none;
-  }
-
   .website-title {
     margin-left: 6px;
     margin-top: 3px;
@@ -193,9 +185,5 @@
     width: 30px;
     height: 3px;
     margin: 3px 0;
-  }
-
-  .spacer {
-    height: 60px;
   }
 }

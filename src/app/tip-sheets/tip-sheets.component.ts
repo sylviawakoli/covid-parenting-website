@@ -1,10 +1,9 @@
 import { Component, OnInit, Input, SimpleChanges, OnChanges, Output, EventEmitter } from '@angular/core';
 import { Language, TipSheet, LanguageCSVRow } from './tip-sheets.model';
-import { HttpClient } from '@angular/common/http';
-import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 import { TipSheetService } from './tip-sheet.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { ResourcesService } from '../resources.service';
 
 @Component({
   selector: 'app-tip-sheets',
@@ -20,10 +19,10 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
   viewAllTipSheets: boolean = false;//used to indicate if the component will show all tipsheets
   @Input()
-  maxTipSheetsToShow: number = 6;//used to show tipsheets in batches
+  maxTipSheetsToShow: number = 5;//was originally 6 cause of flex wrap. used to show tipsheets in batches
 
   allLanguages: Language[] = [];
-  selectedRange: string[] = ["A", "F"];
+  selectedRange: string[] = ["C", "F"];
   letterRanges: string[][] = [["A", "B"], ["C", "F"], ["G", "J"], ["K", "L"], ["M", "P"], ["R", "S"], ["T", "Z"]];
   dropdownLanguages: Language[] = [];
 
@@ -35,7 +34,7 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   tipSheetsSubscription: Subscription;
 
 
-  constructor(private tipSheetService: TipSheetService, private activatedRoute: ActivatedRoute) {
+  constructor(private tipSheetService: TipSheetService, private resourcesService: ResourcesService, private activatedRoute: ActivatedRoute) {
     this.tipSheetService.getLanguages().subscribe((languages) => {
       this.allLanguages = languages;
       this.onLetterRangeClick(this.letterRanges[0], false);
@@ -52,26 +51,30 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   }
 
   changeLanguage(language: Language) {
-    console.log("Change language ", language);
+    //console.log("Change language ", language);
     this.currentLanguage = language;
     if (this.tipSheetsSubscription) {
       this.tipSheetsSubscription.unsubscribe();
     }
     this.tipSheetsSubscription = this.tipSheetService.getTipSheetsForLanguage(language.code).subscribe((sheets) => {
       this.tipSheets = sheets;
-      console.log("Tip sheets set", sheets);
+      //console.log("Tip sheets set", sheets);
       this.visibleTipSheets = [];
       if (this.viewAllTipSheets) {
         this.visibleTipSheets = this.tipSheets;
       } else {
-        this.viewMoreTipSheets()
+        this.onClickViewMoreTipSheets()
       }
+
+      //fetch all resources  with selected language
+      this.fetchAndOtherResources(language.code);
+
       this.activatedRoute.url.subscribe((urlSegments) => {
-        console.log("Activated route url segments", urlSegments);
+        //console.log("Activated route url segments", urlSegments);
         let path = urlSegments[0].path;
         if (history.pushState && path.indexOf("tips") > -1) {
           var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + `?langCode=${language.code}`;
-          window.history.pushState({path:newurl},'',newurl);
+          window.history.pushState({ path: newurl }, '', newurl);
         }
       });
     });
@@ -91,16 +94,21 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   }
 
   //used by the view more button and when the tip sheets are to to be view in batches
-  public viewMoreTipSheets() {
+  public onClickViewMoreTipSheets() {
+    let startIndex: number;
+
     if (this.visibleTipSheets.length == 0) {
-      this.addElementsToVisibleTipSheets(0);
-    } else if (this.visibleTipSheets.length > 0) {
+      startIndex = 0;
+    } else {
       if (this.visibleTipSheets.length < this.tipSheets.length) {
-        //from last added  
-        this.addElementsToVisibleTipSheets(this.visibleTipSheets.length );
+        startIndex = this.visibleTipSheets.length;   //from last added  
+      } else {
+        return;
       }//end inner if
+
     }//end if
 
+    this.addElementsToVisibleTipSheets(startIndex);
     this.showloadMoreButton = this.visibleTipSheets.length < this.tipSheets.length;
   }//end method
 
@@ -116,9 +124,63 @@ export class TipSheetsComponent implements OnInit, OnChanges {
     }//end for loop
   }//end method
 
+
+  public objMergedTipsheet: TipSheet = null;
+  public arrOtherResources: TipSheet[] = null;
+
+  public fetchAndOtherResources(langCode: string) {
+
+    this.objMergedTipsheet = null; //reset
+    this.arrOtherResources = null; //reset array
+    
+    this.resourcesService.fetchResourcesByLanguage(langCode).subscribe((langResources) => {
+      let strResourceType: string;
+      let objResourceSheet: TipSheet;
+      this.arrOtherResources = []; //initialise array
+
+      langResources.forEach((row) => {
+        strResourceType = row.resourceType.toLowerCase();
+        objResourceSheet = {
+          title: row.resourceTitle,
+          thumnailSrc: "",
+          pdfSrc: ""
+        };
+
+        if (strResourceType === "mergedtipsheet") {
+          objResourceSheet.pdfSrc = `assets/tip_sheets/${langCode}/${row.resourceFilePrefix}.pdf`;
+          this.objMergedTipsheet = objResourceSheet;
+          return;
+        } else if (strResourceType === "caseworkers") {
+          objResourceSheet.pdfSrc = `assets/resources/caseworkers/${row.resourceFilePrefix}.pdf`;
+        } else if (strResourceType === "psa" || strResourceType === "psahowto") {
+          objResourceSheet.pdfSrc = `assets/resources/psas/${row.resourceFilePrefix}.pdf`;
+        } else if (strResourceType === "faithbased") {
+          objResourceSheet.pdfSrc = `assets/resources/faithbased/${row.resourceFilePrefix}.pdf`;
+        }else{
+          return;
+        }
+
+        this.arrOtherResources.push(objResourceSheet);
+     
+      });//end for loop
+
+      //if other resources not there. set to null
+      if(this.arrOtherResources.length == 0){
+        this.arrOtherResources = null;
+      } 
+
+
+
+    });
+
+  }//end method
+
+
   public openTipSheetPDF(tipSheet: TipSheet) {
     window.open(tipSheet.pdfSrc, "__blank");
   }
+
+
 
 }//end class
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { ResourcesService, Resource } from './resources.service';
 import * as AOS from 'aos';
 declare let gtag: Function;
 @Component({
@@ -8,7 +9,8 @@ declare let gtag: Function;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(public router: Router) {
+  //todo. possibly remove resources service after fixing laxy loading
+  constructor(public router: Router, public resourcesService: ResourcesService) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         window.scrollTo(0, 0);

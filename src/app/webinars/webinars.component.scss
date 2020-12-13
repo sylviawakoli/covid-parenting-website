@@ -1,0 +1,69 @@
+.nav-card-item-header {
+  background: #75c5ca;
+}
+
+.nav-card-item-content h5 {
+  color: #75c5ca;
+}
+
+.nav-card-item-content a {
+  color: #75c5ca;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.nav-card-item hr {
+  border-color: #75c5ca;
+  //margin: 0;
+}
+
+.webinar-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.webinar-video {
+  flex: 40%;
+  height: 250px;
+}
+
+.webinar-text {
+  flex: 60%;
+  padding-left: 10px;
+}
+
+.preview-text {
+  height: 200px;
+  overflow: hidden;
+}
+
+.more-link {
+  display: block;
+  color: #75c5ca;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.more-link:hover{
+    color: #75c5ca;
+    text-decoration: underline;
+  }
+
+@media only screen and (max-width: 450px) {
+  .webinar-container {
+    flex-direction: column;
+  }
+  .webinar-video {
+    flex: 100%;
+    margin-bottom: 10px;
+  }
+
+  .webinar-text {
+    flex: 100%;
+    padding-left: 0px;
+  }
+
+  .spacer {
+    height: 20px;
+  }
+}
