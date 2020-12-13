@@ -30,7 +30,7 @@ const MENU_ITEMS: MenuItem[] = [
     ]
   },
   {
-    name: "NEWS",
+    name: "NEWS & EVENTS",
     href: "/news-main",
     subMenuItems: [
       { name: "News", href: "/news" },
@@ -47,7 +47,14 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Contributors", href: "/contributors" }
     ]
   },
-  { name: "IMPACT", href: "/impact" },
+  { 
+    name: "IMPACT",
+    href: "/impact",
+    subMenuItems: [
+      { name: "Impact Stories", href: "/impact" },
+      { name: "Champions of Children", href: "/impact" }
+    ]
+  },
   { name: "CONTACT US", href: "/contactus" }
  ];
 
