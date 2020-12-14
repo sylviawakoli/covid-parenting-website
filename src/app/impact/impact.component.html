@@ -1,1 +1,87 @@
-<p>impact works!</p>
+<app-banner></app-banner>
+<app-newletterribbon></app-newletterribbon>
+<div class="content page-container">
+  <div class="main-container">
+  
+<div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+      <p>
+        Our Partners have been incredibly supportive of the COVID-19 Playful Parenting Emergency Response Project!
+      </p>
+      <p style="font-weight: bold;" >
+        The COVID-19 Parenting resources have now reached {{ totalDisseminationSummary | number }} people!
+      </p>
+<p>
+  Data on the number of beneficiaries who received the COVID-19 parenting resources is collected using social media metrics, Google analytics, reports from implementing agencies, surveys with organisations, and direct distribution. We also sent a short survey to over 600 implementing partners in approximately 187 countries who reported on the reach, adoption, and implementation of the resources.
+</p>
+
+<p>
+  The overall reach is calculated by summing the total number of beneficiaries who receive the resources from each implementing partner regardless of implementation strategy. In order to avoid potential double counting, we use a conservative method to estimate the reach of social media platforms in alignment with technical guidance for supporting digital platforms and traditional media from UNICEF Risk Communication and Community Engagement COVID-19 Global Response. As a result, only one social media platform per implementing agency or data source was included in analyses, based on the platform with the highest reach.
+</p>
+<p>
+  These resources focus on building positive parent-child relationships and reducing violence against children by learning through play, reinforcing positive and managing difficult behaviours, creating structure and routines, talking about COVID-19, keeping children safe online, and reducing stress and conflict.
+</p>
+    </div>
+
+    <div class="impact-header">
+      <h4>Total reach by region</h4>
+      <h6>{{ totalRegionSummary | number }} people</h6>
+      <p>As of {{ strCurrentDate }}</p>
+    </div>
+
+    <div class="nav-cards nav-regions"> 
+      <div *ngFor="let summary of arrRegionSummaries" class="nav-card-item"  data-aos="zoom-in" data-aos-duration="1000">  
+        <div class="nav-card-item-content">
+          <h5>{{ summary.impactTitle }}</h5>
+          <div>{{ summary.impactNumber | number}}</div>
+          <div class="percentages-text">{{ summary.impactPercentage | number:'1.1-1' }} %</div>
+          <img src="{{ summary.thumbnailSrc }}" />     
+        </div>
+      </div>
+    </div>
+
+    <hr/>
+    
+    <div class="impact-header" data-aos="zoom-in" data-aos-duration="1000">
+      <h4>Total reach by dissemination method</h4>
+      <h6>{{ totalDisseminationSummary | number }} people</h6>
+      <p>As of {{ strCurrentDate }}</p>
+    </div>
+
+   
+    <div class="nav-cards nav-disseminations">
+      <div *ngFor="let summary of arrDisseminationSummaries" class="nav-card-item" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="nav-card-item-content">
+          <h5>{{ summary.impactTitle }}</h5>
+          <div>{{ summary.impactNumber | number}}</div>
+          <div class="percentages-text" >{{ summary.impactPercentage | number:'1.1-1' }} %</div>
+          <img src="{{ summary.thumbnailSrc }}" />   
+        </div>
+      </div>
+    </div>
+<hr>
+    <div class="nav-cards nav-disseminations">
+      <div class="nav-card-item" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="nav-card-item-content">
+          <h5>IMPACT STORIES</h5>
+          <p style="font-style: italic; color: blue;">
+            Impact Stories will be available soon.
+          </p>
+                  </div>
+      </div>
+    </div>
+    <hr>
+    <div class="nav-cards nav-disseminations">
+      <div class="nav-card-item" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="nav-card-item-content">
+          <h5>CHAMPIONS OF CHILDREN</h5>
+          <p style="font-style: italic; color: blue;">
+            Champions of Children will be available soon.
+          </p>
+                  </div>
+      </div>
+    </div>
+
+
+  </div>
+  <app-sidebar class="side-bar-container"></app-sidebar>
+</div>
