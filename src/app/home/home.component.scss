@@ -1,310 +1,113 @@
-.banner-curve-top {
-  margin-bottom: 0px;
-  position: absolute;
-}
-
-.banner-curve-bottom {
-  margin-top: -80px;
-}
-
-.tips-curve-top {
-  margin-top: -120px;
-}
-
-.tips-curve-bottom {
-  margin-top: -120px;
-}
-
-.banner-container {
-  margin-top: 10px;
-  background: #ffca04;
-}
-
-.banner-slider {
+.about-container {
   display: flex;
+  flex-direction: row;
 }
 
-.slider-text {
-  flex: 50%;
+.about-text {
+  flex: 65%;
 }
 
-.slider-image {
-  flex: 50%; //todo. could be larger?
+.about-image {
+  flex: 35%;
 }
 
-.slide-image {
-  width: calc(60vw - 50px);
-  min-width: 100px;
-  max-width: 440px;
+.about-image img {
+  width: 100%;
 }
 
-.main-header-one {
+.about-text h3 {
   font-weight: 300;
 }
 
-.main-header-two {
+.about-text h4 {
   font-weight: 500;
 }
 
-.main-header-three {
-  font-weight: 500;
-  color: #ed1651;
+.about-text p {
+  font-weight: 300;
 }
 
-.slider-text p {
-  font-weight: 400;
+.nav-home {
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.nav-cards {
-  display: flex;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.nav-card-item {
+.nav-home .nav-card-item {
+  padding-right: 20px;
   flex: 1;
+}
+
+.nav-cards-img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-home .nav-card-item .nav-card-item-header {
   text-align: center;
 }
 
-.nav-card-item h3 {
-  font-weight: 500;
+.nav-card-one .nav-card-item-icon {
+  background: #fecb79;
 }
 
-.nav-card-item p {
-  font-weight: 300;
-}
-
-/* for the tips container*/
-.tips-background {
-  background: #f2f2f2;
-}
-
-.tips-content {
-  color: #0b4061;
-  display: flex;
-  flex-direction: row;
-}
-
-.tips-info {
-  padding-right: 40px;
-  text-align: right;
-  flex: 40%;
-}
-
-.tips-sheets {
-  flex: 60%;
-}
-
-.tips-info h3 {
-  font-weight: 400;
-}
-
-.tips-info p {
-  font-weight: 300;
-}
-
-.tips-info-question {
-  display: flex;
-  flex-direction: row;
-}
-
-.tips-info-question-content {
-  padding-right: 10px;
-}
-
-.desktop-tips-info-directions {
-  display: block;
-}
-
-.mobile-tips-info-directions {
-  display: none;
-}
-
-.slow-down-video-content {
-  margin-top: 60px;
-  display: block;
-
-  .youtube-container {
-    max-width: 99%;
-    overflow: hidden;
-  }
-}
-
-/* for the footer container*/
-.home-footer-background {
-  background: #0a4160;
-}
-
-.survey-content {
-  margin-bottom: 60px;
-  display: block;
-}
-
-.survey-button {
-  
-  display: block;
-  background-color: #33aa33;
-  color: white;
-  border-radius: 20px;
-  padding: 10px;
-  font-size: 22px;
-  padding-left: 20px;
-  max-width: 300px;
-  width: 100%;
-}
-
-/* for tablets*/
-@media only screen and (max-width: 768px) {
-  .banner-curve-top {
-    margin-bottom: -20px;
+.nav-card-one .nav-card-item-header {
+  background: #fecb79;
   }
 
-  .banner-curve-bottom {
-    margin-top: -65px;
+.nav-card-one .nav-card-item-content h5 {
+  color: #fecb79;
   }
 
-  .tips-curve-top {
-    margin-top: -100px;
-    margin-bottom: -70px;
+.nav-card-two .nav-card-item-icon {
+  background: #66738d;
+}
+
+.nav-card-two .nav-card-item-header {
+  background: #66738d;
+}
+
+.nav-card-two .nav-card-item-content h5 {
+  color: #66738d;
+}
+
+.nav-card-three .nav-card-item-icon {
+  background: #75c5ca;
+}
+
+.nav-card-three .nav-card-item-header {
+  background: #75c5ca;
+}
+
+.nav-card-three .nav-card-item-content h5 {
+  color: #75c5ca;
+}
+
+.tipsheets-item-content div a {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 450px) {
+  .about-container {
+    flex-direction: column-reverse;
   }
 
-  .tips-curve-bottom {
-    margin-top: -90px;
+  .about-text {
+    flex: 100%;
+    margin-top: 10px;
+  }
+
+  .about-image {
+    flex: 100%;
   }
 
   .nav-cards {
-    flex-wrap: wrap;
-    margin-top: 0px;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .nav-card-item {
-    flex: 50%;
-    margin-bottom: 50px;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  .banner-curve-top {
-    margin-bottom: 0px;
+    padding-right: 0px;
   }
 
-  .banner-curve-bottom {
-    margin-top: -20px;
-  }
-
-  .tips-curve-top {
-    margin-top: -30px;
-    margin-bottom: 10px;
-  }
-
-  .tips-curve-bottom {
-    margin-top: -30px;
-  }
-
-  .banner-slider {
-    flex-direction: column;
-  }
-
-  .slider-text {
-    flex: 100%;
-  }
-
-  .slider-image {
-    flex: 100%;
-  }
-
-  .nav-cards {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0px;
-  }
-
-  .nav-card-item {
-    flex: 100%;
-  }
-
-  /* for the tips container*/
-  .tips-content {
-    flex-direction: column;
-  }
-
-  .tips-info {
-    padding: 0px;
-    text-align: left;
-    flex: 100%;
-  }
-
-  .tips-sheets {
-    flex: 100%;
-  }
-
-  .desktop-tips-info-directions {
-    display: none;
-  }
-
-  .mobile-tips-info-directions {
-    display: block;
-  }
-}
-
-// UKRI and PLH Digital group logos
-.supporters-content {
-  width: 100%;
-  display: block;
-
-  .supporters-logos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      margin: 20px;
-      max-width: 100px;
-    }
-  }
-}
-
-// Dark Blue logos
-.partner-logos-container {
-  width: 100%;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-
-  img {
-    max-width: 100%;
-    margin-bottom: 30px;
-  }
-}
-
-@media only screen and (min-width: 650px) {
-  .partner-logos-container {
-    img {
-      max-width: 48%;
-      padding: 20px;
-    }
-  }
-}
-
-@media only screen and (min-width: 1800px) {
-  .banner-curve-top {
-    margin-top: -110px;
-  }
-
-  .nav-cards {
-    margin-top: -30px;
-  }
-}
-
-.contact-us-link {
-  font-size: 30px;
 }

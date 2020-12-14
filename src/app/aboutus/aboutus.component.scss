@@ -1,0 +1,36 @@
+.nav-card-item-header {
+  background: #5d61ac;
+}
+
+.nav-card-item-content h5 {
+  color: #5d61ac;
+}
+
+.nav-card-item-content a {
+  color: #5d61ac;  
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-card-item-content hr {
+  border-color: #5d61ac;
+}
+
+.nav-images {
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 450px) {
+  .nav-images {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .news-items .nav-card-item-content {
+    flex: 100%;
+    padding-left: 0px;
+  }
+
+  .nav-images .nav-card-item img {
+    width: 100%;
+  }
+}

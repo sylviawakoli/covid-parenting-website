@@ -1,5 +1,4 @@
-
-<header>Select your language</header>
+<h5 class="tip-header">Select your language</h5>
 <div class="lang-letter-ranges">
     <a *ngFor="let range of letterRanges" (click)="onLetterRangeClick(range)"
         [class]="range[0] === selectedRange[0] ? 'letter-range selected' : 'letter-range'">
@@ -16,21 +15,39 @@
         </button>
     </div>
 </div>
-<div class="tip-sheet-container">
-    <a class="tip-sheet-card" *ngFor="let tipSheet of visibleTipSheets" (click)="openTipSheetPDF(tipSheet)">
-        <div class="tip-sheet-title"><h4>{{ tipSheet.title }}</h4></div>
-        <div class="tipsheet-thumbnail">
-            <img class="thumbnail-img" src="{{ tipSheet.thumnailSrc }}" />
+
+<div *ngIf="objMergedTipsheet">
+    To download all the tip sheets <a class="download-merged" href="{{  objMergedTipsheet? objMergedTipsheet.pdfSrc : '' }}" target="_blank">click here</a>
+</div>
+
+<div class="nav-cards">
+    <div class="nav-card-item">
+         <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
+             <div *ngFor="let tipSheet of visibleTipSheets">
+                <a href="{{ tipSheet.pdfSrc}}" target="_blank">
+                    {{ tipSheet.title }}      
+                </a>
+                <hr/>
+             </div>
         </div>
-        <div class="tip-sheet-btn-container"><span class="btn-container tip-sheet-btn">View</span> </div>       
-    </a>
+        <div class="resource-view-more-text"  (click)="onClickViewMoreTipSheets()" *ngIf="showloadMoreButton" >
+            See more tip sheets
+        </div>
+
+    </div>
 </div>
 
-<!-- todo. not quite sure about how this should be implemented-->
-<!--<div *ngIf="visibleTipSheets.length == tipSheets.length && tipSheets.length < 15">
-    <p>Not all 15 tip sheets are available in this language yet.</p>
-</div>-->
-
-<div>
-   <span class="btn-load-more" (click)="viewMoreTipSheets()" *ngIf="showloadMoreButton">See more tip sheets</span> 
+<div *ngIf="arrOtherResources" class="nav-cards">
+    <div class="nav-card-item" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="nav-card-item-content">
+         <h5 class="tip-header">Other Resources in {{currentLanguage.name}}</h5>
+         <div *ngFor="let resourceSheet of arrOtherResources">
+            <a href="{{ resourceSheet.pdfSrc}}" target="_blank">  {{ resourceSheet.title }}   </a>
+            <hr/>
+         </div>    
+        </div>
+      </div>
 </div>
+
+
+

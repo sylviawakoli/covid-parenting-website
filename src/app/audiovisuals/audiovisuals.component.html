@@ -1,0 +1,101 @@
+<app-banner></app-banner>
+<app-newletterribbon></app-newletterribbon>
+<div class="content page-container">
+  <div class="nav-cards main-container">
+    <div class="nav-card-item">
+      <h5 class="nav-card-item-header">AUDIO-VISUALS RESOURCES</h5>
+      <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
+        <p>
+          Our parenting resources are also been designed for specific audio and visual presentations to reach all parents and caregivers groups, regardless of the quality of their internet access
+        </p>
+      </div>
+      <hr />
+      <div class="nav-card-item-content">
+        <h5>COMICS</h5>
+        <div class="nav-cards nav-resources">
+          <a class="nav-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+            <h5>{{ comics.title }}</h5>
+            <img class="preview" [src]="comics.thumnailSrc" />
+            <div class="view-text">View</div>
+          </a>
+        </div>
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"  *ngIf="bShowloadMoreComicsButton"  >
+          See more comics
+        </div>
+      </div>
+      <hr />
+      <div class="nav-card-item-content">
+        <h5>LET'S SLOW DOWN VIDEOS</h5>
+        <div class="nav-cards nav-resources">
+          <div class="nav-card-item" *ngFor="let slowdown of arrVisibleSlowDownVisuals"  data-aos="zoom-in" data-aos-duration="1000" >
+            <h5>{{ slowdown.title }}</h5>
+            <iframe class="preview"
+              [src]="slowdown.urlSafe"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen  >
+            </iframe>
+          </div>
+        </div>
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllSlowDownVideosVisuals, arrVisibleSlowDownVisuals )"  *ngIf="bShowloadMoreSlowDownVideosButton" >
+          See more let's slow down videos
+        </div>
+      </div>
+      <hr/>
+      
+      <div class="nav-card-item-content">
+        <h5> AUDIO PACK </h5>
+        <div class="nav-card-item-content">
+          <div  data-aos="zoom-in" data-aos-duration="1000">
+            <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-English.pdf" target="_blank">English</a></p> 
+            <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-Portuguese.pdf" target="_blank">Portuguese</a></p> 
+            <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-Spanish.pdf" target="_blank">Spanish</a></p> 
+            </div>
+            <hr/>
+        </div>
+        <h5>PLAY TOGETHER</h5>
+        <div class="nav-cards nav-resources">
+          <a class="nav-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+            <h5>{{ audio.title }}</h5>
+            <img class="preview" [src]="audio.thumnailSrc" />
+            <div class="view-text">Listen</div>
+          </a>
+        </div>
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether)"  *ngIf="bShowloadMoreAudioPlayTogether"  >
+          See more play together audios
+        </div>
+      </div>
+      <hr/>
+      <div class="nav-card-item-content">
+        <h5>KEEP IT POSITIVE</h5>
+        <div class="nav-cards nav-resources">
+          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+            <h5>{{ audio.title }}</h5>
+            <img class="preview" [src]="audio.thumnailSrc" />
+            <div class="view-text">Listen</div>
+          </a>
+        </div>
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive)"  *ngIf="bShowloadMoreAudioKeepPostive"  >
+          See more keep it positive audios
+        </div>
+      </div>
+      <hr/>
+      <div class="nav-card-item-content">
+        <h5>SHARING IS CARING</h5>
+        <div class="nav-cards nav-resources">
+          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+            <h5>{{ audio.title }}</h5>
+            <img class="preview" [src]="audio.thumnailSrc" />
+            <div class="view-text">Listen</div>
+          </a>
+        </div>
+        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing)"  *ngIf="bShowloadMoreAudioSharing"  >
+          See more sharing is caring audios
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <app-sidebar class="side-bar-container"></app-sidebar>
+</div>

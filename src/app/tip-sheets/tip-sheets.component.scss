@@ -1,77 +1,58 @@
+.tip-header{
+  color: #0b4061;
+}
 
 .lang-letter-ranges {
-    display: flex;
+  display: flex;
 }
 
 .letter-range {
-    border: 1px solid grey;
-    margin: 5px;
-    border-radius: 10px;
-    padding: 4px;
+  border: 1px solid grey;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 4px;
 
-    &.selected {
-        background-color: lightskyblue;
-    }
+  &.selected {
+    background-color: #5dbcd2;
+  }
 }
 
 .language-dropdown {
-    margin-left: 4px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-left: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.tip-sheet-container {
-    display: flex;
-    flex-wrap: wrap; 
+.download-merged{
+  color: #5dbcd2;
+  font-size: medium;
 }
 
-.tip-sheet-card {
-    flex: 1; /* make the cards equal in size  */
-    text-decoration: none;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
-    margin: 10px;
-    color: #0b4061; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 10px; /* 5px rounded corners */
-    background: #ffffff;
-    transition: 0.4s;
+.nav-cards{
+  width: 100%;
 }
 
-.tip-sheet-card:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}  
-
-.tip-sheet-title {
-    //font-size: 15px;
-    text-align: center;
-    padding-top: 8px; 
+.nav-cards .nav-card-item{
+  width: 100%;
 }
 
-.tip-sheet-btn-container{
-    padding-top: 8px;
-    padding-bottom: 8px;
-    display: flex;
-    justify-content: center;
+.nav-card-item-content a {
+  color: #75c5ca;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.nav-card-item-content hr {
+  border-color: #75c5ca; 
+  margin-bottom: 20px;
 }
 
 
-.tipsheet-thumbnail{
-    //width: 230px; todo. original value
-    //height: 180px; todo. original value
-    
-    align-self: center; 
-    border-radius: 10px;
-    width: 210px;
-    height: 150px;
+.resource-view-more-text{
+  color: #5dbcd2;
 }
 
-.thumbnail-img{
-   // width: 100%;
-   width: 210px;
-   height: 150px;
-}
+
 
 
 

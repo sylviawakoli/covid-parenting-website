@@ -1,26 +1,18 @@
-<div class="tips-container" >  
-  <!--before curve-->
-  <svg class="curve-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,240C384,256,480,256,576,234.7C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-  
-  <div class="content" data-aos="zoom-in" data-aos-duration="1000">
-    <h2 class="main-header-one">COVID-19:</h2>
-    <h2 class="main-header-two">Parenting Tips</h2>
-    <h3 class="main-header-three">
-      Proven parenting tips and activities for all ages in worldwide languages
-    </h3>
-    <p class="tips-info"><i>If you cant find a tipsheet in your language, <a routerLink="/contactus">please Send us a message!</a></i></p>
-    
-    <app-tip-sheets [currentLanguage]="tipSheetLang"></app-tip-sheets>
-
-    <div><p class="tips-info">Please note that these translations were not created by the World Health Organization (WHO), and WHO is not responsible for the content or accuracy of these translations </p></div>
-       
-  </div>
-
-  <!--after curve--> 
-  <svg class="curve-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#0a4160" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,240C384,256,480,256,576,234.7C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+<app-banner></app-banner>
+<app-newletterribbon></app-newletterribbon>
+<div class="content page-container">
+    <div class="main-container nav-cards">
+        <div class="nav-card-item nav-item-main">
+            <h5 class="nav-card-item-header">PARENTING TIPS</h5>
+            <div class="nav-card-item-content">
+              <p>Our open-source and evidence-based parenting tips and resources are available in more than 100 languages!</p>
+              <p> Select your preferred language, and see the parenting tip sheets, as well as other parenting materials, available in the language of your choice:</p>
+              <app-tip-sheets [currentLanguage]="tipSheetLang"></app-tip-sheets>
+              <p>If you can't find a parenting tip sheet and/or other parenting resources available in your language, please send us an email at: <a href="mailto:translate@covid19parenting.com">translate@covid19parenting.com</a> </p>
+              <p>Please note that these translations were not created by the World Health Organization (WHO), and WHO is not responsible for the content or accuracy of these translations.</p>
+            </div>
+        </div>
+    </div>
+    <app-sidebar class="side-bar-container"></app-sidebar>
 </div>
- <!-- footer-->
- <div class="home-footer-background" >  
-  <app-footer></app-footer>
-</div> 
-<!--/footer-->
+ 

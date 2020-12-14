@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Language } from '../tip-sheets/tip-sheets.model';
-import{WebAnalyticsService} from '../web-analytics.service';
+import { TipSheet } from '../tip-sheets/tip-sheets.model';
+import { WebAnalyticsService } from '../web-analytics.service';
+import { TipSheetService } from '../tip-sheets/tip-sheet.service';
 
 @Component({
   selector: 'app-home',
@@ -11,18 +12,35 @@ export class HomeComponent implements OnInit {
 
   title = 'Covid Parenting Website';
 
-  tipSheetLang: Language = {
-    code: "en",
-    name: "English"
-  };
+  arrVisibleTipSheets: TipSheet[] = [];
 
-  constructor(public webAnalyticsService: WebAnalyticsService) {}
+  constructor(public webAnalyticsService: WebAnalyticsService, private tipSheetService: TipSheetService) {
+    this.fetchTipsheets();
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   //event handler for tracking.
- public SendDownloadTipSheetsEvent(){ 
+  public SendDownloadTipSheetsEvent() {
     this.webAnalyticsService.emitAnlayticsEvent("tipsheets_downloads", "downloads", "downloads");
   }
+
+
+  private fetchTipsheets() {
+    this.tipSheetService.getTipSheetsForLanguage("en").subscribe((tipSheets) => {
+      this.arrVisibleTipSheets = [];
+      let index: number;
+      for (index = 0; index < tipSheets.length; index++) {
+        //if (index === 5) {
+          //break;
+        //}//end if 
+        this.arrVisibleTipSheets.push(tipSheets[index]);
+      }//end for loop
+
+
+    });
+  }//end method
+
+
 
 }

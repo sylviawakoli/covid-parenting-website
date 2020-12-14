@@ -1,153 +1,138 @@
-<!-- Banner --->
-<div class="banner-container">
-  <svg class="banner-curve-top" viewBox="0 0 1440 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M0 112.433L48 123.676C96 134.92 192 157.406 288 146.163C384 134.92 480 89.9464 576 86.2221C672 82.2167 768 120.163 864 146.163C960 172.163 1056 187.623 1152 176.169C1248 165.136 1344 127.19 1392 108.709L1440 89.9464V0H1392C1344 0 1248 0 1152 0C1056 0 960 0 864 0C768 0 672 0 576 0C480 0 384 0 288 0C192 0 96 0 48 0H0V112.433Z"
-      fill="white" />
-  </svg>
-  <div data-aos="zoom-in" data-aos-duration="1000" class="content banner-slider">
-    <div class="slider-text">
-      <div>
-        <h2 class="main-header-one">COVID-19:</h2>
-        <h2 class="main-header-two">24/7 PARENTING</h2>
-        <h3 class="main-header-three">Proven parenting tips and activities for all ages in worldwide languages</h3>
-        <p>
-          Parenting for Lifelong Health provides open-access online parenting resources during COVID-19. We are working
-          with the World Health Organization, UNICEF, UNODC, the Global Partnership to End Violence Against Children,
-          USAID, the Centers for Disease Control and Prevention, World Without Orphans, the
-          World Childhood Foundation, the Internet of Good Things and Clowns Without Borders South Africa.
-        </p>
-        <a href="https://app.covid19parenting.com" class="btn-container-md">Preview our Mobile App!</a>
-      </div>
-    </div>
-    <div class="slider-image">
-      <div><img class="slide-image" src="assets/images/stressed_parent1.svg"></div>
-    </div>
-  </div>
-  <svg class="banner-curve-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 196">
-    <path fill="#ffffff" fill-opacity="1"
-      d="M0 116.148L48 127.763C96 139.378 192 162.607 288 150.993C384 139.378 480 92.9185 576 89.0711C672 84.9333 768 124.133 864 150.993C960 177.852 1056 193.822 1152 181.99C1248 170.593 1344 131.393 1392 112.301L1440 92.9185V232.296H1392C1344 232.296 1248 232.296 1152 232.296C1056 232.296 960 232.296 864 232.296C768 232.296 672 232.296 576 232.296C480 232.296 384 232.296 288 232.296C192 232.296 96 232.296 48 232.296H0V116.148Z">
-    </path>
-  </svg>
-</div>
-<!-- /Banner --->
+<app-banner></app-banner>
+<app-newletterribbon></app-newletterribbon>
 
-<!-- Home-Nav-links --->
-<div class="content nav-cards">
-  <div data-aos="zoom-in" data-aos-duration="1000" class="nav-card-item">
-    <img src="assets/images/iconlanguages.png" />
-    <h5 class="main-header-two">Parenting Tip Sheets</h5>
-    <p>PDF tipsheets available in 100+ languages</p>
-    <a routerLink="/tips" class="btn-container-md" (click)="SendDownloadTipSheetsEvent()">Learn more</a>
-  </div>
-  <div data-aos="zoom-in" data-aos-duration="1000" class="nav-card-item">
-    <img src="assets/images/iconcaseworkers.png" />
-    <h5 class="main-header-two">Tips for Caseworkers</h5>
-    <p>Tips for caseworkers to identify families at risk and give parenting support</p>
-    <a routerLink="/caseworkers" class="btn-container-md">Learn more</a>
-  </div>
-  <div data-aos="zoom-in" data-aos-duration="1000" class="nav-card-item">
-    <a href="https://app.covid19parenting.com"><img src="assets/images/mobile_app_icon1.svg" /></a>
-    <h5 class="main-header-two">Mobile App</h5>
-    <p>Get the tip sheets for easy reading on your mobile device</p>
-    <a href="https://app.covid19parenting.com" class="btn-container-md">Preview our App</a>
-  </div>
-  <div data-aos="zoom-in" data-aos-duration="1000" class="nav-card-item">
-    <img src="assets/images/iconannouncements.png" />
-    <h5 class="main-header-two">Public Service Announcements</h5>
-    <p>Tips for Public Service Announcements and practical guides on how to use them to broadcast positive parenting to families and communities</p>
-    <a routerLink="/psa" class="btn-container-md">Learn more</a>
-  </div>
-  <div data-aos="zoom-in" data-aos-duration="1000" class="nav-card-item">
-    <img src="assets/images/church.png" />
-    <h5 class="main-header-two">Tips for Church Leaders</h5>
-    <p>Download our Guide for Church Leaders to promote positive parenting to families and communities</p>
-    <a href="assets/church_leaders/church_leader_pack.pdf" class="btn-container-md">Download Tips</a>
-  </div>
+<!-- about -->
+<div class="content about-container" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+  <div class="about-text" data-aos="zoom-in">
+    <h4>ABOUT US</h4>
+    <h3>COVID-19: 24/7 PARENTING</h3>
+    <p>
+      <b>Evidence-based parenting tips available in more than 100 languages.</b>
+      <br />
+      <p>
+        Parenting for Lifelong Health (PLH) provides open-source and evidence-based parenting resources to support parents and caregivers during the COVID-19 pandemic and beyond.
+        These resources focus on building positive parent-child relationships and reducing violence against children by learning through play, reinforcing positive and managing difficult behaviours, creating structure and routines, talking about COVID-19, keeping children safe online, and reducing stress and conflict.
+     </p>
+     <p>
+      We are working with the World Health Organization (WHO), UNICEF, the Global Partnership to End Violence Against Children, USAID, Centers for Disease Control and Prevention (CDC), the Oxford University, the LEGO Foundation, the Internet of Good Things & many more, to keep children safe during the COVID-19 pandemic and beyond.
+    </p>
+   </div>
+  <div class="about-image" data-aos="zoom-in"><img src="assets/images/home_about_us.png" /></div>
 </div>
-<!-- /Home-Nav-links --->
+<!-- /about --->
 
-<div class="tips-background">
-  <!--before curve-->
-  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#ffffff" fill-opacity="1" d="M0,288L48,256C96,224,192,160,288,149.3C384,139,480,181,576,213.3C672,245,768,267,864,282.7C960,299,1056,309,1152,309.3C1248,309,1344,299,1392,293.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> -->
-  <svg class="tips-curve-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
-    <path fill="#ffffff" fill-opacity="1"
-      d="M0,160L48,176C96,192,192,224,288,240C384,256,480,256,576,234.7C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-    </path>
-  </svg>
-  <div class="content survey-content" data-aos="zoom-in" data-aos-duration="1000">
-    <h2>Your opinion matters!</h2>
-    <a class="contact-us-link" href="/#/contactus">Click here to share your ideas, suggestions and experiences </a>
-  </div>
-  <div class="content tips-content" data-aos="zoom-in" data-aos-duration="1000">
-    <div class="tips-info">
-      <h2>Choose your language</h2>
-      <h3 class="desktop-tips-info-directions">Click the links on the right to access the current tip sheets in your
-        language </h3>
-      <h3 class="mobile-tips-info-directions">Click the links below to access the current tip sheets in your language
-      </h3>
-      <p>Please note that these translations were not created by the World Health Organization (WHO), and WHO is not
-        responsible for the content or accuracy of these translations </p>
-      <div class="tips-info-question">
-        <div class="tips-info-question-content">
-          <h3>Can't find your language?</h3>
-          <p><i>Want to help us with the translations? <br /> <a routerLink="/contactus">Send us a message!</a> </i></p>
+<div class="content nav-cards nav-home">
+  <div class="nav-card-item nav-card-one" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+        <h5 class="nav-card-item-header">NEWS</h5>
+        <div class="nav-card-item-content"> 
+          <div class="nav-cards-img"> <img src="assets/images/home_news.png" /> </div> 
         </div>
-        <div><img src="assets/images/tipsquestion.png" /></div>
+    <div class="nav-card-item-content">
+      <h5>Video "Let's Slow Down"</h5>
+      <p>
+        Our song 'Let's Slow Down' captures what parents and caregivers may be feeling during this time of crisis, and aims to inspire them to stay calm, mitigate stress, and maintain healthy environments for children.
+      </p>
+      <br>
+      <div>
+        <iframe
+          width="100%"
+          height="180px"
+          src="https://www.youtube.com/embed/j1ShU5pwpaQ"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
+      <a routerLink="/news">View more news</a>
     </div>
-    <div class="tips-sheets">
-      <app-tip-sheets [currentLanguage]="tipSheetLang" [viewAllTipSheets]="false" [maxTipSheetsToShow]="2">
-      </app-tip-sheets>
+
+    <div class="nav-card-item-content">
+      <h5>Podcast "A new age of parenting: where data matters"</h5>
+      <p>Is it actually possible to end violence against children?
+In its new podcast series, the End Violence Partnership explores the answer to that question by talking to those on the frontlines – the experts, researchers and leaders that have dedicated their lives to keeping children safe.
+      </p>
+      <a routerLink="/news">Read more</a>
     </div>
-  </div>
-  <div class="content slow-down-video-content" data-aos="zoom-in" data-aos-duration="1000">
-    <h2>Listen to <span style="color: #0099ff">"Let's Slow Down!"</span> - the official COVID19parenting song! </h2>
-    <div class="youtube-container">
-      <iframe width="480" height="270" src="https://www.youtube.com/embed/j1ShU5pwpaQ" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
+    <div class="nav-card-item-content">
+      <h5>Jamaica in the Spotlight!</h5>
+      <p>
+        LLOVE 101 FM, a local Jamaican radio channel, offered UNICEF Jamaica 50 spots to broadcast parenting tips to their listeners. With the help of the National Parenting Support Commission and Parenting Partners Caribbean, they adapted the COVID-19 Parenting content and requested popular local actors and comedians to announce the tips in Jamaican Patois.
+      </p>
+      <a routerLink="/news">Read more</a>
     </div>
-  </div>
-  <div class="partner-logos-container">
-    <img class="partner-logos-img" src="assets/images/partner_logos1.png">
-    <img class="partner-logos-img" src="assets/images/partner_logos2.png">
-  </div>
-  <div class="content supporters-content">
-    <p>The COVID-19 Parenting Emergency Response is supported by the UKRI GCRF/Newton Fund, the LEGO Foundation, the
-      philanthropic donors to the University of Oxford’s COVID-19 Research Response Fund, Oak Foundation, and the UKRI
-      GCRF Accelerating Achievement for Africa’s Adolescents (Accelerate) Hub. Research on Parenting for Lifelong Health
-      is supported by the UKRI GCRF Accelerate Hub, the Oak Foundation, the European Research Council (ERC) under the
-      European Union’s Seventh Framework Programme and the Horizon 2020 Research and Innovation Programme, the Global
-      Alliance for Chronic Diseases under the European Union’s Horizon 2020 Research and Innovation Programme, UNICEF,
-      WHO, Oxford University Innovation GCRF Sustainable Impact Fund, the Leverhulme Trust, the Economic and Social
-      Research Council, CIDA, the National Research Foundation of South Africa, Ilifa Labantwana, the John Fell Fund,
-      the Evaluation Fund, the UBS Optimus Foundation, USAID-PEPFAR, the Wellcome Trust, Grand Challenges Canada and
-      Wellspring Advisors. </p>
-    <div class="supporters-logos">
-      <img src="assets/images/ukri_logo1.png" style="max-width: 180px;">
-      <img src="assets/images/gcrf_logo1.png">
-      <img src="assets/images/netwon_fund_logo_transparent1a.png">
-      <img src="assets/images/lego_foundation1.png" style="max-width: 180px;">
-      <img src="assets/images/oxford_logo1.png">
-      <img src="assets/images/oak_foundation_transparent1.png">
-      <img src="assets/images/accelerate_logo1.svg">
-      <img src="assets/images/CWBSA.png">
-      <img src="assets/images/idems-logo1.png">
-    </div>
-    <div><img src="assets/images/partners123.png"></div>
   </div>
 
-  <!--after curve-->
-  <svg class="tips-curve-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
-    <path fill="#0a4160" fill-opacity="1"
-      d="M0,160L48,176C96,192,192,224,288,240C384,256,480,256,576,234.7C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-    </path>
-  </svg>
-</div>
+  <div class="nav-card-item nav-card-two" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+        <h5 class="nav-card-item-header">RESOURCES</h5>
+    <div class="nav-card-item-content">
+      <div class="nav-cards-img"><img src="assets/images/home_resources.png" /></div> 
+    </div>
+    <div class="nav-card-item-content">
+      <h5>Church Leaders Pack</h5>
+      <p>        
+        Our Church Leaders promotes positive parenting to families and communities.
+      </p>
+      <a routerLink="/faithleaders">Read more</a>
+    </div>
+    <div class="nav-card-item-content">
+      <h5>Public Service Announcements</h5>
+      <p>
+        Our tips for Public Service Announcements (PSAs) and practical guides are helpful tools to broadcast positive parenting to families and communities.
+      </p>
+      <a href="/psa">Read more</a>
+    </div>
+    <div class="nav-card-item-content">
+      <h5>Digital Parenting</h5>
+      <p>
+        Our Digital Parenting resources are tools that have been conceived and designed to reach parents through digital formats such as online and/or mobile applications, texting and chat services.
+      </p>
+      <a href="/digitalparenting">Read more</a>
+    </div>
 
-<!-- footer-->
-<div class="home-footer-background">
-  <app-footer></app-footer>
-</div>
-<!--/footer-->
+    <div class="nav-card-item-content">
+      <h5>Audiovisual Resources</h5>
+      <p>
+        See how our open-source and evidence-based parenting resources have been designed for specific audio and visual presentations.
+      </p>
+      <a href="/audiovisuals">Read more</a>
+    </div>
+
+    <div class="nav-card-item-content">
+      <h5>Social Media Kit</h5>
+      <p>
+        Download our Social Media Squares, with suggested captions and # to use, to post our parenting tips on your Social Media profiles.
+      </p>
+      <a href="/socialmedia">Read more</a>
+    </div>
+  </div>
+
+  <div class="nav-card-item nav-card-three" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+    <h5 class="nav-card-item-header">PARENTING TIP SHEETS</h5>
+    <div class="nav-card-item-content">
+      <div class="nav-cards-img"><img src="assets/images/home_tips.png"/></div> 
+    </div>
+    <div class="nav-card-item-content">
+      <h5>Playful & Positive</h5> 
+      <p>
+        Our Parenting Tips have been developed by Parenting for Lifelong Health (PLH), WHO and Unicef and are available in 100+ languages.They include evidence-based advice on parenting and reducing stress, as well as lots of playful activities for parents and caregivers to do with children of all ages.   
+      </p>
+      </div>
+
+    <div class="nav-card-item-content">
+      <h6>Check our Parenting Tip Sheets for more information</h6>
+      <div class="nav-cards">
+        <div class="nav-card-item">
+             <div class="nav-card-item-content tipsheets-item-content" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                 <div *ngFor="let tipSheet of arrVisibleTipSheets">
+                    <a href="{{ tipSheet.pdfSrc}}" target="_blank">
+                        {{ tipSheet.title }}      
+                    </a>
+                    <hr/>
+                 </div>
+            </div> 
+        </div>
+    </div >
+      <a href="/tips"> See more tip sheets</a>
+    </div>
+  </div>
+</div> 

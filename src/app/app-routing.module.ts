@@ -1,41 +1,44 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ResourcesComponent } from './resources/resources.component';
+import { NewsComponent } from './news/news.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ImpactStoriesComponent } from './impact-stories/impact-stories.component';
 import { ContributorsComponent } from './contributors/contributors.component';
 import { TipsComponent } from './tips/tips.component';
 import { PsaComponent } from './psa/psa.component';
+import { DigitalparentingComponent } from './digitalparenting/digitalparenting.component';
+import { SocialmediaComponent } from './socialmedia/socialmedia.component';
+import { NewslettersComponent } from './newsletters/newsletters.component';
+import { WebinarsComponent } from './webinars/webinars.component';
+import { AudiovisualsComponent } from './audiovisuals/audiovisuals.component';
 import { CaseworkersComponent } from './caseworkers/caseworkers.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
+import { FaithleadersComponent } from './faithleaders/faithleaders.component';
+import { NewsMainComponent } from './news-main/news-main.component';
 
 
 const routes: Routes = [
-  {
-    path: "home",
-    component: HomeComponent
-  },
-  {
-    path: "tips",
-    component: TipsComponent
-  },
-  {
-    path: "contributors",
-    component: ContributorsComponent
-  },
-
-  {
-    path: "psa",
-    component: PsaComponent
-  },
-  {
-    path: "caseworkers",
-    component: CaseworkersComponent
-  },
-  {
-    path: "contactus",
-    component: ContactusComponent
-  },
+  { path: "home", component: HomeComponent },
+  { path: "resources", component: ResourcesComponent },
+  { path: "news", component: NewsComponent },
+  { path: "aboutus", component: AboutusComponent },
+  { path: "impact", component: ImpactStoriesComponent },
+  { path: "contactus", component: ContactusComponent  },
+  { path: "tips", component: TipsComponent },
+  { path: "caseworkers", component: CaseworkersComponent },
+  { path: "psa", component: PsaComponent },
+  { path: "digitalparenting", component: DigitalparentingComponent },
+  { path: "socialmedia", component: SocialmediaComponent },
+  { path: "newsletters", component: NewslettersComponent },
+  { path: "webinars", component: WebinarsComponent },
+  { path: "audiovisuals", component: AudiovisualsComponent },
+  { path: "contributors", component: ContributorsComponent },
+  { path: "faithleaders", component: FaithleadersComponent },
+  { path: "news-main", component: NewsMainComponent },
   {
     path: "blog",
     component: BlogComponent,
@@ -55,7 +58,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: false })],
+  imports: [RouterModule.forRoot(routes, { useHash: false, anchorScrolling: "enabled" })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

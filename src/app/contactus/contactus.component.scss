@@ -1,115 +1,52 @@
-.contact-container {
-  //margin-top: 30px; 
-  background: #f2f2f2;
-}
-
-.contact-container {
-  margin-top: 20px;
-
-  .content {
-    padding-top: 20px;
-  }
-}
-
-.home-footer-background {
-  background: #ec1551;
-}
-
-.contact-content {
+.contactus-main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-.contact-info {
-  padding-right: 40px;
-  text-align: left;
-  flex: 40%;
+.contactus-text {
+  flex: 65%;
 }
 
-.facebook-msg-button {
-  display: block;
-  background-color: #0084ff;
-  color: white;
-  border-radius: 20px;
-  padding: 10px;
-  font-size: 22px;
-  padding-left: 20px;
-  max-width: 300px;
-  width: 100%;
-  margin-bottom: 40px;
+.contactus-image {
+  flex: 35%;
 }
 
-.email-button {
-  display: block;
-  background-color: #ec1551;
-  color: white;
-  border-radius: 20px;
-  padding: 8px;
-  font-size: 22px;
-  padding-left: 20px;
-  max-width: 400px;
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.survey-button {
-  
-  display: block;
-  background-color: #33aa33;
-  color: white;
-  border-radius: 20px;
-  padding: 10px;
-  font-size: 22px;
-  padding-left: 20px;
-  max-width: 300px;
+.contactus-image img {
   width: 100%;
 }
 
-.contact-form {
-  flex: 60%; 
-}
-.contact-info h1{
-  font-weight: 700;
+
+.nav-card-item-header {
+  background: #fac1bc;
 }
 
-.contact-info p{
-  font-weight: 300;
+.nav-card-item-content h5 {
+  color: #fac1bc;
 }
 
-.contact-curve-bottom{
-  /**because of the send button **/
-  margin-top: -10px;
-  //margin-top: -150px; won't work. Will block button
+.nav-card-item-content a {
+  color: #0b4061;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-@media only screen and (max-width: 768px) {
-
-  .contact-curve-bottom{
-    margin-top: -65px;
-  }
+.nav-card-item hr {
+  border-color: #fac1bc;
 }
 
 @media only screen and (max-width: 450px) {
-
-  .email-button {
-    padding: 6px;
-    font-size: 18px;
+  .contactus-main {
+    flex-direction: column-reverse;
   }
 
-  .contact-content {
-    flex-direction: column;
+  .contactus-text {
+    flex: 100%;
+    margin-top: 10px;
   }
 
-  .contact-content div {
+  .contactus-image {
     flex: 100%;
   }
 
-  .contact-info {
-    padding-right: 0px;
-    text-align: left; 
-  }
 
-  .contact-curve-bottom{
-    margin-top: -30px;
-  }
 }
