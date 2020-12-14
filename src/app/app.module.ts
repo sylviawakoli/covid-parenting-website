@@ -47,6 +47,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { DigitalparentingComponent } from './digitalparenting/digitalparenting.component';
 import { AudiovisualsComponent } from './audiovisuals/audiovisuals.component';
 import { NewsMainComponent } from './news-main/news-main.component';
+import { ImpactComponent } from './impact/impact.component';
+import { ImpactChampionsComponent } from './impact-champions/impact-champions.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +89,9 @@ import { NewsMainComponent } from './news-main/news-main.component';
     AboutusComponent,
     DigitalparentingComponent,
     AudiovisualsComponent,
-    NewsMainComponent
+    NewsMainComponent,
+    ImpactComponent,
+    ImpactChampionsComponent
   ],
   imports: [
     BrowserModule,
