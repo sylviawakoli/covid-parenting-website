@@ -4,7 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { NewsComponent } from './news/news.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { ImpactComponent } from './impact/impact.component';
 import { ImpactStoriesComponent } from './impact-stories/impact-stories.component';
+import { ImpactChampionsComponent } from './impact-champions/impact-champions.component';
 import { ContributorsComponent } from './contributors/contributors.component';
 import { TipsComponent } from './tips/tips.component';
 import { PsaComponent } from './psa/psa.component';
@@ -26,7 +28,7 @@ const routes: Routes = [
   { path: "resources", component: ResourcesComponent },
   { path: "news", component: NewsComponent },
   { path: "aboutus", component: AboutusComponent },
-  { path: "impact", component: ImpactStoriesComponent },
+  { path: "impact", component: ImpactComponent },
   { path: "contactus", component: ContactusComponent  },
   { path: "tips", component: TipsComponent },
   { path: "caseworkers", component: CaseworkersComponent },
@@ -39,6 +41,8 @@ const routes: Routes = [
   { path: "contributors", component: ContributorsComponent },
   { path: "faithleaders", component: FaithleadersComponent },
   { path: "news-main", component: NewsMainComponent },
+  { path: "impactstories", component: ImpactStoriesComponent },
+  { path: "impactchampions", component: ImpactChampionsComponent },
   {
     path: "blog",
     component: BlogComponent,
