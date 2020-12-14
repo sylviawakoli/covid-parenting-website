@@ -51,8 +51,8 @@ const MENU_ITEMS: MenuItem[] = [
     name: "IMPACT",
     href: "/impact",
     subMenuItems: [
-      { name: "Impact Stories", href: "/impact" },
-      { name: "Champions of Children", href: "/impact" }
+      { name: "Impact Stories", href: "/impactstories" },
+      { name: "Champions of Children", href: "/impactchampions" }
     ]
   },
   { name: "CONTACT US", href: "/contactus" }
