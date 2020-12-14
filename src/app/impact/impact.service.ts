@@ -21,7 +21,7 @@ export type ImpactSummaryCSVRow = {
 @Injectable({
   providedIn: 'root'
 })
-export class ImpactStoriesService {
+export class ImpactService {
 
   constructor(private spreadsheetService: SpreadsheetService) {
   }
@@ -60,8 +60,5 @@ export class ImpactStoriesService {
         })
       );
   }
-
-
-
 
 }
