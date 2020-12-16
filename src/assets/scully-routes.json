@@ -1,1 +1,90 @@
-[{"route":"/home"},{"route":"/tips"},{"route":"/contributors"},{"route":"/psa"},{"route":"/caseworkers"},{"route":"/contactus"},{"route":"/blog"},{"route":"/blog/post1","title":"this is my first post","description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos cumque harum praesentium sapiente voluptas","publish":true,"sourceFile":"post1.md"},{"route":"/blog/test-5","title":"test 5","description":"asdfgsdfg","sourceFile":"test-5.md"},{"route":"/blog/this-is-a-testing-blog-post","title":"This is a testing blog post!","description":"This is a description of the blog post!","sourceFile":"this-is-a-testing-blog-post.md"},{"route":"/blog/this-is-another-blog-entry","title":"This is another blog entry","description":"This is the description?","sourceFile":"this-is-another-blog-entry.md"},{"route":"/"}]
+[
+    {
+        "route": "/home"
+    },
+    {
+        "route": "/resources"
+    },
+    {
+        "route": "/news"
+    },
+    {
+        "route": "/aboutus"
+    },
+    {
+        "route": "/impact"
+    },
+    {
+        "route": "/contactus"
+    },
+    {
+        "route": "/tips"
+    },
+    {
+        "route": "/caseworkers"
+    },
+    {
+        "route": "/psa"
+    },
+    {
+        "route": "/digitalparenting"
+    },
+    {
+        "route": "/socialmedia"
+    },
+    {
+        "route": "/newsletters"
+    },
+    {
+        "route": "/webinars"
+    },
+    {
+        "route": "/audiovisuals"
+    },
+    {
+        "route": "/contributors"
+    },
+    {
+        "route": "/faithleaders"
+    },
+    {
+        "route": "/news-main"
+    },
+    {
+        "route": "/impactstories"
+    },
+    {
+        "route": "/impactchampions"
+    },
+    {
+        "route": "/blog"
+    },
+    {
+        "route": "/blog/post1",
+        "title": "this is my first post",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos cumque harum praesentium sapiente voluptas",
+        "publish": true,
+        "sourceFile": "post1.md"
+    },
+    {
+        "route": "/blog/test-5",
+        "title": "test 5",
+        "description": "asdfgsdfg",
+        "sourceFile": "test-5.md"
+    },
+    {
+        "route": "/blog/this-is-a-testing-blog-post",
+        "title": "This is a testing blog post!",
+        "description": "This is a description of the blog post!",
+        "sourceFile": "this-is-a-testing-blog-post.md"
+    },
+    {
+        "route": "/blog/this-is-another-blog-entry",
+        "title": "This is another blog entry",
+        "description": "This is the description?",
+        "sourceFile": "this-is-another-blog-entry.md"
+    },
+    {
+        "route": "/"
+    }
+]
