@@ -35,6 +35,8 @@ caseworkers,Tips for case workers,caseworkers_Portuguese,pt
 caseworkers,Tips for case workers,caseworkers_Russian,ru
 caseworkers,Tips for case workers,caseworkers_Spanish,es
 caseworkers,Tips for case workers,caseworkers_Turkish,tr
+caseworkers,Tips for case workers,caseworkers_Chavacano,cbk
+caseworkers,Tips for case workers,caseworkers_Wara,war
 psa,Public Service announcements,PSA-Bikol,bcl
 psa,Public Service announcements,PSA-Chinese,zh
 psa,Public Service announcements,PSA-English,en
@@ -43,6 +45,7 @@ psa,Public Service announcements,PSA-Malay,ml
 psa,Public Service announcements,PSA-Portuguese,pt
 psa,Public Service announcements,PSA-Russian,ru
 psa,Public Service announcements,PSA-Spanish,es
+psa,Public Service announcements,PSA-Turkish,tr
 psa,Public Service announcements,PSA-Turkish,tr
 psa,Top 6 Parenting Tips,Top-6-Tips-Albanian,al
 psa,Top 6 Parenting Tips,Top-6-Tips-Arabic,ar
@@ -188,6 +191,7 @@ mergedtipsheet,Merged tip sheet,merged_1,ilo
 mergedtipsheet,Merged tip sheet,merged_1,twi
 mergedtipsheet,Merged tip sheet,merged_1,war
 mergedtipsheet,Merged tip sheet,merged_1,rom
+mergedtipsheet,Merged tip sheet,merged_1,cbk
 audioplaytogether,One on One Time,1.m4a,en
 audioplaytogether,Take a Pause,2.m4a,en
 audioplaytogether,Quiet Eyes,3.m4a,en
