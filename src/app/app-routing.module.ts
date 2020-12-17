@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: "impact", component: ImpactComponent },
   { path: "contactus", component: ContactusComponent  },
   { path: "tips", component: TipsComponent },
+  { path: "tips/:langCode", component: TipsComponent },
   { path: "caseworkers", component: CaseworkersComponent },
   { path: "psa", component: PsaComponent },
   { path: "digitalparenting", component: DigitalparentingComponent },

@@ -2,6 +2,7 @@ name: Build
 on:
   push:
     branches:
+      - master
       - drive-pipeline
 
 jobs:
@@ -12,6 +13,9 @@ jobs:
         node-version: [12.x]
 
     steps:
+      - name: Exclude Tip Sheet PDFs from Git LFS fetch
+        run: |
+          git config --global lfs.fetchexclude "src/assets/tip_sheets"
       - name: Install crcmod
         run: |
           sudo apt-get install gcc python-dev python-setuptools
@@ -59,4 +63,4 @@ jobs:
       - id: upload-files
         name: Upload files to Google Cloud Storage (rsync)
         timeout-minutes: 15
-        run: gsutil rsync -d -R -c ./dist/static gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/
+        run: gsutil rsync -d -R -c -x "assets/tip_sheets/.*$" ./dist/static gs://covid-website-storage2 && gsutil web set -m index.html gs://covid-website-storage2/
