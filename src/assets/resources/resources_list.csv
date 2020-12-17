@@ -36,7 +36,8 @@ caseworkers,Tips for case workers,caseworkers_Russian,ru
 caseworkers,Tips for case workers,caseworkers_Spanish,es
 caseworkers,Tips for case workers,caseworkers_Turkish,tr
 caseworkers,Tips for case workers,caseworkers_Chavacano,cbk
-caseworkers,Tips for case workers,caseworkers_Wara,war
+caseworkers,Tips for case workers,caseworkers_Waray,war
+caseworkers,Tips for case workers,caseworkers_Filipino,fil
 psa,Public Service announcements,PSA-Bikol,bcl
 psa,Public Service announcements,PSA-Chinese,zh
 psa,Public Service announcements,PSA-English,en
@@ -46,7 +47,9 @@ psa,Public Service announcements,PSA-Portuguese,pt
 psa,Public Service announcements,PSA-Russian,ru
 psa,Public Service announcements,PSA-Spanish,es
 psa,Public Service announcements,PSA-Turkish,tr
-psa,Public Service announcements,PSA-Turkish,tr
+psa,Public Service announcements,PSA-Waray,war
+psa,Public Service announcements,PSA-Chavacano,cbk
+psa,Public Service announcements,PSA-Filipino,fil
 psa,Top 6 Parenting Tips,Top-6-Tips-Albanian,al
 psa,Top 6 Parenting Tips,Top-6-Tips-Arabic,ar
 psa,Top 6 Parenting Tips,Top-6-Tips-English,en
@@ -64,6 +67,7 @@ psahowto,How to use public service announcements,How-to-PSA-Portuguese,pt
 psahowto,How to use public service announcements,How-to-PSA-Russian,ru
 psahowto,How to use public service announcements,How-to-PSA-Spanish,es
 psahowto,How to use public service announcements,How-to-PSA-Turkish,tr
+psahowto,How to use public service announcements,How-to-PSA-Hindi,hi
 faithbased,Church leaders pack,church_leader_pack,en
 mergedtipsheet,Merged tip sheet,merged_1,en
 mergedtipsheet,Merged tip sheet,merged_1,af
