@@ -29,5 +29,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-
+## When adding new routes
+When adding new Angular routes to the website make sure to run
+```
+npm run scully -- --scanRoutes
+```
+Then check in the modified src/assets/scully-routes.json
 

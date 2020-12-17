@@ -19,6 +19,21 @@ export class TipsComponent {
   };
 
   constructor(private route: ActivatedRoute, private tipSheetSerivce: TipSheetService) {
+    this.route.params.subscribe((paramMap) => {
+      if (paramMap["langCode"]) {
+        this.tipSheetSerivce.getLanguageByCode(paramMap["langCode"])
+          .subscribe((lang) => {
+            if (lang) {
+              this.tipSheetLang = lang;
+            } else {
+              this.tipSheetLang = {
+                code: "en",
+                name: "English"
+              };
+            }
+          });
+      }
+    });
     this.route.queryParams.subscribe((paramMap) => {
       //console.log(paramMap);
       if (paramMap["langCode"]) {

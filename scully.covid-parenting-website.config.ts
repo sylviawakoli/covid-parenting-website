@@ -1,4 +1,19 @@
 import { ScullyConfig } from '@scullyio/scully';
+
+import * as fs from "fs";
+const langCodes = fs.readdirSync("./src/assets/tip_sheets")
+  .filter((filename) => filename.length < 5);
+
+console.log("Lang codes", langCodes);
+
+const langRoutes = {};
+
+langCodes.forEach((code) => {
+  langRoutes["/tips/" + code] = {
+    type: "default"
+  };
+});
+
 export const config: ScullyConfig = {
   projectRoot: "./src",
   projectName: "covid-parenting-website",
@@ -10,6 +25,7 @@ export const config: ScullyConfig = {
       slug: {
         folder: './blog',
       },
-    },
-  }
+    }
+  },
+  extraRoutes: langCodes.map((code) => "/tips/" + code)
 };
