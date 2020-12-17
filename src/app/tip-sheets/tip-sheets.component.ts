@@ -21,6 +21,9 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
   maxTipSheetsToShow: number = 5;//was originally 6 cause of flex wrap. used to show tipsheets in batches
 
+  @Output()
+  onLanguageChange: EventEmitter<Language> = new EventEmitter();
+
   allLanguages: Language[] = [];
   selectedRange: string[] = ["C", "F"];
   letterRanges: string[][] = [["A", "B"], ["C", "F"], ["G", "J"], ["K", "L"], ["M", "P"], ["R", "S"], ["T", "Z"]];
@@ -51,6 +54,7 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   }
 
   changeLanguage(language: Language) {
+    this.onLanguageChange.emit(language);
     //console.log("Change language ", language);
     this.currentLanguage = language;
     if (this.tipSheetsSubscription) {
@@ -68,15 +72,6 @@ export class TipSheetsComponent implements OnInit, OnChanges {
 
       //fetch all resources  with selected language
       this.fetchAndOtherResources(language.code);
-
-      this.activatedRoute.url.subscribe((urlSegments) => {
-        //console.log("Activated route url segments", urlSegments);
-        let path = urlSegments[0].path;
-        if (history.pushState && path.indexOf("tips") > -1) {
-          var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + `?langCode=${language.code}`;
-          window.history.pushState({ path: newurl }, '', newurl);
-        }
-      });
     });
   }
 
