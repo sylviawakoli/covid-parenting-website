@@ -11,12 +11,22 @@ export interface MenuItem {
 //todo. this needs to be globalised
 const MENU_ITEMS: MenuItem[] = [
   { name: "HOME", href: "/" },
+
+  {
+    name: "ABOUT US",
+    href: "/aboutus",
+    subMenuItems: [
+      { name: "Partners & Funders", href: "/aboutus" },
+      { name: "Contributors", href: "/contributors" }
+    ]
+  },
+
   {
     name: "RESOURCES",
     href: "/resources",
     subMenuItems: [
       { name: "Parenting Tips", href: "/tips" },
-      { name: "Caseworkers", href: "/caseworkers" },
+      { name: "Tips For Caseworkers", href: "/caseworkers" },
       { name: "Public Service Announcements", href: "/psa" },
       { name: "Digital Parenting", href: "/digitalparenting" },
       { name: "Audiovisual", href: "/audiovisuals" },
@@ -29,24 +39,7 @@ const MENU_ITEMS: MenuItem[] = [
         },**/
     ]
   },
-  {
-    name: "NEWS & EVENTS",
-    href: "/news-main",
-    subMenuItems: [
-      { name: "News", href: "/news" },
-      { name: "Newsletters", href: "/newsletters" },
-      { name: "Webinars", href: "/webinars" }
-    ]
-  },
 
-  {
-    name: "ABOUT US",
-    href: "/aboutus",
-    subMenuItems: [
-      { name: "Partners & Funders", href: "/aboutus" },
-      { name: "Contributors", href: "/contributors" }
-    ]
-  },
   { 
     name: "IMPACT",
     href: "/impact",
@@ -55,7 +48,18 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Champions of Children", href: "/impactchampions" }
     ]
   },
-  { name: "CONTACT US", href: "/contactus" }
+
+  {
+    name: "NEWS",
+    href: "/news-main",
+    subMenuItems: [
+      { name: "Updates", href: "/news" },
+      { name: "Newsletters", href: "/newsletters" },
+      { name: "Webinars", href: "/webinars" }
+    ]
+  },
+  
+  { name: "TELL US WHAT YOU THINK", href: "/contactus" }
  ];
 
 @Component({
