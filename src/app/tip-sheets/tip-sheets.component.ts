@@ -12,10 +12,7 @@ import { ResourcesService } from '../resources.service';
 })
 export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
-  currentLanguage: Language = {
-    code: "en",
-    name: "English"
-  };
+  currentLanguage: Language;
   @Input()
   viewAllTipSheets: boolean = false;//used to indicate if the component will show all tipsheets
   @Input()

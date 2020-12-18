@@ -12,7 +12,7 @@ export class AppComponent {
   //todo. possibly remove resources service after fixing laxy loading
   constructor(public router: Router, public resourcesService: ResourcesService) {
     this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
+      if (event instanceof NavigationEnd && event.url.indexOf("tips") < 0) {
         window.scrollTo(0, 0);
         gtag('config', 'UA-171116573-2',
           {
