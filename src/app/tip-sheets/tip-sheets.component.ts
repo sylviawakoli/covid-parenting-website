@@ -21,14 +21,6 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
   maxTipSheetsToShow: number = 5;//was originally 6 cause of flex wrap. used to show tipsheets in batches
 
-  @Output()
-  onLanguageChange: EventEmitter<Language> = new EventEmitter();
-
-  allLanguages: Language[] = [];
-  selectedRange: string[] = ["C", "F"];
-  letterRanges: string[][] = [["A", "B"], ["C", "F"], ["G", "J"], ["K", "L"], ["M", "P"], ["R", "S"], ["T", "Z"]];
-  dropdownLanguages: Language[] = [];
-
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] } = {};
 
   tipSheets: TipSheet[] = [];//holds all the tipsheets from the server
@@ -38,10 +30,7 @@ export class TipSheetsComponent implements OnInit, OnChanges {
 
 
   constructor(private tipSheetService: TipSheetService, private resourcesService: ResourcesService, private activatedRoute: ActivatedRoute) {
-    this.tipSheetService.getLanguages().subscribe((languages) => {
-      this.allLanguages = languages;
-      this.onLetterRangeClick(this.letterRanges[0], false);
-    });
+    
   }
 
   ngOnInit(): void {
@@ -54,7 +43,6 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   }
 
   changeLanguage(language: Language) {
-    this.onLanguageChange.emit(language);
     //console.log("Change language ", language);
     this.currentLanguage = language;
     if (this.tipSheetsSubscription) {
@@ -73,19 +61,6 @@ export class TipSheetsComponent implements OnInit, OnChanges {
       //fetch all resources  with selected language
       this.fetchAndOtherResources(language.code);
     });
-  }
-
-  onLetterRangeClick(range: string[], changeLang: boolean = true) {
-    let lowerLetter = range[0].toLowerCase();
-    let higherLetter = range[1].toLowerCase();
-    this.selectedRange = range;
-    this.dropdownLanguages = this.allLanguages.filter((lang) => {
-      let firstLetter = lang.name.toLowerCase()[0];
-      return firstLetter >= lowerLetter && firstLetter <= higherLetter;
-    });
-    if (changeLang && this.dropdownLanguages.length > 0) {
-      this.changeLanguage(this.dropdownLanguages[0]);
-    }
   }
 
   //used by the view more button and when the tip sheets are to to be view in batches
