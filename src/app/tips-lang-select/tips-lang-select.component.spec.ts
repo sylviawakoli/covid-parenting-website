@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { NewsMainComponent } from './news-main.component';
+import { TipsLangSelectComponent } from './tips-lang-select.component';
 
-describe('NewsMainComponent', () => {
-  let component: NewsMainComponent;
-  let fixture: ComponentFixture<NewsMainComponent>;
+describe('TipsLangSelectComponent', () => {
+  let component: TipsLangSelectComponent;
+  let fixture: ComponentFixture<TipsLangSelectComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewsMainComponent ]
+      declarations: [ TipsLangSelectComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewsMainComponent);
+    fixture = TestBed.createComponent(TipsLangSelectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
