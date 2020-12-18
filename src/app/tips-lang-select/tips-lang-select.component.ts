@@ -19,6 +19,7 @@ export class TipsLangSelectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.onLetterRangeClick(this.letterRanges[0], false);
   }
 
   onLetterRangeClick(range: string[], changeLang: boolean = true) {
