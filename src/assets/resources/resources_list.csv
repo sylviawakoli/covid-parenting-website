@@ -32,6 +32,7 @@ caseworkers,Tips for case workers,caseworkers_Bisaya,ceb
 caseworkers,Tips for case workers,caseworkers_Bikol,bcl
 caseworkers,Tips for case workers,caseworkers_Ilokano,ilo
 caseworkers,Tips for case workers,caseworkers_Maguindanao,mdh
+caseworkers,Tips for case workers,caseworkers_Maranao,mrw
 caseworkers,Tips for case workers,caseworkers_Portuguese,pt
 caseworkers,Tips for case workers,caseworkers_Russian,ru
 caseworkers,Tips for case workers,caseworkers_Spanish,es
@@ -45,6 +46,7 @@ psa,Public Service announcements,PSA-English,en
 psa,Public Service announcements,PSA-French,fr
 psa,Public Service announcements,PSA-Maguindanao,mdh
 psa,Public Service announcements,PSA-Malay,ml
+psa,Public Service announcements,PSA-Maranao,mrw
 psa,Public Service announcements,PSA-Portuguese,pt
 psa,Public Service announcements,PSA-Russian,ru
 psa,Public Service announcements,PSA-Spanish,es
@@ -54,6 +56,7 @@ psa,Public Service announcements,PSA-Chavacano,cbk
 psa,Public Service announcements,PSA-Filipino,fil
 psa,Top 6 Parenting Tips,Top-6-Tips-Albanian,al
 psa,Top 6 Parenting Tips,Top-6-Tips-Arabic,ar
+psa,Top 6 Parenting Tips,Top-6-Tips-Chinese,zh
 psa,Top 6 Parenting Tips,Top-6-Tips-English,en
 psa,Top 6 Parenting Tips,Top-6-Tips-Montenegrin,cnr
 psa,Top 6 Parenting Tips,Top-6-Tips-Romani,rom
@@ -201,6 +204,7 @@ mergedtipsheet,Merged tip sheet,merged_1,war
 mergedtipsheet,Merged tip sheet,merged_1,rom
 mergedtipsheet,Merged tip sheet,merged_1,cbk
 mergedtipsheet,Merged tip sheet,merged_1,mdh
+`mergedtipsheet,Merged tip sheet,merged_1,mrw
 audioplaytogether,One on One Time,1.m4a,en
 audioplaytogether,Take a Pause,2.m4a,en
 audioplaytogether,Quiet Eyes,3.m4a,en
