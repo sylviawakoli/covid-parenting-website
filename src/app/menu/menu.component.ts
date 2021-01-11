@@ -29,7 +29,7 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Tips For Caseworkers", href: "/caseworkers" },
       { name: "Public Service Announcements", href: "/psa" },
       { name: "Digital Parenting", href: "/digitalparenting" },
-      { name: "Audio-Visual", href: "/audiovisuals" },
+      { name: "Audiovisual Resources", href: "/audiovisuals" },
       { name: "Faith-Based Resources", href: "/faithleaders" },
       { name: "Social Media", href: "/socialmedia" },
       /**   {
