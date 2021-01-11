@@ -39,7 +39,7 @@ export class ContributorsComponent implements OnInit {
   }//end method
 
   public viewMoreContributors() {
-    let  startIndex: number=  this.lastStartIndex;
+    let startIndex: number = this.lastStartIndex;
     let index: number;
     let counter: number = 0;
     let lowerLetter: string = this.selectedRange[0];
@@ -66,21 +66,30 @@ export class ContributorsComponent implements OnInit {
     this.bShowMoreButton = this.lastStartIndex < this.allContributors.length;
   }
 
- 
+
 
 }//end class
 
 const CONTRIBUTORS_LIST: Contributor[] = [
+  { name: "Abhay Kulkarni", title: "", thumnailSrc: "/" },
   { name: "Abraham Likhy", title: "", thumnailSrc: "/" },
   { name: "Adejola Awosanya", title: "", thumnailSrc: "/" },
+  { name: "Andreia Frazão", title: "", thumnailSrc: "/" },
+  { name: "Adriana Pequeno", title: "", thumnailSrc: "/" },
+  { name: "Agnes Moinet", title: "", thumnailSrc: "/" },
   { name: "Ah Suhn Ghoemeh", title: "Member, Akha Language and Culture Committee", thumnailSrc: "/" },
+  { name: "Akanksha Joshi", title: "", thumnailSrc: "/" },
   { name: "Alexis Rinckenbach", title: "", thumnailSrc: "/" },
   { name: "Anabela Araújo Pedrosa", title: "", thumnailSrc: "/" },
+  { name: "Andrey Pogorelov", title: "", thumnailSrc: "/" },
   { name: "Ani Jokhadze", title: "", thumnailSrc: "/" },
   { name: "Ani Movsisyan", title: "", thumnailSrc: "/" },
   { name: "Anja Goena", title: "", thumnailSrc: "/" },
   { name: "Anna Booij", title: "", thumnailSrc: "/" },
+  { name: "Anna Wiman", title: "", thumnailSrc: "/" },
+  { name: "Annick Masson", title: "", thumnailSrc: "/" },
   { name: "Anton Putilin", title: "", thumnailSrc: "/" },
+  { name: "Arthur Silva", title: "", thumnailSrc: "/" },
   { name: "Aye Aye Yee", title: "Education Specialist, UNICEF", thumnailSrc: "/" },
   { name: "Ashin Vonnisara, Dhammasariya", title: "Advisor, Tai Lay Language and culture committee", thumnailSrc: "/" },
   { name: "Barbara Ruegger", title: "", thumnailSrc: "/" },
@@ -90,9 +99,13 @@ const CONTRIBUTORS_LIST: Contributor[] = [
   { name: "Bumblebee Graphics", title: "", thumnailSrc: "/" },
   { name: "Cai Lon", title: "Treasurer & Office manager, Language and Culture Convention", thumnailSrc: "/" },
   { name: "Carolyn Namutebi", title: "", thumnailSrc: "/" },
+  { name: "Carlota Palacín Jordán", title: "", thumnailSrc: "/" },
   { name: "Cassia Carvalho", title: "Global Partnership to End Violence Against Children", thumnailSrc: "/" },
   { name: "Catia Magalhaes", title: "", thumnailSrc: "/" },
+  { name: "Cecilia Sousa", title: "", thumnailSrc: "/" },
+  { name: "Chinthanie Dissanayake", title: "", thumnailSrc: "/" },
   { name: "Christian Kubb", title: "", thumnailSrc: "/" },
+  { name: "Cláudia Pinheiro Pereira", title: "", thumnailSrc: "/" },
   { name: "Crous M. Hlungwani", title: "University of Venda", thumnailSrc: "/" },
   { name: "Dani Sadatun", title: "", thumnailSrc: "/" },
   { name: "Debbie Harvey", title: "", thumnailSrc: "/" },
@@ -126,6 +139,7 @@ const CONTRIBUTORS_LIST: Contributor[] = [
   { name: "Joyce Wamoyi", title: "National Institute for Medical Research in Tanzania", thumnailSrc: "/" },
   { name: "József Cser", title: "", thumnailSrc: "/" },
   { name: "Ju Hee Lee", title: "", thumnailSrc: "/" },
+  { name: "Kamal Abdulhadi ibrahim", title: "", thumnailSrc: "/" },
   { name: "Karolina Stępniewska", title: "mamotoja.pl", thumnailSrc: "/" },
   { name: "Khin May Tun Chit", title: "National Consultant, Myanmar, UNICEF", thumnailSrc: "/" },
   { name: "Khin Myint Khine", title: "UNICEF", thumnailSrc: "/" },
