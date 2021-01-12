@@ -1,7 +1,7 @@
 import { ScullyConfig } from '@scullyio/scully';
 
 import * as fs from "fs";
-const langCodes = fs.readdirSync("./src/assets/tip_sheets")
+const langCodes = fs.readdirSync("./tip_sheets")
   .filter((filename) => filename.length < 5);
 
 console.log("Lang codes", langCodes);
