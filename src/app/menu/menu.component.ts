@@ -59,7 +59,14 @@ const MENU_ITEMS: MenuItem[] = [
     ]
   },
   
-  { name: "TELL US WHAT YOU THINK", href: "/contactus" }
+  { name: "TELL US WHAT YOU THINK", 
+  href: "/contactus",
+  subMenuItems: [
+    { name: "Parents Survey",  href: "/contactus" },
+    { name: "Champions of Children Survey",  href: "/contactus" },
+    { name: "Teens App Survey", href: "/contactus" },
+  ]
+}
  ];
 
 @Component({
