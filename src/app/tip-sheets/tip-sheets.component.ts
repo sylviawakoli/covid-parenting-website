@@ -1,8 +1,9 @@
-import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges, Output, EventEmitter } from '@angular/core';
 import { Language, TipSheet, LanguageCSVRow } from './tip-sheets.model';
-import { HttpClient } from '@angular/common/http';
-import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 import { TipSheetService } from './tip-sheet.service';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { ResourcesService } from '../resources.service';
 
 @Component({
   selector: 'app-tip-sheets',
@@ -11,34 +12,22 @@ import { TipSheetService } from './tip-sheet.service';
 })
 export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
-  currentLanguage: Language = {
-    code: "en",
-    name: "English"
-  };
+  currentLanguage: Language;
   @Input()
   viewAllTipSheets: boolean = false;//used to indicate if the component will show all tipsheets
   @Input()
-  maxTipSheetsToShow: number = 6;//used to show tipsheets in batches
-
-
-  allLanguages: Language[] = [];
-  selectedRange: string[] = ["A", "F"];
-  letterRanges: string[][] = [["A", "F"], ["G", "L"], ["M", "R"], ["S", "Z"]];
-  dropdownLanguages: Language[] = [];
+  maxTipSheetsToShow: number = 5;//was originally 6 cause of flex wrap. used to show tipsheets in batches
 
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] } = {};
 
   tipSheets: TipSheet[] = [];//holds all the tipsheets from the server
   visibleTipSheets: TipSheet[] = [];//holds the tipsheets being view
   showloadMoreButton: boolean = false;
+  tipSheetsSubscription: Subscription;
 
 
-  constructor(private tipSheetService: TipSheetService) {
-    this.tipSheetService.getLanguages().subscribe((languages) => {
-      this.allLanguages = languages;
-      this.onLetterRangeClick(this.letterRanges[0], false);
-      this.changeLanguage(this.currentLanguage);
-    });
+  constructor(private tipSheetService: TipSheetService, private resourcesService: ResourcesService, private activatedRoute: ActivatedRoute) {
+    
   }
 
   ngOnInit(): void {
@@ -46,47 +35,47 @@ export class TipSheetsComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.currentLanguage) {
-      this.changeLanguage(this.currentLanguage);
+      this.changeLanguage(changes.currentLanguage.currentValue);
     }
   }
 
   changeLanguage(language: Language) {
+    //console.log("Change language ", language);
     this.currentLanguage = language;
-    this.tipSheetService.getTipSheetsForLanguage(language.code).subscribe((sheets) => {
+    if (this.tipSheetsSubscription) {
+      this.tipSheetsSubscription.unsubscribe();
+    }
+    this.tipSheetsSubscription = this.tipSheetService.getTipSheetsForLanguage(language.code).subscribe((sheets) => {
       this.tipSheets = sheets;
+      //console.log("Tip sheets set", sheets);
       this.visibleTipSheets = [];
       if (this.viewAllTipSheets) {
         this.visibleTipSheets = this.tipSheets;
       } else {
-        this.viewMoreTipSheets()
+        this.onClickViewMoreTipSheets()
       }
-    });
-  }
 
-  onLetterRangeClick(range: string[], changeLang: boolean = true) {
-    let lowerLetter = range[0].toLowerCase();
-    let higherLetter = range[1].toLowerCase();
-    this.selectedRange = range;
-    this.dropdownLanguages = this.allLanguages.filter((lang) => {
-      let firstLetter = lang.name.toLowerCase()[0];
-      return firstLetter >= lowerLetter && firstLetter <= higherLetter;
+      //fetch all resources  with selected language
+      this.fetchAndOtherResources(language.code);
     });
-    if (changeLang && this.dropdownLanguages.length > 0) {
-      this.changeLanguage(this.dropdownLanguages[0]);
-    }
   }
 
   //used by the view more button and when the tip sheets are to to be view in batches
-  public viewMoreTipSheets() {
+  public onClickViewMoreTipSheets() {
+    let startIndex: number;
+
     if (this.visibleTipSheets.length == 0) {
-      this.addElementsToVisibleTipSheets(0);
-    } else if (this.visibleTipSheets.length > 0) {
+      startIndex = 0;
+    } else {
       if (this.visibleTipSheets.length < this.tipSheets.length) {
-        //from last added  
-        this.addElementsToVisibleTipSheets(this.visibleTipSheets.length );
+        startIndex = this.visibleTipSheets.length;   //from last added  
+      } else {
+        return;
       }//end inner if
+
     }//end if
 
+    this.addElementsToVisibleTipSheets(startIndex);
     this.showloadMoreButton = this.visibleTipSheets.length < this.tipSheets.length;
   }//end method
 
@@ -101,6 +90,64 @@ export class TipSheetsComponent implements OnInit, OnChanges {
       counter++;
     }//end for loop
   }//end method
+
+
+  public objMergedTipsheet: TipSheet = null;
+  public arrOtherResources: TipSheet[] = null;
+
+  public fetchAndOtherResources(langCode: string) {
+
+    this.objMergedTipsheet = null; //reset
+    this.arrOtherResources = null; //reset array
+    
+    this.resourcesService.fetchResourcesByLanguage(langCode).subscribe((langResources) => {
+      let strResourceType: string;
+      let objResourceSheet: TipSheet;
+      this.arrOtherResources = []; //initialise array
+
+      langResources.forEach((row) => {
+        strResourceType = row.resourceType.toLowerCase();
+        objResourceSheet = {
+          title: row.resourceTitle,
+          thumnailSrc: "",
+          pdfSrc: ""
+        };
+
+        if (strResourceType === "mergedtipsheet") {
+          objResourceSheet.pdfSrc = `assets/tip_sheets/${langCode}/${row.resourceFilePrefix}.pdf`;
+          this.objMergedTipsheet = objResourceSheet;
+          return;
+        } else if (strResourceType === "caseworkers") {
+          objResourceSheet.pdfSrc = `assets/resources/caseworkers/${row.resourceFilePrefix}.pdf`;
+        } else if (strResourceType === "psa" || strResourceType === "psahowto") {
+          objResourceSheet.pdfSrc = `assets/resources/psas/${row.resourceFilePrefix}.pdf`;
+        } else if (strResourceType === "faithbased") {
+          objResourceSheet.pdfSrc = `assets/resources/faithbased/${row.resourceFilePrefix}.pdf`;
+        }else{
+          return;
+        }
+
+        this.arrOtherResources.push(objResourceSheet);
+     
+      });//end for loop
+
+      //if other resources not there. set to null
+      if(this.arrOtherResources.length == 0){
+        this.arrOtherResources = null;
+      } 
+
+
+
+    });
+
+  }//end method
+
+
+  public openTipSheetPDF(tipSheet: TipSheet) {
+    window.open(tipSheet.pdfSrc, "__blank");
+  }
+
+
 
 }//end class
 

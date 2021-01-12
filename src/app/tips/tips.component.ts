@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { SpreadsheetService } from '../shared/services/spreadsheet.service';
 import { Observable } from 'rxjs';
 import { Language } from '../tip-sheets/tip-sheets.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TipSheetService } from '../tip-sheets/tip-sheet.service';
 
 @Component({
@@ -17,14 +17,49 @@ export class TipsComponent {
     code: "en",
     name: "English"
   };
+  languages: Language[] = [];
 
-  constructor(private route: ActivatedRoute, private tipSheetSerivce: TipSheetService) {
-    this.route.queryParams.subscribe((paramMap) => {
-      //console.log(paramMap);
-      if (paramMap["lang"]) {
-        this.tipSheetSerivce.getLanguageByCode(paramMap["lang"])
+  constructor(private route: ActivatedRoute, private tipSheetService: TipSheetService, private router: Router) {
+    this.tipSheetService.getLanguages().subscribe((languages) => {
+      this.languages = languages;
+    });
+    this.route.params.subscribe((paramMap) => {
+      if (paramMap["langCode"]) {
+        this.tipSheetService.getLanguageByCode(paramMap["langCode"])
           .subscribe((lang) => {
-            this.tipSheetLang = lang;
+            if (lang) {
+              this.tipSheetLang = lang;
+            } else {
+              this.tipSheetLang = {
+                code: "en",
+                name: "English"
+              };
+            }
+          });
+      }
+    });
+    this.redirectUsingQueryParam();
+  }
+
+  onLanguageChange(lang: Language) {
+    this.router.navigateByUrl("/tips/" + lang.code);
+  }
+
+  private redirectUsingQueryParam() {
+    this.route.queryParams.subscribe((paramMap) => {
+      if (paramMap["langCode"]) {
+        this.tipSheetService.getLanguageByCode(paramMap["langCode"])
+          .subscribe((lang) => {
+            if (lang) {
+              this.router.navigateByUrl("/tips/" + lang.code);
+            }
+          });
+      } else if (paramMap["langName"]) {
+        this.tipSheetService.searchForLanguageByName(paramMap["langName"])
+          .subscribe((lang) => {
+            if (lang) {
+              this.router.navigateByUrl("/tips/" + lang.code);
+            }
           });
       }
     });

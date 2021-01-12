@@ -1,0 +1,29 @@
+.nav-card-item-header {
+  background: #75c5ca;
+}
+
+.nav-card-item-content h5 {
+  color: #75c5ca;
+}
+
+.nav-card-item-content a {
+  color: #75c5ca;
+}
+
+.nav-card-item hr {
+  border-color: #75c5ca;
+}
+
+.impact-story-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.impact-story-img {
+  flex: 5%;
+}
+
+.impact-story-text {
+  flex: 95%;
+  font-style: italic;
+}

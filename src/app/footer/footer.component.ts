@@ -2,12 +2,11 @@ import { Component, OnInit,Input } from '@angular/core';
 
 //todo. these menus should come from a global service
 const MENU_ITEMS: { name: string, href?: string }[] = [
-  { name: "Home", href: "/" },
-  { name: "Tips", href: "/tips" },
-  { name: "For Caseworkers", href: "/caseworkers" },
-  { name: "Public Service Announcements", href: "/psa" },
-  { name: "Contributors", href: "/contributors" },
-  { name: "Contact us", href: "/contactus" }
+  { name: "About Us", href: "/aboutus" },
+  { name: "Resources", href: "/resources" },
+  { name: "Impact", href: "/impact" },
+  { name: "News", href: "/news" },  
+  { name: "Tell Us What You Think", href: "/contactus" }
 ]; 
 
 @Component({

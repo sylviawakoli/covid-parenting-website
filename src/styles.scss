@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 @import "~bootstrap/scss/bootstrap"; /* Importing Bootstrap SCSS file. */
 @import "~aos/dist/aos.css"; /* Importing AOS CSS file. */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
@@ -9,63 +8,256 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: "Roboto", sans-serif;
-  color: #0b4061; 
+  color: #0b4061;
 }
 
 .content {
-  max-width: 900px;
+  max-width: 1040px;
   margin-left: auto;
   margin-right: auto;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
-/** gives any tag custom button look**/
-.btn-container,.btn-container-md ,.btn-container-lg {
-  font-weight: 700;
+.page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-container {
+  flex: 70%;
+  padding-right: 30px;
+  font-weight: 300;
+}
+
+.side-bar-container {
+  flex: 30%;
+}
+
+/*read more links*/
+.read-more-link {
   text-decoration: none;
-  padding: 5px 25px;
-  border-radius: 25px;
+  color: #0b4061;
+  cursor: pointer;
+}
+
+.read-more-link:hover {
+  color: #0b4061;
+  text-decoration: underline;
+}
+
+/*navigation cards*/
+.nav-cards {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.nav-card-item-icon {
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.nav-card-item-header {
+  margin-top: 10px;
+  //border-radius: 5px;/*todo. uncomment this if rounded shaped headers needed*/
   color: #ffffff;
-  background: #ed1651;
-  border: none;
-  text-decoration: none; 
-  transition-duration: 0.4s;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.nav-card-item-content {
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.nav-card-item-content h5 {
+  margin-top: 10px;
+}
+
+.nav-card-item-content div {
+  font-weight: 300;
+}
+
+.nav-card-item-content ul {
+  font-weight: 300;
+}
+
+.nav-card-item-content p {
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.nav-card-item-content a {
+  text-decoration: none;
+  color: #0b4061;
   font-size: 12px;
   cursor: pointer;
 }
 
-.btn-container-md{
-  padding: 10px 10px;
+.nav-card-item-content a:hover {
+  color: #0b4061;
+  text-decoration: underline;
+  transition: 0.4s;
+}
+
+.nav-card-item-content span {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.nav-card-item-content hr {
+  border-top: 1px dashed #0b4061;
+  margin: 0;
+}
+
+.nav-card-item hr {
+  border-top: 1px dashed #0b4061;
+  //margin: 0;
+}
+
+/*navs used for resources*/
+.nav-resources {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.nav-resources .nav-card-item {
+  flex: 1;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  //color: #0b4061;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ffffff;
+  transition: 0.4s;
+}
+
+.nav-resources .nav-card-item:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-resources .nav-card-item h5 {
+  align-self: center;
+  text-align: center;
+  padding-top: 8px;
   font-size: 14px;
 }
 
-.btn-container-lg{
-  padding: 10px 10px;
-  font-size: 16px;
+.nav-resources .nav-card-item .preview {
+  align-self: center;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
 }
 
-.btn-container:hover, .btn-container-md:hover, .btn-container-lg:hover {
-  background: #ffffff;
-  color: #0b4061; 
-  border: 2px solid #ed1651;
-  text-decoration: none; 
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.nav-resources .nav-card-item .view-text {
+  align-self: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 12px;
+  font-weight: 300;
 }
 
-.btn-load-more{
+.resource-view-more-text {
+  font-weight: 500;
+  font-size: medium;
   text-decoration: underline;
-  margin: 10px;
   cursor: pointer;
 }
 
-.btn-load-more:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-} 
+.preview-resource-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.preview-resource-holder {
+  flex: 40%;
+}
+
+.preview-resource-content {
+  flex: 60%;
+  padding-left: 10px;
+}
+
+.preview-resource-holder img {
+  width: 100%;
+  height: 150px;
+}
+
+.preview-resource-content.preview-text {
+  height: 100px;
+  overflow: hidden;
+}
+
+.preview-resource-content .more-link {
+  display: block;
+  color: #75c5ca;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.preview-resource-content .more-link:hover {
+  color: #75c5ca;
+  text-decoration: underline;
+}
 
 
 @media only screen and (max-width: 900px) {
   .content {
-    padding: 20px; 
+    padding-left: 16px;
+    padding-right: 16px;
   }
+}
+
+@media only screen and (max-width: 450px) {
+  .page-container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .main-container {
+    flex: 100%;
+    padding-right: 0px;
+  }
+
+  .side-bar-container {
+    flex: 100%;
+  }
+
+  /*navs used for resources*/
+  .nav-resources {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .nav-resources .nav-card-item .preview {
+    align-self: center;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .preview-resource-container {
+    flex-direction: column;
+  }
+  
+  .preview-resource-holder {
+    flex: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .preview-resource-content {
+    flex: 100%;
+    padding-left: 0px;
+  }
+
 }

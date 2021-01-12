@@ -1,35 +1,38 @@
-
-<nav  class="navbar fixed-top">
+<nav class="navbar fixed-top">
   <div class="content header-contents">
     <div class="toolbar">
-      <img class="plh-logo" alt="Parenting for Lifelong Health Logo" src="assets/images/plh_logo1.svg" />
-      <div class="website-title"><h2>Covid 19 Parenting</h2></div>
-      <div class="desktop-menu">
-        <a *ngFor="let item of menuItems" [routerLink]="item.href" >{{ item.name }}</a>
+      <div class="website-title">
+        <h2>COVID-19 Parenting</h2>
       </div>
-      <app-social-media-icons placement="toolbar"></app-social-media-icons>
-      
+      <div class="desktop-menu">
+        <div class="desktop-menu-items">
+          <div *ngFor="let item of menuItems" class="menu-item">
+            <a [routerLink]="item.href"> {{ item.name }} </a>
+            <div class="dropdown-content">
+              <div *ngFor="let subItem of item.subMenuItems" class="dropdown-item">
+                <a [routerLink]="subItem.href" fragment="{{subItem.fragment}}">{{ subItem.name }}</a>
+              </div> 
+            </div>
+          </div> 
+        </div>
+      </div>
+     
       <div class="menu-icon" (click)="menuDropdownOpen = true">
         <div></div>
         <div></div>
-        <div></div>
+        <div></div> 
       </div>
-    </div> 
+    </div>
 
     <!--for the mobile menu-->
     <div id="mobileMenu" class="mobile-menu-overlay" [ngStyle]="{'height': menuDropdownOpen ? '100%' : '0%' }">
       <!-- button to close the overlay navigation -->
       <a href="#" class="closebtn" (click)="menuDropdownOpen = false">&times;</a>
-       <!-- menu nav links content -->
+      <!-- menu nav links content -->
       <div class="mobile-menu-overlay-content">
-        <a *ngFor="let item of menuItems" [routerLink]="item.href" (click)="menuDropdownOpen = false" >{{ item.name }}</a>
-        <div class="social-media-mobile">
-          <app-social-media-icons placement="mobile-menu"></app-social-media-icons>
-        </div>
+        <a *ngFor="let item of menuItems" [routerLink]="item.href" (click)="menuDropdownOpen = false">{{ item.name }}</a>
       </div>
     </div>
   </div>
 
 </nav>
-<div class="spacer">
-</div>

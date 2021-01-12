@@ -8,8 +8,6 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 })
 export class SocialMediaIconsComponent implements OnInit {
 
-  @Input() placement: "toolbar" | "mobile-menu" | "footer" = "toolbar";
-
   constructor() { }
 
   ngOnInit(): void {

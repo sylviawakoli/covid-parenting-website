@@ -1,0 +1,16 @@
+<div class="lang-letter-ranges">
+    <a *ngFor="let range of letterRanges" (click)="onLetterRangeClick(range)"
+        [class]="range[0] === selectedRange[0] ? 'letter-range selected' : 'letter-range'">
+        {{ range[0] }} - {{ range[1] }}
+    </a> 
+</div>
+<div ngbDropdown class="language-dropdown">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+        {{ currentLanguage.name }}
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button *ngFor="let language of dropdownLanguages" ngbDropdownItem (click)="onLanguageClick(language)">
+            {{ language.name }}
+        </button>
+    </div>
+</div>
