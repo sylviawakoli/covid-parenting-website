@@ -12,19 +12,11 @@ import { ResourcesService } from '../resources.service';
 })
 export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
-  currentLanguage: Language = {
-    code: "en",
-    name: "English"
-  };
+  currentLanguage: Language;
   @Input()
   viewAllTipSheets: boolean = false;//used to indicate if the component will show all tipsheets
   @Input()
   maxTipSheetsToShow: number = 5;//was originally 6 cause of flex wrap. used to show tipsheets in batches
-
-  allLanguages: Language[] = [];
-  selectedRange: string[] = ["C", "F"];
-  letterRanges: string[][] = [["A", "B"], ["C", "F"], ["G", "J"], ["K", "L"], ["M", "P"], ["R", "S"], ["T", "Z"]];
-  dropdownLanguages: Language[] = [];
 
   tipSheetsByLanguage: { [langCode: string]: TipSheet[] } = {};
 
@@ -35,10 +27,7 @@ export class TipSheetsComponent implements OnInit, OnChanges {
 
 
   constructor(private tipSheetService: TipSheetService, private resourcesService: ResourcesService, private activatedRoute: ActivatedRoute) {
-    this.tipSheetService.getLanguages().subscribe((languages) => {
-      this.allLanguages = languages;
-      this.onLetterRangeClick(this.letterRanges[0], false);
-    });
+    
   }
 
   ngOnInit(): void {
@@ -68,29 +57,7 @@ export class TipSheetsComponent implements OnInit, OnChanges {
 
       //fetch all resources  with selected language
       this.fetchAndOtherResources(language.code);
-
-      this.activatedRoute.url.subscribe((urlSegments) => {
-        //console.log("Activated route url segments", urlSegments);
-        let path = urlSegments[0].path;
-        if (history.pushState && path.indexOf("tips") > -1) {
-          var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + `?langCode=${language.code}`;
-          window.history.pushState({ path: newurl }, '', newurl);
-        }
-      });
     });
-  }
-
-  onLetterRangeClick(range: string[], changeLang: boolean = true) {
-    let lowerLetter = range[0].toLowerCase();
-    let higherLetter = range[1].toLowerCase();
-    this.selectedRange = range;
-    this.dropdownLanguages = this.allLanguages.filter((lang) => {
-      let firstLetter = lang.name.toLowerCase()[0];
-      return firstLetter >= lowerLetter && firstLetter <= higherLetter;
-    });
-    if (changeLang && this.dropdownLanguages.length > 0) {
-      this.changeLanguage(this.dropdownLanguages[0]);
-    }
   }
 
   //used by the view more button and when the tip sheets are to to be view in batches
