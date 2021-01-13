@@ -17,8 +17,9 @@ const MENU_ITEMS: MenuItem[] = [
     name: "ABOUT US",
     href: "/aboutus",
     subMenuItems: [
-      { name: "Partners & Funders", href: "/aboutus" },
-      { name: "Contributors", href: "/contributors" }
+      { name: "Partners & Funders", href: "/aboutus", fragment: "partners-funders" },
+      { name: "Contributors", href: "/contributors" },
+      { name: "Contact Us", href: "/aboutus", fragment: "contact" }
     ]
   },
 
@@ -33,11 +34,11 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Audiovisual Resources", href: "/audiovisuals" },
       { name: "Faith-Based Resources", href: "/faithleaders" },
       { name: "Social Media", href: "/socialmedia" },
-      {
+      /*{
         name: "Radio Scripts",
         href: "/tips",
         fragment: "radio"
-      },
+      },*/
     ]
   },
 
@@ -45,8 +46,8 @@ const MENU_ITEMS: MenuItem[] = [
     name: "IMPACT",
     href: "/impact",
     subMenuItems: [
-      { name: "Reach by Region", href: "/impact" },
-      { name: "Reach by Dissemination Method", href: "/impact" },
+      { name: "Reach by Region", href: "/impact", fragment: "reach-by-region" },
+      { name: "Reach by Dissemination Method", href: "/impact", fragment: "reach-by-dissemination" },
       { name: "Impact Stories", href: "/impactstories" },
       { name: "Champions of Children", href: "/impactchampions" }
     ]
@@ -66,9 +67,9 @@ const MENU_ITEMS: MenuItem[] = [
     name: "TELL US WHAT YOU THINK",
     href: "/contactus",
     subMenuItems: [
-      { name: "Parents Survey", href: "/contactus" },
-      { name: "Champions of Children Survey", href: "/contactus" },
-      { name: "Teens App Survey", href: "/contactus" },
+      { name: "Parents Survey", href: "/contactus",  fragment: "parents-survey" },
+      { name: "Champions of Children Survey", href: "/contactus" , fragment: "champions-of-children-survey"},
+      { name: "Teens App Survey", href: "/contactus" , fragment: "teen-app-survey"},
     ]
   }
 ];
