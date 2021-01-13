@@ -29,7 +29,7 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Tips For Caseworkers", href: "/caseworkers" },
       { name: "Public Service Announcements", href: "/psa" },
       { name: "Digital Parenting", href: "/digitalparenting" },
-      { name: "Audio-Visual", href: "/audiovisuals" },
+      { name: "Audiovisual Resources", href: "/audiovisuals" },
       { name: "Faith-Based Resources", href: "/faithleaders" },
       { name: "Social Media", href: "/socialmedia" },
       /**   {
@@ -44,6 +44,8 @@ const MENU_ITEMS: MenuItem[] = [
     name: "IMPACT",
     href: "/impact",
     subMenuItems: [
+      { name: "Reach by Region", href: "/impact" },
+      { name: "Reach by Dissemination Method", href: "/impact" },
       { name: "Impact Stories", href: "/impactstories" },
       { name: "Champions of Children", href: "/impactchampions" }
     ]
@@ -59,7 +61,14 @@ const MENU_ITEMS: MenuItem[] = [
     ]
   },
   
-  { name: "TELL US WHAT YOU THINK", href: "/contactus" }
+  { name: "TELL US WHAT YOU THINK", 
+  href: "/contactus",
+  subMenuItems: [
+    { name: "Parents Survey",  href: "/contactus" },
+    { name: "Champions of Children Survey",  href: "/contactus" },
+    { name: "Teens App Survey", href: "/contactus" },
+  ]
+}
  ];
 
 @Component({

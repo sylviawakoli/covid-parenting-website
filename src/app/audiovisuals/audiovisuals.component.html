@@ -67,86 +67,89 @@
             <p>The audio pack is primarily designed for government agencies and nongovernmental organizations that work
               to promote child and/or parent health and well-being. They may also be of interest to anyone who is
               concerned about the welfare of children in these challenging times. </p>
-              <br>
-              <h5>How can you use these audio scripts? </h5>
-                          <p>
-                The content of the audio pack is open-source and free to use, adaptable for any context. The scripts and activities can be read out for a wide range of uses; such as radio or loudspeaker broadcast, or pre-recorded as voice notes to send via instant messaging. One complete module would take approximately 20 minutes to broadcast. Each topic and activity would take approximately 3 minutes.  
-              </p><br>
+            <br>
+            <h5>How can you use these audio scripts? </h5>
+            <p>
+              The content of the audio pack is open-source and free to use, adaptable for any context. The scripts and
+              activities can be read out for a wide range of uses; such as radio or loudspeaker broadcast, or
+              pre-recorded as voice notes to send via instant messaging. One complete module would take approximately 20
+              minutes to broadcast. Each topic and activity would take approximately 3 minutes.
+            </p><br>
             <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-English.pdf"
                 target="_blank">English</a> | <a href="assets/resources/audios/Audio-Pack-Portuguese.pdf"
                 target="_blank">Portuguese</a> | <a href="assets/resources/audios/Audio-Pack-Spanish.pdf"
                 target="_blank">Spanish</a></p>
-            
           </div>
-          <hr />
         </div>
-        <h5>PLAY TOGETHER</h5>
-        <div class="nav-cards nav-resources">
-          <div class="nav-card-item-content">
-<p>
-  This module presents practical tips for parents and caregivers about how they can spend one-on-one time with their family to build positive relationships and help children learn through play. 
-</p>
-          </div>
-          <a class="nav-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank"
-            data-aos="zoom-in" data-aos-duration="1000">
-            <h5>{{ audio.title }}</h5>
-            <img class="preview" [src]="audio.thumnailSrc" />
-            <div class="view-text">Listen</div>
-          </a>
-        </div>
-        <div class="resource-view-more-text"
-          (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether)"
-          *ngIf="bShowloadMoreAudioPlayTogether">
-          See more play together audios
-        </div>
+        <br>
+        <hr />
       </div>
-      <hr />
-      <div class="nav-card-item-content">
-        <h5>KEEP IT POSITIVE</h5>
-                <div class="nav-cards nav-resources">
-                  <div class="nav-card-item-content">
-                    <p>
-                      This module will provide tips on how to encourage children and teens through positive instruction and praise. It also reminds parents and caregivers that regular self-care is the first step.
-                    </p>
-                              </div>
-          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}"
-            target="_blank" data-aos="zoom-in" data-aos-duration="1000">
-            <h5>{{ audio.title }}</h5>
-            <img class="preview" [src]="audio.thumnailSrc" />
-            <div class="view-text">Listen</div>
-          </a>
+      <h5>PLAY TOGETHER</h5>
+      <div class="nav-cards nav-resources">
+        <div class="nav-card-item-content">
+          <p>
+            This module presents practical tips for parents and caregivers about how they can spend one-on-one time with
+            their family to build positive relationships and help children learn through play.
+          </p>
         </div>
-        <div class="resource-view-more-text"
-          (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive)"
-          *ngIf="bShowloadMoreAudioKeepPostive">
-          See more keep it positive audios
-        </div>
+        <a class="nav-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank"
+          data-aos="zoom-in" data-aos-duration="1000">
+          <h5>{{ audio.title }}</h5>
+          <img class="preview" [src]="audio.thumnailSrc" />
+          <div class="view-text">Listen</div>
+        </a>
       </div>
-      <hr />
-      <div class="nav-card-item-content">
-        <h5>SHARING IS CARING</h5>
-        <div class="nav-cards nav-resources">
-          <div class="nav-card-item-content">
-            <p>
-              This module will provide tips on how to deal with worry and anxiety in the family by listening to each other, letting go of stress in a fun way and remembering to take a pause.
-            </p>
-                      </div>
-          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank"
-            data-aos="zoom-in" data-aos-duration="1000">
-            <h5>{{ audio.title }}</h5>
-            <img class="preview" [src]="audio.thumnailSrc" />
-            <div class="view-text">Listen</div>
-          </a>
-        </div>
-        <div class="resource-view-more-text"
-          (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing)"
-          *ngIf="bShowloadMoreAudioSharing">
-          See more sharing is caring audios
-        </div>
+      <div class="resource-view-more-text"
+        (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether)"
+        *ngIf="bShowloadMoreAudioPlayTogether">
+        See more PLAY TOGETHER audios
       </div>
-
+    </div>
+    <hr />
+    <div class="nav-card-item-content">
+      <h5>KEEP IT POSITIVE</h5>
+      <div class="nav-cards nav-resources">
+        <div class="nav-card-item-content">
+          <p>
+            This module will provide tips on how to encourage children and teens through positive instruction and
+            praise. It also reminds parents and caregivers that regular self-care is the first step.
+          </p>
+        </div>
+        <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}"
+          target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+          <h5>{{ audio.title }}</h5>
+          <img class="preview" [src]="audio.thumnailSrc" />
+          <div class="view-text">Listen</div>
+        </a>
+      </div>
+      <div class="resource-view-more-text"
+        (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive)"
+        *ngIf="bShowloadMoreAudioKeepPostive">
+        See more KEEP IT POSITIVE audios
+      </div>
+    </div>
+    <hr />
+    <div class="nav-card-item-content">
+      <h5>SHARING IS CARING</h5>
+      <div class="nav-cards nav-resources">
+        <div class="nav-card-item-content">
+          <p>
+            This module will provide tips on how to deal with worry and anxiety in the family by listening to each
+            other, letting go of stress in a fun way and remembering to take a pause.
+          </p>
+        </div>
+        <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank"
+          data-aos="zoom-in" data-aos-duration="1000">
+          <h5>{{ audio.title }}</h5>
+          <img class="preview" [src]="audio.thumnailSrc" />
+          <div class="view-text">Listen</div>
+        </a>
+      </div>
+      <div class="resource-view-more-text" (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing)"
+        *ngIf="bShowloadMoreAudioSharing">
+        See more SHARING IS CARING audios
+      </div>
     </div>
   </div>
-
-  <app-sidebar class="side-bar-container"></app-sidebar>
+<app-sidebar class="side-bar-container"></app-sidebar>
 </div>

@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Exclude Tip Sheet PDFs from Git LFS fetch
         run: |
-          git config --global lfs.fetchexclude "src/assets/tip_sheets"
+          git config --global lfs.fetchexclude "tip_sheets"
       - name: Install crcmod
         run: |
           sudo apt-get install gcc python-dev python-setuptools
