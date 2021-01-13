@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 export interface MenuItem {
@@ -32,15 +33,15 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Audiovisual Resources", href: "/audiovisuals" },
       { name: "Faith-Based Resources", href: "/faithleaders" },
       { name: "Social Media", href: "/socialmedia" },
-      /**   {
-          name: "Radio Scripts",
-          href: "/tips",
-          fragment: "radio"
-        },**/
+      {
+        name: "Radio Scripts",
+        href: "/tips",
+        fragment: "radio"
+      },
     ]
   },
 
-  { 
+  {
     name: "IMPACT",
     href: "/impact",
     subMenuItems: [
@@ -60,16 +61,17 @@ const MENU_ITEMS: MenuItem[] = [
       { name: "Webinars", href: "/webinars" }
     ]
   },
-  
-  { name: "TELL US WHAT YOU THINK", 
-  href: "/contactus",
-  subMenuItems: [
-    { name: "Parents Survey",  href: "/contactus" },
-    { name: "Champions of Children Survey",  href: "/contactus" },
-    { name: "Teens App Survey", href: "/contactus" },
-  ]
-}
- ];
+
+  {
+    name: "TELL US WHAT YOU THINK",
+    href: "/contactus",
+    subMenuItems: [
+      { name: "Parents Survey", href: "/contactus" },
+      { name: "Champions of Children Survey", href: "/contactus" },
+      { name: "Teens App Survey", href: "/contactus" },
+    ]
+  }
+];
 
 @Component({
   selector: 'app-menu',
@@ -81,7 +83,7 @@ export class MenuComponent implements OnInit {
   menuDropdownOpen: boolean = false;
   menuItems = MENU_ITEMS;
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
   }
@@ -94,6 +96,15 @@ export class MenuComponent implements OnInit {
 
   mouseLeaveMenuItem($event, item: MenuItem) {
     item.subMenuOpen = false;
+  }
+
+  scrollToFragment(fragment: string) {
+    console.log("Scroll to fragment ", fragment);
+    if (fragment && fragment.length > 0) {
+      setTimeout(() => {
+        this.viewportScroller.scrollToAnchor(fragment);
+      }, 500);
+    }
   }
 }
 

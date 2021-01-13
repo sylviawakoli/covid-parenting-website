@@ -42,7 +42,7 @@ export class TipsComponent {
   }
 
   onLanguageChange(lang: Language) {
-    this.router.navigateByUrl("/tips/" + lang.code);
+    this.router.navigateByUrl("/tips/" + lang.code + "#tips");
   }
 
   private redirectUsingQueryParam() {
