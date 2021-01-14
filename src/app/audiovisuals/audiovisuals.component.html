@@ -3,7 +3,7 @@
 <div class="content page-container">
   <div class="nav-cards main-container">
     <div class="nav-card-item">
-      <h5 class="nav-card-item-header">AUDIO-VISUAL RESOURCES</h5>
+      <h5 class="nav-card-item-header">AUDIO-VISUALS RESOURCES</h5>
       <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
         <p>
           Our parenting resources are also been designed for specific audio and visual presentations to reach all
@@ -76,80 +76,83 @@
               minutes to broadcast. Each topic and activity would take approximately 3 minutes.
             </p><br>
             <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-English.pdf"
-                target="_blank">English</a> | <a href="assets/resources/audios/Audio-Pack-Portuguese.pdf"
-                target="_blank">Portuguese</a> | <a href="assets/resources/audios/Audio-Pack-Spanish.pdf"
-                target="_blank">Spanish</a></p>
+              target="_blank">English</a> | <a href="assets/resources/audios/Audio-Pack-Portuguese.pdf"
+              target="_blank">Portuguese</a> | <a href="assets/resources/audios/Audio-Pack-Spanish.pdf"
+              target="_blank">Spanish</a></p>
           </div>
+          <br>
+          <hr />
         </div>
-        <br>
-        <hr />
-      </div>
-      <h5>PLAY TOGETHER</h5>
-      <div class="nav-cards nav-resources">
-        <div class="nav-card-item-content">
-          <p>
-            This module presents practical tips for parents and caregivers about how they can spend one-on-one time with
-            their family to build positive relationships and help children learn through play.
-          </p>
+        <h5>PLAY TOGETHER</h5>
+        <div class="nav-cards nav-resources">
+          <div class="nav-card-item-content">
+            <p>
+              This module presents practical tips for parents and caregivers about how they can spend one-on-one time with
+              their family to build positive relationships and help children learn through play.
+            </p>
+          </div>
+          <a class="nav-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank"
+            data-aos="zoom-in" data-aos-duration="1000">
+            <h5>{{ audio.title }}</h5>
+            <img class="preview" [src]="audio.thumnailSrc" />
+            <div class="view-text">Listen</div>
+          </a>
         </div>
-        <a class="nav-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank"
-          data-aos="zoom-in" data-aos-duration="1000">
-          <h5>{{ audio.title }}</h5>
-          <img class="preview" [src]="audio.thumnailSrc" />
-          <div class="view-text">Listen</div>
-        </a>
-      </div>
-      <div class="resource-view-more-text"
-        (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether)"
-        *ngIf="bShowloadMoreAudioPlayTogether">
-        See more PLAY TOGETHER audios
-      </div>
-    </div>
-    <hr />
-    <div class="nav-card-item-content">
-      <h5>KEEP IT POSITIVE</h5>
-      <div class="nav-cards nav-resources">
-        <div class="nav-card-item-content">
-          <p>
-            This module will provide tips on how to encourage children and teens through positive instruction and
-            praise. It also reminds parents and caregivers that regular self-care is the first step.
-          </p>
+        <div class="resource-view-more-text"
+          (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether)"
+          *ngIf="bShowloadMoreAudioPlayTogether">
+          See more PLAY TOGETHER audios
         </div>
-        <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}"
-          target="_blank" data-aos="zoom-in" data-aos-duration="1000">
-          <h5>{{ audio.title }}</h5>
-          <img class="preview" [src]="audio.thumnailSrc" />
-          <div class="view-text">Listen</div>
-        </a>
       </div>
-      <div class="resource-view-more-text"
-        (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive)"
-        *ngIf="bShowloadMoreAudioKeepPostive">
-        See more KEEP IT POSITIVE audios
-      </div>
-    </div>
-    <hr />
-    <div class="nav-card-item-content">
-      <h5>SHARING IS CARING</h5>
-      <div class="nav-cards nav-resources">
-        <div class="nav-card-item-content">
-          <p>
-            This module will provide tips on how to deal with worry and anxiety in the family by listening to each
-            other, letting go of stress in a fun way and remembering to take a pause.
-          </p>
+      <hr />
+      <div class="nav-card-item-content">
+        <h5>KEEP IT POSITIVE</h5>
+        <div class="nav-cards nav-resources">
+          <div class="nav-card-item-content">
+            <p>
+              This module will provide tips on how to encourage children and teens through positive instruction and
+              praise. It also reminds parents and caregivers that regular self-care is the first step.
+            </p>
+          </div>
+          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}"
+            target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+            <h5>{{ audio.title }}</h5>
+            <img class="preview" [src]="audio.thumnailSrc" />
+            <div class="view-text">Listen</div>
+          </a>
         </div>
-        <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank"
-          data-aos="zoom-in" data-aos-duration="1000">
-          <h5>{{ audio.title }}</h5>
-          <img class="preview" [src]="audio.thumnailSrc" />
-          <div class="view-text">Listen</div>
-        </a>
+        <div class="resource-view-more-text"
+          (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive)"
+          *ngIf="bShowloadMoreAudioKeepPostive">
+          See more KEEP IT POSITIVE audios
+        </div>
       </div>
-      <div class="resource-view-more-text" (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing)"
-        *ngIf="bShowloadMoreAudioSharing">
-        See more SHARING IS CARING audios
+      <hr />
+      <div class="nav-card-item-content">
+        <h5>SHARING IS CARING</h5>
+        <div class="nav-cards nav-resources">
+          <div class="nav-card-item-content">
+            <p>
+              This module will provide tips on how to deal with worry and anxiety in the family by listening to each
+              other, letting go of stress in a fun way and remembering to take a pause.
+            </p>
+          </div>
+          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank"
+            data-aos="zoom-in" data-aos-duration="1000">
+            <h5>{{ audio.title }}</h5>
+            <img class="preview" [src]="audio.thumnailSrc" />
+            <div class="view-text">Listen</div>
+          </a>
+        </div>
+        <div class="resource-view-more-text"
+          (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing)"
+          *ngIf="bShowloadMoreAudioSharing">
+          See more SHARING IS CARING audios
+        </div>
       </div>
+
     </div>
   </div>
-<app-sidebar class="side-bar-container"></app-sidebar>
+
+  <app-sidebar class="side-bar-container"></app-sidebar>
 </div>
