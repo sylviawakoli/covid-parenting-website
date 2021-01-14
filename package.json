@@ -18,7 +18,7 @@
     "scully:serve": "scully serve",
     "convert-drive-assets": "ts-node --project tsconfig.scripts.json scripts/convert-drive-assets.ts",
     "test-scripts": "jasmine-ts --project tsconfig.scripts.json --config=scripts.jasmine.json",
-    "upload-tip-sheets": "gsutil -m rsync -R -c ./src/assets/tip_sheets gs://covid-website-pdfs1/assets/tip_sheets"
+    "upload-tip-sheets": "gsutil -m rsync -R -c ./tip_sheets gs://covid-website-pdfs1/assets/tip_sheets"
   },
   "private": true,
   "dependencies": {

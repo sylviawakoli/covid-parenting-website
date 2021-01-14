@@ -26,7 +26,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/admin"
+              "src/admin",
+              { "glob": "tipSheetNames.csv", "input": "./tip_sheets", "output": "./assets/tip_sheets/"}
             ],
             "styles": [
               "src/styles.scss"
