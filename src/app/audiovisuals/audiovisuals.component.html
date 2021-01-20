@@ -14,12 +14,12 @@
       <div class="nav-card-item-content">
         <h5>COMICS</h5>
         <div class="nav-cards nav-resources">
-          <a class="nav-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}"
+          <a class="nav-card-item comics-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}"
             target="_blank" data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ comics.title }}</h5>
             <img class="preview" [src]="comics.thumnailSrc" />
             <div class="view-text">View</div>
-          </a>
+          </a> 
         </div>
         <div class="resource-view-more-text"
           (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"
