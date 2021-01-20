@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { ResourcesService, Resource } from './resources.service';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { ResourcesService } from './resources.service';
 import * as AOS from 'aos';
+import { ViewportScroller } from '@angular/common';
 declare let gtag: Function;
 @Component({
   selector: 'app-root',
@@ -10,10 +11,18 @@ declare let gtag: Function;
 })
 export class AppComponent {
   //todo. possibly remove resources service after fixing laxy loading
-  constructor(public router: Router, public resourcesService: ResourcesService) {
+  constructor(public router: Router, public resourcesService: ResourcesService,
+    private activatedRoute: ActivatedRoute, private viewportScroller: ViewportScroller) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0);
+        this.activatedRoute.fragment.subscribe((fragment) => {
+          if (fragment) {
+            this.viewportScroller.scrollToAnchor(fragment);
+          } else {
+            this.viewportScroller.scrollToAnchor("top");
+          }
+        });
+        
         gtag('config', 'UA-171116573-2',
           {
             'page_path': event.urlAfterRedirects

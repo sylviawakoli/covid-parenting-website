@@ -49,6 +49,7 @@ import { AudiovisualsComponent } from './audiovisuals/audiovisuals.component';
 import { NewsMainComponent } from './news-main/news-main.component';
 import { ImpactComponent } from './impact/impact.component';
 import { ImpactChampionsComponent } from './impact-champions/impact-champions.component';
+import { TipsLangSelectComponent } from './tips-lang-select/tips-lang-select.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { ImpactChampionsComponent } from './impact-champions/impact-champions.co
     AudiovisualsComponent,
     NewsMainComponent,
     ImpactComponent,
-    ImpactChampionsComponent
+    ImpactChampionsComponent,
+    TipsLangSelectComponent
   ],
   imports: [
     BrowserModule,

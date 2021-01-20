@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ShareYourStoryComponent } from './share-your-story.component';
 
@@ -6,7 +6,7 @@ describe('ShareYourStoryComponent', () => {
   let component: ShareYourStoryComponent;
   let fixture: ComponentFixture<ShareYourStoryComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ShareYourStoryComponent ]
     })

@@ -2,7 +2,7 @@
   <div class="content header-contents">
     <div class="toolbar">
       <div class="website-title">
-        <h2>Covid 19 Parenting</h2>
+        <h2>COVID-19 Parenting</h2>
       </div>
       <div class="desktop-menu">
         <div class="desktop-menu-items">
@@ -10,7 +10,8 @@
             <a [routerLink]="item.href"> {{ item.name }} </a>
             <div class="dropdown-content">
               <div *ngFor="let subItem of item.subMenuItems" class="dropdown-item">
-                <a [routerLink]="subItem.href" fragment="{{subItem.fragment}}">{{ subItem.name }}</a>
+                <a [routerLink]="subItem.href" fragment="{{subItem.fragment}}"
+                  (click)="scrollToFragment(subItem.fragment)">{{ subItem.name }}</a>
               </div> 
             </div>
           </div> 

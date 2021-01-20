@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 export interface MenuItem {
@@ -11,52 +12,67 @@ export interface MenuItem {
 //todo. this needs to be globalised
 const MENU_ITEMS: MenuItem[] = [
   { name: "HOME", href: "/" },
+
+  {
+    name: "ABOUT US",
+    href: "/aboutus",
+    subMenuItems: [
+      { name: "Partners & Funders", href: "/aboutus", fragment: "partners-funders" },
+      { name: "Contributors", href: "/contributors" },
+      { name: "Contact Us", href: "/aboutus", fragment: "contact" }
+    ]
+  },
+
   {
     name: "RESOURCES",
     href: "/resources",
     subMenuItems: [
       { name: "Parenting Tips", href: "/tips" },
-      { name: "Caseworkers", href: "/caseworkers" },
+      { name: "Tips For Caseworkers", href: "/caseworkers" },
       { name: "Public Service Announcements", href: "/psa" },
       { name: "Digital Parenting", href: "/digitalparenting" },
-      { name: "Audiovisual", href: "/audiovisuals" },
+      { name: "Audiovisual Resources", href: "/audiovisuals" },
       { name: "Faith-Based Resources", href: "/faithleaders" },
       { name: "Social Media", href: "/socialmedia" },
-      /**   {
-          name: "Radio Scripts",
-          href: "/tips",
-          fragment: "radio"
-        },**/
+      /*{
+        name: "Radio Scripts",
+        href: "/tips",
+        fragment: "radio"
+      },*/
     ]
   },
+
   {
-    name: "NEWS & EVENTS",
+    name: "IMPACT",
+    href: "/impact",
+    subMenuItems: [
+      { name: "Reach by Region", href: "/impact", fragment: "reach-by-region" },
+      { name: "Reach by Dissemination Method", href: "/impact", fragment: "reach-by-dissemination" },
+      { name: "Impact Stories", href: "/impactstories" },
+      { name: "Champions of Children", href: "/impactchampions" }
+    ]
+  },
+
+  {
+    name: "NEWS",
     href: "/news-main",
     subMenuItems: [
-      { name: "News", href: "/news" },
+      { name: "Updates", href: "/news" },
       { name: "Newsletters", href: "/newsletters" },
       { name: "Webinars", href: "/webinars" }
     ]
   },
 
   {
-    name: "ABOUT US",
-    href: "/aboutus",
+    name: "TELL US WHAT YOU THINK",
+    href: "/contactus",
     subMenuItems: [
-      { name: "Partners & Funders", href: "/aboutus" },
-      { name: "Contributors", href: "/contributors" }
+      { name: "Parents Survey", href: "/contactus",  fragment: "parents-survey" },
+      { name: "Champions of Children Survey", href: "/contactus" , fragment: "champions-of-children-survey"},
+      { name: "Teens App Survey", href: "/contactus" , fragment: "teen-app-survey"},
     ]
-  },
-  { 
-    name: "IMPACT",
-    href: "/impact",
-    subMenuItems: [
-      { name: "Impact Stories", href: "/impactstories" },
-      { name: "Champions of Children", href: "/impactchampions" }
-    ]
-  },
-  { name: "CONTACT US", href: "/contactus" }
- ];
+  }
+];
 
 @Component({
   selector: 'app-menu',
@@ -68,7 +84,7 @@ export class MenuComponent implements OnInit {
   menuDropdownOpen: boolean = false;
   menuItems = MENU_ITEMS;
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
   }
@@ -81,6 +97,15 @@ export class MenuComponent implements OnInit {
 
   mouseLeaveMenuItem($event, item: MenuItem) {
     item.subMenuOpen = false;
+  }
+
+  scrollToFragment(fragment: string) {
+    console.log("Scroll to fragment ", fragment);
+    if (fragment && fragment.length > 0) {
+      setTimeout(() => {
+        this.viewportScroller.scrollToAnchor(fragment);
+      }, 500);
+    }
   }
 }
 

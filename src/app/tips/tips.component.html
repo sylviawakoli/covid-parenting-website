@@ -7,10 +7,15 @@
             <div class="nav-card-item-content">
               <p>Our open-source and evidence-based parenting tips and resources are available in more than 100 languages!</p>
               <p> Select your preferred language, and see the parenting tip sheets, as well as other parenting materials, available in the language of your choice:</p>
+              <app-tips-lang-select [currentLanguage]="tipSheetLang" [languages]="languages" (onLanguageChange)="onLanguageChange($event)"></app-tips-lang-select>
               <app-tip-sheets [currentLanguage]="tipSheetLang"></app-tip-sheets>
-              <p>If you can't find a parenting tip sheet and/or other parenting resources available in your language, please send us an email at: <a href="mailto:translate@covid19parenting.com">translate@covid19parenting.com</a> </p>
+              <p> If you would like to have parenting tips sheets and/or other parenting resources translated in your language, please send us an email at : <a href="mailto:translate@covid19parenting.com">translate@covid19parenting.com</a> </p>
+              <br>
               <p>Please note that these translations were not created by the World Health Organization (WHO), and WHO is not responsible for the content or accuracy of these translations.</p>
             </div>
+            <a id="radio" class="anchor"></a>
+            <h5 class="nav-card-item-header">RADIO SCRIPTS</h5>
+            <p>Radio scripts coming soon</p>
         </div>
     </div>
     <app-sidebar class="side-bar-container"></app-sidebar>

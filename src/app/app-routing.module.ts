@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: "impact", component: ImpactComponent },
   { path: "contactus", component: ContactusComponent  },
   { path: "tips", component: TipsComponent },
+  { path: "tips/:langCode", component: TipsComponent },
   { path: "caseworkers", component: CaseworkersComponent },
   { path: "psa", component: PsaComponent },
   { path: "digitalparenting", component: DigitalparentingComponent },
@@ -62,7 +63,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: false, anchorScrolling: "enabled" })],
+  imports: [RouterModule.forRoot(routes, { useHash: false, anchorScrolling: "disabled", relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

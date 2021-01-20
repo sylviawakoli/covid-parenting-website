@@ -25,27 +25,39 @@ slowdownvideo,Send us your cover!,https://www.youtube.com/embed/07OXAtrL9PM?list
 slowdownvideo,Karaoke (instrumental),https://www.youtube.com/embed/wul92VyMZKs?list=PLURnZih-6HI5nB2Co8QdZe1c1sRpxLuqi,en
 slowdownvideo,Karaoke (with vocals),https://www.youtube.com/embed/etA4WAEIkzc?list=PLURnZih-6HI5nB2Co8QdZe1c1sRpxLuqi,en
 slowdownvideo,Instrumental,https://www.youtube.com/embed/1GC3x5vfOSg?list=PLURnZih-6HI5nB2Co8QdZe1c1sRpxLuqi,en
+slowdownvideo,Cover by Palhaços Sem Fronteiras Brasil,https://www.youtube.com/embed/eQT1lbI5OmM?list=PLURnZih-6HI5nB2Co8QdZe1c1sRpxLuqi,pt-br
 caseworkers,Tips for case workers,caseworkers_English,en
 caseworkers,Tips for case workers,caseworker_Chinese,zh
 caseworkers,Tips for case workers,caseworkers_French,fr
 caseworkers,Tips for case workers,caseworkers_Bisaya,ceb
 caseworkers,Tips for case workers,caseworkers_Bikol,bcl
 caseworkers,Tips for case workers,caseworkers_Ilokano,ilo
+caseworkers,Tips for case workers,caseworkers_Maguindanao,mdh
+caseworkers,Tips for case workers,caseworkers_Maranao,mrw
 caseworkers,Tips for case workers,caseworkers_Portuguese,pt
 caseworkers,Tips for case workers,caseworkers_Russian,ru
 caseworkers,Tips for case workers,caseworkers_Spanish,es
 caseworkers,Tips for case workers,caseworkers_Turkish,tr
+caseworkers,Tips for case workers,caseworkers_Chavacano,cbk
+caseworkers,Tips for case workers,caseworkers_Waray,war
+caseworkers,Tips for case workers,caseworkers_Filipino,fil
 psa,Public Service announcements,PSA-Bikol,bcl
 psa,Public Service announcements,PSA-Chinese,zh
 psa,Public Service announcements,PSA-English,en
 psa,Public Service announcements,PSA-French,fr
+psa,Public Service announcements,PSA-Maguindanao,mdh
 psa,Public Service announcements,PSA-Malay,ml
+psa,Public Service announcements,PSA-Maranao,mrw
 psa,Public Service announcements,PSA-Portuguese,pt
 psa,Public Service announcements,PSA-Russian,ru
 psa,Public Service announcements,PSA-Spanish,es
 psa,Public Service announcements,PSA-Turkish,tr
+psa,Public Service announcements,PSA-Waray,war
+psa,Public Service announcements,PSA-Chavacano,cbk
+psa,Public Service announcements,PSA-Filipino,fil
 psa,Top 6 Parenting Tips,Top-6-Tips-Albanian,al
 psa,Top 6 Parenting Tips,Top-6-Tips-Arabic,ar
+psa,Top 6 Parenting Tips,Top-6-Tips-Chinese,zh
 psa,Top 6 Parenting Tips,Top-6-Tips-English,en
 psa,Top 6 Parenting Tips,Top-6-Tips-Montenegrin,cnr
 psa,Top 6 Parenting Tips,Top-6-Tips-Romani,rom
@@ -61,7 +73,10 @@ psahowto,How to use public service announcements,How-to-PSA-Portuguese,pt
 psahowto,How to use public service announcements,How-to-PSA-Russian,ru
 psahowto,How to use public service announcements,How-to-PSA-Spanish,es
 psahowto,How to use public service announcements,How-to-PSA-Turkish,tr
+psahowto,How to use public service announcements,How-to-PSA-Hindi,hi
 faithbased,Church leaders pack,church_leader_pack,en
+faithbased,Church leaders pack,church_Leader_Pack_pt-br,pt-br
+faithbased,Church leaders pack,church_leader_pack_ES,es
 mergedtipsheet,Merged tip sheet,merged_1,en
 mergedtipsheet,Merged tip sheet,merged_1,af
 mergedtipsheet,Merged tip sheet,merged_1,al
@@ -188,6 +203,10 @@ mergedtipsheet,Merged tip sheet,merged_1,ilo
 mergedtipsheet,Merged tip sheet,merged_1,twi
 mergedtipsheet,Merged tip sheet,merged_1,war
 mergedtipsheet,Merged tip sheet,merged_1,rom
+mergedtipsheet,Merged tip sheet,merged_1,cbk
+mergedtipsheet,Merged tip sheet,merged_1,mdh
+mergedtipsheet,Merged tip sheet,merged_1,mrw
+mergedtipsheet,Merged tip sheet,merged_1,ckb
 audioplaytogether,One on One Time,1.m4a,en
 audioplaytogether,Take a Pause,2.m4a,en
 audioplaytogether,Quiet Eyes,3.m4a,en

@@ -1,20 +1,5 @@
 <h5 class="tip-header">Select your language</h5>
-<div class="lang-letter-ranges">
-    <a *ngFor="let range of letterRanges" (click)="onLetterRangeClick(range)"
-        [class]="range[0] === selectedRange[0] ? 'letter-range selected' : 'letter-range'">
-        {{ range[0] }} - {{ range[1] }}
-    </a> 
-</div>
-<div ngbDropdown class="language-dropdown">
-    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-        {{ currentLanguage.name }}
-    </button>
-    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button *ngFor="let language of dropdownLanguages" ngbDropdownItem (click)="changeLanguage(language)">
-            {{ language.name }}
-        </button>
-    </div>
-</div>
+
 
 <div *ngIf="objMergedTipsheet">
     To download all the tip sheets <a class="download-merged" href="{{  objMergedTipsheet? objMergedTipsheet.pdfSrc : '' }}" target="_blank">click here</a>
@@ -22,7 +7,7 @@
 
 <div class="nav-cards">
     <div class="nav-card-item">
-         <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
+         <div class="nav-card-item-content">
              <div *ngFor="let tipSheet of visibleTipSheets">
                 <a href="{{ tipSheet.pdfSrc}}" target="_blank">
                     {{ tipSheet.title }}      

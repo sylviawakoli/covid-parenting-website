@@ -6,20 +6,24 @@
       <h5 class="nav-card-item-header">AUDIO-VISUALS RESOURCES</h5>
       <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
         <p>
-          Our parenting resources are also been designed for specific audio and visual presentations to reach all parents and caregivers groups, regardless of the quality of their internet access
+          Our parenting resources are also been designed for specific audio and visual presentations to reach all
+          parents and caregivers groups, regardless of the quality of their internet access
         </p>
       </div>
       <hr />
       <div class="nav-card-item-content">
         <h5>COMICS</h5>
         <div class="nav-cards nav-resources">
-          <a class="nav-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+          <a class="nav-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}"
+            target="_blank" data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ comics.title }}</h5>
             <img class="preview" [src]="comics.thumnailSrc" />
             <div class="view-text">View</div>
           </a>
         </div>
-        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"  *ngIf="bShowloadMoreComicsButton"  >
+        <div class="resource-view-more-text"
+          (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"
+          *ngIf="bShowloadMoreComicsButton">
           See more comics
         </div>
       </div>
@@ -27,70 +31,123 @@
       <div class="nav-card-item-content">
         <h5>LET'S SLOW DOWN VIDEOS</h5>
         <div class="nav-cards nav-resources">
-          <div class="nav-card-item" *ngFor="let slowdown of arrVisibleSlowDownVisuals"  data-aos="zoom-in" data-aos-duration="1000" >
+          <div class="nav-card-item" *ngFor="let slowdown of arrVisibleSlowDownVisuals" data-aos="zoom-in"
+            data-aos-duration="1000">
             <h5>{{ slowdown.title }}</h5>
-            <iframe class="preview"
-              [src]="slowdown.urlSafe"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen  >
+            <iframe class="preview" [src]="slowdown.urlSafe" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
           </div>
         </div>
-        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllSlowDownVideosVisuals, arrVisibleSlowDownVisuals )"  *ngIf="bShowloadMoreSlowDownVideosButton" >
+        <div class="resource-view-more-text"
+          (click)="onClickViewMoreVisuals(arrAllSlowDownVideosVisuals, arrVisibleSlowDownVisuals )"
+          *ngIf="bShowloadMoreSlowDownVideosButton">
           See more let's slow down videos
         </div>
       </div>
-      <hr/>
-      
+      <hr />
+
       <div class="nav-card-item-content">
         <h5> AUDIO PACK </h5>
         <div class="nav-card-item-content">
-          <div  data-aos="zoom-in" data-aos-duration="1000">
-            <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-English.pdf" target="_blank">English</a></p> 
-            <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-Portuguese.pdf" target="_blank">Portuguese</a></p> 
-            <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-Spanish.pdf" target="_blank">Spanish</a></p> 
-            </div>
-            <hr/>
+          <div data-aos="zoom-in" data-aos-duration="1000">
+            <p>
+              Our audio packs are sets of scripts of evidence-based messages for parents and caregivers that are shown
+              to improve their mental health, give them positive ways to manage challenging child behaviour, and how to
+              enjoy playing together. The scripts can be used in a variety of ways - for example, they can be read on
+              radio, loudspeaker, video, or as a voice recording on text messages
+            </p> <br>
+            <p>
+              The audio pack is broken down into three core modules; Play Together, Keep It Positive, and Sharing is
+              Caring, each with six or seven related topics. Each topic comes with a ready-to-use script and a choice of
+              three playful, practical activities that parents and caregivers can do with their children. There are also
+              relaxation activities to support the mental health of adults.
+            </p> <br>
+            <h5>Who is this audio pack for? </h5>
+            <p>The audio pack is primarily designed for government agencies and nongovernmental organizations that work
+              to promote child and/or parent health and well-being. They may also be of interest to anyone who is
+              concerned about the welfare of children in these challenging times. </p>
+            <br>
+            <h5>How can you use these audio scripts? </h5>
+            <p>
+              The content of the audio pack is open-source and free to use, adaptable for any context. The scripts and
+              activities can be read out for a wide range of uses; such as radio or loudspeaker broadcast, or
+              pre-recorded as voice notes to send via instant messaging. One complete module would take approximately 20
+              minutes to broadcast. Each topic and activity would take approximately 3 minutes.
+            </p><br>
+            <p>See how to use the audio pack in <a href="assets/resources/audios/Audio-Pack-English.pdf"
+              target="_blank">English</a> | <a href="assets/resources/audios/Audio-Pack-Portuguese.pdf"
+              target="_blank">Portuguese</a> | <a href="assets/resources/audios/Audio-Pack-Spanish.pdf"
+              target="_blank">Spanish</a></p>
+          </div>
+          <br>
+          <hr />
         </div>
         <h5>PLAY TOGETHER</h5>
         <div class="nav-cards nav-resources">
-          <a class="nav-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="nav-card-item-content">
+            <p>
+              This module presents practical tips for parents and caregivers about how they can spend one-on-one time with
+              their family to build positive relationships and help children learn through play.
+            </p>
+          </div>
+          <a class="nav-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank"
+            data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ audio.title }}</h5>
             <img class="preview" [src]="audio.thumnailSrc" />
             <div class="view-text">Listen</div>
           </a>
         </div>
-        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether)"  *ngIf="bShowloadMoreAudioPlayTogether"  >
-          See more play together audios
+        <div class="resource-view-more-text"
+          (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether)"
+          *ngIf="bShowloadMoreAudioPlayTogether">
+          See more PLAY TOGETHER audios
         </div>
       </div>
-      <hr/>
+      <hr />
       <div class="nav-card-item-content">
         <h5>KEEP IT POSITIVE</h5>
         <div class="nav-cards nav-resources">
-          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="nav-card-item-content">
+            <p>
+              This module will provide tips on how to encourage children and teens through positive instruction and
+              praise. It also reminds parents and caregivers that regular self-care is the first step.
+            </p>
+          </div>
+          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}"
+            target="_blank" data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ audio.title }}</h5>
             <img class="preview" [src]="audio.thumnailSrc" />
             <div class="view-text">Listen</div>
           </a>
         </div>
-        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive)"  *ngIf="bShowloadMoreAudioKeepPostive"  >
-          See more keep it positive audios
+        <div class="resource-view-more-text"
+          (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive)"
+          *ngIf="bShowloadMoreAudioKeepPostive">
+          See more KEEP IT POSITIVE audios
         </div>
       </div>
-      <hr/>
+      <hr />
       <div class="nav-card-item-content">
         <h5>SHARING IS CARING</h5>
         <div class="nav-cards nav-resources">
-          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="nav-card-item-content">
+            <p>
+              This module will provide tips on how to deal with worry and anxiety in the family by listening to each
+              other, letting go of stress in a fun way and remembering to take a pause.
+            </p>
+          </div>
+          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank"
+            data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ audio.title }}</h5>
             <img class="preview" [src]="audio.thumnailSrc" />
             <div class="view-text">Listen</div>
           </a>
         </div>
-        <div class="resource-view-more-text"  (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing)"  *ngIf="bShowloadMoreAudioSharing"  >
-          See more sharing is caring audios
+        <div class="resource-view-more-text"
+          (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing)"
+          *ngIf="bShowloadMoreAudioSharing">
+          See more SHARING IS CARING audios
         </div>
       </div>
 
