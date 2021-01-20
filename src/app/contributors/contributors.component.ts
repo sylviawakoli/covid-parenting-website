@@ -176,6 +176,7 @@ const CONTRIBUTORS_LIST: Contributor[] = [
   { name: "Marina Banko", title: "", thumnailSrc: "/" },
   { name: "Marina Hennies", title: "", thumnailSrc: "/" },
   { name: "Marsha Habib", title: "", thumnailSrc: "/" },
+  { name: "Maryam Ardakani", title: "", thumnailSrc: "/" },
   { name: "Massarwa ​Adeem", title: "", thumnailSrc: "/" },
   { name: "Mathilde Bapsères", title: "", thumnailSrc: "/" },
   { name: "May Thet Thet Oo", title: "Education Officer, UNICEF", thumnailSrc: "/" },
