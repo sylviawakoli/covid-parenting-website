@@ -16,8 +16,6 @@ export type Visuals = {
 })
 export class AudiovisualsComponent implements OnInit {
 
-  private numOfResourcesToShow: number = 3;//used to show resources in batches
-
   public arrAllComicsVisuals: Visuals[] = [];
   public arrVisibleComicsVisuals: Visuals[] = [];
   public bShowloadMoreComicsButton: boolean = false;
@@ -90,7 +88,7 @@ export class AudiovisualsComponent implements OnInit {
 
       });//end for loop
 
-      this.onClickViewMoreVisuals(this.arrAllSlowDownVideosVisuals, this.arrVisibleSlowDownVisuals);
+      this.onClickViewMoreVisuals( this.arrAllSlowDownVideosVisuals, this.arrVisibleSlowDownVisuals );
 
     });
   }//end method
@@ -136,13 +134,13 @@ export class AudiovisualsComponent implements OnInit {
 
       });//end for loop
 
-      this.onClickViewMoreVisuals(arrAll, arrVisible);
+      this.onClickViewMoreVisuals( arrAll, arrVisible,"audiopacks");
 
     });
   }//end method
 
   //used by the view more buttons and when the visuals are to to be view in batches
-  public onClickViewMoreVisuals(arrAllVisuals: Visuals[], arrVisibleVisuals: Visuals[]) {
+  public onClickViewMoreVisuals(arrAllVisuals: Visuals[], arrVisibleVisuals: Visuals[], visualsType?: string) {
     let startIndex: number;
     if (arrVisibleVisuals.length == 0) {
       startIndex = 0;
@@ -154,7 +152,7 @@ export class AudiovisualsComponent implements OnInit {
       }//end inner if
     }//end if
 
-    this.addElementsToVisibleResources(arrAllVisuals, arrVisibleVisuals, startIndex);
+    this.addElementsToVisibleResources( arrAllVisuals, arrVisibleVisuals, startIndex,visualsType);
 
     this.bShowloadMoreComicsButton = this.arrVisibleComicsVisuals.length < this.arrAllComicsVisuals.length;
     this.bShowloadMoreSlowDownVideosButton = this.arrVisibleSlowDownVisuals.length < this.arrAllSlowDownVideosVisuals.length;
@@ -163,11 +161,17 @@ export class AudiovisualsComponent implements OnInit {
     this.bShowloadMoreAudioSharing = this.arrVisibleAudioSharing.length < this.arrAllAudioSharing.length;
   }//end method
 
-  private addElementsToVisibleResources(arrAllVisuals: Visuals[], arrVisibleVisuals: Visuals[], startIndex: number) {
+  private addElementsToVisibleResources(arrAllVisuals: Visuals[], arrVisibleVisuals: Visuals[], startIndex: number, visualsType?: string) {
     let index: number;
     let counter: number = 0;
+    let numOfVisualsToShow: number = 3; //used to show resources in batches
+    if (visualsType != undefined && visualsType == "audiopacks") {
+      numOfVisualsToShow = 4;
+    }
+
+
     for (index = startIndex; index < arrAllVisuals.length; index++) {
-      if (counter == this.numOfResourcesToShow) {
+      if (counter == numOfVisualsToShow) {
         break;
       }//end if 
       arrVisibleVisuals.push(arrAllVisuals[index]);

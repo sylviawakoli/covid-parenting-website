@@ -14,12 +14,12 @@
       <div class="nav-card-item-content">
         <h5>COMICS</h5>
         <div class="nav-cards nav-resources">
-          <a class="nav-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}"
+          <a class="nav-card-item comics-card-item" *ngFor="let comics of arrVisibleComicsVisuals" href="{{ comics.url }}"
             target="_blank" data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ comics.title }}</h5>
             <img class="preview" [src]="comics.thumnailSrc" />
             <div class="view-text">View</div>
-          </a>
+          </a> 
         </div>
         <div class="resource-view-more-text"
           (click)="onClickViewMoreVisuals(arrAllComicsVisuals, arrVisibleComicsVisuals)"
@@ -43,7 +43,7 @@
           (click)="onClickViewMoreVisuals(arrAllSlowDownVideosVisuals, arrVisibleSlowDownVisuals )"
           *ngIf="bShowloadMoreSlowDownVideosButton">
           See more let's slow down videos
-        </div>
+        </div> 
       </div>
       <hr />
 
@@ -91,7 +91,7 @@
               their family to build positive relationships and help children learn through play.
             </p>
           </div>
-          <a class="nav-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank"
+          <a class="nav-card-item audio-card-item" *ngFor="let audio of arrVisiblePlayTogether" href="{{ audio.url }}" target="_blank"
             data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ audio.title }}</h5>
             <img class="preview" [src]="audio.thumnailSrc" />
@@ -99,7 +99,7 @@
           </a>
         </div>
         <div class="resource-view-more-text"
-          (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether)"
+          (click)="onClickViewMoreVisuals(arrAllAudioPlayTogether, arrVisiblePlayTogether,'audiopacks')"
           *ngIf="bShowloadMoreAudioPlayTogether">
           See more PLAY TOGETHER audios
         </div>
@@ -114,7 +114,7 @@
               praise. It also reminds parents and caregivers that regular self-care is the first step.
             </p>
           </div>
-          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}"
+          <a class="nav-card-item audio-card-item" *ngFor="let audio of arrVisibleAudioKeepPositive" href="{{ audio.url }}"
             target="_blank" data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ audio.title }}</h5>
             <img class="preview" [src]="audio.thumnailSrc" />
@@ -122,7 +122,7 @@
           </a>
         </div>
         <div class="resource-view-more-text"
-          (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive)"
+          (click)="onClickViewMoreVisuals(arrAllAudioKeepPositive, arrVisibleAudioKeepPositive,'audiopacks')"
           *ngIf="bShowloadMoreAudioKeepPostive">
           See more KEEP IT POSITIVE audios
         </div>
@@ -137,7 +137,7 @@
               other, letting go of stress in a fun way and remembering to take a pause.
             </p>
           </div>
-          <a class="nav-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank"
+          <a class="nav-card-item audio-card-item" *ngFor="let audio of arrVisibleAudioSharing" href="{{ audio.url }}" target="_blank"
             data-aos="zoom-in" data-aos-duration="1000">
             <h5>{{ audio.title }}</h5>
             <img class="preview" [src]="audio.thumnailSrc" />
@@ -145,7 +145,7 @@
           </a>
         </div>
         <div class="resource-view-more-text"
-          (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing)"
+          (click)="onClickViewMoreVisuals(arrAllAudioSharing, arrVisibleAudioSharing,'audiopacks')"
           *ngIf="bShowloadMoreAudioSharing">
           See more SHARING IS CARING audios
         </div>

@@ -12,11 +12,20 @@
   font-size: 1.25rem;
   line-height: 1.2;
   text-decoration: none;
-  transition-duration: 0.4s;
 }
 
 .news-letter-container .content a:hover {
   text-decoration: none;
+}
+
+.news-letter-container .content a div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition-duration: 0.4s;
+}
+
+.news-letter-container .content a div:hover {
   border-bottom: 2px solid #ffffff;
 }
 
@@ -24,5 +33,12 @@
   .news-letter-container {
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .news-letter-container .content {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }

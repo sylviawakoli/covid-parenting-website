@@ -13,6 +13,7 @@
                 </div>
                 <div class="nav-card-item-content">
                     <h5>ParentChat</h5>
+                    <div class="preview-text">
                     <p>
                         Due to the impact of COVID-19, it is more challenging for in-person parenting programmes to
                         reach families in need. ParentChat is a newly developed online version of the Parenting for
@@ -23,13 +24,16 @@
                     </p>
                     <br>
                     <p>
-                        For more information on ParentChat click <a
-                            href="https://spi.web.ox.ac.uk/covid-19-e-parenting-for-lifelong-health-eplh-pilot-study-promoting-positive-parenting-and-preventin">here</a>
+                        For more information on ParentChat click <a href="https://spi.web.ox.ac.uk/covid-19-e-parenting-for-lifelong-health-eplh-pilot-study-promoting-positive-parenting-and-preventin">here</a>
                     </p>
+                   </div>
+                   <span class="more-ellipsis">...</span>
+                   <span class="more-link" (click)="onClickShowMoreText($event)">show more</span> 
                 </div>
                 <hr />
                 <div class="nav-card-item-content">
                     <h5>ParentText</h5>
+                    <div class="preview-text">
                     <p>
                         ParentText is an automated text messaging service for parents of children aged 0 to 17. It is
                         delivered using RapidPro, an open-source application serving low-income communities without
@@ -127,11 +131,14 @@
                         on where to access professional or urgent help (e.g. police, ambulance, hotline).
                     </p>
                     <br>
+                    <p> 
+                       For more information on ParentText, check one of our Concept Documents <a href="assets/resources/digitalparenting/Parentext-Concept.pdf">here. </a>
+                     </p>           
+                  </div>
+                   <span class="more-ellipsis">...</span>
+                   <span class="more-link" (click)="onClickShowMoreText($event)">show more</span>                
+               </div>
 
-                    <p> For more information on ParentText, check one of our Concept Documents <a
-                            href="assets/resources/digitalparenting/Parentext-Concept.pdf">here. </a></p>
-
-                </div>
                 <hr />
                 <div class="nav-card-item-content">
                     <h5>ParentApp</h5>
