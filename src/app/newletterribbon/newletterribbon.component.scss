@@ -11,12 +11,21 @@
   color: #ffffff;
   font-size: 1.25rem;
   line-height: 1.2;
-  text-decoration: none;
-  transition-duration: 0.4s;
+  text-decoration: none; 
 }
 
 .news-letter-container .content a:hover {
   text-decoration: none;
+}
+
+.news-letter-container .content a div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition-duration: 0.4s;
+}
+
+.news-letter-container .content a div:hover {
   border-bottom: 2px solid #ffffff;
 }
 
