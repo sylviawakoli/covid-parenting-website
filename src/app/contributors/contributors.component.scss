@@ -1,4 +1,4 @@
-.language-header{
+.language-header {
   color: #5dbcd2;
 }
 
@@ -30,46 +30,42 @@ hr {
   margin-bottom: 20px;
 }
 
-.contributors-info a{
+.contributors-info a {
   font-size: normal;
   color: #75c5ca;
   font-weight: 500;
   font-size: 16px;
 }
 
-.contributors-list{
+.contributors-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.contributor{
+.contributor {
   flex: 25%;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.contributor-name{
+.contributor-name {
   font-weight: 500;
 }
-.contributor-title{
+.contributor-title {
   margin-top: 5px;
 }
 
 @media only screen and (max-width: 450px) {
-  .contributors-list{
+  .contributors-list {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
   }
-
-  .contributor{
+  
+  .contributor {
     flex: 100%;
     margin-left: 0px;
-
   }
-
-
 }
-

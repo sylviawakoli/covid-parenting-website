@@ -14,7 +14,7 @@ export class TipSheetsComponent implements OnInit, OnChanges {
   @Input()
   currentLanguage: Language;
   @Input()
-  viewAllTipSheets: boolean = false;//used to indicate if the component will show all tipsheets
+  viewAllTipSheets: boolean = true;//was originally false. used to indicate if the component will show all tipsheets
   @Input()
   maxTipSheetsToShow: number = 5;//was originally 6 cause of flex wrap. used to show tipsheets in batches
 
