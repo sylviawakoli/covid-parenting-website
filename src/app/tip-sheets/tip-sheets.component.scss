@@ -1,4 +1,4 @@
-.tip-header{
+.tip-header {
   color: #0b4061;
 }
 
@@ -23,16 +23,16 @@
   margin-bottom: 10px;
 }
 
-.download-merged{
+.download-merged {
   color: #5dbcd2;
   font-size: medium;
 }
 
-.nav-cards{
+.nav-cards {
   width: 100%;
 }
 
-.nav-cards .nav-card-item{
+.nav-cards .nav-card-item {
   width: 100%;
 }
 
@@ -43,16 +43,37 @@
 }
 
 .nav-card-item-content hr {
-  border-color: #75c5ca; 
+  border-color: #75c5ca;
   margin-bottom: 20px;
 }
 
-
-.resource-view-more-text{
+.resource-view-more-text {
   color: #5dbcd2;
 }
 
+.tip-sheet-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
+.tip-sheet-item{
+  flex: 25%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-
-
+@media only screen and (max-width: 450px) {
+  .tip-sheet-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  
+  .tip-sheet-item {
+    flex: 100%;
+    margin-left: 0px;
+  }
+}

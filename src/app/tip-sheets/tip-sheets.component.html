@@ -7,8 +7,8 @@
 
 <div class="nav-cards">
     <div class="nav-card-item">
-         <div class="nav-card-item-content">
-             <div *ngFor="let tipSheet of visibleTipSheets">
+         <div class="nav-card-item-content tip-sheet-list">
+             <div class="tip-sheet-item" *ngFor="let tipSheet of visibleTipSheets">
                 <a href="{{ tipSheet.pdfSrc}}" target="_blank">
                     {{ tipSheet.title }}      
                 </a>
