@@ -19,16 +19,25 @@
     font-size: medium;
 
   }
+
   
-  @media only screen and (max-width: 450px) {
-    /**.news-items .nav-card-item-content {
-      flex: 100%;
-      padding-left: 0px;
-    }
-  
-    .news-items .nav-card-item-content img {
-      width: 100%;
-    } */
-  
+  .preview-text {
+    height: 100px;
+    overflow: hidden;
   }
+  
+  .more-link {
+    display: block;
+    color: #75c5ca;
+    font-weight: 500;
+    font-size: medium;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .more-link:hover {
+    color: #75c5ca;
+    text-decoration: underline;
+  }
+  
   
