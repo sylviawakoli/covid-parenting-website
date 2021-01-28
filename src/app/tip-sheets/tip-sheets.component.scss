@@ -1,6 +1,3 @@
-.tip-header {
-  color: #0b4061;
-}
 
 .lang-letter-ranges {
   display: flex;
@@ -65,14 +62,7 @@
   justify-content: flex-end;
 }
 
-.merged-tip-sheet {
-  display: flex;
-  flex-direction: row;
-}
-
-.merged-tip-sheet img {
-  margin-right: 20px;
-}
+ 
 
 @media only screen and (max-width: 450px) {
   .tip-sheet-list {
@@ -86,12 +76,4 @@
     margin-left: 0px;
   }
 
-  .merged-tip-sheet { 
-    flex-direction: column;
-  }
-
-  .merged-tip-sheet img {
-    margin-right: 0px;
-    margin-bottom: 10px;
-  }
 }
