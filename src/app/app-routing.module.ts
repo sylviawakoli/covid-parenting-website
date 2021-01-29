@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, UrlMatcher } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { NewsComponent } from './news/news.component';
@@ -22,6 +22,17 @@ import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { FaithleadersComponent } from './faithleaders/faithleaders.component';
 import { NewsMainComponent } from './news-main/news-main.component';
 
+const tipsMatcher: UrlMatcher = (segments, group, route) => {
+  if (segments.length > 0 && segments[0].path.indexOf('tips') > -1) {
+    return {
+      consumed: segments,
+      posParams: {
+        langCode: segments[1]
+      }
+    };
+  }
+  return null;
+};
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -30,8 +41,7 @@ const routes: Routes = [
   { path: "aboutus", component: AboutusComponent },
   { path: "impact", component: ImpactComponent },
   { path: "contactus", component: ContactusComponent  },
-  { path: "tips", component: TipsComponent },
-  { path: "tips/:langCode", component: TipsComponent },
+  { matcher: tipsMatcher, component: TipsComponent },
   { path: "caseworkers", component: CaseworkersComponent },
   { path: "psa", component: PsaComponent },
   { path: "digitalparenting", component: DigitalparentingComponent },
