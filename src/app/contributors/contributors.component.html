@@ -7,11 +7,11 @@
       <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
         <p>
           We wish to thank the following organisations and individuals for
-          translating and reviewing our materials. 
+          translating and reviewing our materials. Thank you for your contribution!
         </p>
-        <p>
-          Thank you for your contribution!
-        </p>
+        
+          
+        
         <p class="contributors-info">
             Please send us a message at   <a href="mailto:publicity@covid19parenting.com">
               publicity@covid19parenting.com </a> if you wish to be acknowledged as a contributor.
@@ -27,11 +27,12 @@
         </div>
       </div>
       <div class="nav-card-item-content" data-aos="zoom-in" data-aos-duration="1000">
-        <div class="contributors-list"  *ngFor="let contributor of visibleContributors" >
-          <div class="contributor">
-            {{ contributor.name }}<span *ngIf="contributor.title" >&nbsp;-&nbsp;{{ contributor.title }}</span>
-          </div>
-          <hr />
+        <div class="contributors-list">
+          <div class="contributor" *ngFor="let contributor of visibleContributors">
+            <span class="contributor-name">{{ contributor.name }}</span> 
+            <span class="contributor-title" *ngIf="contributor.title" >{{ contributor.title }}</span>
+            <hr />
+          </div>   
         </div>
 
         <div  class="resource-view-more-text" (click)="viewMoreContributors()" *ngIf="bShowMoreButton" >
