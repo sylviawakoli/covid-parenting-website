@@ -23,6 +23,7 @@ import { FaithleadersComponent } from './faithleaders/faithleaders.component';
 import { NewsMainComponent } from './news-main/news-main.component';
 
 const tipsMatcher: UrlMatcher = (segments, group, route) => {
+  console.log("Tips matcher ", segments, group, route);
   if (segments.length > 0 && segments[0].path.indexOf('tips') > -1) {
     return {
       consumed: segments,
@@ -41,6 +42,8 @@ const routes: Routes = [
   { path: "aboutus", component: AboutusComponent },
   { path: "impact", component: ImpactComponent },
   { path: "contactus", component: ContactusComponent  },
+  { path: "tips", component: TipsComponent },
+  { path: "tips/:langCode", component: TipsComponent },
   { matcher: tipsMatcher, component: TipsComponent },
   { path: "caseworkers", component: CaseworkersComponent },
   { path: "psa", component: PsaComponent },
