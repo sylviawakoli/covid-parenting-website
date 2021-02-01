@@ -26,6 +26,8 @@ export class ContributorsComponent implements OnInit {
   constructor() {
     //sort all the contributors in alphabetical order
     this.allContributors = CONTRIBUTORS_LIST.sort((a, b) => a.name.localeCompare(b.name));
+    //this can be commented out if viewing in batches becomes the desired feature
+    this.maxContributorsToShow = this.allContributors.length;
     this.viewMoreContributors();
   }
 
