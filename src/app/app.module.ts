@@ -50,6 +50,7 @@ import { NewsMainComponent } from './news-main/news-main.component';
 import { ImpactComponent } from './impact/impact.component';
 import { ImpactChampionsComponent } from './impact-champions/impact-champions.component';
 import { TipsLangSelectComponent } from './tips-lang-select/tips-lang-select.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { TipsLangSelectComponent } from './tips-lang-select/tips-lang-select.com
     NewsMainComponent,
     ImpactComponent,
     ImpactChampionsComponent,
-    TipsLangSelectComponent
+    TipsLangSelectComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
