@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
@@ -103,7 +104,8 @@ import { MapComponent } from './map/map.component';
     BrowserAnimationsModule,
     HttpClientModule,
     NgbModule,
-    ScullyLibModule
+    ScullyLibModule,
+    LeafletModule
   ],
   providers: [
     SpreadsheetService,
