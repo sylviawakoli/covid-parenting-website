@@ -40,7 +40,7 @@ export class MapComponent implements OnInit {
     .bindPopup('What this initiative has done to my family is so profound. I am able to appreciate the world of children, and I think I am learning good parenting. It has also challenged me to look at this crazy time I have found myself i through the positive lens of hope.".<br> - Parent in Malawi from Without Orphans')
     .openPopup();
 
-    L.marker([-13.10, 33.10], {icon: myIcon}).addTo(this.map)
+    L.marker([-13.10, 35.10], {icon: myIcon}).addTo(this.map)
     .bindPopup('We understand that it is very hard for parents to adjust to the new norm, as they will have their children at home more than they are used to due to schools being closed. [The COVID-19 parenting resources] not only bring relief as we parent, but also challenge parenting in general, for some of us have failed miserably to parent well. It will leave a lasting impact and is amazing we have learnt this through a church in our community. <br> - Parent from Malawi ')
     .openPopup();
 

@@ -46,7 +46,7 @@ const routes: Routes = [
   { path: "news-main", component: NewsMainComponent },
   { path: "impactstories", component: ImpactStoriesComponent },
   { path: "impactchampions", component: ImpactChampionsComponent },
-  { path: "map", component: MapComponent },
+  { path: "impactmap", component: MapComponent },
 
   {
     path: "blog",
