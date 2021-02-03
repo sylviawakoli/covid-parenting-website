@@ -221,6 +221,15 @@ body {
   text-decoration: underline;
 }
 
+.thumbnail-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.thumbnail-container img {
+  margin-right: 20px;
+}
+
 
 @media only screen and (max-width: 900px) {
   .content {
@@ -269,6 +278,15 @@ body {
   .preview-resource-content {
     flex: 100%;
     padding-left: 0px;
+  }
+
+  .thumbnail-container { 
+    flex-direction: column;
+  }
+
+  .thumbnail-container img {
+    margin-right: 0px;
+    margin-bottom: 10px;
   }
 
 }
