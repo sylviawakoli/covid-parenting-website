@@ -29,6 +29,7 @@ export class TipsLangSelectComponent implements OnInit, OnChanges {
   }
 
   onLetterRangeClick(range: string[], changeLang: boolean = true) {
+    //for "others" do differently
     let bType2: boolean = (range[0] === "OTHERS");
     let lowerLetter: string;
     let higherLetter: string;
