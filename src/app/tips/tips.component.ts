@@ -46,7 +46,7 @@ export class TipsComponent {
   }
 
   onLanguageChange(lang: Language) {
-    this.router.navigateByUrl("/tips/" + lang.code + "#tips");
+    this.router.navigateByUrl("/tips/" + lang.code, { state: { noScroll: true } });
   }
 
   private redirectUsingQueryParam() {

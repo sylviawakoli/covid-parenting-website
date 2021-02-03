@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, UrlMatcher } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ResourcesComponent } from './resources/resources.component';
 import { NewsComponent } from './news/news.component';
@@ -21,6 +21,7 @@ import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog/blog-post/blog-post.component';
 import { FaithleadersComponent } from './faithleaders/faithleaders.component';
 import { NewsMainComponent } from './news-main/news-main.component';
+import { MapComponent } from './map/map.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: "contactus", component: ContactusComponent  },
   { path: "tips", component: TipsComponent },
   { path: "tips/:langCode", component: TipsComponent },
+  { path: "tips/:langCode/index.html", component: TipsComponent },
   { path: "caseworkers", component: CaseworkersComponent },
   { path: "psa", component: PsaComponent },
   { path: "digitalparenting", component: DigitalparentingComponent },
@@ -44,6 +46,8 @@ const routes: Routes = [
   { path: "news-main", component: NewsMainComponent },
   { path: "impactstories", component: ImpactStoriesComponent },
   { path: "impactchampions", component: ImpactChampionsComponent },
+  { path: "impactmap", component: MapComponent },
+
   {
     path: "blog",
     component: BlogComponent,

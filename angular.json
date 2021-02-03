@@ -27,10 +27,11 @@
               "src/favicon.ico",
               "src/assets",
               "src/admin",
-              { "glob": "tipSheetNames.csv", "input": "./tip_sheets", "output": "./assets/tip_sheets/"}
+              { "glob": "tipSheetNames.csv", "input": "./node_modules/leaflet/dist/images", "output": "./assets/tip_sheets/"}
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           },
@@ -93,7 +94,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
             "scripts": []
           }
